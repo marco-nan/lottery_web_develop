@@ -1,0 +1,71 @@
+
+
+<!-- 低版本 提示框-->
+<div class="promptBox" data="1">
+  <div class="promptBoxZi">
+    <h1 style="font-size: 40px;line-height: 80px;font-weight: 100;margin-bottom: 10px;margin: 0 auto;">是时候升级你的浏览器了</h1>
+    <P style="font-size: 12px;">你正在使用 Internet Explorer 的早期版本（IE9以下版本 或使用该内核的浏览器）。这意味着在升级浏览器前，你将无法访问此网站。</P>
+    <div style="width: 960px;margin-left: 24px;height: 1px;border-bottom: 1px solid #ddd;margin: 24px;"></div>
+
+    <h2 style="font-weight: 100;font-size: 20px;line-height: 24px;">请注意：Windows XP 及 Internet Explorer 早期版本的支持已经结束</h2>
+
+    <P style="font-size: 14px;line-height: 24px;width: 960px;margin: 24px;	">自 2016 年 1 月 12 日起，Microsoft 不再为 IE 11 以下版本提供相应支持和更新。没有关键的浏览器安全更新，您的 PC 可能易受有害病毒、间谍软件和其他恶意软件的攻击，它们可以窃取或损害您的业务数据和信息。请参阅 <A href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support" style="color:#0072c6">微软对 Internet Explorer 早期版本的支持将于 2016 年 1 月 12 日结束的说明</A> </P>
+    <div style="width: 960px;margin-left: 24px;height: 1px;border-bottom: 1px solid #ddd;margin: 24px;"></div>
+
+    <h2 style="font-size: 20px;line-height: 25px;font-weight: 100;margin-bottom: 10px;margin: 18px 0;">更先进的浏览器</h2>
+
+    <P style="font-size: 12px;">推荐使用以下浏览器的最新版本。如果你的电脑已有以下浏览器的最新版本则直接使用该浏览器访问<B id=referrer></B>即可。</P>
+
+    <ul class=browser style="width:988px;padding: 10px;height: 60px;">
+      <li class=browser-chrome style="float: left;width: 160px;height: 60px;background: url('/views/img/google.png') no-repeat"><a href="http://www.google.cn/chrome/browser/index.html?hl=zh-CN&amp;standalone=1" class="hoverOnly" style="color: red;width: 100px;display: block;margin-left: 40px;color:#0072c6;font-size: 14px;line-height: 22px;" target=_blank>谷歌浏览器<span style="display: block">Google Chrome</span></a></li>
+      <li class=browser-360 style="float: left;width: 160px;height: 60px;background: url('/views/img/360.png') no-repeat" ><a href="http://se.360.cn/" class="hoverOnly" style="color: red;width:100px;display: block;margin-left: 40px;color:#0072c6;font-size: 14px;line-height: 22px;" target=_blank>360安全浏览器 <span style="display: block">360用户推荐</span></a></li><!-- 2016-08-06 -->
+      <li class=browser-firefox style="float: left;width: 160px;height: 60px;background: url('/views/img/fire.png') no-repeat" ><a href="http://www.firefox.com.cn/" class="hoverOnly" style="color: red;width: 100px;display: block;margin-left: 40px;color:#0072c6;font-size: 14px;line-height: 22px;" target=_blank>火狐浏览器<span style="display: block">Mozilla Firefox</span></a></li>
+      <li class=browser-ie style="float: left;width: 180px;height: 60px;background: url('/views/img/ie.png') no-repeat" ><a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" class="hoverOnly" style="color: red;width: 120px;display: block;margin-left: 40px;color:#0072c6;font-size: 14px;line-height: 22px;" target=_blank>IE浏览器<span style="display: block">Internet Explorer</span></a></li>
+      <li class=browser-qq style="float: left;width: 160px;height: 60px;background: url('/views/img/qq.png') no-repeat" ><a href="http://browser.qq.com/" class="hoverOnly"  style="color: red;width: 100px;display: block;margin-left: 40px;color:#0072c6;font-size: 14px;line-height: 22px;" target=_blank>QQ浏览器9 <span style="display: block">全新升级版本</span></a></li><!-- 9.4.8187.400 -->
+      <div class=clean></div></ul>
+  </div>
+</div>
+
+<script type="text/javascript">
+  //	判断当前浏览器是什么版本
+  function myBrowser(){
+    var userAgent = navigator.userAgent;
+    var isOpera = userAgent.indexOf("Opera") > -1;
+    if (isOpera) {                                              //判断是否Opera浏览器
+      return "Opera"
+    };
+    if (userAgent.indexOf("Firefox") > -1) {                    //判断是否Firefox浏览器
+      return "FF";
+    }
+    if (userAgent.indexOf("Chrome") > -1){                      //判断是否是google 浏览器
+      return "Chrome";
+    }
+    if (!!window.ActiveXObject || "ActiveXObject" in window){   // 判断是否是IE 浏览器
+      return "IE";
+    }
+    if (userAgent.indexOf("Safari") > -1) {                     //判断是否Safari浏览器
+      return "Safari";
+    }
+  }
+  //  调用
+  var mb = myBrowser();
+  //判断是否是IE浏览器
+  if ("IE" == mb) {
+    if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<10){
+      $('.promptBox').show();
+    }
+  }
+  if ("FF" == mb) {
+    // console.log("我是 Firefox");
+  }
+  if ("Chrome" == mb) {
+    // console.log("我是 Chrome");
+  }
+  if ("Opera" == mb) {
+    // console.log("我�� Opera");
+  }
+  if ("Safari" == mb) {
+    // console.log("我是 Safari");
+  }
+
+</script>

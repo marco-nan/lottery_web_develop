@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>推广注册</title>
+    <!--#include virtual="/page/include/user-center.html"-->
+    <!--#include virtual="/page/include/table.html"-->
+    <!--#include virtual="/page/include/validation.html"-->
+    <script src="/js/lib/clipboard/clipboard.min.js" type="text/javascript"></script>
+    <script type="text/javascript">var systemConfig=<!--#include virtual="/data/json/web_system_config.json"--></script>
+    <script src="/js/user-center/agent/spread-info.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <form id="spreadInfoForm" class="form-inline m-y-md">
+        <div class="form-group m-r-md">
+            <label for="spreadType">推广页面</label>
+            <select id="spreadType" name="spreadType" class="form-control">
+                <option value="0">首页</option>
+            </select>
+        </div>
+        <div id="userType-container" class="form-group m-r-md">
+            <label for="userType">目标：</label>
+            <select id="userType" name="userType" class="form-control">
+                <option value="0">用户</option>
+                <option value="1">代理</option>
+            </select>
+        </div>
+        <div id="rebate-container" class="form-group m-r-md">
+            <label for="rebate">奖金设置：</label>
+            <select id="rebate" name="rebate" class="form-control"></select>
+        </div>
+        <div class="form-group m-r-md">
+            <label for="code">推广码</label>
+            <input id="code" type="text" class="form-control" name="code" style="width: 100px;">
+        </div>
+        <button id="createBtn" type="button" class="btn btn-primary m-l-md">网页链接</button>
+        <button id="createWxBtn" type="button" class="btn btn-primary m-l-md">微信链接</button>
+    </form>
+    <div class="table-responsive">
+        <table id="table" class="table table-condensed">
+            <thead class="thead-default">
+            <tr>
+                <th>推广渠道链接</th>
+                <th>推广码</th>
+                <th>推广页面</th>
+                <th>推广目标</th>
+                <th>奖金</th>
+                <th>访问量</th>
+                <th>注册人数</th>
+                <th>发布时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="pagination"></div>
+    </div>
+</div>
+</body>
+</html>

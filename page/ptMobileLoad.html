@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>longsnake88 Flash</title>
+    <script type="text/javascript" src="https://login.longsnake88.com/jswrapper/integration.js.php?casino=longsnake88"></script>
+    <script type="text/javascript">
+        function parseUrl(){
+            var result ={};
+            var query = location.search.split("?")[1];
+            var queryArr = query.split("&");
+            queryArr.forEach(function(item){
+                var value = decodeURI(item.split("=")[1]);
+                var key = item.split("=")[0];
+                result[key] = value;
+            });
+            return result;
+        }
+        var result = parseUrl();
+        var userName = result["userName"].toUpperCase()
+        var passWord = result["passWord"]
+        var language = result["language"]
+        var currentgame = result["game"];
+        var gametype = 'ngm';
+       iapiSetCallout('Login', calloutLogin);
+       iapiSetCallout('GetTemporaryAuthenticationToken', calloutGetTemporaryAuthenticationToken);
+
+        function login() {
+            iapiSetClientPlatform("mobile&deliveryPlatform=HTML5");
+            iapiLogin(userName,passWord, 1, language);
+        }
+        function calloutLogin(response) {
+            if (response.errorCode) {
+                alert("Login failed. " + response.playerMessage + " Error code: " + response.errorCode);
+            }
+            else {
+                iapiRequestTemporaryToken(1, '424', 'GamePlay');
+            }
+        }
+
+
+        function launchMobileClient(temptoken) {
+            if (gametype == "mps") {
+                var clientUrl=''+'?username=' + userName + '&temptoken=' + temptoken + '&game=' + currentgame + '&real=1';
+            } else if (gametype = "ngm") {
+                var clientUrl = 'http://hub.gm175888.com/igaming/' + '?gameId=' + currentgame + '&real=1' + '&username=' + userName + '&lang=' + language + '&tempToken=' + temptoken + '&lobby=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'lobby.html' + '&support=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'support.html' + '&logout=' + location.href.substring(0,location.href.lastIndexOf('/')+1) + 'logout.html';
+            }
+            document.location = clientUrl;}
+
+
+        function calloutGetTemporaryAuthenticationToken(response) {
+            if (response.errorCode) {
+                alert("Token failed. " + response.playerMessage + " Error code: " + response.errorCode);
+            }
+            else {
+                launchMobileClient(response.sessionToken.sessionToken);
+            }
+        }
+        </script>
+    
+    </head>
+<body>
+<style>
+    img
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 160px;
+        margin-top: -80px;
+        margin-left: -80px;
+    }
+</style>
+<img src="/images/load.gif" />
+<script>login()</script>
+</body>
+</html>

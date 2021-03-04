@@ -1,0 +1,53 @@
+<style>
+.alert-notice-warp .layui-layer-content {
+     font-size: 16px;
+     color: #333;
+     line-height: 30px;
+     text-indent:24px;
+     padding: 2px 12px;
+     height:324px !important;
+}
+.alert-notice-warp .layui-layer-content img {
+    float:left;
+}
+</style>
+<script type="text/javascript">
+if(0 === 0)
+{
+  if ($.cookie("alertShade",{path:"/"}) != 'ok') {
+    if (0 === 0) {
+      layer.open({
+        skin: 'alert-notice-warp',
+        title: "温馨提示",
+        shadeClose: false,
+        type: 1,
+        area: ['632px','450px'],
+        btn:'关闭',
+        content: ' <img style="width:100%;" src="/views/image/20200216/20200216092725092371-20190729061630401489-33.png" />',
+        yes:function () {
+          $.cookie("alertShade",'ok',{path:"/"});
+          layer.closeAll();
+        }
+      });
+    } else {
+      layer.open({
+        skin: 'alert-notice-warp',
+        title: "温馨提示",
+        shadeClose: false,
+        type: 1,
+        area: ['552px','264px'],
+        btn:'关闭',
+        content: '温馨提示',
+        yes:function () {
+          $.cookie("alertShade",'ok',{path:"/"});
+          layer.closeAll();
+        }
+      });
+    }
+    $(".layui-layer-close").on('click', function () {
+      $.cookie("alertShade",'ok',{path:"/"});
+      layer.closeAll();
+    })
+  }
+}
+</script>

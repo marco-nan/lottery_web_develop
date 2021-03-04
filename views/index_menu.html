@@ -1,0 +1,188 @@
+<script type="text/javascript">
+  function enterRoom () {
+    var token = $.cookie("token", {path: "/"}),
+      userType = $.cookie("userType", {path: "/"});
+    accountType = $.cookie("accountType", {path: "/"});
+    if (token == null || token == "") {
+      layer.alert('请登入后再进入聊天室!', {
+        skin: 'layui-layer-molv'
+        , closeBtn: 1
+        , anim: 1
+        , shadeClose: true
+        , btn: ['确定']
+        , icon: 6
+      });
+      return false;
+    }
+    window.open('/chat/index.html?web', 'newwindow', 'width=400, height=800, top=20, left=20, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no')
+  }
+</script>
+
+
+
+<style type="text/css">
+.sportNext{display: none;}
+.sportNextParent:hover .sportNext{display: block;}
+.nav-plus li span a:hover{background:red;}
+.liveVideoNext{display: none;}
+.liveVideoNextParent:hover .liveVideoNext{display: block;}
+
+.eleGameNext{display: none;}
+.eleGameNextParent:hover .eleGameNext{display: block;}
+
+.eleGameNext{display: none;}
+.chessClass:hover .eleGameNext{display: block;}
+
+.eleGameNext{display: none;}
+.sportsClass:hover .eleGameNext{display: block;}
+
+.elebuyuNext{
+display: none;
+}
+.elebuyuNextParent:hover .elebuyuNext{display: block;}
+.mobileClass a {
+    width: 100px !important;
+}
+.wVSy {
+    -webkit-animation: wVSy 1s ease-in infinite;
+    -moz-animation: wVSy 1s ease-in infinite;
+    -ms-animation: wVSy 1s ease-in infinite;
+    -o-animation: wVSy 1s ease-in infinite;
+    font-size: 15px;
+    font-weight: bold;
+}
+@keyframes wVSy {
+    0% {
+        color: blue;
+    }
+    100% {
+        color: red
+    }
+}
+@-webkit-keyframes wVSy {
+    0% {
+        color: blue;
+    }
+    100% {
+        color: red
+    }
+}
+@-moz-keyframes wVSy {
+    0% {
+        color: blue;
+    }
+    100% {
+        color: red
+    }
+}
+@-ms-keyframes wVSy {
+    0% {
+        color: blue;
+    }
+    100% {
+        color: red
+    }
+}
+@-o-keyframes wVSy {
+    0% {
+        color: blue;
+    }
+    100% {
+        color: red
+    }
+}
+</style>
+<ul class="nav-plus"> 
+   <li class=""> <a href="/views/main.html" class=""> <i class=""></i>首页</a></li> 
+   <li class="next"> <a href="/page/game-center.html" class=""> <i class=""></i>彩票大厅</a> <img class="hot_new" src="/views/img/hot_new.gif" /> 
+    <div class="GC_next"> 
+     <div class="GC_next_left"> 
+      <div class="GC_next_left_title">
+        官方玩法 
+       <span>官</span> 
+      </div> 
+      <div class="GC_next_left_content GCContent"></div> 
+     </div>
+     <div class="GC_next_right"> 
+      <div class="GC_next_right_title">
+        信用玩法 
+       <span>信</span> 
+      </div> 
+      <div class="GC_next_left_content XYContent"></div> 
+     </div> 
+    </div> </li> 
+
+
+
+ <li style="position: relative;"  class="liveVideoNextParent">
+        <a href="/views/html/LiveVideo.html"><i class=""></i>真人视讯</a>
+        <img class="hot_new" src="/views/img/hot_new.gif" />
+        <span class="liveVideoNext" style="position: absolute;height: auto;overflow: hidden;width: 100%;top: 42px;left: 0;background:#e4393c;z-index: 2;">
+	<a onclick="EnterLiveGame('bbin')" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">BBIN视讯</a>
+        <a onclick="EnterLiveGame('ag')" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">AG视讯</a>
+        <a onclick="EnterLiveGame('mg')" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">MG视讯</a>
+        <a onclick="EnterLiveGame('og')" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">OG视讯</a>
+        <a onclick="EnterLiveGame('cq9')" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">CQ9视讯</a>
+        <a onclick="EnterLiveGame('pt')" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">PT视讯</a>
+        <a onclick="EnterLiveGame('dg')" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">DG视讯</a>
+      </span>
+    </li>
+ <li style="position: relative;"  class="eleGameNextParent">
+        <a href="/views/html/electronicGame.html?gameType=bbin" class=""> <i class=""></i>电子游艺</a>
+        <img class="hot_new" src="/views/img/hot_new.gif" />
+        <span class="eleGameNext" style="position: absolute;height: auto;overflow: hidden;width: 100%;top: 42px;left: 0;background:#e4393c;z-index: 2;">
+        <a href="/views/html/electronicGame.html?gameType=mg" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">MG电子</a>
+        <a href="/views/html/electronicGame.html?gameType=pt" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">PT电子</a>
+        <a href="/views/html/electronicGame.html?gameType=agby" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">AG捕鱼</a>
+	<a href="/views/html/electronicGame.html?gameType=bbin" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">BBIN电子</a>
+        <a href="/views/html/electronicGame.html?gameType=ag" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">AG电子</a>
+        <a href="/views/html/electronicGame.html?gameType=cq9" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">CQ9电子</a>
+        <a href="/views/html/electronicGame.html?gameType=jdb" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">JDB电子</a>
+        <a href="/views/html/electronicGame.html?gameType=pg" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">PG电子</a>
+        <a href="/views/html/electronicGame.html?gameType=hb" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">HB电子</a>
+      </span>
+    </li>
+ <li style="position: relative;"  class="eleGameNextParent">
+      <a href="/views/html/chess.html" class="zrys"> <i class=""></i>棋牌对战</a>
+        <img class="hot_new" src="/views/img/hot_new.gif" />
+        <span class="eleGameNext" style="position: absolute;height: auto;overflow: hidden;width: 100%;top: 42px;left: 0;background:#e4393c;z-index: 2;">
+        <a href="/views/html/chess.html?gameType=jdb" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">JDB棋牌</a>
+        <a href="/views/html/chess.html?gameType=ky" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">开元棋牌</a>
+        <a href="/views/html/chess.html?gameType=rmg" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">大富翁棋牌</a>
+
+      </span>
+   </li>
+ <li style="position: relative;"  class="eleGameNextParent">
+        <a href="/views/html/sports.html" title="体育赛事" class="zrys"> <i class=""></i>体育赛事</a> 
+        <img class="hot_new" src="/views/img/hot_new.gif" />
+        <span class="eleGameNext" style="position: absolute;height: auto;overflow: hidden;width: 100%;top: 42px;left: 0;background:#e4393c;z-index: 2;">
+       <a target="_banlk" onclick="return islogin();" href="/liveRedirect.html?liveCode=ag&gameType=4" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">AG体育</a>
+<a onclick="EnterLiveGame('bb')" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">BB体育</a>
+        <a onclick="EnterLiveGame('sb')" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">沙巴体育</a>
+       <a onclick="EnterLiveGame('bl')" style="display: inline-block;width: 100%;height: 32px;line-height: 32px;cursor: pointer;">皇冠体育</a>
+      </span>
+    </li>
+<li>
+      <a onclick="enterRoom()"><i class=""></i>聊天室</a>
+      <img class="hot_new" src="/views/img/hot_new.gif">
+</li>
+
+   <li class="">
+      <a href="/views/html/youhui.html" class=""> <i class=""></i>优惠活动</a>
+      <img class="hot_new" src="/views/img/hot_new.gif" /></li> 
+	  <li class="">
+        <a href="/views/html/trend.html" class="">
+            <i class=""></i>走势图表</a> 
+        </a>
+    </li>
+<li class="mobileClass">
+        <a href="/views/html/mobile-lottery.html" class="">
+            <i class="fa fa-mobile"></i>手机购彩</a> <img class="hot_new" src="/views/img/hot_new.gif">
+        
+    </li>
+    <li class="">
+        <a href="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=369044798&site=qq&menu=yes','','height=600, width=1000,top=0, left=0')" class="qq_service">
+            <i class=""></i></a> 
+        </a>
+    </li>
+  </ul>

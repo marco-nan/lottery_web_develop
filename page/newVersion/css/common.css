@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+@media only screen and (min-width: 720px) {
+  .main .formLogin {
+  	position: absolute;
+  	left: 50%;
+  	width: 480px !important;
+  	margin-left: -240px !important;
+  }
+  .main .formLogin ul {
+  	height: .6rem !important;
+  	line-height: .6rem !important;
+  }
+  .main .formLogin > input[type="button"] {
+  	height: .6rem !important;
+  	line-height: .6rem !important;
+  	font-size: 24px !important;
+  }
+  .main .formLogin ul li:nth-child(2) input {
+  	font-size: .2rem !important;
+  }
+  .header ul {
+	  width: 480px !important;
+	  position: absolute;
+	  left: 50%;
+	  margin-left: -240px !important;
+  }
+}
+
+html, body {
+	background-color: #f8f8f8;
+}
+.header {
+	height: 4.2rem;
+	width: 100%;
+	background: url('../img/indexBanner.png') no-repeat center top/ 100% 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.header ul {
+	margin-top: .4rem;
+	width: 80%;
+	margin-left: 10%;
+	background-color: rgba(255, 255, 255, 0.88);
+	border-radius: 10px;
+	padding-bottom: 16px;
+}
+
+.header li {
+  text-align: center;
+  padding: 4px 0;
+  color: #000000;
+  font-size: .26rem;
+  font-weight: 500;
+}
+.header li:nth-child(1){
+  color: red;
+	border-bottom: 1px solid #999999;
+	padding: 10px 0;
+	font-weight: bold;
+}
+.header li:nth-child(2),.header li:nth-child(3),.header li:nth-child(4),.header li:nth-child(5),.header li:nth-child(6),.header li:nth-child(7){
+    font-size: .2rem;
+	text-align: left;
+    padding: 4px 24px;
+}
+.header li:nth-child(5),.header li:nth-child(6) {
+	color: red;
+	padding: 0 24px;
+}
+.header li:nth-child(7) {
+	padding: 6px 24px 12px;
+}
+.header li span {
+	color: #000;
+	box-shadow: 0 0 9px #160303;
+}
+
+.main {
+	height: auto;
+	padding: 32px 0;
+	width: 100%;
+	position: relative;
+}
+
+.main .formLogin {
+	width: 80%;
+	margin-left: 10%;
+	min-height: 3rem;
+}
+
+.main .formLogin ul {
+  width: 100%;
+  height: .8rem;
+  line-height: .8rem;
+  overflow: hidden;
+  display: flex;
+  background: #fff;
+  box-shadow: 0px 0px 12px #cdcdcd;
+  border-radius: .1rem;
+  margin-bottom: 12px;
+}
+
+.main .formLogin ul li {
+  float: left;
+  font-size: .2rem;
+  text-align: center;
+}
+
+.main .formLogin ul li:nth-child(1) {
+	flex: 3;
+	border-right: 1px solid #f2f2f2;
+}
+.main .formLogin ul li:nth-child(2) {
+	flex: 7;
+	position: relative;
+}
+.main .formLogin ul li:nth-child(2) input {
+	width: 100%;
+	height: 100%;
+	text-indent: 12px;
+	color: #000;
+	border: 0;
+	text-align: left;
+	font-size: .24rem;
+}
+.main .formLogin ul li:nth-child(2) img {
+	cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+.main .formLogin > input[type="button"]{
+  color: #fff;
+  width: 100%;
+  background-color: #fe5805;
+  height: .8rem;
+  border: 0;
+  border-radius: 6px;
+  font-size: .3rem;
+  margin-bottom: 8px;
+}
+.main .formLogin > input[type="button"].reg {
+	color: #333;
+	background-color: #fff;
+	border: 1px solid #e1e0e0;
+}
+.alert-style {
+ padding: 18px;
+}
+.alert-style > li:nth-child(1) {
+	color: #000;font-size: .2rem
+}
+.alert-style > li:nth-child(2) {
+	color: red;
+	font-size: .4rem;
+	text-align: center;
+	padding: 0 4px;
+}
+#confirmPasswordWrap {
+	display: none;
+}

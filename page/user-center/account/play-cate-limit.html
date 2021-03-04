@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>彩种限额</title>
+  <!--#include virtual="/page/include/user-center.html"-->
+  <!--#include virtual="/page/include/table.html"-->
+  <script src="/js/user-center/account/play-cate-limit.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="container-fluid">
+  <form id="queryForm" class="form-inline m-t-md">
+    <div class="form-group m-r-md m-b-xs">
+      <label for="gameId">彩种：</label>
+      <select id="gameId" name="gameId" class="form-control input-sm"></select>
+    </div>
+  </form>
+  <div class="table-responsive">
+    <table id="table" class="table table-bordered table-condensed">
+      <thead class="thead-default">
+      <tr>
+        <th>玩法</th>
+        <th>单注最低</th>
+        <th>单注最高</th>
+        <th>单项最高</th>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

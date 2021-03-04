@@ -1,0 +1,225 @@
+<style>
+    .hoverBg:hover {
+        color: red;
+        background-position: -50px;
+    }
+
+    .red {
+        float: left;
+        clear: left;
+        width: 120px;
+        height: 5px;
+    }
+
+    #swatch {
+
+        width: 120px;
+        height: 100px;
+        margin-top: 18px;
+        margin-left: 350px;
+        background-image: none;
+    }
+
+    .red .ui-slider-range {
+        background: #ef2929;
+    }
+
+    .red .ui-slider-handle {
+        border-color: #ef2929;
+    }
+
+    .ui-slider-range {
+        height: 5px !important;
+        outline: none !important;
+    }
+
+    .red .ui-slider-handle {
+        border: none
+    }
+
+</style>
+<div class="content_Fr_left_head" style="overflow:hidden">
+
+    <div style="float:left;margin: 0 0 0 5px;width: 215px;" class="rebateclass">
+        <span class="dolor" style="display: none"></span>
+        <span id="amount" style="width:24px"><a style="color: #333;" class="proportion">0</a>%</span>
+        <span class="minues" onclick="rebateCore.minuesClick()"
+              style="border:none;margin-top: 8px;margin-right: -10px;"></span>
+        <div class="span6" style="width: 120px">
+            <div class="red"></div>
+        </div>
+        <span class="Plus" onclick="rebateCore.plusClick()"
+              style="margin-top: 14px;background: url(/images/jia.png) no-repeat center;"></span>
+
+    </div>
+    <span class="amountBindVal" style="line-height: 28px;background: none;border: none;padding: 0px"><input
+            type="checkbox" id="checkMoney" name="checkMoney" onclick="checkMoneyChange(this)">预设</span>
+    <input type="text" style="height: 30px;width: 100px;" name="nQuickMoney" id="quickMoney" placeholder="请输入金额"
+           class="CheckMoney" oninput="quickMoneyChange(this)" onkeyup="clearNoNum(this)">
+    <span onmousemove="moveOnChips('50')" onmouseout="outOnChips('50')" onmousedown="selectChipsBet('50')"
+          onmouseup="setChips('50')" class="hoverBg"
+          style="cursor: pointer;background-image: url(/page/game/img/chip50.png);width: 50px;border: none;"
+          id="C50"></span>
+    <span onmousemove="moveOnChips('100')" onmouseout="outOnChips('100')" onmousedown="selectChipsBet('100')"
+          onmouseup="setChips('100')" class="hoverBg"
+          style="cursor: pointer;background-image: url(/page/game/img/chip100.png);width: 50px;border: none;"
+          id="C100"></span>
+    <span onmousemove="moveOnChips('500')" onmouseout="outOnChips('500')" onmousedown="selectChipsBet('500')"
+          onmouseup="setChips('500')" class="hoverBg"
+          style="cursor: pointer;background-image: url(/page/game/img/chip500.png);width: 50px;border: none;"
+          id="C500"></span>
+    <span onmousemove="moveOnChips('1000')" onmouseout="outOnChips('1000')" onmousedown="selectChipsBet('1000')"
+          onmouseup="setChips('1000')" class="hoverBg"
+          style="cursor: pointer;background-image: url(/page/game/img/chip1000.png);width: 50px;border: none;"
+          id="C1000"></span>
+    <span onmousemove="moveOnChips('5000')" onmouseout="outOnChips('5000')" onmousedown="selectChipsBet('5000')"
+          onmouseup="setChips('5000')" class="hoverBg"
+          style="cursor: pointer;background-image: url(/page/game/img/chip5000.png);width: 50px;border: none;"
+          id="C5000"></span>
+
+    <button class="resert_money" id="butResert" onclick="moneyReset()">重置</button>
+    <button class="sub_Single_Note" onclick="betContent()" style="padding: 7px 10px;">提交注单</button>
+</div>
+<script>
+    $(function () {
+//    $("input[type=text]").onlyNum();
+        var money = $.cookie("quickMoney", {path: '/'});
+        var checkbox = $.cookie('checkMoney', {path: '/'});
+        if (money != '' && checkbox == 'true') {
+            $("input[name='nQuickMoney']").val(money);
+            $("[name='checkMoney']").attr("checked", 'true');
+        } else {
+            $("input[name='nQuickMoney']").val('');
+            $("[name='checkMoney']").attr("checked", false);
+        }
+    });
+
+    function moneyReset() {
+        $("input[name='nQuickMoney']").val('');
+        gameManager.cancel();
+    }
+
+    function setChips(chipNums) {
+        $("#C" + chipNums).css({"backgroundPosition": "-50px 0px"});
+    }
+
+    function moveOnChips(chipNums) {
+        $("#C" + chipNums).css({"backgroundPosition": "-50px 0px"});
+    }
+
+    function outOnChips(chipNums) {
+        $("#C50").css({"backgroundPosition": "0px 0px"});
+        $("#C100").css({"backgroundPosition": "0px 0px"});
+        $("#C500").css({"backgroundPosition": "0px 0px"});
+        $("#C1000").css({"backgroundPosition": "0px 0px"});
+        $("#C5000").css({"backgroundPosition": "0px 0px"});
+        $("#C10000").css({"backgroundPosition": "0px 0px"});
+        $("#C" + chipNums).css({"backgroundPosition": "-50px 0px"});
+    }
+
+    var chipConut = 0;
+
+    function setChips(chipNums) {
+        $("#C" + chipNums).css({"backgroundPosition": "-50px 0px"});
+    }
+
+    function clearNoNum(obj) {
+        obj.value = obj.value.replace(/[^\d.]/g, "");  //清除“数字”和“.”以外的字符
+        obj.value = obj.value.replace(/\.{2,}/g, "."); //只保留第一个. 清除多余的
+        obj.value = obj.value.replace(".", "$#$").replace(/\./g, "").replace("$#$", ".");
+        obj.value = obj.value.replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3');//只能输入两个小数
+        if (obj.value.indexOf(".") < 0 && obj.value != "") {//以上已经过滤，此处控制的是如果没有小数点，首位不能为类似于 01、02的金额
+            obj.value = parseFloat(obj.value);
+        }
+        check();
+    }
+
+    function selectChipsBet(chipNum) {
+        if ($("input[name='nQuickMoney']").val() != "") {
+            chipConut = parseInt($("input[name='nQuickMoney']").val()) + parseInt(chipNum);
+            $("input[name='nQuickMoney']").val(chipConut);
+        } else {
+            chipConut = chipNum;
+            $("input[name='nQuickMoney']").val(chipConut);
+        }
+        var x = $("input[type='checkbox']").prop("checked");
+        if (x) {
+            addcookie();
+        } else {
+            removecookie();
+        }
+        quickMoneyAddChange(chipConut);
+        $("#C50").css({"backgroundPosition": "0px 0px"});
+        $("#C100").css({"backgroundPosition": "0px 0px"});
+        $("#C500").css({"backgroundPosition": "0px 0px"});
+        $("#C1000").css({"backgroundPosition": "0px 0px"});
+        $("#C5000").css({"backgroundPosition": "0px 0px"});
+        $("#C10000").css({"backgroundPosition": "0px 0px"});
+        $("#C" + chipNum).css({"backgroundPosition": "-100px 0px"});
+    }
+
+    function check() {
+//    if($("input[name='nQuickMoney']").val()==0||$("input[name='nQuickMoney']").val()=='0'){
+//        $("input[name='nQuickMoney']").val('')
+//    }
+        var x = $.cookie('checkMoney', {path: '/'});
+        if (x) {
+//      alert(3)
+            addcookie();
+
+        } else {
+//      alert(4)
+            removecookie();
+        }
+    }
+
+
+    function checkMoneyChange(obj) {
+        if ($(obj).attr("checked")) {
+            $("[name='checkMoney']").attr("checked", 'true');
+            addcookie();
+        } else {
+            $("[name='checkMoney']").removeAttr("checked");
+            removecookie();
+        }
+    }
+
+    function removecookie() {
+        $.cookie('checkMoney', 'false', {path: '/'});
+        $.cookie("quickMoney", '', {path: '/'});
+    }
+
+    function addcookie() {
+        var money = $("input[name='nQuickMoney']").val();
+        $.cookie("quickMoney", money, {path: '/'});
+        var x = $("input[type='checkbox']").prop("checked");
+        if (x) $.cookie('checkMoney', 'true', {path: '/'});
+        else $.cookie('checkMoney', 'false', {path: '/'});
+
+    }
+
+
+    $.fn.onlyNum = function () {
+        $(this).keypress(function (event) {
+            var eventObj = event || e;
+            var keyCode = eventObj.keyCode || eventObj.which;
+            if ((keyCode >= 48 && keyCode <= 57) || keyCode === 46) {
+                return true;
+            }
+            else
+                return false;
+        }).focus(function () {
+            //禁用输入法
+            this.style.imeMode = 'disabled';
+        }).bind("paste", function () {
+            //获取剪切板的内容
+            var clipboard = window.clipboardData.getData("Text");
+            if (/^\d+$/.test(clipboard)) {
+                return true;
+            }
+            else
+                return false;
+        });
+    };
+    rebateCore.init();
+</script>

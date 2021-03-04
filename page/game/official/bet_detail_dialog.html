@@ -1,0 +1,319 @@
+<meta charset="utf-8">
+<style type="text/css">
+	body,html{
+	    padding: 0px;
+		margin: 0px;
+		overflow: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	.popup_tab{
+		text-align: center;
+    	padding: 10px 0;
+		background-color: #484544;
+		width: 100%;
+		height: 38px;
+		margin-top: -1px;
+	}
+	.popup_tab a.active {
+	    background: #b62929;
+	}
+
+	.popup_tab a {
+	    color: #fff;
+	    text-shadow: 0 1px 1px #000;
+	    color: #fff;
+    	display: inline-block;
+	    font-size: 15px;
+        padding: 8px 25px;
+	    background-color: #393736;
+	    cursor: pointer;
+	}
+	.popup_tab a:nth-child(1){
+		    border-radius: 6px 0 0 6px;
+	}
+	.popup_tab a:nth-child(2){
+		    border-radius: 0px 6px 6px 0;
+	}
+	
+	.datail_form{
+	    height: 140px;
+	    width: 100%;
+	    background: #484544;
+	    color: #fff;
+	    font-size: 12px;
+	}
+
+	.datail_form_zi{
+		float: left;
+		height: 140px;
+		width: 33.3%;
+	}
+	.datail_form_zi ul{
+		padding: 10px;
+	}
+	.datail_form_zi ul li{
+		height: 24px;
+		border-right: 1px solid #999;
+		width: 100%;
+
+	}
+	.datail_right ul li {
+		border:none;
+	}
+	.datail_right ul li:last-child span:last-child{
+		color: #908e8e;
+	}
+	.datail_form_zi ul li span:nth-child(1){
+		float: left;
+	}
+	.datail_form_zi ul li span:nth-child(2){
+		float: right;
+		margin-right: 10px;
+	}
+	.BettingContent{
+		width: 100%;
+		height: 90px;
+		background-color: #484544;
+	}
+	.BettingContent_top{
+		height: 60px;
+		width: 100%;
+		background-color: #fff;
+		border-radius: 6px;
+	}
+	.BettingContent_under{
+		height: 30px;
+		line-height: 30px;
+		width: 100%;
+		text-align: center;
+		color: #fff;
+		font-size: 12px;
+	}
+	.BettingContent_left{
+		float: left;
+		width: 14%;
+		height: 50px;
+		margin-top: 5px;
+		line-height: 50px;
+		text-align: center;
+		color: #000;
+		border-right: 1px solid #999;
+	}
+	.BettingContent_right{
+		float: left;
+		width: 85%;
+		height: 60px;
+		font-size: 12px;
+		line-height: 24px;
+		font-size: 12px;
+		text-indent:12px;
+		word-break: break-all;
+		overflow-y: scroll;
+	}
+	.popupTitle{
+		width: 100%;
+		height: 28px;
+		background-color: #d5dfe2;
+		table-layout:fixed ;
+	}
+	.popupTitle tr{
+		width: 100%;
+	}
+	.popupTitle tr td{
+		width: 25%;
+		text-align: center;
+		font-size: 12px;
+	    color: #000 !important;
+	    font-weight: 700;
+	}
+	.scllorWrap{
+		height: 182px;
+		width: 100%;
+		overflow-x:hidden;
+	}
+	ul{
+		margin: 0px;
+		padding: 0px;
+	}
+	li{
+		list-style: none;
+	}
+	.scllorWrap ul{
+		height: 182px;
+		width: 100%;
+	}
+	.scllorWrap ul li{
+		height: 30px;
+		width: 100%;
+		border-bottom: 1px solid #ddd;
+	}
+	.scllorWrap ul li span {
+		width: 20%;
+		float: left;
+		height:30px;
+		text-align:center;
+		line-height: 30px;
+		color: #333;
+		font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+	}
+	.scllorWrap ul li span:nth-child(1){
+		position: relative;
+		text-indent: 24px;
+	}
+	.checkboxTrue{
+	    width: 20px;
+	    height: 20px;
+	    border: 1px solid #ddd;
+	    position: absolute;
+	    top: 4px;
+	    left: 50px;
+	    background-color: #fff;
+	    border-radius: 4px;
+	    /*background-image: url(img/check_true.png);*/
+	    background-repeat: no-repeat;
+	    background-position: center;
+	}
+	.checkboxTrueInput{
+		width: 20px;
+	    height: 20px;
+	    border: 1px solid #ddd;
+	    position: absolute;
+	    top: 4px;
+	    left: 50px;
+	    z-index:1;
+	}
+	.scllorWrap ul li span input[type="text"]
+	{
+	
+	    width: 69px;
+	    border-radius: 4px;
+	    border: 1px solid #ddd;
+	    outline: none;
+	    text-indent: 10px;
+	}
+	.scllorWrap ul li span input[type="checkbox"]{
+		opacity: 0;
+	}
+	.peishu{
+		margin: 0 4px;
+	}
+	.GenerateAppend{
+		margin-left: 264px;
+		display:inline-block;
+		width: 156px;
+		height: 34px;
+		background:url(images/GenerateAppend-bg1.png);
+		background-repeat: no-repeat;
+		background-position: center;		
+	    border-radius: 6px;
+	    cursor: pointer;
+	}
+	.GenerateAppend:hover{
+		background:url(images/GenerateAppend-bg2.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	.status-win { color: #e71010 !important; }
+	.status-lose { color: #908e8e !important; }
+	.status-unlottery { color: #07d00b !important; }
+	.status-undo { color: #2c77ba !important; }
+	.status-hasundo { color: #906944 !important; }
+	.status-delete { color: #b9cca6 !important; }
+	.status-lottery { color: #e2bc03 !important; }
+	span.record-status {
+		font-weight: 700;
+	}
+</style>
+
+<div id="content"></div>
+<script type="text/html" id="betDetailDialogTpl">
+	<div class="datail_form clear">
+		<div class="datail_left datail_form_zi">
+			<ul>
+				<li><span>用户名</span><span>{{account}}</span></li>
+				<li><span>注单编号</span><span>{{orderNo}}</span></li>
+				<li><span>倍数模式</span><span>{{multiple}}倍，{{betModel == 0 ? "元" : betModel == 1 ? "角":"分"}}</span></li>
+				<li><span>奖期</span><span>{{turnNum}}</span></li>
+				<li><span>投注注数</span><span>{{totalNums}} 注</span></li>
+			</ul>
+		</div>
+		<div class="datail_middle datail_form_zi">
+			<ul>
+				<li><span>游戏</span><span>{{gameName}}</span></li>
+				<li><span>投单时间</span><span>{{addTime}}</span></li>
+				<li><span>注单奖金</span><span>{{status == 1 && result == 1 ? reward : 0}}元</span></li>
+				<li><span>开奖内容</span><span>{{status == 1 ? openNum : '未开奖'}}</span></li>
+
+			</ul>
+		</div>
+		<div class="datail_right datail_form_zi">
+			<ul>
+				<li><span>玩法</span><span>{{cateName}}</span></li>
+				<li><span>总金额</span><span>{{totalMoney}}元</span></li>
+				<li><span>动态返点</span><span>{{rebateMoney}}元</span></li>
+				<li><span>订单状态</span>
+					<span>
+					{{if status === 0}}<span class="record-status status-lottery">未开奖</span>
+					{{else if status == 1 && result == 0}}<span class="record-status status-lose">未中奖</span>
+					{{else if status == 1 && result == 1}}<span class="record-status status-win">已派奖</span>
+					{{else if status == 1 && result == 2}}<span class="record-status status-nowin">和局</span>
+					{{else if status == 2}}<span class="record-status status-hasundo">撤销</span>
+					{{else if status == 3}}<span class="record-status status-delete">删除</span>
+					{{else if status == 4}}<span class="record-status status-delete">追号停止</span>
+					{{/if}}
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="BettingContent">
+		<div class="BettingContent_top">
+			<div class="BettingContent_left">
+				投注内容
+			</div>
+			<div class="BettingContent_right">
+				{{showContent}}
+			</div>
+		</div>
+		<div class="BettingContent_under">
+			可能中奖情况
+		</div>
+	</div>
+
+	<table class="popupTitle" >
+		<tr>
+			<td>奖级名称</td>
+			<td>号码</td>
+			<td>倍数</td>
+			<td>奖金</td>
+			<td>中奖奖金</td>
+		</tr>
+	</table>
+
+	<div class="scllorWrap">
+		<ul style="height: 150px;width: 100%;overflow-x: hidden;">
+			{{each canWinList canWinInfo}}
+			<li>
+				<span>{{canWinInfo.name}}</span>
+				<span>{{canWinInfo.betInfo}}</span>
+				<span>{{multiple}}</span>
+				<span>{{canWinInfo.odds}}</span>
+				<span>{{canWinInfo.canWinMoney}}</span>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+</script>
+<script type="text/javascript" src="/js/lib/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/lib/template-web.js"></script>
+<script type="text/javascript">
+	function setBetContent(betOrder) {
+        $('#content').html(template("betDetailDialogTpl", betOrder));
+    }
+</script>

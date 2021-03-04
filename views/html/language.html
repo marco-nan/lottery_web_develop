@@ -1,0 +1,83 @@
+<style type="text/css">
+    .lang.active {
+        height: auto;
+    }
+    .lang {
+        position: relative;
+        background: #e4393c;
+        left: 10px;
+        z-index: 10;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+        border-radius: 4px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .lang>span{
+        color: #fff3f0;
+        padding-left: 10px;
+    }
+    .lang .mps-dropdown-arrow {
+        width: 0px;
+        height: 0px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff3f0;
+        position: absolute;
+        right: 5px;
+        margin-top: 13px;
+        position: absolute;
+    }
+    .lang>.lang-item {
+        line-height: 37px;
+        color: #fff;
+        padding-left: 10px;
+    }
+    .lang>.lang-item:hover {
+        background-color: #fff;
+        background-color: hsla(0,0%,100%,.2);
+    }
+    .lang:hover{
+        background-color:#CC0033;
+    }
+
+
+/*    登录后*/
+    .logined-box .lang{
+        float: right;
+        top: -3px;
+        width: 90px;
+        left: 0;
+        height: 28px;
+        line-height: 28px;
+    }
+    .logined-box .lang .mps-dropdown-arrow{
+        margin-top:12px;
+    }
+
+
+</style>
+
+<div class="lang">
+    <span>简体中文</span>
+    <i class="mps-dropdown-arrow"></i>
+    <div class="lang-item lang_zh">简体中文</div>
+    <div class="lang-item lang_en">English</div>
+    <div class="lang-item">Malay</div>
+</div>
+
+<!--<script type="text/javascript" src="/views/js/i18n/js/jquery-3.3.1.js"></script>-->
+<script type="text/javascript" src="/views/js/i18n/js/jquery.i18n.properties-min-1.0.9.js"></script>
+<script type="text/javascript" src="/views/js/i18n/js/language.js"></script>
+
+<script type="text/javascript">
+    $(".lang").click(function(){
+        $(".lang").toggleClass("active")
+    })
+</script>

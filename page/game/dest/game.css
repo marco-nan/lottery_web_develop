@@ -1,0 +1,249 @@
+/* 两面长龙 */
+.play-bd .table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+	border-right: 1px solid #a69b91;
+	border-bottom: 1px solid #a69b91;
+	border-left: 1px solid #a69b91;
+	width: 100%;
+	background: #fff;
+	text-align: center;
+}
+.play-bd .table td {
+	color: #333;
+}
+
+.play-bd .table td, .table th {
+	border-top: 1px solid #a69b91;
+	border-right: 1px solid #a69b91;
+	border-bottom: 1px solid #a69b91;
+	font-size: inherit;
+	margin: 0;
+	overflow: visible;
+	padding: 4px;
+}
+
+.play-bd .table thead, .table .thead {
+	background: #a69b91;
+	color: #fff;
+	vertical-align: bottom;
+}
+
+.play-bd .table thead th, .table .thead th {
+	text-align: center;
+	padding: 0.3em 1em;
+	font-weight: bold;
+	border: none;
+}
+
+.play-bd tr {
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
+
+/* 玩法 */
+.betarea2_pl {
+	line-height: 30px;
+	color: #333;
+	font-size: 14px;
+	text-align: center;
+}
+
+.betarea2_pl span {
+	color: red;
+	font-weight: normal;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+/* 时时彩组选 */
+ol, ul {
+	list-style: none;
+}
+
+.betarea2 {
+	margin: 22px 0px 0px 0px;
+	width: 1500px;
+}
+
+.betarea2 .font {
+	float: left;
+	width: 97px;
+	padding-left: 18px;
+}
+
+.betarea2 .font .r1 {
+	background-position: 0 -478px !important;
+    padding: 0 1px 1px 0;
+    color: #fff;
+    margin-top: 6px;
+    left: 0;
+    top: 0;
+    height:28px;
+    /* height: 28px; */
+    margin: 0px 0px 0;
+    padding: 0px 24px 1px 17px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+.betarea2 .font .r2 {
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+}
+
+.betarea2 .ball_list {
+	float: left;
+	width: 1000px;
+	height: 47px;
+	cursor: pointer;
+	margin-left:15px;
+}
+
+.betarea2 .ball_list li {
+	float: left;
+	width: 46px;
+	height: 44px;
+	line-height: 47px;
+	background: url(/page/game/official/images/num.png) no-repeat;
+	margin-right: 14px;
+	font-size: 14px;
+	color: Black;
+	font-weight: normal;
+	text-align: center;
+}
+.beijing { background: url(../img/base-ico.png) no-repeat; 
+	 background-position: 11px -477px !important;
+    padding: 0 1px 1px 0;
+    color: #fff;
+    margin-top: 6px;}
+.betarea2 .ball_list li.danger {
+	float: left;
+	width: 46px;
+	height: 44px;
+	line-height: 47px;
+	background: url(/page/game/official/images/num.png) no-repeat;
+	font-size: 14px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	background-position: 0px -50px;
+}
+.saixuan{
+	font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color:#fff;
+}
+.betarea2 .ball_list .li0 {
+	background: url(/page/game/img/tab.png) no-repeat;
+	width: 77px;
+	height: 35px;
+	line-height: 35px;
+	position: relative;
+	margin-top:5px;
+}
+
+.betarea2 .ball_list .li0 table {
+	background-color: #eae196;
+	border: 2px solid #eae196;
+	position: absolute;
+	top: -23px;
+	left: -2px;
+	display: none;
+}
+
+.betarea2 .ball_list .li0 td {
+	height: 24px;
+	width: 24px;
+	text-align: center;
+	font-size: 12px;
+	background-color: white;
+	line-height: 24px;
+	border: 1px solid #eae196;
+}
+
+.betarea2 .ball_list .li0 td a {
+	display: block;
+	width: 24px;
+	height: 24px;
+	border: 1px solid black;
+	color: #181818;
+	text-decoration: none;
+}
+
+.betarea2 .ball_list .li0 td a:hover {
+	border: 1px solid #684405;
+	color: #181818;
+	background: #ff9001;
+	color: White;
+}
+
+.ball_row1 li {
+	margin-top: 0px;
+	margin-left: 10px;
+}
+
+.ball_row1 .ball_list {
+	
+	height: 80px;
+}
+
+.ball_row2 {
+	clear: both
+}
+
+.ball_row2 li {
+	margin-top: 0px;
+	margin-left: 10px;
+}
+
+.ball_row2 .ball_list {
+	
+	height: 80px;
+}
+
+.ball_row3 {
+	clear: both
+}
+
+.ball_row3 li {
+	margin-top: 0px;
+	margin-left: 10px;
+}
+
+.ball_row3 .ball_list {
+	
+	height: 80px;
+}
+
+/* 六合彩快捷下注 */
+div.kssr{font-size:8px; height: auto; width: 200px; display: block; top: 2px; left:816px;  background: #f1f1f1; border: 1px solid #ccc;}
+#QuickBar fieldset { margin: 2px; padding: 2px; border: 1px dotted black; }
+#QuickBar input { margin: 2px; }
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    padding: 0;
+}
+legend {
+    font-size:12px;
+     margin-bottom: 5px;
+ 
+}
+fieldset {
+        border: 0;
+  
+}
+
+.waring {
+	background-color: #c4dff2;
+}
+.data-focus .xy{ display: block; width: 16px; height: 16px; background-image: url(/page/game/img/x.png); background-repeat: no-repeat; background-position: center center; margin:0 auto;text-align:center }
+.danger .xy{ background-image: url(/page/game/img/y.png); background-repeat: no-repeat; background-position: center center; }
+.vis_hid{visibility:hidden}

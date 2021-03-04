@@ -1,0 +1,140 @@
+
+
+<!--
+  ***
+  **   玩法  内容
+  *
+-->
+
+<div class="play-wrap">
+    <div class="play-content">
+         <div class="play_left">
+             <div class="lbar"><span>玩法规则</span></div>
+             <div class="play_list" style="">
+             <ul>
+               <li onclick="play_mathods_tab(this,'game-1')" class="game-1 current">
+                 <a >
+                   福彩3D
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-2')" class="game-2">
+                 <a >
+                   排列三
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-5')" class="game-5">
+                 <a>
+                   重庆时时彩
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-4')" class="game-4">
+                 <a >
+                   天津时时彩
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-7')" class="game-7">
+                 <a >
+                   新疆时时彩
+                 </a>
+               </li>
+               <li  onclick="play_mathods_tab(this,'game-3')" class="game-3">
+                 <a >
+                   上海时时乐
+                 </a>
+               </li>
+               <li  onclick="play_mathods_tab(this,'game-x')" class="game-12">
+                 <a >
+                   山东11选5
+                 </a>
+               </li>
+               <li  onclick="play_mathods_tab(this,'game-13')" class="game-13">
+                 <a >
+                   上海11选5
+                 </a>
+               </li>
+               <li  onclick="play_mathods_tab(this,'game-x')" class="game-14">
+                 <a >
+                   江西11选5
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-x')" class="game-15">
+                 <a >
+                   广东11选5
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-9')" class="game-9">
+                 <a >
+                   北京PK拾
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-10')" class="game-10">
+                 <a >
+                   江苏快三
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-11')" class="game-11">
+                 <a >
+                   安徽快三
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-17')" class="game-17">
+                 <a >
+                   广西快三
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-18')" class="game-18">
+                 <a >
+                   香港⑥合彩
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-41')" class="game-41">
+                 <a >
+                   北京28
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-42')" class="game-42">
+                 <a>
+                   幸运28
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-51')" class="game-51">
+                 <a >
+                   三分时时彩
+                 </a>
+               </li>
+               <li onclick="play_mathods_tab(this,'game-52')" class="game-52">
+                 <a >
+                   三分PK拾
+                 </a>
+               </li>
+
+             </ul>
+           </div>
+         </div>
+          <!--  规则  -->
+          <div class="play_right">
+               <!--#include virtual="/views/html/rules.html"-->
+          </div>
+
+    </div>
+</div>
+<div class="clear"></div>
+
+<!-- 切换彩票规则 -->
+<script type="text/javascript" src="/views/js/index.js"></script>
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>
+<script type="text/javascript">
+
+  var game = getQueryString('game');
+  if (game != null) {
+
+      $('.play_list li').removeClass('current');
+      $(".game-"+game).addClass('current');
+      $('.rule-right').hide();
+      if(game=="15"|| game=="14" || game=="12"){
+          $("#game-x").show();
+      }
+      $("#game-" + game).show();
+  }
+
+</script>

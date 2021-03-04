@@ -1,0 +1,44 @@
+<script type="text/javascript">
+	
+	$(document).ready(function(){  
+		getNoticeRoll();
+	});
+
+	function getNoticeRoll() {
+		var str = "";
+		//获取公告的JSON数据
+		var noticeJson = HttpUtil.ajaxAsync(HttpUtil.baseUrl+"/data/json/notice.json");
+		if(noticeJson!=null&&noticeJson!="") {
+			if(noticeJson.roll_notice!=null&&noticeJson.roll_notice!="") {
+				str = noticeJson.roll_notice.noticeContent+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			}
+		}
+		$("#notice_roll_show").html(str);
+	}
+	
+	function notice_data() {
+	    window.open('/page/include/notice_roll_history.html', "History", "width=816,height=500,top=0,left=0,status=no,toolbar=no,scrollbars=yes,resizable=no,personalbar=no");
+	}
+</script>
+
+<!-- 跑马灯 -->
+<div class="zoumaLight">
+    <div class="zoumaLight_left">
+    </div>
+    <div class="zoumaLight_right">
+        <marquee scrollamount="5" scrolldelay="1" direction="left" onmouseover="this.stop();" onmouseout="this.start();" onclick="HotNewsHistory();" style="cursor: pointer;">
+                <a class="msg-col" onclick="notice_data();" href="javascript:void(0)" id="notice_roll_show"></a>
+
+        </marquee>
+    </div>
+</div>
+
+<!--
+<div class="indexgonggao">
+    <div class="w1000">
+        <marquee id="msgNews" scrollamount="4" scrolldelay="100" direction="left">
+            <nobr>
+            	<a class="msg-col" onclick="notice_data();" href="javascript:void(0)" id="notice_roll_show"></a></nobr>
+		</marquee>
+    </div>
+</div>-->

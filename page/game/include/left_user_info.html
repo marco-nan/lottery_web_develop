@@ -1,0 +1,24 @@
+<div class="userbox">
+    <ul class="stc_1 clear">
+        <li class="mane"><span class="stc_t">账号：</span><span class="stc_c" id="userName"></span></li>
+        <li class="balance">
+            <span class="stc_t">余额：</span><span class="stc_c" id="userMoney" style="cursor:pointer" onclick="refreshBalance()"></span>
+
+        </li>
+    </ul>
+</div>
+<div class="acc-links clear" id="user-center-id">
+    <a title="在线存款" class="btn-navacc-deposit" href="javascript:void(0)" onclick="openModalX('rech')" id="user-deposit"><span title="在线存款">充值</span></a>
+    <a title="在线取款" class="btn-navacc-withdraw" href="javascript:void(0)" onclick="openModalX('withdraw')" id="user-withdraw"><span title="在线取款">提现</span></a>
+    <a title="账变记录" class="btn-navacc btn-navacc-mail"  href="javascript:void(0)" onclick="openModalX('bill')" id="user-account-record"><span title="账变记录">账变记录</span></a>
+    <a title="游戏记录" class="btn-navacc btn-navacc-current" href="javascript:void(0)" onclick="openModalX('bet')" id="user-game-record"><span>游戏记录</span></a>
+    <a title="个人消息" class="btn-navacc btn-navacc-history" id="user-account-manage" href="javascript:void(0)" onclick="openModalX('message')"><span>个人消息</span></a>
+    <a title="会员中心" class="btn-navacc btn-navacc-center" href="javascript:void(0)" onclick="openModalX('user-center')" id="user-center"><span title="会员中心">会员中心</span></a>
+</div>
+<script type="text/javascript">
+
+    function refreshBalance() {
+        $("#userMoney").html("刷新中")
+        userInfoManager.load();
+    }
+</script>

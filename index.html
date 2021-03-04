@@ -1,0 +1,97 @@
+<html>
+<head>
+    <!--logo-->
+    <!--#include virtual="/views/page_title_logo.html"-->
+    <!--title-->
+    <!--#include virtual="/views/page_title_content.html"-->
+    <!--#include virtual="/views/meta.html"-->
+    <script type="text/javascript" src="/js/lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/lib/jquery/jquery.cookie.js"></script>
+</head>
+
+<body scroll="no" style="margin:auto">
+<iframe frameborder="0" width="100%" id="mainFrame" height="100%" scrolling="auto" style="margin: 0px;" src="/views/main.html"
+        onload="loadFrame(this)"></iframe>
+</body>
+<script type="text/javascript">
+    if (window.sessionStorage) {
+        var url = window.sessionStorage.getItem("currentUrl");
+        if (url != null && url != 'undefined' && url != '') {
+            if (url == '/') {
+                document.getElementById("mainFrame").src = "/views/main.html";
+            } else {
+                document.getElementById("mainFrame").src = url;
+            }
+        } else {
+            document.getElementById("mainFrame").src = "/views/main.html";
+        }
+    }
+    function loadFrame(obj) {
+        var url = obj.contentWindow.location.pathname;
+        window.sessionStorage.setItem("currentUrl", url);
+    }
+</script>
+
+<script type="text/javascript">
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+        "SymbianOS", "Windows Phone",
+        "iPad", "iPod"];
+    var isMobileClient = false;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            isMobileClient = true;
+            break;
+        }
+    }
+    /*手机wap首页引入*/
+    <!--#include virtual="/views/mobile_index_url.html"-->
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    function findSpreadDomainInfo() {
+        var domainConfig = null;
+        $.ajax({
+            url: '/domain_config',
+            type: 'GET',
+            dataType: 'JSON',
+            async: false,
+            success: function (data) {
+                domainConfig = data;
+            }
+        });
+        return domainConfig;
+    }
+
+    function handleIntr() {
+        if (window.sessionStorage && !window.sessionStorage.getItem("currentUrl")) {
+            var spreadCode, rediretUrl;
+            var spreadInfo = findSpreadDomainInfo();
+            if (spreadInfo) {
+                spreadCode = spreadInfo.spreadCode;
+                rediretUrl = isMobileClient ? spreadInfo.wapPath : spreadInfo.webPath;
+            }
+            var intr = getQueryString("intr");
+            if (intr) {
+                spreadCode = intr;
+            }
+            if (spreadCode) {
+                $.cookie("spreadCode", spreadCode, {path: "/"});
+            }
+            if (spreadCode && !rediretUrl) {
+                rediretUrl = isMobileClient ? "/wap/index.html#/register" : "/views/html/register.html";
+            }
+            if (isMobileClient) {
+                window.location.href = rediretUrl ? rediretUrl : mobileIndex;
+            } else {
+                document.getElementById("mainFrame").src = rediretUrl && rediretUrl !== '/' ? rediretUrl : "/views/main.html";
+            }
+        }
+    }
+    handleIntr();
+</script>
+</html>

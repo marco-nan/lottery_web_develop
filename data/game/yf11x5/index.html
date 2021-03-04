@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>一分11选5</title>
+    <!--#include virtual="/page/game/include/head.html"-->
+</head>
+<body class="index-bg">
+    <div class="header_nav_bg">
+        <input type="hidden" id="gameId" value="96"  data-gameCode="yf11x5"/>
+        <div class="header_nav">
+            <!--#include virtual="/page/include/lottery.html"-->
+        </div>
+    </div>
+    <div class="frame">
+        <div class="sidebar index-sidebar">
+            <!--#include virtual="/page/game/include/left.html"-->
+        </div>
+        <div id="_main_view" class="main">
+            <section>
+                <!-- 玩法菜单 -->
+                <!--#include virtual="/data/game/yf11x5/cate/96.html"-->
+                <div class="main-bet-content"  id="twoHtml" style="width: 80%;float:left">
+                    <!-- 下注界面 -->
+                 </div>
+
+                <div class="Nav_content_Fr_right" style="float: left;">
+                    <!--#include virtual="/page/game/include/right.html"-->
+                </div>
+            </section>
+            <!--#include virtual="/page/game/include/jscommon.html"-->
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <!--#include virtual="/page/game/include/bottom_notice.html"-->
+    <!--#include virtual="/page/game/include/conBet.html"-->
+    <!--#include virtual="/page/game/include/bottom_notice.html"-->
+    <script>
+    $(function(){
+    	menu.tab('/data/game/yf11x5/cate/96_LM.html','twoHtml');
+      	gameManager.initGame({loadLmcl:true,loadAnalysis:false});
+        lotteryManager.init({openCallback:gameManager.openCallback});
+      });
+    </script>
+</body>
+</html>

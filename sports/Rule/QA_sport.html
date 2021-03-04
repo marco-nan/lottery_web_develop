@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta contect="none" name="Robots">
+<link type="text/css" href="mem_qa.css" rel="stylesheet">
+<link type="text/css" href="mem_qa_roul.css" rel="stylesheet">
+<title>体育规则</title>
+<script src="QA_sport.js" language="javascript"></script>
+</head>
+ 
+<body id="SPORT">
+<div class="qa_head"><em>帮助</em><span onclick="window.close();" class="close_box">关闭</span></div>
+<div id="wrapper">
+	
+    <div id="qa_nav">
+      <ul>
+        <li class="sport">体育规则</li>
+        <li class="rule"><a href="QA_roul.html">规则与条款</a></li>
+        <li class="odd"><a href="QA_way.html">赔率计算列表</a></li>
+        
+      </ul>
+    </div>
+    
+    <div id="main">
+    <a name="top"></a>
+    	<h1>选择体育项目 : 
+    	  <label>
+    	    <select onchange="chg_roul(this.options[this.selectedIndex].value);" id="jumpMenu" name="jumpMenu">
+    	  	<option selected="selected" value="QA_sport.html">一般体育说明</option>
+            <option value="rule_zq.html">足球</option>
+            <option value="rule_lq.html">篮球</option>
+            <option value="rule_binqiu.html">冰球</option>
+            <option value="rule_bq.html">棒球</option>
+            <option value="rule_paiqiu.html">排球</option>
+            <option value="rule_wq.html">网球</option>
+  	    </select>
+  	    </label>
+    	</h1>
+        <div id="info"><!--资料区-->
+            <!--#include virtual="/sports/Rule/data/yibantiyu.html"-->
+            <div class="to_top"><a href="#top"><span>回最上层</span></a></div>
+        </div>
+    </div>
+    
+</div>
+<div class="qa_foot"></div>
+
+
+
+</body></html>

@@ -1,0 +1,28 @@
+/**{
+	margin: 0;padding: 0;
+	cursor: pointer;
+}*/
+.page_rain {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.page_rain .rain_div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.page_rain .rain_div .dd {
+    width: 156px;
+    height: 172px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../images/test_package.png) no-repeat;
+    background-size: 100% auto;
+
+}

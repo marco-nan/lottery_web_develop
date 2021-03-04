@@ -1,0 +1,246 @@
+<html data-dpr="1" style="font-size: 55.2px;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--#include virtual="/views/page_title_logo.html"-->
+    <!--#include virtual="/views/page_title_content.html"-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+        /* CSS Document */
+        html, body, div, p {
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+        }
+
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+            -webkit-text-size-adjust: none;
+        }
+
+        body, div, ol, dl, dt, dd, ul, li, table, tr, td, h1, h2, h3, h4, h5, h6, p, form, input, button, img, strong, em {
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+            font-style: normal;
+            box-sizing: border-box;
+        }
+
+        li, dd, dt {
+            list-style-type: none;
+        }
+
+        ol, ul, dl {
+            list-style: none;
+        }
+
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+
+        a {
+            color: #231f20;
+            text-decoration: none;
+            outline: 0;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #ccc;
+        }
+
+        input:-moz-placeholder {
+            color: #ccc;
+        }
+
+        button::-moz-focus-inner, input::-moz-focus-inner {
+            border: 0 none;
+            margin: 0;
+            padding: 0;
+        }
+
+        input, select, option, button, textarea {
+            font-size: 100%;
+            vertical-align: middle;
+            outline: 0 none;
+            border-radius: 0px;
+            border: none;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+        }
+
+        html {
+            font-size: 100px;
+        }
+
+        body {
+            font-size: 1.4rem;
+        / ! * 1.4 × 10 px = 14 px * ! /
+        }
+
+        body {
+            color: #999;
+            background: #fff;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            margin: 0 auto;
+            font-family: Verdana, Arial, Helvetica, sans-serif
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .red {
+            color: #f2210a;
+        }
+
+        /*内容*/
+        .wrap {
+            height: 100%;
+            overflow: auto;
+            color: #999
+        }
+
+        .wap-text {
+            text-align: center;
+            font-size: 80%;
+        }
+
+        .wap-text i {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            margin-left: 5px
+        }
+
+        .wap-text p {
+            font-size: 16px;
+            display: block;
+            padding-bottom: 10px;
+        }
+
+        .main_content {
+            padding: 0 0.25rem;
+            text-align: center;
+        }
+
+        #logo {
+            margin-top: .46rem;
+        }
+
+        .logo {
+            width: 2.42rem;
+        }
+
+        .btn {
+            width: 4.30rem;
+            height: 0.74rem;
+            line-height: 0.74rem;
+            border-radius: 0.20rem;
+            font-size: 0.32rem;
+            margin: 0.04rem 0 0.22rem 0;
+            display: inline-block;
+        }
+
+        .prompt {
+            line-height: 0.5rem;
+            color: #999;
+            font-size: 0.24rem;
+        }
+
+        .prompt-title {
+            color: #999;
+            font-size: 0.24rem;
+        }
+
+        .prompt-title i {
+            display: inline-block;
+            width: 0.23rem;
+            height: 0.23rem;
+            background-image: url(/images/download.png);
+            background-size: 100%;
+            margin-left: 0.08rem;
+            margin-top: 0.06rem;
+        }
+
+        .app-btn {
+            width: 4.24rem;
+            height: 0.68rem;
+            border: 0.03rem solid #d91d37;
+            color: #d91d37;
+            margin: 0 auto;
+            border-radius: 0.20rem;
+            line-height: 0.58rem;
+            font-size: 0.32rem;
+        }
+
+        .app-btn2 {
+            width: 4.24rem;
+            height: 0.68rem;
+            border: 0.03rem solid #0cc32a;
+            color: #0cc32a;
+            margin: 0 auto;
+            border-radius: 0.20rem;
+            line-height: 0.58rem;
+            font-size: 0.32rem;
+        }
+
+        .android_btn {
+            width: 0.38rem;
+            height: 0.42rem;
+            display: inline-block;
+            background-size: 100%;
+            margin-right: 0.17rem;
+        }
+
+        .store_btn {
+            width: 0.38rem;
+            height: 0.42rem;
+            display: inline-block;
+            background-size: 100%;
+            margin-right: 0.17rem;
+        }
+
+        .code {
+            width: 2.64rem;
+            height: 2.64rem;
+            margin-top: 0.3rem;
+        }
+
+        .qr-code p {
+            line-height: 0.72rem;
+            color: #999;
+        }
+
+        .copyright {
+            font-size: 0.22rem;
+            color: #999;
+            position: fixed;
+            bottom: 0.20rem;
+            width: 100%;
+            text-align: center;
+            left: 0;
+        }
+    </style>
+    <script type="text/javascript" src="/js/lib/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/views/js/Jurisdiction.js"></script>
+</head>
+<body style="font-size: 12px;">
+<div class="main_content">
+    <!--#include virtual="/views/app_down_load.html"-->
+</div>
+
+</body>
+</html>

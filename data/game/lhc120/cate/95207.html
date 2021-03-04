@@ -1,0 +1,65 @@
+<table class="table table-bordered table-bet lianma">
+   	<thead class="header-cat">
+   	<tr>
+   	  <td rowspan="2" style="vertical-align: middle;" class="r_title_first">类别</td>
+         <td>
+         	<label>
+         	<input type="radio" name="rtype" data-code="95207101" checked="checked" data-cateName="四全中" data-number="4" data-tmNumber="4" onclick="menu.tab('/data/game/lhc120/cate/95207101.html','two1Html')">
+         	四全中
+         	</label>
+         </td>
+         <td>
+         	<label>
+         	<input type="radio" name="rtype" data-code="95207102" data-cateName="三全中" data-number="3" onclick="menu.tab('/data/game/lhc120/cate/95207101.html','two1Html')">
+         	三全中
+         	</label>
+         </td>
+         <td colspan="2">
+         	<label>
+         	<input type="radio" name="rtype" data-code="95207103" data-cateName="三中二" data-number="3" onclick="menu.tab('/data/game/lhc120/cate/95207101.html','two1Html')">
+         	三中二</label>
+         </td>
+         <td>
+         	<label><input type="radio" name="rtype" data-code="95207105" data-cateName="二全中" data-number="2" data-minNumber="2" onclick="menu.tab('/data/game/lhc120/cate/95207104.html','two1Html')">二全中</label>
+         </td>
+         <td colspan="2"><label><input type="radio" name="rtype" data-code="95207106" data-cateName="二中特" data-number="2"  data-tmNumber="10" onclick="menu.tab('/data/game/lhc120/cate/95207104.html','two1Html')">二中特</label></td>
+         <td><label><input type="radio" name="rtype" data-code="95207107" data-cateName="特串" data-number="2" onclick="menu.tab('/data/game/lhc120/cate/95207104.html','two1Html')">特串</label></td>
+       </tr>
+       <tr>
+       	<td class="r_title_first">四全中</td>
+       	<td class="r_title_first">三全中</td>
+       	<td class="r_title_first">中二</td>
+       	<td class="r_title_first">中三</td>
+       	<td class="r_title_first">二全中</td>
+       	<td class="r_title_first">中特</td>
+       	<td class="r_title_first">中二</td>
+       	<td class="r_title_first">特串</td>
+       </tr>
+       </thead>
+       <tbody><tr>
+          <td>赔率</td>
+          <td><b class="text-danger" id="133016"></b></td>
+          <td><b class="text-danger" id="133625"></b></td>
+          <td><b class="text-danger" id="133626"></b><br>
+          </td><td><b class="text-danger" id="133627"></b></td>
+          <td><b class="text-danger" id="133628"></b></td>
+          <td><b class="text-danger" id="133723"></b><br>
+          </td><td><b class="text-danger" id="133724"></b></td>
+          <td><b class="text-danger" id="133793"></b></td>
+       </tr>
+   </tbody>
+</table>
+
+<div class="table  table-bet redTable data-betArea">
+<div id="two1Html">
+	<!--#include virtual="/data/game/lhc120/cate/95207101.html"-->
+</div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+</div>
+<script type="text/javascript">
+$(function(){
+    $('#quickBetDiv').css('display', 'none');
+	menu.twoTab();
+	oddManager.cateCode();
+});
+</script>

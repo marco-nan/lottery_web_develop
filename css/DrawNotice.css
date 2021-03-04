@@ -1,0 +1,492 @@
+
+
+/*
+开奖公告 css
+ */
+body,html{
+    height: 100%;
+    font-family: "微软雅黑";
+}
+
+
+
+.DrawNoticeWrap{
+    width: 100%;
+    min-height: 200px;
+    /*background:#098;*/
+    clear: both;
+    overflow:hidden;
+}
+.DrawNotice{
+    width: 1000px;
+    /*min-height: 200px;*/
+    min-width: 980px;
+    /*background-color: #097;*/
+    margin: 0 auto;
+    overflow:hidden;
+    margin-bottom: 10px;
+    background: #ececec;
+}
+.DrawNoticeTable-top{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 36px;
+    min-width: 980px;
+    background-color: #fff;
+    line-height: 36px;
+    border:1px solid #dfdfdf;
+    margin-top: 10px;
+
+}
+.ball_grey {
+    background-color: #999!important;
+}
+.DrawNoticeTable-top li{
+    float: left;
+    height: 34px;
+    font-size: 14px;
+    color: #333;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.DrawNoticeTable-only {
+    border-bottom: 2px solid #da2c41;
+    color: #c71f33 !important;
+}
+
+.DrawNoticeContent-zi{
+    width: 100%;
+    min-width: 980px;
+    min-height: 36px;
+    background-color: #fff;
+    line-height: 36px;
+    border:1px solid #dfdfdf;
+    border-top: 0px;
+    display: none;
+}
+
+.DrawNoticeContent-zi a{
+    width: 76px;
+    text-align: center;
+    line-height: 20px;
+    height: 19px;
+    color: #777474;
+    padding: 0 11px;
+    border-right: 1px solid red;
+    cursor: pointer;
+    display: inline-block;
+}
+.DrawNoticeContent-one{
+    display: block;
+}
+
+.DrawNoticeTitle{
+    width: 100%;
+    clear: both;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: normal;
+    color: #c71f33;
+}
+.c-blue{
+    cursor: pointer;
+}
+.title{
+    background: #fffcf4;
+    text-align: center;
+    font-weight: 700;
+    height: 36px;
+
+}
+.bgcolor td {
+    border-left: 1px solid #fff;
+    text-align: center;
+    padding: 8px;
+    font-size: 12px;
+}
+
+
+.ballbg span {
+    color: #fff;
+    display: inline-block;
+    width: 20px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+    background: #d90000;
+    border-radius: 50%;
+    float: left;
+    margin:  0 3px;
+}
+
+.nodata,.ball_kuaisan{
+    text-align:left !important;
+}
+.ball_liuhecai >p {
+    display: inline-block;
+    width: 26px;
+    text-align: center;
+    float: left;
+}
+.name{
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+.name:hover{
+    color: #ee7537;
+    text-decoration: none;
+}
+.plusStyle{
+    font-weight: normal !important;
+    margin-right: 2px !important;
+}
+.ball_kuaisan span {
+    width: 20px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    background: #d90000;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+.draw-lottery-btn {
+    display: inline-block;
+    width: 34px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    background: #fc9721;
+    cursor: pointer;
+}
+.ballcol-03, .ballcol-04, .ballcol-09, .ballcol-10, .ballcol-14, .ballcol-15, .ballcol-20, .ballcol-25, .ballcol-26, .ballcol-31, .ballcol-36, .ballcol-37, .ballcol-41, .ballcol-42, .ballcol-47, .ballcol-48 {
+    background: #3990b4;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+}
+.ballcol-01, .ballcol-02, .ballcol-07, .ballcol-08, .ballcol-12, .ballcol-13, .ballcol-18, .ballcol-19, .ballcol-23, .ballcol-24, .ballcol-29, .ballcol-30, .ballcol-34, .ballcol-35, .ballcol-40, .ballcol-45, .ballcol-46 {
+    background: #ed2d2d;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+
+}
+.ballcol-05, .ballcol-06, .ballcol-11, .ballcol-16, .ballcol-17, .ballcol-21, .ballcol-22, .ballcol-27, .ballcol-28, .ballcol-32, .ballcol-33, .ballcol-38, .ballcol-39, .ballcol-43, .ballcol-44, .ballcol-49 {
+    background: #47b53a;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+
+}
+
+
+
+.col-03, .col-04, .col-09, .col-10, .col-14, .col-15, .col-20, .col-25, .col-26, .col-31, .col-36, .col-37, .col-41, .col-42, .col-47, .col-48 {
+    background: #3990b4;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    display: inline-block;
+    margin-right: 4px;
+}
+.col-01, .col-02, .col-07, .col-08, .col-12, .col-13, .col-18, .col-19, .col-23, .col-24, .col-29, .col-30, .col-34, .col-35, .col-40, .col-45, .col-46 {
+    background: #d90000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    display: inline-block;
+    margin-right: 4px;
+}
+.col-05, .col-06, .col-11, .col-16, .col-17, .col-21, .col-22, .col-27, .col-28, .col-32, .col-33, .col-38, .col-39, .col-43, .col-44, .col-49 {
+    background: #47b53a;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    display: inline-block;
+    margin-right: 4px;
+}
+#_menu_draw_b_51{
+    display: table-row;
+}
+/*
+ 活动 公告
+ * */
+.ActivitiesWrap{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+.Activities{
+    width: 1000px;
+    min-width: 960px;
+    min-height: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.titie-pic{
+    padding:12px 0 ;
+}
+.Activities-content{
+    height: 24%;
+    width: 100%;
+    /*background: red;*/
+    margin-bottom: 10px;
+}
+.Activities-con-wrap,.Activities-con-wrap >ul{
+    height: 100%;
+}
+.Activities-con-wrap{
+    margin-bottom: 24px;
+
+}
+.Activities-con-wrap ul>li:nth-child(1){
+    width: 65%;
+    height: 100%;
+    background: #fff;
+    float: left;
+}
+.Activities-con-wrap ul>li:nth-child(1) img{
+    width: 96%;
+    height: 84%;
+    margin-left: 2%;
+    margin-top: 2%;
+    cursor: pointer;
+}
+.Activities-con-wrap ul>li:nth-child(2){
+    width: 35%;
+    height: 100%;
+    background: #fff;
+    float: left;
+}
+.xialawz{
+    clear: both;
+}
+.td_wrapper h2
+{
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 32px;
+    line-height: 20px;
+    height: 20px;
+    margin: 20px 0 0 0;
+    color: #ee7537;
+}
+.td_wrapper h2 a
+{
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 32px;
+    line-height: 20px;
+    height: 20px;
+    margin: 20px 0 0 0;
+    color: #ee7537;
+}
+.td_wrapper p
+{
+    color: #333;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    margin-left: 32px;
+}
+/*
+ 手机 购彩
+ * */
+.MobileShoppingWrap{
+    /* width: 72%; */
+    min-width: 1200px;
+    max-width: 1200px;
+    min-height: 100%;
+    height: 100%;
+    margin: 0 auto;
+    height: 560px;
+}
+.MobileShopping{
+    width: 100%;
+    height: 560px;
+    background: url(/data/image/mobilelottery/wap-phone_02.png);
+}
+.MobileShopping-left,.MobileShopping-right{
+    float: left;
+}
+.MobileShopping-left{
+    width: 50%;
+    height: 560px;
+    background-image: url(/data/image/mobilelottery/app-bg_03.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 20px;
+}
+.MobileShopping-right{
+    width: 50%;
+    height: 560px;
+}
+.MobileShopping-right h3 {
+    font: 40px/40px Microsoft Yahei;
+    color: #c71f33;
+    margin-top: 35px;
+    letter-spacing: 4px;
+}
+.app-tit {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.app-tit p {
+    font-size: 30px;
+    color: #666;
+    padding: 0 0 0 0;
+    letter-spacing: 3px;
+}
+.app-two-left {
+    float: left;
+    margin: 20px 0px 0 30px;
+}
+
+.app-btn1, .app-btn2 {
+    float: left;
+    margin-right: 10px;
+}
+.app-right {
+    margin: 0 0 0px 0px;
+    color: #fff;
+    text-align: center;
+}
+
+.app-btn1 p, .app-btn2 p {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+}
+.wap-two-right {
+    float: left;
+    width: 198px;
+    text-align: center;
+    font: 14px/24px Microsoft Yahei;
+    color: #ce330a;
+    margin: 5px 15px 0 50px;
+}
+.wap-two-bg {
+    background: url(/data/image/mobilelottery/code-bg.png) no-repeat;
+    background-size: 198px 198px;
+    width: 198px;
+    height: 198px;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+.wap-two-bg img {
+    width: 167px;
+    height: 167px;
+}
+.wap-two-right p {
+    margin-top: 5px;
+}
+
+.app_wap_menu {
+    height: 50px;
+}
+.app_center div {
+    width: 50%;
+    float: left;
+    cursor: pointer;
+    background: #c71f33;
+}
+.app_menu_only
+{
+    background: #ee7537 !important;
+}
+a.app_menu, a.wap_menu {
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    font: 20px/50px Microsoft Yahei;
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+}
+
+.wap-wrapper {
+    width: 1030px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+.wap-left {
+    width: 420px;
+    float: left;
+    position: relative;
+}
+.wap-phone {
+    background: url(/data/image/mobilelottery/wap_03.png) no-repeat;
+    width: 380px;
+    height: 524px;
+    margin: 36px 0 0 70px;
+}
+.wap-right, .app-right {
+    width: 528px;
+    float: right;
+}
+.wap-tit {
+    width: 492px;
+    background-size: 492px 244px;
+    margin: 36px 0 0 0px;
+    color: #fff;
+    font: 30px/50px Microsoft Yahei;
+}
+.wap-tit h3 {
+    font: 40px/40px Microsoft Yahei;
+    color: #c71f33;
+    padding: 16px 0 26px 0;
+}
+.wap-tit p {
+    font-size: 30px;
+    color: #666;
+    padding: 0 0 10px 0;
+}
+.wap-tit p {
+    font-size: 30px;
+    color: #666;
+    padding: 0 0 10px 0;
+}
+
+.search {
+    width: 367px;
+    height: 64px;
+    background: #fafafa;
+    line-height: 64px;
+    border-radius: 5px;
+    margin: 28px 0 5px 0;
+    background: url(/data/image/mobilelottery/input-wap_03.png) no-repeat;
+}
+.search-text {
+    color: #c71f33;
+    font-size: 18px;
+    margin: -20px 0 0 60px;
+    display: block;
+}

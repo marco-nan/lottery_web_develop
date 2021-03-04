@@ -1,0 +1,248 @@
+*{margin:0;padding:0;}
+.body-wrap{padding-top: 135px;}
+.w1000{ width:1000px; margin:0 auto;}
+.clear{ clear:both;}
+.ml5{margin-left: 9px;}
+a{ text-decoration:none;color:#fff; font-size:12px;}
+body{font-size:12px; font-family: "宋体";overflow-x:hidden;}
+.flag{ position:relative; top: 2px;}
+.pos{position: absolute;left:50%;margin-left: -960px;}
+.livebg{background:url(../images/livebg.jpg) top center no-repeat;min-height:929px;}
+.lotbg{background:url(../images/lotterybg.jpg) top center no-repeat; min-height:717px;}
+.abbg{background:url(../images/aboutbg.jpg) top center repeat-y;min-height:700px;}
+.prebg{background:url(../images/promotionsbg.jpg) top center no-repeat; min-height:981px;}
+.gamebg{background:url(../images/slotsbg.jpg) top center no-repeat; height:880px;}
+.sportbg{background:url(../images/sportsbg.png) top center no-repeat; height:auto;}
+.header{ height: 135px; background: #fff;position: fixed;top: 0px;left: 0px;width: 100%;z-index: 999;}
+.fixed{position: fixed;top:0px;z-index: 999;width: 100%;}
+.head{ height:100px; overflow:hidden}
+.head .logo{display: block; width: 320px; height: 114px; background: url(../images/logo.png) no-repeat; float: left;}
+.head .logor{ background: url(../images/logor.gif) top center no-repeat; width:160px; height:70px; float: left;margin-top: 25px;}
+.head .headright{ float: right; width:515px;}
+.head .headright .toplink{color: #535353; line-height:15px;font-size: 12px; height:15px;text-align: right;margin-top: 20px;}
+.head .headright .toplink a{ color: #535353;font-family: "Microsoft Yahei";}
+.head .headright .toplink a:hover{ color:#4459a9}
+.head .headright .toplink img{ margin-left: 3px;}
+.head .headright .login { height: 30px; margin-top: 24px;}
+.head .headright .login input{ width: 103px; height:20px; line-height: 20px; padding-left: 10px; margin-left:5px; float: left;border-radius:2px; border: none; color: #1b1b1b; font-size: 13px; display: block; border: 1px solid #e5e5e5;font-family: "Microsoft Yahei"}
+.head .headright .login .input-box{width: 100%;}
+.head .headright .login .input-box li{float: left;}
+.head .headright .login .yzm{ width:98px;}
+.head .headright .login .yzmimg{ position: relative; margin-left: -46px; top:1px; float: left;}
+.head .headright .login .subbtn{ background:#4459a9; border: none; padding:0; text-align: center; height: 22px; line-height: 22px; width: 63px; color: #fff; cursor: pointer; font-size: 13px; font-family: "Microsoft Yahei"}
+.head .headright .login .regbtn{ background:#f39800 url(../images/regbtn.png) no-repeat;border: none;height: 22px; line-height: 22px;  width:87px;padding-left:12px; width:75px!important;text-align: left;  color: #fff; cursor: pointer;font-size: 13px; font-family: "Microsoft Yahei";margin-left: 5px;}
+.head .headright .login .subbtn:hover{ background:#f39800}
+.head .headright .login .regbtn:hover{ background:#e70012 url(../images/regbtn.png) no-repeat;}
+.head .headright .logined{ color:#535353;float:right; line-height:25px;margin: 10px 0px 0px 0px;}
+.head .headright .logined a{  color:#535353;font-family: "Microsoft Yahei";}
+.head .headright .logined span{ color:#f39800;}
+.head .headright .logined .exit{ width:63px; height:22px; background:#40559f; font-size:13px; font-family:"Microsoft Yahei"; text-align:center; line-height:22px; display:block; float:right; color:#fff; margin-top:30px;}
+.head .headright .logined .logined-box{float:left; width:430px; text-align:right;margin-right: 5px;}
+
+.menu{ background:#4459a9; height: 35px; position:relative}
+.menu ul{width: 1020px;height: 35px;}
+.menu ul li{ float: left; width:96px; margin: 0 10px; height: 32px; line-height: 32px; border-bottom: 3px solid transparent; text-align: center; transition:all 0.3s;position: relative;}
+.menu ul li a{ font-family: "Microsoft Yahei"; font-size: 14px; font-weight: bold; height: 32px; display: block;transition:all 0.3s;}
+.menu ul li.first{ margin-left: -10px}
+.menu ul li.last{ margin-right: 0;margin-left: 13px;}
+.menu ul li:hover{ border-bottom: 3px solid #fff100}
+.menu ul li:hover a{ color: #fff100}
+.menu ul li .mghot{ position:absolute; right:-14px; top:2px;}
+.menu .box{position:absolute;left:0px;top:35px;width:100%;overflow:hidden;height:0;filter:alpha(opacity=0);opacity:0; background: url(../images/menubox.png) repeat-x; z-index:999}
+.menu .cont{position:relative; height: 150px; width: 1000px; margin: 0 auto;}
+
+.cont .jr{height:38px; line-height:35px; display:block;font-size: 14px; font-family: "Microsoft Yahei"; color:#fff;}
+.cont span{height:38px; line-height:35px;  display:block; position:absolute; left:15px; bottom:0; width:120px;font-size: 16px; font-family: "Microsoft Yahei"; color:#fff; text-align:center}
+
+
+.indexbanner{ height:400px; position: relative; overflow: hidden; width: 100%;}
+.indexbanner .hd{ height:12px; overflow:hidden; position:absolute; bottom:14px; z-index:1;width:120px; left: 50%; margin-left: -48px;}
+.indexbanner .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.indexbanner .hd ul li{ float:left; margin-right:12px;  width:12px; height:12px; border-radius: 12px;  background:#cdd4db; cursor:pointer; text-indent: -999px; overflow: hidden;}
+.indexbanner .hd ul li.on{ background:#4c4d4d;}
+.indexbanner .bd{ position:relative; height:100%; z-index:0;   }
+.indexbanner .bd li{ zoom:1; vertical-align:middle; height: 400px; }
+
+.indexgonggao{ background: url(../images/gonggaobg.png) top center no-repeat; height:30px; line-height:30px; color: #535353; font-family: "Microsoft Yahei"; font-size: 13px; border-bottom: 1px solid #d2d2d2}
+.indexgonggao  marquee{ float: right; width: 890px; margin-right: 10px;}
+.indexgonggao  .msg-col,.pagesgonggao .msg-col{color: #535353}
+
+.main01{ height: 455px; background: #fff;overflow: hidden;}
+.main01 div p{ color: #707070; font-size: 12px; font-family: "Microsoft Yahei"; line-height: 25px; text-align: center; width: 280px; margin: 0 auto}
+.main01 div a{ display: block; height: 96px; padding-top:360px;}
+.main01 .mg{ background: url(../images/m01.png) no-repeat; width: 303px; height: 516px; float: left; margin-right: 45px;}
+.main01 .bbin{ background: url(../images/m02.png) no-repeat; width: 303px; height: 516px; float: left; margin-right: 45px;}
+.main01 .ag{ background: url(../images/m03.png) no-repeat; width: 303px; height: 516px; float: right;}
+.main01 .mg:hover{ background-position: right top;}
+.main01 .bbin:hover{ background-position: right top}
+.main01 .ag:hover{ background-position: right top}
+.main01 .mg:hover p,.main01 .bbin:hover p,.main01 .ag:hover p{ color: #454545}
+
+.main02{ height: 628px; background: url(../images/main02bg.jpg) top center no-repeat; overflow: hidden;}
+
+.lunbo{ overflow:hidden; position:relative; height:220px;margin-top: 140px;}
+.lunbo .hd{ overflow:hidden; position: absolute; top:94px; width: 100%; height: 13px}
+.lunbo .hd .prev{display:block;  width:13px; height:13px;overflow:hidden;cursor:pointer; background:url(../images/arrow.png) no-repeat; margin-left: -45px}
+.lunbo .hd .next{display:block;  width:13px; height:13px;overflow:hidden;cursor:pointer; background:url(../images/arrow.png) right center no-repeat;  float: right; margin-right: -45px}
+.lunbo .bd{}
+.lunbo .bd ul{ overflow:hidden; zoom:1; }
+.lunbo .bd ul li{overflow:hidden; text-align:center; width: 173px; float: left; margin-right: 33px; line-height: 45px;}
+.lunbo .bd ul li img{  border:5px solid #eee; border-radius: 162px; display: block; transition: all 0.5s;}
+.lunbo .bd ul li  a{ font-family: "Microsoft Yahei"; color: #eee; font-size: 16px;transition: all 0.5s;}
+.lunbo .bd ul li:hover img{ border: 5px solid #fff100}
+.lunbo .bd ul li:hover a{ color: #fff100}
+
+.main02 .main02wz{ background: url(../images/main02wzbg.png) center center no-repeat; height: 75px;}
+.main02 table tr td{ height: 75px; width: 249px; border: 1px solid #384c9a; background: url(../images/live.png) no-repeat;}
+.main02 table tr td img{ display: block;}
+.main02 table tr td.l01{ background-position: 0 0}
+.main02 table tr td.l02{ background-position: -251px 0}
+.main02 table tr td.l03{ background-position: -501px 0}
+.main02 table tr td.l04{ background-position: -751px 0}
+.main02 table tr td.l05{ background-position: 0 -76px}
+.main02 table tr td.l06{ background-position: -251px -76px}
+.main02 table tr td.l07{ background-position: -501px -76px}
+.main02 table tr td.l08{ background-position: -751px -76px}
+.main02 table tr td.l01:hover{ background-position: 0 -152px}
+.main02 table tr td.l02:hover{ background-position: -251px -152px}
+.main02 table tr td.l03:hover{ background-position: -501px -152px}
+.main02 table tr td.l04:hover{ background-position: -751px -152px}
+.main02 table tr td.l05:hover{ background-position: 0 -228px}
+.main02 table tr td.l06:hover{ background-position: -251px -228px}
+.main02 table tr td.l07:hover{ background-position: -501px -228px}
+.main02 table tr td.l08:hover{ background-position: -751px -228px}
+.main02 table tr td a{ display: block; height: 75px;}
+
+.main03{ height: 530px; background: #fff url(../images/main03bg.png) top center no-repeat; overflow: hidden;}
+.main03 ul{ margin-top: 140px; width: 1010px;}
+.main03 ul li{ width: 490px; height: 390px; text-align: center; float: left; margin-right: 9px; position: relative;}
+.main03 ul li a{display: block;}
+.main03 ul li img{ display: block;}
+.main03 ul li h2{ height: 50px; line-height: 60px; color: #2a2a2a; font-size: 16px; font-family: "Microsoft Yahei";transition: all 0.3s;}
+.main03 ul li p{ width: 280px; margin:0 auto; line-height: 26px; color: #8c8c8c; font-size: 13px; font-family:"Microsoft Yahei";transition: all 0.3s;}
+.main03 ul li .ico{ margin: 0 auto; margin-top: 15px;}
+.main03 ul li .hover{ border: 4px solid transparent; width: 482px;height: 209px;position: absolute;top: 0; left: 0;transition:all 0.3s;}
+.main03 ul li a:hover .hover{border: 4px solid #2d4086}
+.main03 ul li a:hover h2{ color: #293c84}
+.main03 ul li a:hover p{ color: #454545}
+
+.main04{ height: 524px; background:#293c84 url(../images/main04bg.jpg) top center no-repeat; overflow: hidden;}
+.main04 .leftimg{ float: left; margin-top: 135px;}
+.main04 .wz{ background: url(../images/m04wz.png) no-repeat; width: 365px; height: 243px; float: right; margin-top: 200px; margin-right: 92px;}
+.main04 .ewm{ position: absolute; right:22px; top: 320px; line-height: 40px; color: #fff; font-family: "Microsoft Yahei"; text-align: center;}
+.main04 .ewm img{ display: block;}
+
+
+.footer{ height: 240px; background: #1b1b1b}
+.footer .footerinfo{background: url(../images/footerbg.png) no-repeat; height: 136px; padding-top: 30px;}
+.footer .footerinfo .aboutwz{ margin-left: 270px; line-height: 23px; color: #a0a0a0; font-family: "Microsoft Yahei"; width: 310px; float:left;}
+.footer .footerinfo ul.lianxi{ float: right; width: 250px;}
+.footer .footerinfo ul.lianxi li{ height: 26px; line-height: 26px; margin-bottom: 13px; color: #a0a0a0; font-size: 15px; font-family:"Microsoft Yahei";}
+.footer .footerinfo ul.lianxi li b{ display: block; width: 26px; height: 26px; float: left; background: url(../images/footerico.png) no-repeat; margin-right:8px;}
+.footer .footerinfo ul.lianxi li b.ico01{ background-position: 0 0}
+.footer .footerinfo ul.lianxi li b.ico02{ background-position: 0 -39px}
+.footer .footerinfo ul.lianxi li b.ico03{ background-position: 0 -77px}
+.footer .footerinfo ul.lianxi li span{ font-size: 16px; font-family: Arial;}
+.footer .footerlink{ float: left; height: 74px; line-height: 74px; color: #707070; font-family: "Microsoft Yahei"}
+.footer .footerlink a{ color: #707070;font-family: "Microsoft Yahei"}
+.footer .footerlink a:hover{ color: #fff}
+.footer .copyright{ float: right; height: 74px; line-height: 74px; color: #707070; font-family: Arial;}
+
+.pagesbanner{ height: 180px;}
+.pagesgonggao{ background: url(../images/gonggaobg_1.png) top center no-repeat; height: 37px; line-height: 37px; color: #535353; font-family: "Microsoft Yahei"; font-size: 13px;}
+.pagesgonggao  marquee{ float: right; width: 890px; margin-right: 10px;}
+
+.pages{ position: relative; overflow: hidden;width: 100%;}
+
+.slots{ margin-top: 10px;}
+.sports{ margin-top: 10px;}
+.promotions{ margin-top: 10px;}
+
+.live{ margin-top:20px;}
+.live ul{ width: 1020px;}
+
+
+
+.lottery{}
+.lottery ul{ width: 1020px;}
+.lottery ul li{ width: 321px; height: 154px; border:1px solid #c9c9c9; background: #ffffff; overflow: hidden; margin-top: 20px; margin-right: 15px; float: left; transition:all 0.3s; position:relative}
+.lottery ul li img{ float: left; margin-left: 16px; margin-top: 8px; display: block; background:#eeeeee;border-radius:136px; border:1px solid #c9c9c9}
+.lottery ul li a{ display:block; height:148px}
+.lottery ul li .liright{ float: right; width: 130px; margin-right: 25px; padding-top: 30px; line-height: 30px; text-align: center;}
+.lottery ul li .liright h2{ font-family: "Microsoft Yahei"; font-weight: bold; color: #1b1b1b; font-size: 20px;transition:all 0.3s;}
+.lottery ul li .liright span{ font-family: Arial; font-size: 12px; color: #707070;transition:all 0.3s;}
+.lottery ul li .rulebtn{ width: 102px; height: 26px; display: block; margin: 0 auto; line-height: 24px; color: #fff; margin-top: 6px; position:absolute; right:35px; bottom:28px; text-align:center;font-family: "Microsoft Yahei"; font-size: 14px; background: #aaaaaa; border-radius: 2px;transition:all 0.3s;}
+.lottery ul li:hover{ border:1px solid #4459a9}
+.lottery ul li a:hover h2,.lottery ul li a:hover span{ color:#4459a9}
+.lottery ul li .rulebtn:hover{ color: #fff; background:#4459a9}
+
+
+.about{ margin-top: 20px;margin-bottom: 20px;}
+.about .aboutleft{ width: 250px; float: left;height: 670px; background:#fff}
+.about .aboutleft ul li{ height: 80px;padding-left:60px; overflow: hidden; line-height:16px;}
+.about .aboutleft ul li a{ height: 55px; padding-top: 25px; display: block;}
+.about .aboutleft ul li span{ background: url(../images/aboutico.png) no-repeat; width: 36px; height: 36px; display: block; float: left;margin-right: 20px;}
+.about .aboutleft ul li:hover span,.about .aboutleft ul li.on span{ background: url(../images/abouticoon.png) no-repeat;}
+.about .aboutleft ul li span.ico01{ background-position: 0 0 }
+.about .aboutleft ul li span.ico02{ background-position: 0 -78px}
+.about .aboutleft ul li span.ico03{ background-position: 0 -154px }
+.about .aboutleft ul li span.ico04{ background-position: 0 -228px }
+.about .aboutleft ul li span.ico05{ background-position: 0 -304px }
+.about .aboutleft ul li span.ico06{ background-position: 0 -376px }
+.about .aboutleft ul li a{ color: #2a2a2a; font-size: 16px; font-family: "Microsoft Yahei";}
+.about .aboutleft ul li a b{ font-size:10px; font-family: Arial; color:#898989}
+.about .aboutleft ul li:hover,.about .aboutleft ul li.on{}
+.about .aboutleft ul li:hover a,.about .aboutleft ul li.on a{ color: #4459a9}
+.about .aboutleft ul li:hover a b,.about .aboutleft ul li.on a b{ color: #4459a9}
+
+.about .aboutright{ background: #fff; width: 730px; height: auto; min-height: 650px;float:right;padding-bottom: 20px; }
+.about .aboutright .title{ height:60px; line-height:60px; text-align: left; color: #4459a9; font-size: 18px; font-family: "Microsoft Yahei"; margin-left:35px;}
+.about .aboutright .title span{ font-size: 14px; font-family: Arial;}
+.about .aboutright .content{ margin: 0 30px 30px 35px; color: #626262; font-size: 13px; line-height: 26px;}
+.about .aboutright .content h3{ margin:10px 0}
+.about .aboutright .content a{ color:#626262}
+
+#menu1 {width:659px; margin-bottom:20px; height:1%; overflow:hidden; text-align:center}
+#menu1 dd {float:left;text-align:center; background:#4459a9; cursor:pointer; border:#ccc solid 0px; color:#fff; margin-right:8px; width:100px; font-family:"Microsoft Yahei";}
+#menu1 dd.hover { background:#f39800; color:#fff;}
+#menu1 dd a{ color:#fff; font-family:"Microsoft Yahei"}
+#main1 table tr td { text-align: center; border:1px solid #626262; height:40px}
+#main1 table tr th { text-align: center; border:1px solid #626262; height:40px;font-weight:normal}
+
+.reg{ padding-bottom: 30px;color:#898989}
+.reg h2{ color: #4459a9; font-size: 18px; font-family: "Microsoft Yahei"; text-align: center; line-height: 60px; margin-top: 5px;}
+.reg p{ color: #eeeeee;font-size: 12px; line-height: 26px; margin-left: 135px;}
+.reg p a{ color: #fff100}
+.reg .regmain{width: 700px;margin-top:5px; margin-left:15px; overflow: hidden;}
+
+.regmain .btn{ background:#40559f; width:100px; height:28px; border:none;margin:0 5px; color:#fff; text-align:center; padding:0; font-size:15px;font-family: "Microsoft Yahei"; cursor:pointer;border-radius:2px; }
+.regmain a{ color:#898989}
+.regmain p{ color: #898989; margin-left: 0}
+.reg .regmain .formular p label, .formular p input, .formular p select, .formular p img, .formular p span {display: inline-block;float: left;}
+.reg .regmain .formular p .span{ color:#98affa}
+.reg .regmain .formular p{height: 25px;line-height: 25px;margin-bottom: 10px;}
+.reg .regmain .formular .star {color: #e60012;float: none;}
+.reg .regmain .formular {color: #fff;font-family: "微软雅黑";font-size: 12px;line-height: 1.5;margin: 0 auto;text-align: left;}
+.reg .regmain .formular fieldset {border: 1px solid #d9d7d7;margin: 10px auto;padding: 10px;margin-bottom: 20px;}
+.reg .regmain .formular legend {color: #4459a9;font-weight: bold;margin-left: 20px;padding: 0px 10px;font-size: 16px;}
+.reg .regmain .formular p {height: 25px;line-height: 25px;}
+.reg .regmain .formular p label {text-align: right;width: 111px;color: #313131;font-size: 13px;}
+.reg .regmain .formular p input {width:188px;height:23px; line-height:23px; border:1px solid #d9d7d7; color:#707070; font-size:13px; padding-left:5px;}
+.reg .regmain .formular p select{margin-right: 8px;background:#fff;border: none;width: 49px;text-indent: center;border:1px solid #d9d7d7;}
+.reg .regmain .formular p.memCash_text {margin: 0 0 0 135px;}
+.reg .regmain .formular .mar {margin: 11px 0 0 34px;color:#898989}
+.reg .regmain .formular .mar li{line-height: 22px;}
+.reg .regmain .formular p input.HiddenInput {height: 0;visibility: hidden; width: 0;}
+.reg .regmain .reg-agree{margin-left: 8px;width:500px;height: 26px;line-height: 26px;margin-bottom: 15px;color:#898989}
+
+.floatDiv a{display:block;width:120px;font-size: 0;position:relative;}
+.lStyle{background:url(../images/kf-l.gif) no-repeat;}
+.rStyle{background:url(../images/kf-r.gif) no-repeat;}
+.kfright{ background:url(../images/kfright.png?=2) no-repeat; width:106px; height:264px; position:relative;}
+.kfleft a,.kfright a{ display:block;}
+.kfweixin{ position: absolute; right:95px; bottom:48px; background: url(../images/kfweixin.png) no-repeat; width: 151px; height: 170px; display: none;}
+.kfphone1{ position: absolute; right:95px; bottom:125px; background: url(../images/kfphone1.png) no-repeat; width: 151px; height:92px; display: none;}
+.kfphone2{ position: absolute; right:95px; bottom:90px; background: url(../images/kfphone2.png) no-repeat; width: 151px; height:92px; display: none;}
+
+
+#msgNews a {color: #535353;}

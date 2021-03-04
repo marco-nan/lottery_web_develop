@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>下属用户详情</title>
+  <!--#include virtual="/page/include/user-center.html"-->
+  <!--#include virtual="/page/include/table.html"-->
+  <script src="/js/user-center/agent/sub-detail.js" type="text/javascript"></script>
+</head>
+<body class="bg-white">
+	<button id="backBtn" type="button" class="btn btn-primary" style="position: fixed; right: 20px; top: 20px; z-index:9999;">返回</button> 
+<div class="container-fluid">
+  <div class="bg-gray col-lg-12">
+	  <ul class="nav nav-pills m-t-md" role="tablist" id="gameTabs">
+	  	<li class="nav-item subInfo active"><a role="tab" data-toggle="tab" id="subInfo">下属用户信息</a></li>
+	  </ul>
+  </div>
+  <div class="col-lg-12"><div class="tab-content m-t-md">
+  <div class="table-responsive">
+    <table id="table" class="table table-bordered table-condensed">
+      <thead class="thead-default">
+      <tr>
+        <th id="name">玩法类型</th>
+        <th>赔率</th>
+        <th>返点</th>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <table id="tab_two" class="table table-bordered table-condensed">
+        <tr>
+            <td>用户名称：</td>
+            <td id="account"></td>
+        </tr>
+        <tr>
+            <td>用户昵称：</td>
+            <td id="nickname"></td>
+        </tr>
+        <tr>
+            <td>用户等级：</td>
+            <td id="type"></td>
+        </tr>
+        <tr>
+            <td>可用金额：</td>
+            <td id="money"></td>
+        </tr>
+        
+        <tr>
+            <td>最后登录时间：</td>
+                <td id="loginTime"></td>
+        </tr>
+    </table>
+
+  </div>
+  </div></div>
+</div>
+</body>
+</html>

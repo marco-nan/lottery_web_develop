@@ -1,0 +1,10 @@
+[
+      {
+    "modelName": "轮播图",
+    "appLink": "wap_link_banner"
+    },
+  {
+    "modelName": "公告",
+    "appLink": "wap_link_notice"
+    }
+]

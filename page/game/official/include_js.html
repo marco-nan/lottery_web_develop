@@ -1,0 +1,26 @@
+<!--mergeTo:/js/merge/game.official.all.min.js-->
+<script type="text/javascript" src="/js/xdialog.js"></script>
+<script type="text/javascript" src="/js/top.js"></script>
+
+<script type="text/javascript" src="/page/game/js/lottery.core.js"></script>
+<script type="text/javascript" src="/page/game/js/page.core.js"></script>
+<script type="text/javascript" src="/page/game/js/fc.core.js"></script>
+<script type="text/javascript" src="/page/game/js/conBetPage.js"></script>
+<script type="text/javascript" src="/page/game/official/js/official.core.js"></script>
+<script type="text/javascript" src="/page/game/js/ArrayUtils.js"></script>
+<script type="text/javascript" src="/page/game/js/calendar.js"></script>
+<script type="text/javascript" src="/page/game/js/ballanimation.js"></script>
+<script type="text/javascript" src="/js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="/page/game/js/plupload.full.min.js"></script>
+<!--mergeEnd-->
+<script type="text/javascript">
+    $(function(){
+        function openCallback(){
+//            officialCore.clear();
+            gameManager.openCallback();
+            officialCore.refreshBetRecord();
+        }
+//        {openCallback:openCallback}
+        lotteryManager.init({openCallback:openCallback});
+    });
+</script>

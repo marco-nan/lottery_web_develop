@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <link href="/css/member/standard.css" rel="stylesheet" type="text/css" />
+	    <link href="/css/member/HotNewsHistory.css" rel="stylesheet" type="text/css" />
+	    <script type="text/javascript" src="/js/lib/jquery/jquery-1.9.1.min.js"></script>
+	    <script type="text/javascript" src="/js/lib/util/httpUtil.js"></script>
+	    <style type="text/css">
+	        #title { background: url(/images/member/history/title.jpg) left top no-repeat; }
+	        #top { background: url(/images/member/history/bg_t.jpg) left top no-repeat; width: 720px; height: 58px; }
+	        #container { background: url(/images/member/history/bg_c.jpg) left top repeat-y; margin: 0 auto; padding: 0 37px; width: 646px; }
+	        #footer { background: url(/images/member/history/bg_f.jpg) left top no-repeat; padding-top: 20px; width: 720px; height: 35px; }
+	    </style>
+	    <script type="text/javascript">
+            function getQueryString(game) {
+                var reg = new RegExp("(^|&)" + game + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) {
+                    return unescape(r[2]);
+                }
+                return null;
+            }
+			$(document).ready(function(){  
+				getNoticeAll();
+			});
+		
+			function getNoticeAll() {
+                var noticeType = getQueryString("noticeType");
+                if(!noticeType){
+                    noticeType = 1;
+                }
+				HttpUtil.ajax({
+					type: "GET",
+					url: HttpUtil.baseUrl+"/api/notice/queryPageRoll",
+					dataType: "json",
+					para:{noticeType:noticeType},
+					success:function(json){
+						var str = "<div class='content'>"
+		            			+ "<div class='date'><span class='content-title'>日期</span></div>"
+		            			+ "<div class='msg'><span class='content-title'>内容</span></div>"
+		            			+ "<div class='clear'></div>"
+		        				+ "</div>";
+		        		var str1 = "";
+		        		if(json.data!=null&&json.data!=""&&json.data.length!=0) {
+		        			for(var i=0; i<json.data.length; i++) {
+		        				str1 = str1
+		        					 + "<div class='line'></div>"
+		        					 + "<div class='content'>"
+		        		             + "<div class='date'><span class='inner'>"+json.data[i].updateTime+"</span></div>"
+		        		             + "<div class='msg'><p class='inner-title'>"+json.data[i].noticeContent+"</p></div>"
+		        					 + "<div class='clear'></div>"
+		        		        	 + "</div>";
+		        			}
+		        		}
+		        		$("#container").html(str+str1);
+					}
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<div id="main-wrap">
+	    	<div id="top">
+	        	<div id="title"></div>
+	    	</div>
+	    	<div id="container">
+	        	
+			</div>
+	    	<div id="footer"></div>
+		</div>
+	</body>
+</html>

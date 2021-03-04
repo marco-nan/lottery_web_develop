@@ -1,0 +1,257 @@
+.clear, blockquote, body, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, th, ul {
+    margin: 0;
+    padding: 0;
+}
+.clear, .clearfix::after {
+    clear: both;
+}
+a {
+    outline: 0 none;
+}
+ol, ul {
+    list-style: outside none none;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+input {
+    line-height: normal;
+}
+button {
+    overflow: visible;
+}
+.clearfix::after, .clearfix::before {
+    content: "";
+    display: table;
+}
+body {
+    background: #293242 none repeat scroll 0 0;
+    font-size: 12px;
+}
+.zh-cn body {
+    font-family: STHeiti,"Microsoft YaHei","微软雅黑",SimSun,"宋体",arial;
+}
+.zh-tw body {
+    font-family: "Microsoft JhengHei","微軟正黑體",arial,helvetica,sans-serif;
+}
+@keyframes safe-circle {
+0%, 100% {
+    transform: rotate(0deg);
+}
+40% {
+    transform: rotate(180deg);
+}
+60% {
+    transform: rotate(90deg);
+}
+}
+@keyframes safe-circle {
+0%, 100% {
+    transform: rotate(0deg);
+}
+40% {
+    transform: rotate(180deg);
+}
+60% {
+    transform: rotate(90deg);
+}
+}
+.fgpw-wrap {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 10px;
+    height: 404px;
+    margin: 150px auto 0;
+    padding-top: 106px;
+    position: relative;
+    width: 386px;
+}
+.fgpw-wrap.st-oops, .fgpw-wrap.st-success {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.fgpw-wrap .txt-wrap {
+    margin: 0 auto;
+    width: 304px;
+}
+.fgpw-wrap.st-success {
+    background-image: url("http://la0111.com/infe/img/user/fg_pw/email.svg");
+}
+.fgpw-wrap.st-oops {
+    background-image: url("http://la0111.com/infe/img/user/fg_pw/service.svg");
+}
+.lock-pic-wrap {
+    background: rgba(0, 0, 0, 0) url("http://la0111.com/infe/img/user/fg_pw/safe.svg") no-repeat scroll 50% 0;
+    height: 235px;
+    left: 50%;
+    margin-left: -106px;
+    position: absolute;
+    top: -140px;
+    width: 212px;
+}
+.lock-pic-wrap .lock-line {
+    background: rgba(0, 0, 0, 0) url("http://la0111.com/infe/img/user/fg_pw/safe-line.svg") no-repeat scroll 50% 0;
+    height: 135px;
+    left: 39px;
+    position: absolute;
+    top: 49px;
+    width: 135px;
+}
+.lock-pic-wrap .lock-line.motion {
+    animation: 8s linear 0s normal none infinite running safe-circle;
+}
+.lock-pic-wrap .pic-oops, .lock-pic-wrap .pic-success {
+    background: rgba(0, 0, 0, 0) url("http://la0111.com/infe/img/user/fg_pw/tick.svg") no-repeat scroll 50% 0;
+    height: 141px;
+    left: 37px;
+    position: absolute;
+    top: 47px;
+    width: 140px;
+}
+.lock-pic-wrap .pic-oops {
+    background: rgba(0, 0, 0, 0) url("http://la0111.com/infe/img/user/fg_pw/cross.svg") no-repeat scroll 50% 0;
+}
+.result-wrap .pw-info-wrap {
+    height: 249px;
+    text-align: center;
+}
+.result-wrap .pw-info-wrap .pw-st-title {
+    font-size: 40px;
+    line-height: 45px;
+    padding: 15px 0;
+}
+.result-wrap .pw-info-wrap .result-info {
+    font-size: 17px;
+    line-height: 30px;
+    padding-top: 30px;
+}
+.pw-info-wrap .pw-st-title {
+    color: #242424;
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.pw-info-wrap .pw-input-wrap {
+    border-bottom: 1px solid #ecf0f1;
+    padding: 28px 0 10px;
+}
+.pw-info-wrap .pw-input-wrap .pw-unit {
+    float: left;
+    margin-bottom: 7px;
+    position: relative;
+}
+.pw-info-wrap .pw-input-wrap input {
+    background: #ecf0f1 none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #363439;
+    font-size: 15px;
+    height: 38px;
+    line-height: 38px;
+    outline: 0 none;
+    padding-right: 10px;
+    position: relative;
+    text-indent: 10px;
+    width: 190px;
+    z-index: 1;
+}
+.pw-info-wrap .pw-input-wrap input:focus {
+    border: 1px solid #66afe9;
+    box-shadow: 0 0 10px rgba(102, 175, 233, 0.5), 0 0 3px 1px rgba(102, 175, 233, 0.5) inset;
+}
+.pw-info-wrap .pw-input-wrap .pw-placeholder {
+    color: #acacac;
+    cursor: text;
+    font-size: 15px;
+    left: 12px;
+    top: 9px;
+    z-index: 2;
+}
+.pw-info-wrap .pw-input-wrap .pw-unit-chk {
+    float: right;
+}
+.pw-info-wrap .pw-input-wrap .pw-unit-chk input {
+    height: 30px;
+    line-height: 30px;
+    margin-left: 0;
+    padding: 10px 0 45px;
+    text-align: center;
+    text-indent: 0;
+    width: 95px;
+}
+.pw-info-wrap .pw-input-wrap .pw-unit-chk .pw-placeholder {
+    left: 0;
+    text-align: center;
+    top: 14px;
+    width: 100%;
+}
+.pw-info-wrap .pw-input-wrap .pw-unit-yzm {
+    line-height: 40px;
+}
+.pw-info-wrap .pw-input-wrap .pw-unit-yzm input {
+    width: 75px;
+}
+.pw-info-wrap .pw-input-wrap .vPic {
+    bottom: 2px;
+    right: 4px;
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    vertical-align: middle;
+    margin-left: 5px;
+    height: 35px;
+}
+.pw-tips-wrap {
+    color: red;
+    padding-top: 15px;
+    text-align: center;
+    line-height: 22px;
+}
+.pw-tips-wrap.error {
+    color: #e34543;
+    font-size: 15px;
+}
+.pw-submit-wap {
+    padding-bottom: 30px;
+}
+.pw-submit-wap .fgpw-submit {
+    background: #e34543 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    outline: 0 none;
+    transition: all 0.2s ease 0s;
+    width: 100%;
+}
+.pw-submit-wap .fgpw-submit.close-btn {
+    margin: 0 auto;
+    width: 304px;
+}
+.pw-submit-wap .fgpw-submit:focus, .pw-submit-wap .fgpw-submit:hover {
+    background: #1ecd97 none repeat scroll 0 0;
+}
+.sec-pic-wrap {
+    background: rgba(0, 0, 0, 0) url("http://la0111.com/infe/img/user/fg_pw/secure.svg") no-repeat scroll 0 0;
+    height: 42px;
+    margin: 0 auto;
+    padding-left: 48px;
+    width: 72px;
+}
+.sec-pic-wrap .sec-pic-txt {
+    border-left: 2px solid #efefef;
+    padding-left: 5px;
+}
+.sec-pic-wrap .sec-pic-txt p {
+    color: #7a7a7a;
+    display: block;
+    font-family: "Open Sans",sans-serif;
+    font-size: 22px;
+    line-height: 18px;
+    padding-top: 5px;
+}
+.sec-pic-wrap .sec-pic-txt span {
+    color: #0b85cc;
+}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>个人总览</title>
+  <style>
+    .table th, .table td {
+      padding: .5rem .5rem;
+    }
+    .table td:nth-child(odd):not([colspan]) {
+      text-align: center;
+      background-color: #e2e2e2;
+      color: #222;
+      width: 50px;
+    }
+    .table td:nth-child(1), .table td:nth-child(2), .table td:nth-child(3):not([colspan]) {
+      width: 10.5rem;
+    }
+    .table-responsive{
+      position: relative;
+    }
+    .loading {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(22, 8, 8, 0.08);
+      z-index: 3;
+    }
+    .loading >img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -32px;
+      margin-left: -32px;
+    }
+    .btn-sm {
+      border: none;
+      outline: none !important;
+    }
+    .Prompt a.red {
+      color: #b62929;
+    }
+    .Prompt {
+      font-size: 18px;
+      margin-left: 5px;
+      color: red;
+    }
+    .Balance {
+      margin-right: 12px;
+      color: #b62929;
+    }
+    .bgRed{
+      background-color: #8ab99a !important;
+      background-image:url(../../../images/user-center/base-ico.png);
+      background-repeat: no-repeat;
+      background-position: 125px -11px;
+      text-align: left;
+      padding-left: 39px !important;
+      color: #e6e6e6;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .bl_tr{
+      display: none;
+    }
+  </style>
+  <!--#include virtual="/page/include/user-center.html"-->
+  <!--#include virtual="/page/include/datepicker.html"-->
+</head>
+<body style="position: relative;">
+<div class="container-fluid p-x-md">
+  <div class="table-responsive m-t-md">
+
+    <div class="col-lg-12 p-x-lg m-t-md">
+      <div   style="margin-left:20px;height:40px;" >
+        <ul style="list-style-type:none;"> <!-- <h4 class="text-danger" style="margin: 0px;display:block">目前余额</h4> -->
+          <li style="display:inline-block;float:left;" ><h4 class="text-danger">目前余额</h4></li>
+          <li style="display:inline-block;float:right; margin-right:18.85%;" onclick="refreshForbatch()"> <input type="button"  class="btn btn-sm btn-primary m-l-md" style="font-size:16px;" value="一键刷新"/></li>
+        </ul>
+      </div>
+      <hr>
+      <table   id="balance-tab"  class="table table-bordered">
+        <thead class="thead-default">
+        <tr>
+          <td>账户余额</td>
+          <td><a id="selfBalance"></a>RMB</td>
+          <td><button onclick="getBalance(this,null)" code="self" type="button" class="btn btn-sm btn-primary m-l-md">刷新</button></td>
+        </tr>
+        </thead>
+        <tbody class="Balance-type"></tbody>
+      </table>
+    </div>
+
+    <div class="col-lg-12 p-x-lg m-t-md">
+      <h4 class="text-danger">额度转换</h4>
+      <hr>
+      <form id="lineConvertForm" class="form form-horizontal col-lg-12 m-b-md">
+        <div class="form-group row">
+          <label for="from" class="control-label">
+            <span class="fa fa-required m-r-xs"></span>转出：
+          </label>
+          <div style="display:inline-block; width: 20%;">
+            <select id="from" name="from" class="form-control" required>
+              <option value="self">账户余额</option>
+            </select>
+          </div>
+          <span class="Prompt" id="PromptFrom"><a class="red">*</a>请选择你要转出的余额类型</span>
+        </div>
+
+        <div class="form-group row">
+          <label for="to" class="control-label">
+            <span class="fa fa-required m-r-xs"></span>转入：
+          </label>
+          <div style="display:inline-block; width: 20%;">
+            <select id="to" name="to" class="form-control" required></select>
+          </div>
+          <span class="Prompt" id="PromptTo"><a class="red">*</a>请选择你要接收的余额类型</span>
+        </div>
+
+        <div class="form-group row">
+          <label for="amount" class="control-label" style="float:left;">
+            <span class="fa fa-required m-r-xs"></span>金额：
+          </label>
+          <div  style="display:inline-block; width: 20%; margin-left: 5px;">
+            <div class="input-group" style="width: 100%;">
+              <input type="number" id="amount" name="amount" class="form-control"
+                     placeholder="请输入存款金额" required autocomplete="off" onkeypress="return myNumberic(event)" />
+              <span class="input-group-addon">元</span>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div id="buttons" class="form-group row m-t-md">
+          <div class="col-lg-12">
+            <button type="button" class="btn btn-danger m-r-md" style="border: none;outline: none">提交</button>
+            <button type="reset" class="btn btn-default m-r-md" style="border: none;outline: none">重置</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+  var OptionStr = {},
+          reg = /(^[1-9]([0-9]+)?(\.[0-9]{1,2})?$)|(^(0){1}$)|(^[0-9]\.[0-9]([0-9])?$)/;   //  金额正则表达式
+
+  $(function() {
+
+    balanceType();
+
+    //转出类型变化
+    $('#lineConvertForm #from').on("change", function() {
+      if(this.value != "self") {
+        $("#lineConvertForm #to")
+                .empty()
+                .append('<option value="self">账户余额</option>');
+      }else {
+        $("#lineConvertForm #to").empty();
+        var _option = "";
+        for (var i=0; i<OptionStr.length; i++) {
+          if(OptionStr[i].code.indexOf("bg")>-1){
+            continue;
+          }
+          _option += "<option value='"+OptionStr[i].code+"'>"+OptionStr[i].name+"余额</option>"
+        }
+        _option += "<option value='bg_egame'>BG余额</option>"
+        $("#lineConvertForm #to").append(_option)
+      }
+      liveBalance(this.value,"#PromptFrom")
+      liveBalance($('#lineConvertForm #to option:selected').val(),"#PromptTo");
+    });
+    $('#lineConvertForm #to').on("change", function() {
+      liveBalance(this.value,"#PromptTo")
+    })
+
+    //额度转换
+    $('#lineConvertForm [type="button"]').on('click', function() {
+      loading();
+      if ($("#amount").val() === "") {
+        alert( '转入金额不能为空')
+        $(".loading-default").hide()
+        return false;
+      } else if ($("#from").val() === "self" && $("#to").val() === "self"){
+        alert("请选择转出余额或者转入余额!")
+        $(".loading-default").hide()
+        return false;
+      }
+      var data = {
+        from: $("#from").val(),
+        to: $("#to").val(),
+        amount: $("#amount").val()
+      };
+      $.get("/api/live/transfer", data, "json")
+              .done(function(result) {
+                $(document.body).children('.loading-default').remove();
+                $.info('额度转换成功');
+                if (data.from == "self"){
+                  getBalance(null, 'self',function(rs){
+                    $("#PromptFrom").html('<span>¥ '+rs+'</span>');
+                  });    // 获取总金额;
+                  getBalance(null, data.to,function(rs){
+                    $("#PromptTo").html('<span>¥ '+rs+'</span>');
+                  });
+                }
+                else if(data.to == "self"){
+                  getBalance(null, data.from,function(rs){
+                    $("#PromptFrom").html('<span>¥ '+rs+'</span>');
+                  });
+                  getBalance(null, 'self',function(rs){
+                    $("#PromptTo").html('<span>¥ '+rs+'</span>');
+                  });    // 获取总金额;
+
+                }
+                /*liveBalance($('#lineConvertForm #from option:selected').val(),"#PromptFrom");
+                liveBalance($('#lineConvertForm #to option:selected').val(),"#PromptTo");*/
+
+              })
+              .error(function (result) {
+                $(document.body).children('.loading-default').remove();
+                $('.loading').hide();
+                alert(JSON.parse(result.responseText).msg);
+              })
+    });
+
+    $(document).on("click",".bgRed",function(){
+      var kind = $(this).text();
+      var ctrClass = getEncodeData(kind);
+      $("."+ctrClass).toggle(100);
+    })
+
+  });
+
+  // 获取余额  查询 种类
+  function balanceType() {
+    $.getJSON('/api/live/allLiveGamesMap', function (response) {
+      var res = [];
+      for(x in response){
+        var  temp  = response[x];
+        for(d in temp){
+          res.push(temp[d]);
+        }
+      }
+      OptionStr = res;
+
+      for(k in response){
+        $("<tr/>", {
+          'class': '',
+          html: "<td class='bgRed' colspan='3'>"+k+"余额</td>"
+        }).appendTo($(".Balance-type"));
+        var classCtr = getEncodeData(k);
+        $.each(response[k], function (index, datas){
+          if(datas.code=="wzry"){	 return true }
+          $("<tr/>", {
+            'class': classCtr +" bl_tr",
+            html: "<td>"+datas.name+"余额</td>"
+                    +"<td><span id='"+datas.code+"Balance' class='Balance'></span><samp>RMB</samp></td>"
+                    +"<td><button onclick='getBalance(this, null)' code='" + datas.code + "' type='button' class='btn btn-sm btn-primary m-l-md'> 查询 </button></td>"
+          }).appendTo($(".Balance-type"));
+
+          $("<option/>", { value: datas.code, html: datas.name + "余额"}).appendTo($("#from"));      // 转出列表
+          $("<option/>", { value: datas.code, html: datas.name + "余额"}).appendTo($("#to"));        // 转入列表
+        })
+      }
+      liveBalance($('#lineConvertForm #from option:selected').val(),"#PromptFrom");
+      liveBalance($('#lineConvertForm #to option:selected').val(),"#PromptTo");
+    })
+            .fail(function () {
+              alert('获取查询余额种类失败!')
+            });
+  }
+  //转账查询真人余额
+  function liveBalance(liveType,id){
+    loading();
+    $.get("/api/live/getBalance", {liveCode: liveType}, "json")
+            .done(function(result) {
+              $(document.body).children('.loading-default').remove();
+              $('.loading').hide();
+              $(id).html($('<span>¥ '+toThousandsString(result)+'</span>'))
+            })
+            .error(function () {
+              $(document.body).children('.loading-default').remove();
+              $('.loading').hide();
+              $(id).text('获取余额失败');
+            })
+  }
+  //金额格式化  支持 小数版本
+  function toThousandsString(number) {
+    const splitNumber = (number || 0).toString().split('.')
+    var integer = splitNumber[0]
+    const decimal = splitNumber[1] || ''
+
+    var result = ''
+    while (integer.length > 3) {
+      result = ',' + integer.slice(-3) + result
+      integer = integer.slice(0, integer.length - 3)
+    }
+    if (integer) {
+      result = integer + result
+    }
+
+    if (decimal === '') {
+      return result
+    }
+
+    return result + '.' + decimal
+  }
+  //  查询余额
+  function getBalance(_this,_type,setVal) {
+    loading();
+    if (_type === null) {
+      var code = $(_this).attr('code');
+    } else {
+      code = _type
+    }
+    $.get("/api/live/getBalance", {liveCode: code}, "json")
+            .done(function(result) {
+              $(document.body).children('.loading-default').remove();
+              $('.loading').hide();
+              $("#" + code + "Balance").text(toThousandsString(result)+" ");
+              if(setVal !== undefined){
+                setVal(toThousandsString(result)+" ");
+              }
+            })
+            .error(function (result) {
+              $(document.body).children('.loading-default').remove();
+              $('.loading').hide();
+              alert(JSON.parse(result.responseText).msg);
+            })
+  }
+
+  //  加载框
+  function loading() {
+    var loadingEl = $('<div class="loading-default"><div></div></div>');
+    $(document.body).append(loadingEl);
+  }
+
+  // 限制 输入 金额
+  function myNumberic(e,len) {
+    var obj=e.srcElement || e.target;
+    var dot=obj.value.indexOf(".");
+    len =(typeof(len)=="undefined")?2:len;
+    var  key=e.keyCode|| e.which;
+    if(key==8 || key==9 || key==46 || (key>=37  && key<=40))     //兼容Firefox的backspace,tab,del,方向键
+      return true;
+    if (key<=57 && key>=48) { //数字
+      if(dot==-1)//没有小数点
+        return true;
+      else if(obj.value.length<=dot+len)//小数位数
+        return true;
+    } else if((key==46) && dot==-1){//小数点
+      return true;
+    }
+    return false;
+  }
+
+
+  //一键刷新
+  function refreshForbatch(){
+    var  buts=$('#balance-tab').find('button');
+    //循环获取对象的值
+    buts.each(function(){
+      refreshBalance(this,null);
+    })
+  }
+
+  function refreshBalance(_this,_type) {
+    loading();
+    if (_type === null)
+    {
+      var code = $(_this).attr('code');
+    }
+    else
+    {
+      code = _type
+    }
+    $.get("/api/live/getBalance", {liveCode: code}, "json")
+            .done(function(result) {
+              $(document.body).children('.loading-default').remove();
+              $('.loading').hide();
+              $("#" + code + "Balance").text(result);
+            })
+            .error(function (result) {
+              $(document.body).children('.loading-default').remove();
+              $('.loading').hide();
+              // alert(JSON.parse(result.responseText).msg);
+            })
+  }
+
+  function getEncodeData(str){
+    return encodeURI(str).replace(/%/g,'').substr(0,11);
+  }
+
+</script>
+</body>
+</html>

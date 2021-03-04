@@ -1,0 +1,130 @@
+<!--#include virtual="/views/html/low-funetional-vision.html"-->
+
+<!-- 走势图 -->
+<iframe width="100%" height="1000" align="top" scrolling="auto" onload="this.height=1000" frameborder="0" src=""
+        id="TrendBody" name="TrendBody" style="display: none"></iframe>
+
+<div class="content-wrap">
+  <div class="top-content">
+    <!-- 高频、信用、官方 -->
+    <div class="top-content-left">
+    </div>
+    <!-- 公告 -->
+    <div class="submain-tip">
+      <span>
+        <!--<i class="fa fa-volume-up" aria-hidden="true"></i>--></span>
+      <span id="Notice-Wrap">
+        <marquee id='indexNotice' behavior=scroll loop=-1 scrollamount=5 scrolldelay=10 height=50 width=608
+                 onmouseover=this.stop() onmouseout=this.start() onclick="showNotice()"></marquee>
+      </span>
+    </div>
+    <div class="top-content-right">
+      <div class="content-right-top">
+        <!-- 轮播 -->
+        <!--#include virtual="/views/index_banner.html"-->
+      </div>
+      <!-- 彩票种类 tab -->
+      <div class="qb-box-list">
+        <div class="qb-box-list-head">
+          <ul class="hot-nav">
+            <!-- 中间部分 热门彩票 导航 -->
+          </ul>
+        </div>
+        <div class="nav-content">
+          <div style="height: 140px;" class="loading">
+            <img src="/views/img/loading_more.gif" style="margin-left: 240px;"/></div>
+        </div>
+        <div class="qb-box-list-bottom">
+          <div class="bei-box">
+            <div class="bei-box-num">
+              <button class="minus" onclick="num('minus')">-</button>
+              <input class="import" type="text" value="1"/>
+              <button class="plus" onclick="num('plus')">+</button>
+              <span class="accumulative">倍 共
+                <a class="tatil-money">2</a>元</span></div>
+          </div>
+          <div class="dg-btn-box">
+            <button class="For-a" onclick="ForA('for','')">
+              <i class="fa fa-refresh" aria-hidden="true"></i>换一注
+            </button>
+            <button class="Instant-bet" onclick="ForA('instant','')">立即投注</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="top-content-r">
+      <!-- android/ios 二维码 -->
+      <div class="right-info">
+        <ul class="mobile-tab">
+          <li onmouseover="_table(this,'on','tab-content')" class="tab-mobile on" data-val="1">
+            <a onclick="">
+              <i class="fa fa-apple" aria-hidden="true"></i>iOS版</a>
+          </li>
+          <li onmouseover="_table(this,'on','tab-content')" class="tab-mobile" data-val="2">
+            <a onclick="">
+              <i class="fa fa-android" aria-hidden="true"></i>Android版</a>
+          </li>
+        </ul>
+        <div class="tab-content tab-content-ios">
+          <p>适用于IOS6.0及以上平台</p>
+          <!--#include virtual="/views/ios_ewm.html"-->
+          <p>扫一扫二维码下载Iphone版</p>
+        </div>
+        <div class="tab-content tab-content-android">
+          <p>适用于Android及以上平台</p>
+          <!--#include virtual="/views/android_ewm.html"-->
+          <p>扫一扫二维码下载Android版</p>
+        </div>
+      </div>
+      <!--  KK彩票推荐 -->
+      <div class="lotteryRecommendation">
+        <div class="part-cont-title">
+          <span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></span>
+          <span>时事新闻</span>
+          <span title="更多信息" onclick="javascript:window.location.href='/views/html/lotteryInformation.html'"><i
+            class="fa fa-bars" aria-hidden="true"></i></span>
+        </div>
+        <!--#include virtual="/views/index_news_title_1.html" -->
+      </div>
+
+
+    </div>
+    <!--<div class="mid-cpntent">-->
+    <!--中奖排行榜-->
+    <div class="mid-cpntent-left">
+      <h2 class="mid-cpntent-left-title">
+        <span>新手指导</span>
+        <span title="新手指导" onclick="javascript:window.location.href='/views/html/help.html'"><i class="fa fa-bars"
+                                                                                                aria-hidden="true"></i></span>
+      </h2>
+      <div class="tableCarousel" cellspacing="0" cellpad="" c-greyding="0" style="">
+        <ul class="web-notice-box help-ul">
+          <!--#include virtual="/views/index_user_help.html"--></ul>
+      </div>
+    </div>
+
+    <!--走势图表-->
+    <div class="mid-cpntent-center">
+      <h2 class="chart_title">
+        <span>走势图表</span>
+        <a href="/views/html/trend.html" title="更多资讯">更多资讯>></a>
+      </h2>
+      <div class="chart-pic"></div>
+      <div class="chart-list">
+        <ul class="highfreqlottery">
+          <!--#include virtual="/views/high_freq_lottery.html"-->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>
+<script>
+  $("#nav-more-menu").removeClass('nav-more-menu');
+  $('.more-lottery-wrap,.lottery-list-wrap').show();
+  $(".lottery-tab").css("display", "flex");
+</script>

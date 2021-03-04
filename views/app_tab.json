@@ -1,0 +1,14 @@
+[
+        {
+            "modelName": "首页",
+            "modelType": "home"
+        },
+        {
+            "modelName": "长龙",
+            "modelType": "long"
+        },
+        {
+            "modelName": "充值",
+            "modelType": "cz"
+        }
+]

@@ -1,0 +1,130 @@
+::-webkit-scrollbar { /*滚动条*/
+  width: 2px;
+}
+
+::-webkit-scrollbar-button { /*滚动条两端的按钮*/
+}
+
+::-webkit-scrollbar-track { /*外层轨道*/
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-track-piece { /*内层轨道*/
+}
+
+::-webkit-scrollbar-thumb { /*拖动条*/
+  background: rgb(211, 32, 54);
+}
+
+::-webkit-scrollbar-corner { /*边角*/
+}
+
+::-webkit-resizer { /*右下角拖动块*/
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+  vertical-align: middle;
+}
+
+.table, th {
+  text-align: center;
+}
+
+.table-noborder tr th, .table-noborder tr td {
+  border: none;
+}
+
+.table-noborder thead:last-child tr:last-child th, .table-noborder thead:last-child tr:last-child td, .table-noborder tbody:last-child tr:last-child th, .table-noborder tbody:last-child tr:last-child td, .table-noborder tfoot:last-child tr:last-child th, .table-noborder tfoot:last-child tr:last-child td {
+  border-bottom: none;
+}
+
+.table-noborder th:last-child, .table-noborder td:last-child {
+  border-right: none;
+}
+
+.loading-default {
+  /*background-color: #FFF;*/
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*opacity: 0.5;*/
+  /*filter: Alpha(opacity=50);*/
+  z-index: 9999;
+}
+
+.loading-default > div {
+  background: url(../../images/user-center/loading-default.gif) no-repeat center center;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-gray {
+  background-color: #ededed;
+}
+
+.bg-gray, .bg-gray a {
+  color: #373a3c;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.text-inverse {
+  color: #373a3c;
+}
+
+.form-sm .form-group {
+  margin-bottom: 5px;
+}
+
+.form-xs .form-group {
+  margin-bottom: 0;
+}
+
+.form-text-right .form-group > label {
+  text-align: right;
+}
+
+.fa-required:before {
+  content: "*";
+  color: red;
+}
+
+.fa-space:before {
+  content: "\00a0\00a0";
+}
+
+.alert-flopy {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 9999;
+}
+
+.field-md {
+  width: 120px !important;
+}
+
+.field-sm {
+  width: 100px !important;
+}
+
+.field-xs {
+  width: 80px !important;
+}
+
+hr {
+  border-top: 1px solid #cdcdcd;
+}
+
+a.none-underline {
+  text-decoration: none;
+}
+
+.popover-content {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}

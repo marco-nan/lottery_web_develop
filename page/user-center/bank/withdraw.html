@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+  		<meta charset="UTF-8">
+  		<title>提现</title>
+  		<!--#include virtual="/page/include/user-center.html"-->
+  		<!--#include virtual="/page/include/validation.html"-->
+  		<!--#include virtual="/page/include/datepicker.html"-->
+  		<link href="/css/user-center/bank/withdraw.css" type="text/css" rel="stylesheet"/>
+		<script src="/js/lib/layer/layer.js" type="text/javascript"></script>
+  		<script src="/js/user-center/bank/validWithdraw.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+	  		<h5 class="m-t-md">自出款后第一次存款开始之后，总有效投注：<span class="text-primary" id="validBet"></span>（即所有有效投注额）。</h5>
+	  		<div style="margin-top: 15px;">
+	  			<span id="effective_id"></span>
+	  			<span id="rebate_id"></span>
+            </div>
+	  		<div class="table-responsive m-t-md">
+	    		<table class="table table-bordered bg-audit">
+	      			<thead>
+	      				<tr>
+							<td width="150" rowspan="2" style="background: #C5D9F1;">存款日期区间</td>
+                            <td width="85" rowspan="2" style="background: #C5D9F1;">存款金额</td>
+                            <td width="85" rowspan="2" style="background: #C5D9F1;">存款优惠</td>
+                            <td width="150" colspan="3" style="background: #C5D9F1;display:table-cell;" data-id="effectiveamount">有效投注</td>
+                            <td width="280" colspan="3" style="display:table-cell;" data-id="rebate">优惠流水审核</td>
+                            <td width="440" colspan="4" style="background: #D8E4BC;">常态流水审核</td>
+                            <td width="150" rowspan="2" style="background: #C5D9F1;">共扣除金额</td>
+						</tr>
+                        <tr>
+                        	<td width="45" style="background: #C5D9F1;display: table-cell;" data-id="effectiveamount">彩票</td>
+                        	<td width="45" style="background: #C5D9F1;display: table-cell;" data-id="effectiveamount">体育</td>
+                        	<td width="45" style="background: #C5D9F1;display: table-cell;" data-id="effectiveamount">真人</td>
+                            <td width="70" style="display: table-cell;" data-id="rebate">优惠打码量</td>
+                            <td width="55" style="display: table-cell;" data-id="rebate">通过</td>
+                            <td width="80" style="display: table-cell;" data-id="rebate">优惠扣除金额</td>
+                            <td width="70" style="background: #D8E4BC;">常态打码量</td>
+                            <td width="60" style="background: #D8E4BC;">放宽额度</td>
+                            <td width="45" style="background: #D8E4BC;">通过</td>
+                            <td width="70" style="background: #D8E4BC;">常态扣除金额</td>
+						</tr>
+	      			</thead>
+	      			<tbody id="dmlList" style="background:#FFFFFF;"></tbody>
+	    		</table>
+	    		<input type="hidden" id="sumDeductMoney" name="sumDeductMoney" value=""/>
+	  			<h5 class="m-t-md">优惠审核&nbsp;+&nbsp;常态性审核&nbsp;共需扣除：<span class="text-primary" id="sumDeduct"></span></h5>
+	  			<h5>此次出款时间为：<span class="text-primary" id="cashTime"></span></h5>
+	  		</div>
+	  		<div class="text-center" style="margin-top: -50px;">
+	    		<a id="btn-primary" href="javascript:void(0)" class="btn btn-primary" onclick="jQuery.cashNext()">继续出款</a>
+	  		</div>
+		</div>
+	</body>
+</html>

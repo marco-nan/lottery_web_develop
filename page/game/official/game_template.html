@@ -1,0 +1,383 @@
+<script type="text/html" id="tpl-num1">
+    <div class="itemlist-{{size}}">
+        {{each rows row}}
+        <div class="sumBtn_list clear">
+            <div class="sumBtn_left">
+                <span class="name">{{row.name}}</span>
+                <div class="fleft">
+                    {{each row.nums num}}
+                    <span class="num-box"><a href="javascript:void(0);" data-num="{{num}}" class="num num-{{num}}" ><font>{{num}}</font></a><i></i></span>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="sumBtn_righr">
+                <a href="javascript:void(0);" title="全" class="allBtn">全</a>
+                <a href="javascript:void(0);" title="大" class="bigBtn">大</a>
+                <a href="javascript:void(0);" title="小" class="smallBtn">小</a>
+                <a href="javascript:void(0);" title="单" class="oddBtn">单</a>
+                <a href="javascript:void(0);" title="双" class="evenBtn">双</a>
+                <a href="javascript:void(0);" title="清" class="delBtn">清</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+<script type="text/html" id="tpl-num2">
+    <div class="itemlist-{{size}}">
+        {{each rows row}}
+        <div class="sumBtn_list clear">
+            <div class="sumBtn_left">
+                <span class="name">{{row.name}}</span>
+                <div class="fleft">
+                    {{each row.nums num}}
+                    <span class="num-box"><a href="javascript:void(0);" data-num="{{num}}" class="num">{{num}}</a><i>&nbsp;</i></span>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="sumBtn_righr">
+                <a href="javascript:void(0);" title="全" class="allBtn">全</a>
+                <a href="javascript:void(0);" title="清" class="delBtn">清</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+<script type="text/html" id="tpl-num3">
+    <div class="itemlist-{{size}}">
+        {{each rows row}}
+        <div class="sumBtn_list clear">
+            <div class="sumBtn_left">
+                <div>
+                    <span class="name">{{row.name}}</span>
+                    <div class="fleft">
+                        {{each row.nums num}}
+                        <span class="Bbtn num-box-2"><a class="num" href="javascript:void(0);" data-num="{{num}}">{{@num}}</a><i></i></span>
+                        {{/each }}
+                    </div>
+                </div>
+                <div>
+                    <div class="fleft" style="color:#fff;text-align:center">
+                        <span class="num-box num-box-2 num-odds">&nbsp;</span>
+                        <span class="num-box num-box-2 num-odds">&nbsp;</span>
+                        <span class="num-box num-box-2 num-odds">&nbsp;</span>
+                        <span class="num-box num-box-2 num-odds">&nbsp;</span>
+                        <span class="num-box num-box-2 num-odds">&nbsp;</span>
+                        <span class="num-box num-box-2 num-odds">&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sumBtn_righr">
+                <a href="javascript:void(0);" title="全" class="allBtn">全</a>
+                <a href="javascript:void(0);" title="清" class="delBtn">清</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+<script type="text/html" id="tpl-num3-1">
+    <div class="itemlist-{{size}}">
+        {{each rows row}}
+        <div class="sumBtn_list clear">
+            <div class="sumBtn_left">
+                <div>
+                    <span class="name">{{row.name}}</span>
+                    <div class="fleft">
+                        {{each row.nums num}}
+                        <span class="num-box num-box-1 num-bigger-box" ><a href="javascript:void(0);" class="num num-{{num}}" data-num="{{num}}"><font>{{num}}</font></a><i>&nbsp;</i></span>
+                        {{/each }}
+                    </div>
+                </div>
+                <div>
+                    <div class="fleft" style="text-align:center;color:#fff">
+                        <span class="num-box num-box-1 num-odds num-bigger-box">&nbsp;</span>
+                        <span class="num-box num-box-1 num-odds num-bigger-box">&nbsp;</span>
+                        <span class="num-box num-box-1 num-odds num-bigger-box">&nbsp;</span>
+                        <span class="num-box num-box-1 num-odds num-bigger-box">&nbsp;</span>
+                        <span class="num-box num-box-1 num-odds num-bigger-box">&nbsp;</span>
+                        <span class="num-box num-box-1 num-odds num-bigger-box">&nbsp;</span>
+                        <span class="num-box num-box-1 num-odds num-bigger-box">&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sumBtn_righr">
+                <a href="javascript:void(0);" title="全" class="allBtn">全</a>
+                <a href="javascript:void(0);" title="大" class="bigBtn">大</a>
+                <a href="javascript:void(0);" title="小" class="smallBtn">小</a>
+                <a href="javascript:void(0);" title="单" class="oddBtn">单</a>
+                <a href="javascript:void(0);" title="双" class="evenBtn">双</a>
+                <a href="javascript:void(0);" title="清" class="delBtn">清</a>
+            </div>
+        </div>
+        {{/each }}
+    </div>
+</script>
+<script type="text/html" id="tpl-num4">
+    <div>
+        {{each rows row}}
+        <div class="sumBtn_list clear">
+            <div class="sumBtn_list_kl8">
+                <span class="name">{{row.name}}</span>
+                <div class="fleft">
+                    {{each row.nums num}}
+                    <span class="num-box"><a href="javascript:void(0);" class="num num-{{num}}" data-num="{{num}}"><font>{{num}}</font></a><i>&nbsp;</i></span>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+<script type="text/html" id="tpl-num5">
+    <div class="itemlist2-{{size}}">
+        {{each rows row}}
+        <div class="sumBtn_list clear">
+            <div class="sumBtn_left">
+                <span class="name">{{row.name}}</span>
+                <div class="fleft">
+                    {{each row.nums num}}
+                    <span class="Bbtn"><a href="javascript:void(0);" class="num" data-num="{{num}}">{{num}}</a><i>&nbsp;</i></span>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="sumBtn_righr">
+                <a href="javascript:void(0);" title="全" class="allBtn">全</a>
+                <a href="javascript:void(0);" title="清" class="delBtn">清</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+<script type="text/html" id="tpl-num5-1">
+    <div class="itemlist3-{{size}}">
+        {{each rows row}}
+        <div class="sumBtn_list clear">
+            <div class="sumBtn_left">
+                <div class="clear">
+                    <span class="name">{{row.name}}</span>
+                    <div class="fleft">
+                        {{each row.nums num}}
+                        <span class="Bbtn2"><a href="javascript:void(0);" class="num" data-num="{{num}}"><font>{{@num}}</font></a><i>&nbsp;</i></span>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="clear">
+                    <span></span>
+                    <div class="fleft">
+                        <span class="Bbtn2-odds"></span>
+                        <span class="Bbtn2-odds"></span>
+                        <span class="Bbtn2-odds"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="sumBtn_righr">
+                <a href="javascript:void(0);" title="全" class="allBtn">全</a>
+                <a href="javascript:void(0);" title="清" class="delBtn">清</a>
+            </div>
+        </div>
+        {{/each }}
+    </div>
+</script>
+<script type="text/html" id="tpl-num6">
+    <div class="itemlist-2">
+    {{each rows row}}
+
+    <div class="sumBtn_list clear">
+        <div class="sumBtn_left">
+            <span class="name">{{row.name}}</span>
+            <div class="fleft">
+                {{each row.nums num}}
+                <span class="Bbtn num-box-2"><a href="javascript:void(0);"  data-num="{{num}}" class="num">{{@num}}</a><i></i></span>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    </div>
+</script>
+<script type="text/html" id="tpl-num7">
+    <div class="clear sumBtn_list_jsk3 sumBtn_list">
+        <div class="sumBtn_left" style="text-align:center">
+            <div>
+                <div class="clear">
+                    <span class="name">{{rows[0].name}}</span>
+                    <div class="fleft">
+                        {{each rows[0].nums num}}
+                        <span class="num-box" style="width: 65px"><a href="javascript:void(0)" style="float:none;display:inline-block"  data-num = "{{num}}" class="num num-{{num}}"><font>{{@num}}</font></a><i></i></span>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="clear" style="margin-top: 10px">
+                    <div class="fleft">
+                        {{each rows[1].nums num}}
+                        <span class="num-box" style="width: 65px"><a href="javascript:void(0)" style="float:none;display:inline-block"  data-num = "{{num}}" class="num num-{{num}}"><font>{{@num}}</font></a><i></i></span>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+                <span class="name" style="display:none">&nbsp;</span>
+                <div class="fleft" style="color:#fff;">
+                    <span class="num-box num-pl-box" style="width: 65px"></span>
+                    <span class="num-box num-pl-box"  style="width: 65px"></span>
+                    <span class="num-box num-pl-box"  style="width: 65px"></span>
+                    <span class="num-box num-pl-box"  style="width: 65px"></span>
+                    <span class="num-box num-pl-box"  style="width: 65px"></span>
+                    <span class="num-box num-pl-box"  style="width: 65px"></span>
+                    <span class="num-box num-pl-box"  style="width: 65px"></span>
+                    <span class="num-box num-pl-box"  style="width: 65px"></span>
+                </div>
+            </div>
+        </div>
+        <div class="sumBtn_righr">
+            <a href="javascript:void(0)" title="小" class="smallBtn">小</a>
+            <a href="javascript:void(0)" title="大" class="bigBtn">大</a>
+            <a href="javascript:void(0)" title="单" class="oddBtn">单</a>
+            <a href="javascript:void(0)" title="双" class="evenBtn">双</a>
+            <a href="javascript:void(0)" title="清" class="delBtn">清</a>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="tpl-danshi1">
+    <div class="selector-box">
+        <div class="selector-con clear">
+            <textarea id="danshi1_textarea"></textarea>
+            <div class="fleft">
+                <a href="javascript:void(0);" class="btn DeleteDuplicate" title="删除重复号"></a>
+                <a href="javascript:void(0);" class="btn Import" title="导入文件" style="overflow:hidden;cursor:pointer" id="btnImport"></a>
+                <a href="javascript:void(0);" class="btn Empty" title="清空"></a>
+            </div>
+        </div>
+        <div class="tips">{{@inputTip}}</div>
+    </div>
+</script>
+<script type="text/html" id="tpl-danshi2">
+    <div class="selector-box selector-box2">
+        <div class="selector-con clear">
+            <div class="con-toolbar clear">
+                <span>选择位置：</span>
+                <span>
+                    <label class="checkbox" for="ds-ck-0"><input type="checkbox" id="ds-ck-0" value="0" data-name="万" class="checkbox-hide"/>万</label>
+                    <label class="checkbox" for="ds-ck-1"><input type="checkbox" id="ds-ck-1" value="1" data-name="千" class="checkbox-hide"/>千</label>
+                    <label class="checkbox" for="ds-ck-2"><input type="checkbox" id="ds-ck-2" value="2" data-name="百" class="checkbox-hide"/>百</label>
+                    <label class="checkbox" for="ds-ck-3"><input type="checkbox" id="ds-ck-3" value="3" data-name="十" class="checkbox-hide"/>十</label>
+                    <label class="checkbox" for="ds-ck-4"><input type="checkbox" id="ds-ck-4" value="4" data-name="个" class="checkbox-hide"/>个</label>
+                </span>
+                <span class="toolbar-tips">( 温馨提示：你选择了 <label id="posCheckedCount">&nbsp;</label> 个位置，系统会自动根据位置组合成 <label id="posCombCount">&nbsp;</label> 个方案  )</span>
+            </div>
+            <textarea id="danshi2TextArea"></textarea>
+            <div class="fleft">
+                <a href="javascript:void(0);" class="btn DeleteDuplicate" title="删除重复号"></a>
+                <a href="javascript:void(0);" class="btn Import" title="导入文件" style="overflow:hidden;cursor:pointer" id="btnImport"></a>
+                <a href="javascript:void(0);" class="btn Empty" title="清空"></a>
+            </div>
+        </div>
+        <div class="tips">{{@inputTip}}</div>
+    </div>
+</script>
+<script type="text/html" id="tpl-hezhi1">
+    <div class="itemlist1-{{size}}">
+        {{each rows row}}
+        <div class="sumBtn_list clear">
+            <div class="sumBtn_left">
+                <span class="name">{{row.name}}</span>
+                <div class="fleft">
+                    {{each row.nums num}}
+                    <span class="num-box"><a href="javascript:void(0);" data-num="{{num}}" class="num num-{{num}}"><font>{{num}}</font></a><i></i></span>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+<script type="text/html" id="tpl-hezhi2">
+    <div class="selector-box4">
+        <div class="selector-con clear">
+            <div class="con-toolbar clear">
+                <span>选择位置：</span>
+                <span>
+                    <label class="checkbox" for="ds-ck-0"><input type="checkbox" id="ds-ck-0" value="0" data-name="万" class="checkbox-hide" />万</label>
+                    <label class="checkbox" for="ds-ck-1"><input type="checkbox" id="ds-ck-1" value="1" data-name="千" class="checkbox-hide" />千</label>
+                    <label class="checkbox" for="ds-ck-2"><input type="checkbox" id="ds-ck-2" value="2" data-name="百" class="checkbox-hide" />百</label>
+                    <label class="checkbox" for="ds-ck-3"><input type="checkbox" id="ds-ck-3" value="3" data-name="十" class="checkbox-hide" />十</label>
+                    <label class="checkbox" for="ds-ck-4"><input type="checkbox" id="ds-ck-4" value="4" data-name="个" class="checkbox-hide" />个</label>
+                </span>
+                <span class="toolbar-tips">( 温馨提示：你选择了 <label id="posCheckedCount">&nbsp;</label> 个位置，系统会自动根据位置组合成 <label id="posCombCount">&nbsp;</label> 个方案  )</span>
+            </div>
+        </div>
+        <div>
+            {{each rows row}}
+            <div class="sumBtn_list clear">
+                <div class="sumBtn_left">
+                    <span class="name">{{row.name}}</span>
+                    <div class="fleft">
+                        {{each row.nums num}}
+                        <span class="num-box"><a href="javascript:void(0);" class="num num-{{num}}" data-num="{{num}}"><font>{{num}}</font></a><i>&nbsp;</i></span>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</script>
+<script type="text/html" id="tpl-renxuan1">
+    <div class="selector-box3">
+        <div class="selector-con clear">
+            <div class="con-toolbar clear">
+                <span>选择位置：</span>
+                <span>
+                    <label class="checkbox" for="ds-ck-0"><input type="checkbox" id="ds-ck-0" value="0" data-name="万" class="checkbox-hide" />万</label>
+                    <label class="checkbox" for="ds-ck-1"><input type="checkbox" id="ds-ck-1" value="1" data-name="千" class="checkbox-hide" />千</label>
+                    <label class="checkbox" for="ds-ck-2"><input type="checkbox" id="ds-ck-2" value="2" data-name="百" class="checkbox-hide" />百</label>
+                    <label class="checkbox" for="ds-ck-3"><input type="checkbox" id="ds-ck-3" value="3" data-name="十" class="checkbox-hide" />十</label>
+                    <label class="checkbox" for="ds-ck-4"><input type="checkbox" id="ds-ck-4" value="4" data-name="个" class="checkbox-hide" />个</label>
+                </span>
+                <span class="toolbar-tips">( 温馨提示：你选择了 <label id="posCheckedCount">&nbsp;</label> 个位置，系统会自动根据位置组合成 <label id="posCombCount">&nbsp;</label> 个方案  )</span>
+            </div>
+        </div>
+        <div>
+            {{each rows row}}
+            <div class="sumBtn_list clear">
+                <div class="sumBtn_left">
+                    <span class="name">{{row.name}}</span>
+                    <div class="fleft">
+                        {{each row.nums num}}
+                        <span class="num-box"><a href="javascript:void(0);" class="num num-{{num}}" data-num="{{num}}"><font>{{num}}</font></a><i>&nbsp;</i></span>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="sumBtn_righr">
+                    <a href="javascript:void(0);" title="全" class="allBtn">全</a>
+                    <a href="javascript:void(0);" title="大" class="bigBtn">大</a>
+                    <a href="javascript:void(0);" title="小" class="smallBtn">小</a>
+                    <a href="javascript:void(0);" title="单" class="oddBtn">单</a>
+                    <a href="javascript:void(0);" title="双" class="evenBtn">双</a>
+                    <a href="javascript:void(0);" title="清" class="delBtn">清</a>
+                </div>
+            </div>
+            {{/each }}
+        </div>
+    </div>
+</script>
+<script type="text/html" id="tpl-dantuo">
+    <div>
+        <div class="sumBtn_list clear">
+            <div class="sumBtn_left">
+                <span class="name">&nbsp;</span>
+                <div class="fleft">
+
+                    <span class="num-box"><a href="javascript:void(0);"><font></font></a><i></i></span>
+                </div>
+            </div>
+            <div class="sumBtn_righr">
+                <a href="javascript:void(0);" title="全" class="allBtn">全</a>
+                <a href="javascript:void(0);" title="大" class="bigBtn">大</a>
+                <a href="javascript:void(0);" title="小" class="smallBtn">小</a>
+                <a href="javascript:void(0);" title="单" class="oddBtn">单</a>
+                <a href="javascript:void(0);" title="双" class="evenBtn">双</a>
+                <a href="javascript:void(0);" title="清" class="delBtn">清</a>
+            </div>
+        </div>
+    </div>
+</script>

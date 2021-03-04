@@ -1,0 +1,328 @@
+
+/* 电子游艺 */
+
+@keyframes wakeup {
+  0% {
+    box-shadow: 0 0 0 gold;
+  }
+  100% {
+    box-shadow: 0 0 6px gold;
+  }
+}
+
+.eleContentWrap {
+  width: 100%;
+  min-height: 100px;
+  overflow: hidden;
+  background-color: #252525;
+}
+
+.eleContent {
+  width: 1000px;
+  height: 846px;
+  margin: 32px auto;
+  position:relative;
+}
+
+.eleContent .ele-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 1, 0.33);
+  z-index: 3;
+  color: #b6b6b6;
+  text-align: center;
+  line-height: 846px;
+  display: none;
+}
+
+.eleContent .ele-loading span {
+  padding: 22px 12px;
+  background-color: #fbfbfb;
+  color: #000;
+  border-radius: 4px;
+}
+
+.eleContent .ele-loading i {
+  padding: 0 12px;
+  font-size: 20px;
+}
+
+.ele-header {
+  height: 74px;
+  position: relative;
+  background-color: #000000;
+  padding: 0 26px;
+}
+
+.ele-swiper-wrapper {
+  height: 60px;
+  cursor: pointer;
+}
+
+.ele-swiper-container .swiper-slide > div:nth-child(1) {
+  height: 50px;
+  text-align: center;
+}
+
+.ele-swiper-container .swiper-slide > div:nth-child(1) img {
+  height: 100%;
+}
+
+.ele-swiper-container .swiper-slide > div:nth-child(2) {
+  height: 24px;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 24px;
+}
+
+.ele-active-index-box {
+  width: 100%;
+  position: relative;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+}
+
+.ele-swiper-slide-active {
+  border-bottom: 4px solid #2196f3;
+  height: 68px !important;
+}
+
+.ele-swiper-slide-active > div:nth-child(1) {
+  height: 42px !important;
+}
+
+.ele-nav-box {
+  padding: 10px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #181818;
+  /*border-top: 1px solid #2a2828;*/
+}
+
+.ele-nav-box > div.ele-nav-row {
+  float: left;
+}
+
+.ele-nav-box > div.ele-nav-row:nth-child(1) {
+  width: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.ele-nav-box > div.ele-nav-row:nth-child(2) {
+  width: 148px;
+  color: #ffffff;
+  padding: 0 12px;
+  background-color: #3b3a3a;
+  border-radius: 18px;
+  height: 28px;
+  margin-top: 4px;
+}
+
+.ele-nav-box > div.ele-nav-row:nth-child(2) > input {
+  width: 120px;
+  border: 0;
+  height: 28px;
+  line-height: 28px;
+  text-indent: 12px;
+  color: #c5c5c5;
+  float: left;
+  outline: 0;
+  background: none;
+}
+
+.ele-nav-box > div.ele-nav-row:nth-child(2) > i {
+  color: #a9a8a8;
+  cursor: pointer;
+  float: left;
+  height: 28px;
+  line-height: 28px;
+  width: 28px;
+  text-align: center;
+}
+
+.ele-nav-box > div.ele-nav-row:nth-child(3) {
+  float: left;
+  height: 32px;
+  text-align: right;
+  line-height: 32px;
+  color: #ffffff;
+  width: 708px;
+}
+
+.ele-nav-box > div.ele-nav-row:nth-child(3) span {
+  font-size: 12px;
+  cursor: pointer;
+  padding: 6px 12px;
+  color: #ff9800;
+}
+
+.ele-nav-box > div.ele-nav-row:nth-child(3) span:nth-child(2n) {
+  padding: 6px 0;
+}
+
+.ele-gamelist-row {
+  height: 618px;
+  width: 1000px;
+  background-color: black;
+}
+
+.ele-gamelist-row .ele-gamelist-col {
+  width: 176px;
+  height: 180px;
+  margin: 12px;
+  background-color: #181818;
+  float: left;
+  cursor: pointer;
+}
+
+.ele-gamelist-row .ele-gamelist-col:hover {
+  box-shadow: 0 0 10px #ffe039;
+}
+
+.ele-gamelist-row .ele-gamelist-col .ele-gamelist-col-logo {
+  height: 100px;
+  width: 100px;
+  margin: 12px 38px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ele-gamelist-row .ele-gamelist-col .ele-gamelist-col-logo img {
+  width: 100%;
+}
+
+.ele-gamelist-row .ele-gamelist-col .ele-gamelist-col-logo img.mg {
+  width: 100px;
+}
+
+.ele-gamelist-row .ele-gamelist-col .ele-gamelist-col-title {
+  height: 26px;
+  padding: 0 12px;
+  color: #92922f;
+  line-height: 26px;
+  text-align: left;
+}
+
+.ele-gamelist-row .ele-gamelist-col .ele-gamelist-col-text {
+  text-align: center;
+  color: #a9a8a8;
+  height: 46px;
+  line-height: 46px;
+  font-size: 14px;
+}
+
+.ele-footer-page {
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  padding: 18px 0;
+  background-color: #181818;
+}
+
+.ele-footer-page span {
+  background-color: #6e5109;
+  color: #eccdcd;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-align: center;
+  padding: 6px 22px;
+}
+
+.ele-footer-page span:nth-child(3),
+.ele-footer-page span:nth-child(4) {
+  cursor: not-allowed;
+}
+
+.ele-footer-page span a {
+  color: #fff;
+}
+
+.ele-mg-next-nav, .ele-jdb-next-nav{
+  display: none;
+  float: right;
+}
+
+.ele-header .swiper-button-next, .ele-header .swiper-button-prev {
+  background-size: 10px 44px;
+  display: none;
+}
+
+.isAgby {
+  display: none;
+}
+
+.agby-box {
+  width: 100%;
+  height: 786px;
+}
+
+.by-rule-box {
+  height: 80px;
+  width: 100%;
+  background-color: #0c0c0c;
+  text-align: center;
+  line-height: 80px;
+}
+
+.ele-by-class .layui-layer-content {
+  padding: 0 12px;
+}
+
+.mutedBtn {
+  position: absolute;
+  right: 4px;
+  bottom: 28px;
+  z-index: 2;
+  background-color: rgba(1, 1, 1, 0.34);
+  padding: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 1px #fff;
+}
+
+.mutedBtn i.fa-bell-slash {
+  color: red;
+  display: none;
+}
+
+.agby-btn {
+  position: absolute;
+  display: inline-block;
+  color: #ffffff;
+  background: url(/page/eleGame/img/by-btn.png) no-repeat;
+  top: 48%;
+  left: 40%;
+  z-index: 999;
+  cursor: pointer;
+  width: 216px;
+  height: 60px;
+  line-height: 36px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.mutedBtn i.fa-bell {
+  color: green;
+  display: block;
+  padding: 5px;
+}
+
+#ele-byVideo {
+  cursor: pointer;
+}
+
+.by-rule-box > span {
+  padding: 11px 32px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  background: url(/page/eleGame/img/f-tab-btn.png) no-repeat scroll 0 0;
+}

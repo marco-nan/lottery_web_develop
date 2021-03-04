@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--logo-->
+    <!--#include virtual="/views/page_title_logo.html"-->
+    <!--title-->
+    <!--#include virtual="/views/page_title_content.html"-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+    <link rel="stylesheet" type="text/css" href="/page/newVersion/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/page/newVersion/css/common.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/page/newVersion/css/layer.css"> -->
+
+    <script type="text/javascript" src="/js/lib/jquery/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/js/lib/jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/js/lib/layer/layer.js"></script>
+    <script type="text/javascript" src="/js/lib/util/md5.js"></script>
+    <script type="text/javascript" src="/page/newVersion/js/rem.js"></script>
+    <script type="text/javascript" src="/page/newVersion/js/common.js"></script>
+
+</head>
+<body>
+<header class="header">
+    <ul>
+        <li>网站已改版升级</li>
+        <li>原账号密码不变</li>
+        <li>请根据提示使用原帐号密码进行登录。</li>
+        <li>给您带来的不便，敬请谅解</li>
+        <li>新版本全网最高赔率：</li>
+        <li>9.85（1990）</li>
+    </ul>
+</header>
+<main class="main">
+    <form class="formLogin">
+        <ul>
+            <li>提现密码：</li>
+            <li><input type="password" placeholder="请输入提现密码" id="withdrawPassword"></li>
+        </ul>
+        <!--<ul>-->
+            <!--<li>昵称：</li>-->
+            <!--<li><input type="text" placeholder="请输入昵称" id="nickName"></li>-->
+        <!--</ul>-->
+        <ul>
+            <li>真实姓名：</li>
+            <li><input type="text" placeholder="请输入昵称" id="fullName"></li>
+        </ul>
+        <ul>
+            <li>真实手机：</li>
+            <li><input type="text" placeholder="请输入昵称" id="phone" maxlength="11"></li>
+        </ul>
+        <ul>
+            <li>微信号：</li>
+            <li><input type="text" placeholder="请输入昵称" id="wechat"></li>
+        </ul>
+        <ul>
+            <li>QQ号：</li>
+            <li><input type="text" placeholder="请输入昵称" id="qq"></li>
+        </ul>
+        <ul>
+            <li>邮箱：</li>
+            <li><input type="text" placeholder="请输入昵称" id="email"></li>
+        </ul>
+
+        <input type="button" value="提交完善资料" id="login" onclick="Material()">
+    </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,141 @@
+::-webkit-scrollbar { /*滚动条*/
+  width: 2px;
+  height: 20px;
+}
+
+::-webkit-scrollbar-button { /*滚动条两端的按钮*/
+}
+
+::-webkit-scrollbar-track { /*外层轨道*/
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-track-piece { /*内层轨道*/
+}
+
+::-webkit-scrollbar-thumb { /*拖动条*/
+  background: rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-corner { /*边角*/
+}
+
+::-webkit-resizer { /*右下角拖动块*/
+}
+
+body {
+  background-color: #eaeaea;
+  font-size: 12px;
+  font-family: "Microsoft YaHei", 微软雅黑;
+  padding: 10px 0;
+  min-width: 1024px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  display: inline-block;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.tab-contents .tab-panel {
+  display: none;
+}
+
+.x-center{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.game-tab-container .tabs {
+  border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.game-tab-container .tab-contents li {
+  line-height: 27px;
+  min-width: 60px;
+  padding: 0 5px;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.game-tab-container .tabs li {
+  line-height: 30px;
+  min-width: 50px;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.game-tab-container .tab-contents li.active, .game-tab-container .tab-contents li:hover {
+  color: #ea721a;
+}
+
+.game-tab-container .tabs li.active, .game-tab-container .tabs li:hover {
+  color: #ea721a;
+  border-bottom: 2px solid #ea721a;
+}
+
+ul.button-groups {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+ul.button-groups > li {
+  background-color: #fff;
+  line-height: 30px;
+  border: 1px solid rgb(222, 222, 222);
+  min-width: 70px;
+  text-align: center;
+  padding:0 5px;
+}
+
+ul.button-groups > li.active, ul.button-groups > li:hover {
+  border-color: #ea721a;
+  background-color: #ea721a;
+  color: #fff;
+}
+
+ul.small-button-groups {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+ul.small-button-groups > li {
+  background-color: #fff;
+  line-height: 18px;
+  border-radius:5px;
+  border: 1px #ea721a solid;
+  color: #ea721a;
+  min-width: 70px;
+  text-align: center;
+}
+
+ul.small-button-groups > li.active, ul.small-button-groups > li:hover {
+  border-color: #ea721a;
+  background-color: #ea721a;
+  color: #fff;
+}
+
+.loading-default {
+  background-color: #FFF;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  filter: Alpha(opacity=10);
+}
+
+.loading-default > div {
+  background: url(../../images/user-center/loading-default.gif) no-repeat center center;
+  width: 100%;
+  height: 100%;
+}

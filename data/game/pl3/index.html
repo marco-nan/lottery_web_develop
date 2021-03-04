@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>排列3</title>
+	<!--#include virtual="/page/game/include/head.html"-->
+</head>
+<body class="index-bg">
+    <div class="header_nav_bg">
+    	<input type="hidden" id="gameId" value="11"  data-gameCode="pl3"/>
+        <div class="header_nav">
+            <!--#include virtual="/page/include/lottery.html"-->
+        </div>
+    </div>
+    <div class="frame">
+        <div class="sidebar index-sidebar">
+            <!--#include virtual="/page/game/include/left.html"-->
+        </div>
+        <div id="_main_view" class="main">
+            <section>
+                <!-- 玩法菜单 -->
+                <!--#include virtual="/data/game/pl3/cate/11.html"-->
+                <div class="main-bet-content"  id="twoHtml" style="width: 80%;float:left">
+                    <!-- 下注界面 -->
+                 </div>
+
+                <div class="Nav_content_Fr_right" style="float: left;">
+                    <!--#include virtual="/page/game/include/right.html"-->
+                </div>
+            </section>
+            <!--#include virtual="/page/game/include/jscommon.html"-->
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <!--#include virtual="/page/game/include/conBet.html"-->
+    <!--#include virtual="/page/game/include/bottom_notice.html"-->
+</body>
+</html>
+  <script>
+  $(function(){
+	  menu.tab('/data/game/pl3/cate/11101.html','twoHtml');
+ 	  gameManager.initGame({loadLmcl:true,loadAnalysis:false});
+      lotteryManager.init({openCallback:gameManager.openCallback});
+ });
+    </script>

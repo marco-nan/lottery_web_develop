@@ -1,0 +1,30 @@
+<div id="FloatLeft_" class="float-left-wrap"   style="background: url(/views/image/20200804/20200804182904767309-20200521162255639822-1.png)  no-repeat; height: 570px;    width: 120px;">
+    <a href="http://cms.ces.com/加盟代理" target="_blank" style="height: 134px;"></a>
+ <a href="/data/game/lhc300/index.html" target="_blank" style="height: 90px;"></a>
+    <a href="http://cms.ces.com/官网" target="_blank" style="height: 73px;"></a>
+   <a href="#" target="_blank" style=" height: 200px;"><img  src="/views/image/20200521/20200521152928122509-100_副本.png"  style="margin-top: 0px;    margin-left: 15px;"></a>
+  <a href="javascript:;" class="close" style="height: 50px;margin-top:0px;"> </a>
+</div>
+<style>
+        .float-right-wrap,
+        .float-left-wrap{width:117px !important;}
+    </style>
+    
+<script>
+$(".close").click(function(){
+  $(this).parent().fadeOut(100);
+});
+
+$(".Recharge").click(function(){
+  var token = $.cookie("token", {path: "/"});
+  if (token != null && token != "" )
+    window.location.href = "/page/user-center/user-center.html?startPage=bank-rech";
+  else
+    layer.alert('请先登入', {
+      icon: 2,
+      shade: 0
+    }, function () {
+      window.location.href = "/views/html/login.html";
+    });
+})
+</script>

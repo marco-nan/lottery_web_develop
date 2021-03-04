@@ -1,0 +1,20 @@
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<div class="table  table-bet  redTable data-betArea">
+<ul class="nav nav-tabs">
+        		<li class="active"><a onclick="menu.tab('/data/game/lhc180/cate/73205101.html','threeHtml')">二尾连</a></li>
+    		<li><a onclick="menu.tab('/data/game/lhc180/cate/73205102.html','threeHtml')">三尾连</a></li>
+    		<li><a onclick="menu.tab('/data/game/lhc180/cate/73205103.html','threeHtml')">四尾连</a></li>
+    		<li><a onclick="menu.tab('/data/game/lhc180/cate/73205104.html','threeHtml')">五尾连</a></li>
+</ul>
+
+<div class="tab-content" id="threeHtml">
+        <!--#include virtual="/data/game/lhc180/cate/73205101.html"-->
+</div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+</div>
+<script type="text/javascript">
+$(function(){
+    $('#quickBetDiv').css('display', 'none')
+	menu.twoTab();
+});
+</script>

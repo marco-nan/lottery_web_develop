@@ -1,0 +1,11 @@
+.lhc-alert-warp{
+    background-color:transparent !important;
+    box-shadow: none !important;
+}
+.lhc-alert-warp .layui-layer-content{
+    overflow:hidden !important
+}
+.lhc-alert-warp .layui-layer-setwin .layui-layer-close2{
+    top:27px !important;
+}
+

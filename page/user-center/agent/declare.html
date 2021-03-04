@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>返点设定</title>
+  <!--#include virtual="/page/include/user-center.html"-->
+</head>
+<body class="bg-faded">
+
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    function getAgentContent() {
+      $.ajax({
+        type: 'get',
+        dataType: 'html',
+        url: '/views/app_agendDelaer.html',
+        success: function (response) {
+          $(".bg-faded").html(response)
+        },
+        error: function (err) {
+          console.log(err)
+        }
+      })
+    }
+
+    getAgentContent();
+  })
+</script>
+</body>
+</html>

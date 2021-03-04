@@ -1,0 +1,174 @@
+<!-- 左浮窗 -->
+<!--#include virtual="/views/html/float-left.html"-->
+
+<!-- 右浮窗 -->
+<!--#include virtual="/views/html/float-right.html"-->
+
+<!-- 红包 (cms)-->
+<!--#include virtual="/views/redPacket.html"-->
+<style type="text/css">
+    .mobileClass a {
+        width:100px !important;
+    }
+    .live_drop_down {
+        width: 75px;
+        position: absolute;
+        top: 42px;
+        left: 0;
+        z-index: 2000;
+        background: #e4393c;
+        padding-top: 9px;
+        border: 1px solid #fff;
+    }
+    .game_drop_down{
+        width: 75px;
+        position: absolute;
+        top: 42px;
+        left: 0;
+        z-index: 2000;
+        background: #e4393c;
+        padding-top: 9px;
+        border: 1px solid #fff;
+    }
+	.sports_drop_down{
+        width: 75px;
+        position: absolute;
+        top: 42px;
+        left: 0;
+        z-index: 2000;
+        background: #e4393c;
+        padding-top: 9px;
+        border: 1px solid #fff;
+    }
+	.chess_drop_down{
+        width: 75px;
+        position: absolute;
+        top: 42px;
+        left: 0;
+        z-index: 2000;
+        background: #e4393c;
+        padding-top: 9px;
+        border: 1px solid #fff;
+    }
+	.nav-plus li ul li {
+	  float:none;
+	}
+</style>
+<!-- 头部 -->
+<header class="header-wrap">
+  <div class="header">
+    <!--欢迎条幅-->
+    <!--#include virtual="/views/index_top_welcome.html"-->
+    <!--左侧条幅-->
+    <!--#include virtual="/views/top_left_content.html"-->
+
+    <div class="header-right">
+      <div class="header-gou" onclick="window.location.href='/views/html/mobile-lottery.html'">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      </div>
+      <!--#include virtual="/views/top_right_content.html"-->
+    </div>
+  </div>
+</header>
+
+<!--登入区-->
+
+<div id="login-wrap" onkeydown="KeyDown();">
+  <div class="login-area">
+    <!--#include virtual="/views/index_logo_kfc.html"-->
+    <!--<div class="dreamTitle" style="background: url('/views/img/logo_tit.png') no-repeat center;"></div>-->
+    <div class="login-key">
+      <div class="key-wrap">
+                <span class="user-name">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                    <input type="text" placeholder="请输入用户名" class="user" id="username"/>
+                </span>
+
+        <span class="user-password">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input type="password" placeholder="请输入密码" class="password" id="password"/>
+                </span>
+
+        <span class="user-identifying-code" id="vcode_moudle">
+                    <input type="hidden" id="needVocde" value="">
+                    <input type="text" placeholder="验证码" class="identifying-code" onfocus="getYzm()" maxlength="4"
+                           id="rmNum"/>
+                    <img src="/views/img/code.png" id="vImg" onclick="getYzm()" class="identifying-code-png"/>
+                </span>
+
+        <span class="user-enter">
+                     <input class="dr_anniu sub_anniu" type="button" name="login" value="登录" id="submit"
+                            onclick="aLeftForm1Sub()">
+                     <input class="dr_anniu reg_anniu" type="button" value="注册"
+                            onclick="window.location.href='/views/html/register.html'"/>
+                </span>
+          <!--#include virtual="/views/html/language.html"-->
+
+    </div>
+  </div>
+</div>
+</div>
+
+<!--导航区-->
+<div id="nav-wrap">
+  <div class="nav">
+    <!--#include virtual="/views/index_menu_first.html"-->
+    <!--#include virtual="/views/index_menu.html"-->
+  </div>
+</div>
+
+<script type="text/javascript">
+    // 真人娱乐
+    $(".liveClass").hover(function () {
+        $(".live_drop_down").show();
+    },function () {
+        $(".live_drop_down").hide();
+    })
+    
+    $(".liveClass>li").hover(function(){
+        $(".live_drop_down").show();
+    },function () {
+        $(".live_drop_down").hide();
+    })
+
+    // 电子游艺
+    $(".gameClass").hover(function () {
+        $(".game_drop_down").show();
+    },function () {
+        $(".game_drop_down").hide();
+    })
+    
+    $(".gameClass>li").hover(function(){
+        $(".game_drop_down").show();
+    },function () {
+        $(".game_drop_down").hide();
+    })
+
+	// 体育投注
+    $(".sportsClass").hover(function () {
+        $(".sports_drop_down").show();
+    },function () {
+        $(".sports_drop_down").hide();
+    })
+    
+    $(".sportsClass>li").hover(function(){
+        $(".sports_drop_down").show();
+    },function () {
+        $(".sports_drop_down").hide();
+    })
+
+	// 棋牌游戏
+    $(".chessClass").hover(function () {
+        $(".chess_drop_down").show();
+    },function () {
+        $(".chess_drop_down").hide();
+    })
+    
+    $(".chessClass>li").hover(function(){
+        $(".chess_drop_down").show();
+    },function () {
+        $(".chess_drop_down").hide();
+    })
+	
+</script>
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>

@@ -1,0 +1,86 @@
+{
+  "rech": {
+    "name": "充值",
+    "url": "/page/user-center/payment/recharge.html"
+  },
+  "withdraw": {
+    "name": "提现",
+    "url": "/page/user-center/bank/withdraw.html"
+  },
+  "bill": {
+    "name": "账变记录",
+    "children": [
+      {
+        "name": "账变报表",
+        "url": "/page/user-center/report/bill_report.html"
+      },
+      {
+        "name": "个人报表",
+        "url": "/page/user-center/report/personal-report.html"
+      }
+    ]
+  },
+  "message": {
+    "name": "个人消息",
+    "url": "/page/user-center/cms/message.html"
+  },
+  "bet": {
+    "name": "游戏记录",
+    "children": [
+      {
+        "name": "购彩查询",
+        "url": "/page/user-center/bet/bet.html"
+      },
+      {
+        "name": "追号查询",
+        "url": "/page/user-center/bet/trace.html"
+      }
+    ]
+  },
+  "user-center": {
+    "name": "会员中心",
+    "children": [
+      {
+        "name": "个人总览",
+        "url": "/page/user-center/account/overviews.html"
+      },
+      {
+        "name": "个人资料",
+        "url": "/page/user-center/account/password.html"
+      },
+      {
+        "name": "银行卡管理",
+        "url": "/page/user-center/account/bank.html"
+      },
+      {
+        "name": "彩种信息",
+        "url": "/page/user-center/account/play-cate.html"
+      },
+      {
+        "name": "彩种限额",
+        "url": "/page/user-center/account/play-cate-limit.html"
+      }
+    ]
+  },
+  "agent-center": {
+    "name": "代理中心",
+    "children": [
+      {
+        "name": "团队总览",
+        "url": "/page/user-center/agent/team-overviews.html"
+      },
+      {
+        "name": "用户列表",
+        "url": "/page/user-center/agent/user_list.html"
+      },
+      {
+        "name": "注册管理",
+        "url": "/page/user-center/agent/regist.html"
+      },
+      {
+        "name": "推广注册",
+        "url": "/page/user-center/agent/spread-info.html"
+      }
+    ]
+  }
+}

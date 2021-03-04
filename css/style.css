@@ -1,0 +1,433 @@
+/*------------------通用--------------------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+.bg-col-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+.background {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.wei-mainImg {
+  -webkit-animation: xz 2s linear infinite;
+  -moz-animation: xz 2s linear infinite;
+  -ms-animation: xz 2s linear infinite;
+  -o-animation: xz 2s linear infinite;
+}
+#aoyun {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+#aoyun .aoyun-img1 {
+  position: absolute;
+  width: 40%;
+  height: 30%;
+  left: 30%;
+  top: 5%;
+  background-image: url("../images/123456_05.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#aoyun .aoyun-img2 {
+  position: absolute;
+  width: 70%;
+  height: 50%;
+  top: 40%;
+  left: 15%;
+  background-image: url("../images/123456_03.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#aoyun .ay-blue {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  top: 4%;
+  left: 26%;
+  background-image: url("../images/blue.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: xz 2s linear 2s;
+  -moz-animation: xz 2s linear 2s;
+  -ms-animation: xz 2s linear 2s;
+  -o-animation: xz 2s linear 2s;
+}
+#aoyun .ay-black {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  top: 4%;
+  left: 38%;
+  background-image: url("../images/black.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: xz 2s linear 4s;
+  -moz-animation: xz 2s linear 4s;
+  -ms-animation: xz 2s linear 4s;
+  -o-animation: xz 2s linear 4s;
+}
+#aoyun .ay-red {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  top: 4%;
+  left: 52%;
+  background-image: url("../images/red.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: xz 2s linear 6s;
+  -moz-animation: xz 2s linear 6s;
+  -ms-animation: xz 2s linear 6s;
+  -o-animation: xz 2s linear 6s;
+}
+#aoyun .ay-yellow {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  top: 17%;
+  left: 33%;
+  background-image: url("../images/yellow.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: xz 2s linear 10s;
+  -moz-animation: xz 2s linear 10s;
+  -ms-animation: xz 2s linear 10s;
+  -o-animation: xz 2s linear 10s;
+}
+#aoyun .ay-green {
+  position: absolute;
+  width: 22%;
+  height: 22%;
+  top: 17%;
+  left: 44%;
+  background-image: url("../images/green.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: xz 2s linear 8s;
+  -moz-animation: xz 2s linear 8s;
+  -ms-animation: xz 2s linear 8s;
+  -o-animation: xz 2s linear 8s;
+}
+#aoyun .ay-star {
+  position: absolute;
+  width: 6%;
+  height: 6%;
+  top: 12%;
+  left: 51%;
+  background-image: url("../images/star.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: star 1s linear 2s infinite;
+  -moz-animation: star 1s linear 2s infinite;
+  -ms-animation: star 1s linear 2s infinite;
+  -o-animation: star 1s linear 2s infinite;
+}
+#aoyun .ay-logo {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: 28%;
+  left: 30%;
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: star 3s linear 5s infinite;
+  -moz-animation: star 3s linear 5s infinite;
+  -ms-animation: star 3s linear 5s infinite;
+  -o-animation: star 3s linear 5s infinite;
+}
+#aoyun .ay-2016 {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  top: 27%;
+  left: 62%;
+  background-image: url("../images/2016.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: rio2016 4s linear 5s;
+  -moz-animation: rio2016 4s linear 5s;
+  -ms-animation: rio2016 4s linear 5s;
+  -o-animation: rio2016 4s linear 5s;
+}
+#aoyun .ay-close {
+  position: absolute;
+  z-index: 9999;
+  width: 5%;
+  height: 5%;
+  top: 10px;
+  right: 30%;
+  background-image: url("../images/close-btn.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+  transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+}
+#aoyun .ay-close:hover {
+  -ms-transform: rotate(360deg);
+  /* Internet Explorer */
+  -moz-transform: rotate(360deg);
+  /* Firefox */
+  -webkit-transform: rotate(360deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(360deg);
+  /* Opera */
+  transform: rotate(360deg);
+}
+#aoyun .overimg {
+  position: absolute;
+  width: 50%;
+  height: 35%;
+  left: 25%;
+  top: 5%;
+  overflow: hidden;
+}
+#aoyun .light {
+  position: absolute;
+  left: -1083px;
+  top: 0;
+  width: 100px;
+  height: 335px;
+  background-image: -moz-linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  transform: skewx(-25deg);
+  -o-transform: skewx(-25deg);
+  -moz-transform: skewx(-25deg);
+  -webkit-transform: skewx(-25deg);
+  -webkit-animation: bg-w 0.8s linear 3s 2;
+  -moz-animation: bg-w 0.8s linear 3s 2;
+  -ms-animation: bg-w 0.8s linear 3s 2;
+  -o-animation: bg-w 0.8s linear 3s 2;
+}
+#aoyun .stage {
+  position: absolute;
+  top: 0;
+  left: 28%;
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2000;
+}
+#aoyun .sheep {
+  background-image: url('../images/run01.png');
+  background-position: 0 0;
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  right: 0;
+  bottom: 10%;
+  background-repeat: no-repeat;
+  cursor: -webkit-grabbing;
+  overflow: hidden;
+  z-index: 3000;
+}
+@keyframes xz {
+  from {
+    -ms-transform: rotate(0deg);
+    /* Internet Explorer */
+    -moz-transform: rotate(0deg);
+    /* Firefox */
+    -webkit-transform: rotate(0deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(0deg);
+    /* Opera */
+    transform: rotateZ(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    /* Internet Explorer */
+    -moz-transform: rotate(360deg);
+    /* Firefox */
+    -webkit-transform: rotate(360deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(360deg);
+    /* Opera */
+    transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes xz {
+  from {
+    -ms-transform: rotate(0deg);
+    /* Internet Explorer */
+    -moz-transform: rotate(0deg);
+    /* Firefox */
+    -webkit-transform: rotate(0deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(0deg);
+    /* Opera */
+    transform: rotateZ(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    /* Internet Explorer */
+    -moz-transform: rotate(360deg);
+    /* Firefox */
+    -webkit-transform: rotate(360deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(360deg);
+    /* Opera */
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes bg-w {
+  from {
+    left: -1083px;
+  }
+  to {
+    left: 1083px;
+  }
+}
+@-webkit-keyframes bg-w {
+  from {
+    left: -1083px;
+  }
+  to {
+    left: 1083px;
+  }
+}
+@keyframes star {
+  from {
+    -ms-transform: rotateY(0deg);
+    /* Internet Explorer */
+    -moz-transform: rotateY(0deg);
+    /* Firefox */
+    -webkit-transform: rotateY(0deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotateY(0deg);
+    /* Opera */
+    transform: rotateY(0deg);
+  }
+  to {
+    -ms-transform: rotateY(360deg);
+    /* Internet Explorer */
+    -moz-transform: rotateY(360deg);
+    /* Firefox */
+    -webkit-transform: rotateY(360deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotateY(360deg);
+    /* Opera */
+    transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes star {
+  from {
+    -ms-transform: scale(0);
+    /* Internet Explorer */
+    -moz-transform: scale(0);
+    /* Firefox */
+    -webkit-transform: scale(0);
+    /* Safari 和 Chrome */
+    -o-transform: scale(0);
+    /* Opera */
+    transform: scale(0);
+    -ms-transform: rotateY(0deg);
+    /* Internet Explorer */
+    -moz-transform: rotateY(0deg);
+    /* Firefox */
+    -webkit-transform: rotateY(0deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotateY(0deg);
+    /* Opera */
+    transform: rotateY(0deg);
+  }
+  to {
+    -ms-transform: rotateY(360deg);
+    /* Internet Explorer */
+    -moz-transform: rotateY(360deg);
+    /* Firefox */
+    -webkit-transform: rotateY(360deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotateY(360deg);
+    /* Opera */
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rio2016 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rio2016 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes close-a {
+  0% {
+    -ms-transform: rotate(0deg);
+    /* Internet Explorer */
+    -moz-transform: rotate(0deg);
+    /* Firefox */
+    -webkit-transform: rotate(0deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(0deg);
+    /* Opera */
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    /* Internet Explorer */
+    -moz-transform: rotate(360deg);
+    /* Firefox */
+    -webkit-transform: rotate(360deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(360deg);
+    /* Opera */
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes close-a {
+  0% {
+    -ms-transform: rotate(0deg);
+    /* Internet Explorer */
+    -moz-transform: rotate(0deg);
+    /* Firefox */
+    -webkit-transform: rotate(0deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(0deg);
+    /* Opera */
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    /* Internet Explorer */
+    -moz-transform: rotate(360deg);
+    /* Firefox */
+    -webkit-transform: rotate(360deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(360deg);
+    /* Opera */
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

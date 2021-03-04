@@ -1,0 +1,77 @@
+
+<!--
+***
+**   优惠活动
+*
+-->
+
+<style>
+    .youhui-wrap
+    {
+        min-height: 100px;
+        width: 1000px;
+    }
+    .youhui-content-title
+    {
+        /*height: 122px;*/
+        width: 976px;
+        padding: 22px 12px;
+        cursor: pointer;
+        margin: 20px 0;
+    }
+    .y-pic
+    {
+        width: 976px;
+        /*height:122px;*/
+        float: left;
+    }
+    .y-text
+    {
+        /*height:122px;*/
+        width: 184px;
+        float: right;
+        padding: 0 12px;
+    }
+    .y-left-title
+    {
+        font-size: 18px;
+        font-family: 微软雅黑, 'Microsoft YaHei';
+        color: #393939;
+    }
+    .y-left-t
+    {
+        line-height: 24px;
+    }
+    .yHide-content
+    {
+        min-height: 100px;
+        width: 976px;
+        padding: 15px 28px;
+        display: none;
+    }
+</style>
+
+<div class="activities-wrap">
+
+    <div class="activities">
+        <!-- 公告 -->
+        <div class="submain-tip You-submain-tip">
+           <span></span>
+           <span id="Notice-Wrap">
+              <marquee id='indexNotice' behavior=scroll loop=-1 scrollamount=5 scrolldelay=10 height=50 width=840 onmouseover=this.stop() onmouseout=this.start() onclick="showNotice()"></marquee>
+           </span>
+        </div>
+
+        <!--<div class="select-top">
+            <span>全部优惠</span>
+        </div>-->
+
+
+        <div class="activities-top">
+            <div class="activities-table">
+                <!--#include virtual="/views/youhui_content.html"-->
+            </div>
+        </div>
+    </div>
+</div>
+

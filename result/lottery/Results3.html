@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+<meta charset="utf-8">
+<title>_HistoryLayout</title>
+<script type="text/javascript" src="/js/lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/js/lib/util/httpUtil.js"></script>
+<script type="text/javascript" src="/js/lib/json2.js"></script>
+<script src="/result/lottery/results.js"></script>
+<link href="/result/lottery/main_gray.css" rel="stylesheet" />
+<link href="/result/lottery/pikaday/pikaday.css" rel="stylesheet" />
+<script type="text/javascript"
+	src="/result/lottery/pikaday/pikaday.min.js"></script>
+<script type="text/javascript" src="/js/lib/template.js"></script>
+
+<style id="style-1-cropbar-clipper">
+/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+	top: 18px !important;
+	left: 50% !important;
+	margin-left: -100px !important;
+	width: 200px !important;
+	border: 2px rgba(255, 255, 255, .38) solid !important;
+	border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+	margin-left: 0px !important;
+}
+
+embed, object {
+	animation-duration: .001s;
+	-ms-animation-duration: .001s;
+	-moz-animation-duration: .001s;
+	-webkit-animation-duration: .001s;
+	-o-animation-duration: .001s;
+	animation-name: nodeInserted;
+	-ms-animation-name: nodeInserted;
+	-moz-animation-name: nodeInserted;
+	-webkit-animation-name: nodeInserted;
+	-o-animation-name: nodeInserted;
+}
+.td1{
+	wdith:7%;
+}
+</style>
+</head>
+<body onload="init()">
+	<div tabindex="-1"
+		style="position: left; outline: 0px; left: 83px; top: 4px; z-index: 1028;"
+		aria-labelledby="title:d-account-info"
+		aria-describedby="content:d-account-info"
+		class="ui-popup ui-popup-modal ui-popup-show ui-popup-focus"
+		role="alertdialog">
+		<div i="dialog" class="ui-dialog">
+			<div class="ui-dialog-arrow-a"></div>
+			<div class="ui-dialog-arrow-b"></div>
+			<table class="ui-dialog-grid">
+				<tbody>
+					<tr>
+						<td i="body" class="ui-dialog-body" ">
+							<div style="height: 475px;" align="left" >
+								<div class="tab tab-dialog" style="width:980px">
+									<input type="text" class="input j-datepicker mr10 hasDatepicker" name="date" value=''
+										id="date" readonly="readonly" style="display: inline-block;">
+									<select class="select-menu" id="game_id" name="game_id" onchange="search()" style="width: 120px";>
+									</select>
+									<button class="button" id="submit" onclick="search()">查询</button>
+									<span id="loading" class="red hide" style="display: none;">
+										正在加载中... </span>
+									<div id='LotteryList' class="tab tab-dialog "></div>
+									<script>
+										$(function() {
+											var myDate = new Date();
+											$('#date').val(myDate.toLocaleDateString());
+											var picker = new Pikaday(
+													{
+														field : document.getElementById('date'),
+														firstDay : 1,
+														minDate : new Date('2010-01-01'),
+														maxDate : new Date('2020-12-31'),
+														yearRange : [ 2000,2020 ]
+													});
+										})
+									</script>
+								</div>
+						</td>
+					</tr>
+					<tr>
+						<td i="footer" class="ui-dialog-footer" style="display: none;"><div
+								i="statusbar" class="ui-dialog-statusbar" style="display: none;"></div>
+							<div i="button" class="ui-dialog-button"></div></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</body>
+
+<script id="temp_10" type="text/html">
+<div class="tab">
+        <div id="福彩3d">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>期数</th>
+                        <th>开奖时间</th>
+                        <th>开奖号码</th>
+                        <th colspan="3">总和</th>
+                    </tr>
+                </thead>
+                <tbody>
+					{{each content as info i}}
+                                                    <tr>
+                                                        <td class="td-hd" >{{info.turnNum}}</td>
+                                                        <td>{{info.openTime}}</td>
+                                                        <td>
+                                                            <span class="icon_2 ball_3d_2">{{info.openNum[0]}}</span>
+															<span class="icon_2 ball_3d_2">{{info.openNum[1]}}</span>
+															<span class="icon_2 ball_3d_2">{{info.openNum[2]}}</span>
+                                                        </td>
+                                                        <td><span class="icon_2 ball_3d_2">{{info.result[10104101]}}</span></td>
+                                                        <td><span class="icon_2 ball_3d_2">{{info.result[10104102]}}</span></td>
+                                                        <td><span class="icon_2 ball_3d_2">{{info.result[10104103]}}</span></td>
+                                                    </tr>
+					{{/each}}
+                </tbody>
+            </table>
+        </div>
+</script>
+<script id="temp_11" type="text/html">
+<div class="tab tab-dialog">
+	  <div id="排列三">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>期数</th>
+                        <th>开奖时间</th>
+                        <th>开奖号码</th>
+                        <th colspan="3">总和</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{each content as info i}}
+                    <tr>
+                        <td class="td-hd">
+                            {{info.turnNum}}
+                        </td>
+                        <td>
+                            {{info.openTime}}
+                        </td>
+                        <td>
+                            <span class="icon_2 ball_3d_2">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[2]}}</span>
+                        </td>
+                        <td><span class="icon_2 ball_3d_2">{{info.result[11104101]}}</span></td>
+                        <td><span class="icon_2 ball_3d_2">{{info.result[11104102]}}</span></td>
+                        <td><span class="icon_2 ball_3d_2">{{info.result[11104103]}}</span></td>
+                    </tr>
+					{{/each}}
+                </tbody>
+            </table>
+        </div>
+</script>
+<script id="temp_70" type="text/html">
+<div class="tab">
+<div id="六合彩">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>期数</th>
+                        <th>开奖时间</th>
+                        <th>开奖号码</th>
+                        <th colspan="3">总和</th>
+                        <th>波色</th>
+                        <th>特别码</th>
+                        <th>正码一</th>
+                        <th>正码二</th>
+                        <th>正码三</th>
+                        <th>正码四</th>
+                        <th>正码五</th>
+                        <th>正码六</th>
+                    </tr>
+                </thead>
+                <tbody>
+						{{each content as info i}}
+                    <tr>
+                        <td class="td-hd"  width="7%">{{info.turnNum}}</td>
+                        <td width="9%">{{info.openTime}}</td>
+                        <td>
+                            <table class="table-noborder">
+                                <tbody>
+                                    <tr>
+                                        <span class="icon_2 ball-style b-blue">{{info.openNum[0]}}</span>
+										<span class="icon_2 ball-style b-blue">{{info.openNum[1]}}</span>
+										<span class="icon_2 ball-style b-red">{{info.openNum[2]}}</span>
+ 										<span class="icon_2 ball-style b-red">{{info.openNum[3]}}</span>
+										<span class="icon_2 ball-style b-red">{{info.openNum[4]}}</span>
+										<span class="icon_2 ball-style b-red">{{info.openNum[5]}}</span>
+ 										<span class="icon_2 ball-style b-red">{{info.openNum[6]}}</span>
+                                    </tr>
+                                    <tr>
+                                      <td></td><td></td><td></td><td></td><td></td><td></td>  <td>{{info.result[70200103008]}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>{{info.result[70200103006]}}</td>
+                        <td>{{info.result[70200103007]}}</td>
+                        <td>空</td>
+                        <td><font color="#f00;" ;="">红波</font></td>
+                        <td>{{info.result[70200101002]}}{{info.result[70200101003]}}</td>
+                        <td>{{info.result[70200103001]}}{{info.result[70200103002]}}</td>
+                        <td>{{info.result[70200104001]}}{{info.result[70200104002]}}</td>
+                        <td>{{info.result[70200105001]}}{{info.result[70200105002]}}</td>
+                        <td>{{info.result[70200106001]}}{{info.result[70200106002]}}</td>
+                        <td>{{info.result[70200107001]}}{{info.result[70200107002]}}</td>
+                        <td>{{info.result[70200108001]}}{{info.result[70200108002]}}</td>
+                    </tr>
+					{{/each}}
+                </tbody>
+            </table>
+        </div>
+</div>
+</script>
+<script id="temp_22" type="text/html">
+<div class="tab tab-dialog">
+	 <div id="北京赛车">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+
+                        <th>期数</th>
+                        <th>开奖时间</th>
+                        <th>开奖号码</th>
+                        <th colspan="3">冠亚和</th>
+                    </tr>
+                </thead>
+                <tbody>
+					{{each content as info i}}
+                    <tr>
+                        <td class="td-hd">{{info.turnNum}}</td>
+                        <td>{{info.openTime}}</td>
+                        <td class="hide-icon-text">
+                            <span class="icon_2 ball-style b-red">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball-style b-red">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball-style b-red">{{info.openNum[2]}}</span> 
+							<span class="icon_2 ball-style b-red">{{info.openNum[3]}}</span>
+							<span class="icon_2 ball-style b-red">{{info.openNum[4]}}</span>
+							<span class="icon_2 ball-style b-red">{{info.openNum[5]}}</span>
+ 							<span class="icon_2 ball-style b-red">{{info.openNum[6]}}</span>
+							<span class="icon_2 ball-style b-red">{{info.openNum[7]}}</span>
+							<span class="icon_2 ball-style b-red">{{info.openNum[8]}}</span>
+ 							<span class="icon_2 ball-style b-red">{{info.openNum[9]}}</span>
+                        </td>
+                        <td><span class="icon_2 ball_3d_2">{{info.result[22101101]}}</span></td>
+                        <td><span class="icon_2 ball_3d_2">{{info.result[22101102]}}</span></td>
+                        <td><span class="icon_2 ball_3d_2">{{info.result[22101103]}}</span></td>
+                    </tr>
+					{{/each}}
+                </tbody>
+            </table>
+        </div>
+        </div>
+</script>
+<script id="temp_23" type="text/html">
+<div class="tab tab-dialog">
+<div name="北京快乐8" id="game_id" value="23">
+       <table class="table table-bordered">
+           <thead>
+               <tr>
+                   <th>期数</th>
+                   <th>开奖时间</th>
+                   <th>开奖号码</th>
+                   <th colspan="3">总和</th>
+                   <th>上中下</th>
+                   <th>奇和偶</th>
+               </tr>
+           </thead>
+           <tbody>
+				{{each content as info i}}
+               <tr>
+                   <td class="td-hd">{{info.turnNum}}</td>
+                   <td>{{info.openTime}}</td>
+                   <td>
+                            <span class="icon_2 ball_s_2">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[2]}}</span>
+ 							<span class="icon_2 ball_s_2">{{info.openNum[3]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[4]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[5]}}</span>
+ 							<span class="icon_2 ball_s_2">{{info.openNum[6]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[7]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[8]}}</span>
+ 							<span class="icon_2 ball_s_2">{{info.openNum[9]}}</span>
+							</br>
+							<span class="icon_2 ball_s_2">{{info.openNum[10]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[11]}}</span>
+ 							<span class="icon_2 ball_s_2">{{info.openNum[12]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[13]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[14]}}</span>
+ 							<span class="icon_2 ball_s_2">{{info.openNum[15]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[16]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[17]}}</span>
+ 							<span class="icon_2 ball_s_2">{{info.openNum[18]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[19]}}</span>
+                   </td>
+                   <td>{{info.result[23102112]}}</td>
+                   <td> <font color="red">{{info.result[23102108]}}</font></td>
+                   <td>{{info.result[23102107]}}</td>
+                   <td>{{info.result[23102110]}}</td>
+                   <td>{{info.result[23102111]}}</td>
+               </tr>
+				{{/each}}
+           </tbody>
+       </table>
+   </div>
+   </div>
+</script>
+<script id="temp_24" type="text/html">
+<div class="tab tab-dialog">
+	<div id="广东快乐十分">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>期数</th>
+                        <th>开奖时间</th>
+                        <th>开奖号码</th>
+                        <th colspan="2">总和</th>
+						<th>总和尾大小</th>
+                    </tr>
+                </thead>
+                <tbody>
+					{{each content as info i}}
+                    <tr>
+                        <td class="td-hd">{{info.turnNum}}</td>
+                        <td>{{info.openTime}}</td>
+                        <td><span class="icon_2 ball_sf_h">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[2]}}</span> 
+							<span class="icon_2 ball_sf_h">{{info.openNum[3]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[4]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[5]}}</span>
+ 							<span class="icon_2 ball_sf_h">{{info.openNum[6]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[7]}}</span></span>
+                        </td>
+                        <td width="8%">{{info.result[24106102]}}</td>
+                        <td width="8%"><font color="red">{{info.result[24106101]}}</font></td>
+                        <td width="11%"><font color="red">{{info.result[24106103]}}</font></td>
+                    </tr>
+				{{/each}}
+                </tbody>
+            </table>
+        </div>
+        </div>
+</script>
+<script id="temp_25" type="text/html">
+<div class="tab tab-dialog">
+<div id="天津时时彩">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>期数</th>
+                        <th>开奖时间</th>
+                        <th>开奖号码</th>
+                        <th colspan="2">总和</th>
+                        <th>龙虎</th>
+                        <th>万</th>
+                        <th>千</th>
+                        <th>百</th>
+						<th>拾</th>
+						<th>个</th>
+                    </tr>
+                </thead>
+                <tbody>
+					{{each content as info i}}
+                    <tr>
+                        <td class="td-hd">{{info.turnNum}}</td>
+                        <td>{{info.openTime}}</td>
+                        <td><span class="icon_2 ball_3d_2">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[2]}}</span> 
+							<span class="icon_2 ball_3d_2">{{info.openNum[3]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[4]}}</span></td>
+                        <td> <font color="red">{{info.result[25110101]}}</font></td>
+                        <td>{{info.result[25110102]}}</td>
+                        <td>{{info.result[25110103]}}</td>
+                        <td>{{info.result[25102102]}}{{info.result[25102103]}}{{info.result[25102104]}}</td>
+                        <td>{{info.result[25103102]}}{{info.result[25103103]}}{{info.result[25103104]}}</td>
+                        <td>{{info.result[25104102]}}{{info.result[25104103]}}{{info.result[25104104]}}</td>
+						<td>{{info.result[25105102]}}{{info.result[25105103]}}{{info.result[25105104]}}</td>
+						<td>{{info.result[25106102]}}{{info.result[25106103]}}{{info.result[25106104]}}</td>
+                    </tr>
+					{{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</script>
+<script id="temp_26" type="text/html">
+<div class="tab tab-dialog">
+<div id="重庆时时彩">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>期数</th>
+                        <th>开奖时间</th>
+                        <th>开奖号码</th>
+                        <th colspan="3">总和</th>
+                        <th>龙虎</th>
+                        <th>万</th>
+                        <th>千</th>
+                        <th>百</th>
+                    </tr>
+                </thead>
+                <tbody>
+					{{each content as info i}}
+                    <tr>
+                        <td class="td-hd">{{info.turnNum}}</td>
+                        <td>{{info.openTime}}</td>
+                        <td> <span class="icon_2 ball_s_2">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[2]}}</span> 
+							<span class="icon_2 ball_s_2">{{info.openNum[3]}}</span>
+							<span class="icon_2 ball_s_2">{{info.openNum[4]}}</span></td>
+                        <td>{{info.result[26110104]}}</td>
+                        <td> <font color="red">{{info.result[26110102]}}</font></td>
+                        <td>{{info.result[26110101]}}</td>
+                        <td>{{info.result[26110103]}}</td>
+                        <td>{{info.result[26102102]}}{{info.result[26102103]}}{{info.result[26102104]}}</td>
+                        <td>{{info.result[26103102]}}{{info.result[26103103]}}{{info.result[26103104]}}</td>
+                        <td>{{info.result[26104102]}}{{info.result[26104103]}}{{info.result[26104104]}}</td>
+                    </tr>
+					{{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</script>
+<script id="temp_27" type="text/html">
+<div class="tab tab-dialog">
+<div id="江西时时彩">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>期数</th>
+                        <th>开奖时间</th>
+                        <th>开奖号码</th>
+                        <th colspan="3">总和</th>
+                        <th>龙虎</th>
+                        <th>前三</th>
+                        <th>中三</th>
+                        <th>后三</th>
+                    </tr>
+                </thead>
+                <tbody>
+					{{each content as info i}}
+                    <tr>
+                        <td class="td-hd">{{info.turnNum}}</td>
+                        <td>{{info.openTime}}</td>
+                        <td> <span class="icon_2 ball_3d_2">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[2]}}</span> 
+							<span class="icon_2 ball_3d_2">{{info.openNum[3]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[4]}}</span></td>
+                        <td>无</td>
+                        <td> <font color="red">{{info.result[27110102]}}</font></td>
+                        <td>{{info.result[27110101]}}</td>
+                        <td>虎</td>
+                        <td>单,<font color="red">大</font>,合</td>
+                        <td>单,大,合</td>
+                        <td>单,大,合</td>
+                    </tr>
+					{{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</script>
+<script id="temp_21" type="text/html">
+<div class="tab tab-dialog">
+<div id="新疆时时彩">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>期数</th>
+                        <th>开奖时间</th>
+                        <th>开奖号码</th>
+                        <th colspan="3">总和</th>
+                        <th>龙虎</th>
+                        <th>前三</th>
+                        <th>中三</th>
+                        <th>后三</th>
+                    </tr>
+                </thead>
+                <tbody>
+					{{each content as info i}}
+                    <tr>
+                        <td class="td-hd">{{info.turnNum}}</td>
+                        <td>{{info.openTime}}</td>
+                        <td> <span class="icon_2 ball_3d_2">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[2]}}</span> 
+							<span class="icon_2 ball_3d_2">{{info.openNum[3]}}</span>
+							<span class="icon_2 ball_3d_2">{{info.openNum[4]}}</span></td>
+                        <td>35</td>
+                        <td> <font color="red">大</font></td>
+                        <td>单</td>
+                        <td>虎</td>
+                        <td>单,<font color="red">大</font>,合</td>
+                        <td>单,大,合</td>
+                        <td>单,大,合</td>
+                    </tr>
+					{{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</script>
+<script id="temp_28" type="text/html">
+<div class="tab tab-dialog">
+<div id="重庆幸运农场">
+      <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th>期数</th>
+                  <th>开奖时间</th>
+                  <th>开奖号码</th>
+                  <th colspan="2">总和</th>
+				  <th colspan="2">总和尾大小</th>
+              </tr>
+          </thead>
+          <tbody>
+				{{each content as info i}}
+              <tr>
+                  <td class="td-hd">{{info.turnNum}}</td>
+                  <td>{{info.openTime}}</td>
+                  <td> <span class="icon_2 ball_sf_h">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[2]}}</span> 
+							<span class="icon_2 ball_sf_h">{{info.openNum[3]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[4]}}</span> 
+							<span class="icon_2 ball_sf_h">{{info.openNum[5]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[6]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[7]}}</span> 
+				  </td>
+                  <td>{{info.result[28106102]}}</td>
+                  <td>{{info.result[28106101]}}</td>
+                  <td><font color="red">{{info.result[28106103]}}</font></td>
+              </tr>
+			{{/each}}
+          </tbody>
+      </table>
+  </div>
+  </div>
+</script>
+<script id="temp_29" type="text/html">
+<div class="tab tab-dialog">
+<div id="广西快乐十分">
+       <table class="table table-bordered">
+           <thead>
+               <tr>
+                   <th>期数</th>
+                   <th>开奖时间</th>
+                   <th>开奖号码</th>
+                   <th>正码一</th>
+                   <th>正码二</th>
+                   <th>正码三</th>
+                   <th>正码四</th>
+               </tr>
+           </thead>
+           <tbody>
+				{{each content as info i}}
+               <tr>
+                   <td class="td-hd" width="10%">{{info.turnNum}}</td>
+                   <td width="9%">{{info.openTime}}</td>
+                   <td width="18%">
+                      		<span class="icon_2 ball_sf_h">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[2]}}</span> 
+							<span class="icon_2 ball_sf_h">{{info.openNum[3]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[4]}}</span></span>
+                   </td>
+                   <td width="11%">{{info.result[29101102102]}}{{info.result[29101102103]}}{{info.result[29101102104]}}{{info.result[29101102105]}}{{info.result[29101102107]}}{{info.result[29104102101]}}{{info.result[29104102102]}}</td>
+                   <td width="11%">{{info.result[29101103102]}}{{info.result[29101103103]}}{{info.result[29101103104]}}{{info.result[29101103105]}}{{info.result[29101103107]}}{{info.result[29104103101]}}{{info.result[29104103102]}}</td>
+                   <td width="11%">{{info.result[29101104102]}}{{info.result[29101104103]}}{{info.result[29101104104]}}{{info.result[29101104105]}}{{info.result[29101104107]}}{{info.result[29104104101]}}{{info.result[29104104102]}}</td>
+                   <td width="11%">{{info.result[29101105102]}}{{info.result[29101105103]}}{{info.result[29101105104]}}{{info.result[29101105105]}}{{info.result[29101105107]}}{{info.result[29104105101]}}{{info.result[29104105102]}}</td>
+               </tr>
+			{{/each}}
+           </tbody>
+       </table>
+   </div>
+   </div>
+</script>
+<script id="temp_31" type="text/html">
+<div class="tab tab-dialog">
+		<div id="PC蛋蛋">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>期数</th>
+						<th>开奖时间</th>
+						<th>开奖号码</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{each content as info i}}
+					<tr>
+						<td class="td-hd">{{info.turnNum}}</td>
+						<td>{{info.openTime}}</td>
+						<td>
+						    <span class="icon_2 ball_sf_h">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[2]}}</span> 
+                     	</td>
+					</tr>
+				   {{/each}}
+			   </tbody>
+			</table>
+		</div>
+		<input type="hidden" id="hid-empty-data" value="暂无数据" />
+	</div>
+</div>
+</script>
+<script id="temp_33" type="text/html">
+<div class="tab tab-dialog">
+	<div id="广东11选5">
+	<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>期数</th>
+			<th>开奖时间</th>
+			<th>开奖号码</th>
+		</tr>
+	</thead>
+	<tbody>
+	{{each content as info i}}
+	    <tr>
+			<td class="td-hd">{{info.turnNum}}</td>
+			<td>{{info.openTime}}</td>
+			<td>
+				<table class="table-noborder">
+					<tbody>
+						<tr>
+						<span class="icon_2 ball_sf_h">{{info.openNum[0]}}</span>
+						<span class="icon_2 ball_sf_h">{{info.openNum[1]}}</span>
+						<span class="icon_2 ball_sf_h">{{info.openNum[2]}}</span> 	
+						<span class="icon_2 ball_sf_h">{{info.openNum[3]}}</span>
+						<span class="icon_2 ball_sf_h">{{info.openNum[4]}}</span>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+</div>
+<input type="hidden" id="hid-empty-data" value="暂无数据" />
+</div>
+</div>
+</script>
+<script id="temp_32" type="text/html">
+<div class="tab tab-dialog">
+		<div id="江西骰宝">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>期数</th>
+						<th>开奖时间</th>
+						<th>开奖号码</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{each content as info i}}
+					<tr>
+						<td class="td-hd">{{info.turnNum}}</td>
+						<td>{{info.openTime}}</td>
+						<td>
+						    <span class="icon_2 ball_sf_h">{{info.openNum[0]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[1]}}</span>
+							<span class="icon_2 ball_sf_h">{{info.openNum[2]}}</span> 
+                     	</td>
+					</tr>
+				   {{/each}}
+			   </tbody>
+			</table>
+		</div>
+		<input type="hidden" id="hid-empty-data" value="暂无数据" />
+	</div>
+</div>
+</script>
+
+<script id="temp_71" type="text/html">
+  <div class="tab">
+    <div id="极速六合彩">
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>期数</th>
+          <th>开奖时间</th>
+          <th>开奖号码</th>
+          <th colspan="3">总和</th>
+          <th>波色</th>
+          <th>特别码</th>
+          <th>正码一</th>
+          <th>正码二</th>
+          <th>正码三</th>
+          <th>正码四</th>
+          <th>正码五</th>
+          <th>正码六</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{each content as info i}}
+        <tr>
+          <td class="td-hd"  width="7%">{{info.turnNum}}</td>
+          <td width="9%">{{info.openTime}}</td>
+          <td>
+            <table class="table-noborder">
+              <tbody>
+              <tr>
+                <span class="icon_2 ball-style b-blue">{{info.openNum[0]}}</span>
+                <span class="icon_2 ball-style b-blue">{{info.openNum[1]}}</span>
+                <span class="icon_2 ball-style b-red">{{info.openNum[2]}}</span>
+                <span class="icon_2 ball-style b-red">{{info.openNum[3]}}</span>
+                <span class="icon_2 ball-style b-red">{{info.openNum[4]}}</span>
+                <span class="icon_2 ball-style b-red">{{info.openNum[5]}}</span>
+                <span class="icon_2 ball-style b-red">{{info.openNum[6]}}</span>
+              </tr>
+              <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td>  <td>{{info.result[71200103008]}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>{{info.result[71200103006]}}</td>
+          <td>{{info.result[71200103007]}}</td>
+          <td>空</td>
+          <td><font color="#f00;" ;="">红波</font></td>
+          <td>{{info.result[71200101002]}}{{info.result[71200101003]}}</td>
+          <td>{{info.result[71200103001]}}{{info.result[71200103002]}}</td>
+          <td>{{info.result[71200104001]}}{{info.result[71200104002]}}</td>
+          <td>{{info.result[71200105001]}}{{info.result[71200105002]}}</td>
+          <td>{{info.result[71200106001]}}{{info.result[71200106002]}}</td>
+          <td>{{info.result[71200107001]}}{{info.result[71200107002]}}</td>
+          <td>{{info.result[71200108001]}}{{info.result[71200108002]}}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</script>

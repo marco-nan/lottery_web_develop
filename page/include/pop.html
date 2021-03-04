@@ -1,0 +1,42 @@
+<link href="./js/lib/jquery/jquery.pop/jquery.pop.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="./js/lib/jquery/jquery.pop/jquery.pop.js"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		//setInterval("loadPop()",10000);//1000为1秒钟
+	}
+	function loadPop() {
+		HttpUtil.ajax({
+			type: "GET",
+			url: HttpUtil.baseUrl+"/api/pushMessage/queryPop",
+			dataType: "json",
+			success:function(data){
+				if(data!=null&&data!="") {
+					if(data.messageTitle!=null&&data.messageTitle!="") {
+						var str3 = "";
+						if(data.messageContent.length>50) {
+							str3 = data.messageContent.substring(0,50)+"....";
+						} else {
+							str3 = data.messageContent;
+						}
+						var pop=new Pop(data.messageTitle,
+								HttpUtil.baseUrl+"/ucenter_index.html?url=8",
+								str3);
+					}
+				}
+			}
+		});
+	}
+</script>
+<div id="pop" style="display:none;">
+	<div id="popHead">
+		<a id="popClose" title="关闭">关闭</a>
+		<h2>温馨提示</h2>
+	</div>
+	<div id="popContent">
+		<dl>
+			<dt id="popTitle"><a href=""></a></dt>
+			<dd id="popIntro"></dd>
+		</dl>
+		<p id="popMore"><a href="">查看 »</a></p>
+	</div>
+</div>

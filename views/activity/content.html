@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="css/animate.min.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/rain.css"/>
+<div class="contentWrap">
+    <div class="body">
+        <div class="container1">
+            <!-- banner -->
+            <div class="inner">
+                <div class="hongba">
+                    <div class="hongba-in">
+                        <div class="hongbjies" id="hb-message" style="display:none;">
+                            红包活动已结束
+                        </div>
+                        <div class="cl h5"></div>
+                        <div class="juhd" id="hb-clock" >
+                            <em class="">下期开始:</em>
+                            <span class="">0</span>
+                            <em class="">小时</em>
+                            <span class="">0</span>
+                            <em class="">分</em>
+                            <span class="">0</span>
+                            <em class="">秒</em>
+                        </div>
+                        <div class="cl"></div>
+                        <div class="box_b">
+                            <div class="box0">
+                                <marquee id="announce" behavior="scroll" direction="scroll" scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();" style="height:100%;width:100%;">
+
+                                </marquee>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- banner -->
+        </div>
+        <div class="box_bg">
+            <!--#include virtual="/views/hongbao_desc.html"-->
+        </div>
+    </div>
+    <!-- 中奖结果-->
+    <div id="hongbao_back" class="hide" style="display:none;"></div>
+    <div id="hongbao_open" class="popup flip" style="display:none;">
+        <div class="popup-t"> <a href="javascript:;" onclick="close_hongbao()" class="b1"><img src="images/x.png"></a>
+            <p class="b2"></p>
+            <!--<p class="b3">东方</p>-->
+            <p class="b4">&nbsp;&nbsp;</p>
+            <p class="b5" id="b5"></p>
+            <a href="javascript:;" onclick="startGame()" class="b6">拆红包</a>
+        </div>
+        <!--<div class="popup-b">官方网址：<a href="http://www.1881343.com" target="_blank" style="color:#ffb02b;">www.1881343.com</a></div>-->
+    </div>
+    <div id="hongbao_result"  class="reward flip" style="display:none;">
+        <div class="reward-t"> <a href="javascript:;" onclick="close_hongbao()" class="b1"><img src="images/x.png"></a>
+        </div>
+        <div class="reward-b">
+            <p class="w1" id="w111">&nbsp;&nbsp;</p>
+            <p class="w2">&nbsp;&nbsp;</p>
+            <p class="w3">00.00<em>元</em></p>
+            <!--<p class="w4">官方网址：<a href="http://www.1881343.com" target="_blank" style="color:#000000;">www.1881343.com</a></p>-->
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/lib/jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/js/lib/util/md5.js" ></script>
+    <script type="text/javascript" src="js/snowfall.jquery.js"></script>
+    <script type="text/javascript" src="js/lottery.js"></script>
+</div>
+<script type="text/javascript" src="/views/js/index.js"></script>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册管理</title>
+  <!--#include virtual="/page/include/user-center.html"-->
+  <!--#include virtual="/page/include/form.html"-->
+  <!--#include virtual="/page/include/validation.html"-->
+  <script src="/js/lib/util/md5.js" type="text/javascript"></script>
+  <script src="/js/user-center/agent/regist.js" type="text/javascript"></script>
+</head>
+<body class="bg-faded">
+<div class="container-fluid">
+  <div class="col-lg-12 p-x-lg m-t-md">
+    <h4 class="text-danger"><span
+        class="fa fa-user-circle p-r-sm"></span>注册用户
+    </h4>
+    <hr>
+  </div>
+  <div class="col-lg-12 p-l-lg">
+    <form id="registForm" class="form form-horizontal col-lg-12 m-b-md">
+      <div class="form-group row">
+        <label for="isDl" class="control-label"><span
+            class="fa fa-required m-r-xs"></span>用户类型：</label>
+        <div>
+          <select id="isDl" name="isDl" class="form-control" required>
+            <option value="0">用户</option>
+            <option value="1">代理</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="nickname" class="control-label"><span
+            class="fa fa-required m-r-xs"></span>用户昵称：</label>
+        <div>
+          <input id="nickname" name="nickname" class="form-control" placeholder="请输入用户昵称" required>
+        </div>
+        <div class="auto">
+          <p class="form-control-static text-danger">2-15位汉字、字母或数字</p>
+        </div>
+      </div>
+      <div id="fullname_moudle" class="form-group row">
+        <label for="fullName" class="control-label"><span class="fa fa-required m-r-xs" id="fullnameStar"></span>真实姓名：</label>
+        <div>
+          <input id="fullName" name="fullName" class="form-control" placeholder="请输入用户真实姓名">
+        </div>
+        <div class="auto">
+          <p class="form-control-static text-danger">2-15位汉字或数字</p>
+        </div>
+      </div>
+      <div id="phone_moudle" class="form-group row">
+          <label class="control-label"><span class="fa fa-required m-r-xs" id="phoneStar"></span>会员电话：</label>
+          <div>
+            <input id="phone" name="phone" class="form-control" placeholder="请输入您的手机号码">
+          </div>
+          <div class="auto">
+          	<p class="form-control-static text-danger">11位数字</p>
+      	  </div>
+      </div>
+      <div class="form-group row">
+        <label for="account" class="control-label"><span
+            class="fa fa-required m-r-xs"></span>登录帐号：</label>
+        <div>
+          <input id="account" name="account" class="form-control" placeholder="请输入登录帐号" required>
+        </div>
+        <div class="auto">
+          <p class="form-control-static text-danger">字母开头的5-30位字母、数字或下划线</p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="password" class="control-label"><span
+            class="fa fa-required m-r-xs"></span>登录密码：</label>
+        <div>
+          <input type="password" id="password" name="password" class="form-control"
+                 placeholder="请输入登录密码" required>
+        </div>
+        <div class="auto">
+          <p class="form-control-static text-danger">6-16位字母或数字</p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="repassword" class="control-label"><span
+            class="fa fa-required m-r-xs"></span>确认密码：</label>
+        <div>
+          <input type="password" id="repassword" name="repassword" class="form-control"
+                 placeholder="再次输入密码" required>
+        </div>
+      </div>
+      <hr>
+      <div id="rebate-container" class="form-group row">
+        <label for="rebate" class="control-label text-primary">
+          <strong><span class="fa fa-required m-r-xs"></span>奖金设置：</strong>
+        </label>
+        <div>
+          <select id="rebate" name="rebate" class="form-control" required></select>
+        </div>
+      </div>
+      <hr id="rebate-container-hr">
+      <div id="buttons" class="form-group row m-t-md">
+        <div class="col-lg-12">
+          <button type="submit" class="btn btn-danger m-r-md">提交</button>
+          <button type="reset" class="btn btn-default m-r-md">重置</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

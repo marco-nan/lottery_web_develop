@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>长龙助手</title>
+<link rel=stylesheet type=text/css href=lmc.css>
+<script type="text/javascript" src="/js/lib/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/lib/layer/layer.js"></script>
+<script type="text/javascript" src="lmc_main.js"></script>
+</head>
+<body style="margin:0px;">
+	<div style="padding:10px;background: #bf242a;color: #fff;font-size: 14px;padding-bottom: 8px;overflow: hidden;">
+		<span style="padding: 5px;margin-right:10px;font-size:20px;font-weight: bold;" id="reback" class="" onclick="javascript:history.back(-1);"> <返回 </span>
+		<span style="padding: 5px;margin-right:10px;" class="type_span type_sel">我要投注</span>
+		<span style="padding: 5px;" class="type_span ">最近投注</span>
+		<span style="padding: 5px;float: right;" class=" ">余额：<span style="color:#fff;" class="money_hide" id="moneySpan">****</span></span>
+	</div>
+	<div id="betDiv">
+		<div style="-webkit-overflow-scrolling : touch;" id="rows">
+		</div>
+		<div style="position: fixed;bottom: 0px;border-top: 1px solid #c5c3c3;font-size: 14px;width: 100%;background: #fff;">
+			<div style="padding: 10px;">
+				<span>每注 </span>
+				<span><input type="text" style="width: 80px;padding: 5px;border: 1px solid #d2d2d2;border-radius: 5px;" onkeyup="setValue(this)" id="inputMoney" /></span>
+				<span> 元</span>
+				<span style="color: #777;font-size: 12px;margin-left: 20px;">最高可中</span>
+				<span style="font-size: 12px;color: #d24c4e;" id="maxMoney">0.00</span>
+				<span style="font-size: 12px;color: #777;">元</span>
+			</div>
+			<div style="text-align: center;">
+				<div style="float:left;background: #222;width: 25%;color:#fff;">
+					<div style="padding:12px;" onclick="clearAll()">清空</div>
+				</div>
+				<div style="float:left;background: #2b2b2b;width: 50%;color:#fff;">
+					<div style="padding:12px;">共 <span style="color:rgb(255, 163, 25);" id="selCount">0</span> 注，<span style="color:rgb(255, 163, 25);" id="payMoney">0.00</span> 元</div>
+				</div>
+				<div style="float:left;background: #e54042;width: 25%;color:#fff;">
+					<div style="padding:12px;" onclick="submitOk()">确认投注</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="betLogsDiv" style="display: none;">
+		<div class="row_log_div" id="rows_log" style="-webkit-overflow-scrolling : touch;">
+		</div>
+		<div style="position: fixed;bottom: 0px;text-align: center;width:100%;background: #000;color: #fff;">
+			<div style="padding: 20px;">
+				<span style="margin-right: 5px;" onclick="setPage('start')">首页</span>
+				<span style="margin-right: 5px;" onclick="setPage(-1)">上一页</span>
+				<span style="margin-right: 5px;" onclick="setPage(+1)">下一页</span>
+				<span onclick="setPage('end')">末页</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	var _height = getQueryVariable("height");
+	var height = 0;
+	if(_height!=null){
+		height = _height;
+	}else{
+		height = document.documentElement.clientHeight;	
+		if(height==0){
+			height = window.screen.availHeight - 42 - 50 - 90;
+		}
+	}
+	$("#rows").css("height",height+"px");
+	$("#rows_log").css("height",height+"px");
+});
+</script>
+</html>

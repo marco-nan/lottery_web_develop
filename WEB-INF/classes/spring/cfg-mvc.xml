@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+						http://www.springframework.org/schema/mvc 
+						http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+	
+	<bean id="customObjectMapper" class="com.cz.framework.CustomObjectMapper"/>
+	<!-- url请求拦截器，打印url信息和请求处理时间等 -->
+	<bean id="requestLogInterceptor" class="com.cz.framework.web.RequestLogInterceptor"/>
+	<!-- <bean id="loginInterceptor" class="com.cz.admin.ctrl.LoginInterceptor"/> -->
+	<!-- spring mvc异常处理 -->
+	<bean id="webExceptionResolver" class="com.cz.framework.web.WebExceptionResolver"/>  
+
+	<bean id="conversionService"  
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">  
+		<property name="converters">  
+    		<list> 
+    			<bean class="com.cz.framework.DateConverter" />  
+		    </list>  
+		</property>  
+	</bean> 
+	
+	<!-- <bean id="freeMarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">  
+    	<property name="templateLoaderPath" value="classpath:template" />  
+    	<property name="freemarkerSettings">  
+	        <props>  
+	        	<prop key="tag_syntax">auto_detect</prop>  
+	            <prop key="template_update_delay">20</prop>  
+	            <prop key="default_encoding">UTF-8</prop>
+	            <prop key="output_encoding">UTF-8</prop>   
+	            <prop key="locale">zh_CN</prop> 
+	            <prop key="number_format">0.######</prop>  
+	            <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+	            <prop key="date_format">yyyy-MM-dd</prop>
+	            <prop key="time_format">HH:mm:ss</prop>  
+	            <prop key="classic_compatible">true</prop>  
+	            <prop key="template_exception_handler">ignore</prop>
+                <prop key="url_escaping_charset">UTF-8</prop>
+                <prop key="boolean_format">true,false</prop> 
+                <prop key="whitespace_stripping">true</prop>  
+	        </props>  
+	    </property>  
+	</bean>    -->
+		
+	<!-- <bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10000000" />
+	</bean> -->
+	
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="webBindingInitializer">
+			<bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+				<property name="conversionService" ref="conversionService" />
+			</bean>
+		</property>
+		<property name="messageConverters"> 
+         <list> 
+             <bean class = "org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                      <list>
+                          <value>text/html;charset=UTF-8</value>
+                     </list>   
+                </property>   
+             </bean>   
+             <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+             	<property name="supportedMediaTypes">
+                      <list>
+                          <value>text/plain;charset=UTF-8</value>
+                     </list>   
+                </property> 
+                <property name="objectMapper" ref="customObjectMapper"></property> 
+             </bean>
+         </list> 
+   		</property>
+   		<!-- 参数注入 -->
+		<!-- <property name="customArgumentResolvers">
+			<array>
+				<bean class="com.cz.sgyz.admin.ctrl.annotation.SessionArgumentsResolver"/>
+			</array>
+		</property> -->
+	</bean> 
+	
+	<!-- <bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+		<property name="order" value="2" />
+	</bean> -->
+	
+	<bean
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+			<property name="order" value="1" />
+			<property name="interceptors">
+				<list>
+					<ref bean="requestLogInterceptor" />
+				</list>
+			</property>
+		</bean>
+	
+	<bean class="org.springframework.validation.beanvalidation.BeanValidationPostProcessor">
+	    <property name="validator" ref="validator"/>  
+	</bean>
+	<bean class="org.springframework.validation.beanvalidation.MethodValidationPostProcessor">
+		<property name="validator" ref="validator"/>  
+	</bean>
+	
+	<!-- 国际化配置 -->    
+	<bean id="localeResolver"    
+	    class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />    
+	<bean id="messageSource"    
+    	class="org.springframework.context.support.ReloadableResourceBundleMessageSource">    
+	    <property name="basenames">    
+	        <list>    
+	            <value>classpath:bundle/messages</value>    
+	        </list>    
+	    </property>   
+	    <property name="defaultEncoding" value="UTF-8"/> 
+	    <property name="cacheSeconds" value="0"/> 
+	    <property name="useCodeAsDefaultMessage" value="false" />
+	</bean>    
+    
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">      
+      <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>      
+      <!-- 这里配置将使用上面国际化配置的messageSource -->    
+      <property name="validationMessageSource" ref="messageSource"/>      
+  	</bean>    
+	<mvc:view-controller path="/" view-name="/login.html"/>
+	
+ 	<!-- <mvc:annotation-driven validator="validator"> -->
+		<!--  可不设置，使用默认的超时时间 -->
+	  <!--    -->
+	    <!--  设置返回字符串中文乱码问题, spring默认返回ISO-8859-1-->
+	    <!-- <mvc:message-converters register-defaults="true">
+	      <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+	        <property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
+	      </bean>
+	    </mvc:message-converters> -->
+ 	<!-- </mvc:annotation-driven> -->
+ 	
+	<context:component-scan base-package="com.cz">
+		<context:include-filter type="regex" expression="com\.cz\..*\.ctrl\..*"/>
+	</context:component-scan>
+
+</beans>

@@ -1,0 +1,29 @@
+<html>
+<body>
+<style>
+    img
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 160px;
+        margin-top: -80px;
+        margin-left: -80px;
+    }
+</style>
+<img src="/images/load.gif"/>
+
+<script type="text/javascript" src="/js/lib/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/js/lib/jquery/jquery.cookie.js"></script>
+<script>
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+    var token = getQueryString("token")
+    var isMobile = getQueryString("isMobile")
+</script>
+<script type="text/javascript">window.location.href='/api/live/redirectPage?account='+token+'&isMobile='+isMobile</script>
+</body>
+</html>

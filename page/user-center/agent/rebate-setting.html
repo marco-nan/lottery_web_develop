@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>返点设定</title>
+  <!--#include virtual="/page/include/user-center.html"-->
+  <!--#include virtual="/page/include/form.html"-->
+  <!--#include virtual="/page/include/validation.html"-->
+  <script src="/js/user-center/agent/rebate-setting.js" type="text/javascript"></script>
+</head>
+<body class="bg-faded">
+<div class="container-fluid">
+  <div class="col-lg-12 p-x-lg m-t-md">
+    <h4 class="text-danger">
+      返水设定
+    </h4>
+    <hr>
+  </div>
+  <div class="col-lg-12 p-x-lg m-t-md">
+    <form id="rebateSetForm" class="form form-horizontal col-lg-12 m-b-md">
+      <input id="subUserId" name="subUserId" type="hidden">
+      <input id="account" name="account" type="hidden">
+      <div class="form-group row">
+        <label for="account" class="control-label"><span
+            class="fa fa-space m-r-xs"></span>用户账号：</label>
+        <div>
+          <p id="accountText" class="form-control-static"></p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="subNickname" class="control-label"><span
+            class="fa fa-space m-r-xs"></span>用户昵称：</label>
+        <div>
+          <p id="subNickname" class="form-control-static"></p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="rebate" class="control-label"><span
+            class="fa fa-required m-r-xs"></span>返水比率：</label>
+        <div>
+          <select id="rebate" name="rebate" class="form-control" required>
+          </select>
+        </div>
+      </div>
+      <hr>
+      <div class="form-group row m-t-md">
+        <div class="col-lg-12">
+          <button id="submitButton" type="submit" class="btn btn-danger m-r-md">提交</button>
+          <button id="backBtn" type="button" class="btn btn-default m-r-md">返回</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

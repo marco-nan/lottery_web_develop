@@ -1,0 +1,186 @@
+
+
+<!--
+  ***
+  **   开奖公告 内容
+  *
+-->
+
+
+<div class="draw-content-wrap">
+    <div class="draw-content">
+        <!-- loading -->
+        <div class="draw-content-load">
+          <img style="margin-left: 44%;margin-top: 30%;" src="/views/img/loading_more.gif">
+        </div>
+
+         <div class="draw-content-top">
+              <label>最新开奖</label>
+              <span name="date" id="now_date"></span>
+              <div> <label>今日开奖：</label> </div>
+              <ul class="draw-lotteryList">
+
+              </ul>
+         </div>
+         <div class="kj_box">
+              <!-- 六合彩-->
+              <div class="cz-box">
+                  <h1>六合彩</h1>
+                  <table cellpadding="0" cellspacing="0" class="kj_tab">
+                      <thead>
+                          <tr class="title">
+                              <td width="88">彩种</td>
+                              <td width="80">期号</td>
+                              <td width="180">开奖时间</td>
+                              <td width="302">开奖号码</td>
+                              <td width="110">投注提示</td>
+                              <td width="78">开奖频率</td>
+                              <td width="40">详情</td>
+                              <td width="40">走势</td>
+                              <td width="80">购买</td>
+                          </tr>
+                      </thead>
+                      <tbody class="notice_lhs">
+
+                      </tbody>
+                  </table>
+              </div>
+
+           <!--时时彩 -->
+         <div class="cz-box">
+               <h1>时时彩</h1>
+               <table cellpadding="0" cellspacing="0" class="kj_tab">
+                   <thead>
+                       <tr class="title">
+                           <td width="88">彩种</td>
+                           <td width="80">期号</td>
+                           <td width="180">开奖时间</td>
+                           <td width="302">开奖号码</td>
+                           <td width="110">投注提示</td>
+                           <td width="78">开奖频率</td>
+                           <td width="40">详情</td>
+                           <td width="40">走势</td>
+                           <td width="80">购买</td>
+                       </tr>
+                   </thead>
+
+               <!--时时彩-->
+                   <tbody class="notice_ssc">
+
+                   </tbody>
+
+               </table>
+           </div>
+
+           <!-- 快乐彩  -->
+           <div class="cz-box">
+               <h1>快乐彩</h1>
+               <table cellpadding="0" cellspacing="0" class="kj_tab">
+                   <thead>
+                       <tr class="title">
+                           <td width="88">彩种</td>
+                           <td width="80">期号</td>
+                           <td width="180">开奖时间</td>
+                           <td width="302">开奖号码</td>
+                           <td width="110">投注提示</td>
+                           <td width="78">开奖频率</td>
+                           <td width="40">详情</td>
+                           <td width="40">走势</td>
+                           <td width="80">购买</td>
+                       </tr>
+                   </thead>
+
+                   <tbody class="notice_ks">
+
+                   </tbody>
+               </table>
+           </div>
+
+           <!--11选5 -->
+           <div class="cz-box">
+               <h1>11选5</h1>
+               <table cellpadding="0" cellspacing="0" class="kj_tab">
+                   <thead>
+                       <tr class="title">
+                           <td width="88">彩种</td>
+                           <td width="80">期号</td>
+                           <td width="180">开奖时间</td>
+                           <td width="302">开奖号码</td>
+                           <td width="110">投注提示</td>
+                           <td width="78">开奖频率</td>
+                           <td width="40">详情</td>
+                           <td width="40">走势</td>
+                           <td width="80">购买</td>
+                        </tr>
+                   </thead>
+
+                   <tbody class="notice_syxw">
+
+                   </tbody>
+               </table>
+           </div>
+
+           <!--低频彩 -->
+             <div class="cz-box">
+                 <h1>低频彩</h1>
+                 <table cellpadding="0" cellspacing="0" class="kj_tab">
+                   <thead>
+                   <tr class="title">
+                     <td width="88">彩种</td>
+                     <td width="80">期号</td>
+                     <td width="180">开奖时间</td>
+                     <td width="302">开奖号码</td>
+                     <td width="110">投注提示</td>
+                     <td width="78">开奖频率</td>
+                     <td width="40">详情</td>
+                     <td width="40">走势</td>
+                     <td width="80">购买</td>
+                   </tr>
+                   </thead>
+
+                   <tbody class="notice_dpc">
+
+
+                   </tbody>
+                 </table>
+             </div>
+
+           <!-- PK拾  -->
+           <div class="cz-box">
+             <h1>PK拾</h1>
+             <table cellpadding="0" cellspacing="0" class="kj_tab">
+               <thead>
+               <tr class="title">
+                 <td width="88">彩种</td>
+                 <td width="80">期号</td>
+                 <td width="180">开奖时间</td>
+                 <td width="302">开奖号码</td>
+                 <td width="110">投注提示</td>
+                 <td width="78">开奖频率</td>
+                 <td width="40">详情</td>
+                 <td width="40">走势</td>
+                 <td width="80">购买</td>
+               </tr>
+               </thead>
+
+               <tbody class="notice_pk">
+
+               </tbody>
+             </table>
+           </div>
+         </div>
+
+    </div>
+</div>
+<script>
+
+  //加载 走势图
+  function TabResult(_this) {
+      var href = $(_this).attr('data');
+      $(".draw-content-wrap").empty();
+      $("#DrawNoticeBody").show();
+      window.frames['DrawNoticeBody'].location.href = href;
+  }
+
+</script>
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>

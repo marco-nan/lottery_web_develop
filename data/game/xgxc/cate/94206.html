@@ -1,0 +1,18 @@
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<div class="table  table-bet  redTable data-betArea">
+<ul class="nav nav-tabs">
+        		<li class="active"><a onclick="menu.tab('/data/game/xgxc/cate/94206101.html','threeHtml')">合肖中</a></li>
+    		<li><a onclick="menu.tab('/data/game/xgxc/cate/94206102.html','threeHtml')">合肖不中</a></li>
+</ul>
+
+<div class="tab-content" id="threeHtml">
+        <!--#include virtual="/data/game/xgxc/cate/94206101.html"-->
+</div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+</div>
+<script type="text/javascript">
+$(function(){
+    $('#quickBetDiv').css('display', 'none')
+	menu.twoTab();
+});
+</script>

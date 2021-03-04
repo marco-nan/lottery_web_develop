@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>欢乐快三</title>
+	<!--#include virtual="/page/game/include/head.html"-->
+</head>
+<body class="index-bg">
+    <div class="header_nav_bg">
+    	<input type="hidden" id="gameId" value="49"  data-gameCode="k3180"/>
+         <div class="header_nav">
+            <!--#include virtual="/page/include/lottery.html"-->
+        </div>
+    </div>
+    <div class="frame">
+        <div class="sidebar index-sidebar">
+            <!--#include virtual="/page/game/include/left.html"-->
+        </div>
+        <div id="_main_view" class="main">
+            <section>
+				<div class="T_nav">
+    				<ul class="T_nav_wrap">
+				        <li class="T_nav_bg" >大小骰宝 </li>
+				    </li>
+				    <div class="clearfix"></div>
+				</ul>
+					<!--#include virtual="/page/game/include/game_type.html"-->
+				</div>
+                <div class="main-bet-content"  id="twoHtml" style="width: 80%;float:left">
+                 </div>  
+                  <div class="Nav_content_Fr_right" style="float: left;">
+                    <!--#include virtual="/page/game/include/right.html"-->
+                </div> 
+            </section>
+
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <!--#include virtual="/page/game/include/conBet.html"-->
+    <!--#include virtual="/page/game/include/jscommon.html"-->
+	<!--#include virtual="/page/game/include/bottom_notice.html"-->
+<script>
+$(function(){
+   	menu.tab('/data/game/k3180/main.html','twoHtml');
+    gameManager.initGame({loadLmcl:true,loadAnalysis:true});
+    lotteryManager.init({openCallback:gameManager.openCallback});
+    lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback})
+});
+</script>
+</body>
+</html>

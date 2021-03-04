@@ -1,0 +1,11 @@
+{
+    "credit": [
+        {"name": "两面", "code": "lianmian"},
+        {"name": "特别号,正码特", "code": "101"},
+        {"name": "一中一,总和", "code": "102"},
+        {"name": "连码", "code": "103"},
+        {"name": "四季五行", "code": "104"}
+    ],
+    "official": [
+    ]
+}

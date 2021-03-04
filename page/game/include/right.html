@@ -1,0 +1,76 @@
+<div id="_rightInfo">
+</div>
+
+<script type="text/html" id="latelyBetTemplate">
+    {{each content info i}}
+    <li><span>{{info.addTime}}</span><span>{{info.odds}}</span><span>{{{{info.money}}}}</span></li>
+    <li><span>{{info.cateName}}:{{info.betInfo}}</span></li>
+    {{/each}}
+</script>
+
+
+
+<script type="text/html" id="rightInfoWithLmcl">
+    <div class="CurrentBetting rightActive" onclick="menu.rightTab('bet',this)">本期投注</div>
+    <div class="CurrentBetting" onclick="menu.rightTab('lmcl',this)">长龙特选</div>
+    <div style="clear: both;"></div>
+
+    <ul class="CurrentBetting_zi" id="rightBet" >
+        <div class="stc_2" style="display: block;" >
+            <table class="top10-order">
+                <thead class="top10-order-header">
+                <tr class="top10-tr">
+                    <th class="top10-td-1">时间</th>
+                    <th class="top10-td-2">赔率</th>
+                    <th class="top10-td-3 noborder">金额</th>
+                </tr>
+                </thead>
+                <tbody class="top10-order-content" id="latelyBetInfoArea">
+                <tr>
+                    <td colspan="3" class="top10T noborder">暂无最新注单信息</td>
+                </tr>
+                </tbody>
+                <tfoot class="top10-order-content">
+                </tfoot>
+            </table>
+        </div>
+    </ul>
+
+    <div style="display: none;padding-left: 10px" id="rightLmcl">
+        <table class="table" id="changelong">
+            <tbody>
+            {{each list value i}}
+            <tr>
+                <td class="table-odd tal">{{value.name}}<a style="color: red" href="javascript:;">@{{value.openValue}}</a></td>
+                <td class="table-odd td-issue number">{{value.repeatCount}}期</td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</script>
+<script type="text/html" id="rightInfoWithoutLmcl">
+    <div class="CurrentBetting rightActive" style="width: 100%">本期投注</div>
+    <div style="clear: both;"></div>
+
+    <ul class="CurrentBetting_zi">
+        <div class="stc_2" style="display: block;">
+            <table class="top10-order">
+                <thead class="top10-order-header">
+                <tr class="top10-tr">
+                    <th class="top10-td-1">时间</th>
+                    <th class="top10-td-2">赔率</th>
+                    <th class="top10-td-3 noborder">金额</th>
+                </tr>
+                </thead>
+                <tbody class="top10-order-content" id="latelyBetInfoArea">
+                <tr>
+                    <td colspan="3" class="top10T noborder">暂无最新注单信息</td>
+                </tr>
+                </tbody>
+                <tfoot class="top10-order-content">
+                </tfoot>
+            </table>
+        </div>
+    </ul>
+</script>

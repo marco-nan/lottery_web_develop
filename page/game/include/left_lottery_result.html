@@ -1,0 +1,39 @@
+<div class="left_result_tab">
+    <a href="/page/game-center/open-info.html?gameCode=cqssc" target="_blank" class="left_result_btn"></a>
+    <ul id="lotteryResultCenter">
+        <li>
+                <span style="color: #000">暂无开奖结果</span>
+        </li>
+    </ul>
+</div>
+
+
+<!--<div class="side_tab">
+    <div class="" id="sideTab" style="overflow:hidden;">
+        <div class="st_header clear" tab="header">
+            <a href="javascript:void(0)" onclick="switchResult(0)" class="black_bg active" style="color: #fff"
+               id="_id_open_result">开奖结果</a>
+        </div>
+        <div class="st_content" tab="content">
+            <div class="side-result" style="display: block;">
+                <ul class="top10T" data-bind="style:{display:resultHistoryList().length<=0?'':'none'}"
+                    style="display: none;">暂无开奖结果
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<script type="text/html" id="lotteryHistoryTemplate">
+        {{each list value i}}
+        <li>
+            <b>{{i+1}}</b>
+            <span class="left_olPeriod">{{value.turnNum}}</span>
+            <span class="left_resultNum" style="text-align: left;">
+                <span   title="{{value.openNum}}">{{value.openNum}}<em style="color:red;padding-left: 6px;">{{value.result}}</em></span>
+            </span>
+        </li>
+        {{/each}}
+        <!--<ul class="top10T" ><a target="_blank" href="/Result/index?game=9">更多开奖结果</a></ul>-->
+</script>

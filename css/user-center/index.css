@@ -1,0 +1,420 @@
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font: 12px/1.8 simhei, 'Microsoft YaHei', Arial, Verdana, Georgia, 'Comic Sans MS', 'Trebuchet MS', Black, Impact;
+  font-size: 14px;
+  min-width: 1366px;
+  min-height: 500px;
+  overflow-y: hidden;
+}
+
+#rechNotice {
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+#notice-carousel {
+  display: inline-block;
+  padding: 0 50px;
+  border-bottom: 1px solid #ccc;
+  background: url(/images/suona.png) 10px 10px no-repeat;
+  width: 78%;
+}
+.loading-default {
+  background-color: #FFF;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  filter: Alpha(opacity=10);
+}
+
+.loading-default > div {
+  background: url(../../images/user-center/loading-default.gif) no-repeat center center;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.flopy {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.float-right {
+  float: right;
+}
+
+#navbar, #layout-east {
+  background-color: #363636;
+  color: #FFF;
+}
+
+#navbar {
+  height: 106px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-width: 1366px;
+  z-index: 3;
+}
+
+#navbar .navbar-brand {
+  background: url(../../images/user-center/logo1.png?4350fd91a3b) no-repeat center center;
+  width: 174px;
+  height: 106px;
+  padding: 0 20px;
+}
+
+#navbar .navbar-nav {
+  list-style: none;
+  position: absolute;
+  right: 20px;
+  height: 40px;
+  top: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar .navbar-nav .nav-item {
+  font-size: 12px;
+  width: 52px;
+  margin: 0 14px;
+  background: url(../../images/user-center/top_menu_icos.png?f5b5a161698) no-repeat;
+  height: 40px;
+  text-align: center;
+  padding-top: 48px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+#game-ag
+{
+  background-position: 4px -840px !important;
+}
+#game-ag:hover
+{
+  background-position: -48px -840px !important;
+}
+#game-live
+{
+  background-position: 4px -1140px !important;
+}
+#game-live:hover
+{
+  background-position: -48px -1140px !important;
+}
+#game-ele
+{
+  background-position: 4px -938px !important;
+}
+#game-ele:hover
+{
+  background-position: -48px -938px !important;
+}
+#game-sport
+{
+  background-position: 4px -1038px !important;
+  position: relative;
+  z-index: 999;
+}
+ #game-chess
+{
+  background-position: 4px -444px !important;
+  position: relative;
+  z-index: 999;
+}
+#game-sport>div, #game-chess>div{
+  position: absolute;
+  top: 76px;
+  left: -26px;
+  width: 200%;
+  height: auto;
+  display: none;
+  background-color: rgba(13, 11, 13, 0.77);
+  z-index: 999;
+  box-shadow: 0 1px 4px #170101;
+  border-radius: 4px;
+}
+#game-sport:hover
+{
+  background-position: -48px -1038px !important;
+}
+ #game-chess:hover
+{
+  background-position: -48px -444px !important;
+}
+#game-sport:hover div, #game-chess:hover div{
+  display: block;
+}
+#game-sport>div>a, #game-chess>div>a{
+  display: block;
+  width: 100%;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #514f4f;
+}
+#game-sport>div>a.isHG{
+  display: none;
+}
+#game-sport>div>a:hover, #game-chess>div>a:hover{
+  color: red;
+  background: #3e3939;
+}
+#navbar .navbar-nav .nav-item:hover {
+  color: #ededed;
+}
+#game-wzry{
+  background-position: 4px -1240px !important;
+}
+#game-wzry:hover{
+  background-position: -48px -1240px !important;
+}
+#navbar .navbar-nav .nav-item.nav-item-game-center {
+  background-position: 4px -543px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-home {
+  background-position: 4px -42px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-customer-service {
+  background-position: 4px -142px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-game-rules {
+  background-position: 4px -200px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-help {
+  background-position: 4px -400px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-sign-out {
+  background-position: 4px -342px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-game-center:hover {
+  background-position: -49px -546px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-home:hover {
+  background-position: -49px -42px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-customer-service:hover {
+  background-position: -49px -142px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-game-rules:hover {
+  background-position: -49px -200px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-help:hover {
+  background-position: -49px -400px;
+}
+
+#navbar .navbar-nav .nav-item.nav-item-sign-out:hover {
+  background-position: -49px -342px;
+}
+
+#layout-east {
+  width: 197px;
+  padding: 0 8px;
+  position: fixed;
+  top: 106px;
+  left: 0;
+  bottom: 0;
+  overflow-y:scroll;
+}
+
+#layout-center {
+  padding-left: 213px;
+  padding-top: 106px;
+}
+
+#div-account, #div-balance {
+  background: url(../../images/user-center/base-ico2.png?329fc73cc53) no-repeat;
+  margin-bottom: 12px;
+  line-height: 31px;
+  padding-left: 45px;
+}
+
+#div-account {
+  background-position: -100px -37px;
+  padding-top: 7px;
+  height: 34px;
+}
+
+#div-balance {
+  background-position: -100px -80px;
+  height: 36px;
+  padding-top: 10px;
+}
+
+#div-cash-buttons {
+  padding: 11px 0 2px 0;
+  list-style: none;
+  margin: 0;
+  color: #EFECEC;
+}
+
+#div-cash-buttons li {
+  background: url(../../images/user-center/user-btn.png?0d1a1d7e61f) no-repeat;
+  display: inline-block;
+  margin: 0 10px 1px 2px;
+  cursor: pointer;
+  height: 37px;
+  padding-left: 47px;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 9px;
+}
+
+#div-cash-buttons #bank-rech {
+  background-position: -2px 4px;
+}
+
+#div-cash-buttons #bank-withdraw {
+  background-position: -82px 6px;
+}
+
+#accordion .accordion-item .accordion-title {
+  background: url(../../images/user-center/base-ico.png?37c8675a403) no-repeat;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 25px;
+  text-align: left;
+  margin-bottom: 1px;
+  cursor: pointer;
+  padding-right: 18px;
+}
+
+#accordion .accordion-item .accordion-title {
+  background-position: 0 -576px;
+}
+
+#accordion .accordion-item .accordion-title:after {
+  float: right;
+  margin: 0px 12px 0px 0px;
+  content: ">";
+  transform: rotate(90deg);
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+#accordion ul.accordion-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+#accordion ul.accordion-content li {
+  padding-left: 30px;
+  height: 33px;
+  line-height: 33px;
+  cursor: pointer;
+}
+
+#accordion ul.accordion-content li.active, #accordion ul.accordion-content li:hover {
+  background: url(../../images/user-center/base-ico.png?37c8675a403) no-repeat;
+  color: #000;
+}
+
+#accordion ul.accordion-content li.active, #accordion ul.accordion-content li:hover {
+  background-position: 0 -618px;
+}
+
+#page-info {
+  padding: 0 10px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #d0d0d0;
+  font-size: 16px;
+}
+
+#page-info #breadcrumb {
+  border-bottom: 2px solid #b62929;
+  display: inline-block;
+  height: 49px;
+}
+
+#game-center-games {
+  background: url(../../images/user-center/nav_bg.png?0d74b744fc1) repeat;
+  margin: 2px 0 0;
+  height: auto;
+  padding: 15px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px #000000;
+  width: 780px;
+  color: #FFF;
+  left: 821.667px;
+  top: 63px;
+  z-index: 999;
+}
+
+#game-center-games .games-catelog {
+  width: 50%;
+  float: left;
+}
+
+#game-center-games h3 {
+  padding: 4px 0 4px 38px;
+  margin: 8px 0;
+}
+
+h3.official {
+  background: url(../../images/user-center/icon51.png?636bdd7a58f) no-repeat center left;
+}
+
+h3.credit {
+  background: url(../../images/user-center/icon52.png?636bdd7a58f) no-repeat center left;
+}
+
+#game-center-games ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #D7D7D7;
+}
+
+#game-center-games ul, #game-center-games h3 {
+  margin-left: 30px;
+}
+
+#game-center-games ul > li {
+  float: left;
+  line-height: 28px;
+  width: 80px;
+  height: 28px;
+  margin: 5px 10px 5px 0;
+  text-align: left;
+  font-size: 12px;
+}
+
+#game-center-games ul > li > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#game-center-games ul > li > a:hover {
+  color: #FF0000;
+}

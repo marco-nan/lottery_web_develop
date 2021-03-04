@@ -1,0 +1,94 @@
+body, button, input, select, textarea { font: 400 0.75em/1.8 Avenir, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif; }
+        .tab { margin-bottom: 20px; }
+
+        .tab-hd .active { background: #a69b91; cursor: default; color: #fff; }
+
+        .tab-item { height: 28px; line-height: 28px; background: #f9f7f4; float: left; color: #666; margin-right: 10px; padding: 0 10px; cursor: pointer; }
+
+        .tab-bd { display: none; }
+
+        .tab-colored-hd { border-left: 1px solid #d5d5d5; }
+
+        .tab-colored-item { height: 28px; line-height: 28px; border-top: 1px solid #d5d5d5; border-bottom: 1px solid #d5d5d5; float: left; color: #666; padding: 0 10px; cursor: pointer; border-right: 1px solid #d5d5d5; }
+
+        .tab-colored-active { color: #e14f4f; border-top: 1px solid #e14f4f; border-bottom: none; }
+
+        .tab-colored-bd { display: none; }
+
+        .tab-colored .table-bordered thead { background: #f8f8f8; color: #666; }
+
+            .tab-colored .table-bordered thead th { border: 1px solid #d5d5d5; }
+
+        .tab-colored .table-bordered .td-hd { background: #fffef6; }
+
+        .tab-colored .table-bordered td,
+        .tab-colored .table-bordered th { border: 1px solid #d5d5d5; }
+        .tab-dialog .button { color: #fff; background-color: #ad6f26; }
+
+        .tab-dialog .input,
+        .tab-dialog .select-menu { background: #fff; border-color: #d1c5b3; }
+
+            .tab-dialog .input:focus,
+            .tab-dialog .select-menu:focus { background: #ffffb9; }
+
+        .tab-dialog .select-menu { background: #fff; border-color: #d1c5b3; }
+
+            .tab-dialog .select-menu .select-options { background: #fff7c8; border-color: #d1c5b3; }
+
+                .tab-dialog .select-menu .select-options a { color: #89643c; border-top-color: #d1c5b3; }
+
+                    .tab-dialog .select-menu .select-options a:hover { color: #0e0805; background: #ffe342; }
+
+                .tab-dialog .select-menu .select-options .current { color: #0e0805; background: #ffe342; }
+
+        .tab-dialog .table { border-color: #d1c5b3; background: #fffaf3; }
+
+            .tab-dialog .table .table-odd { background-color: #311b13; color: #b4987e; }
+
+            .tab-dialog .table .table-current { background: #4c3223; color: #b73638; }
+
+            .tab-dialog .table td,
+            .tab-dialog .table th { border-color: #d1c5b3; }
+
+            .tab-dialog .table td { color: #89643c; }
+
+            .tab-dialog .table thead,
+            .tab-dialog .table .thead { background: #e3d8c8; color: #6f4d28; }
+
+
+        .table { border-collapse: collapse; border-spacing: 0; empty-cells: show; border-right: 1px solid #a69b91; border-bottom: 1px solid #a69b91; border-left: 1px solid #a69b91; width: 100%; background: #fff; text-align: center; }
+
+            .table .table-column { width: 60px; }
+
+            .table .table-odd { background-color: #f9f7f4; width: 54px; font-weight: bold; color: #595959; }
+
+            .table .table-current { background: #fff5b2; color: #b73638; }
+
+            .table .td-issue { width: 40px; }
+
+            .table caption { padding: 0; margin: 0; text-align: center; position: relative; }
+
+            .table td,
+            .table th { border-top: 1px solid #a69b91; border-right: 1px solid #a69b91; border-bottom: 1px solid #a69b91; font-size: inherit; margin: 0; overflow: visible; padding: 4px; word-wrap: break-word; word-break: break-all; }
+
+                .table td span,
+                .table th span { font-weight: bold; cursor: pointer; }
+
+                .table td:first-child,
+                .table th:first-child { border-left-width: 0; }
+
+            .table td { background-color: transparent; color: #595959; }
+
+            .table thead,
+            .table .thead { background: #a69b91; color: #fff; vertical-align: bottom; }
+
+                .table thead th,
+                .table .thead th { text-align: center; padding: 0.3em 1em; font-weight: bold; border: none; }
+
+                .table thead .tal,
+                .table .thead .tal { text-align: left; }
+
+            .table .p0 { border-bottom: 1px solid #a69b91; padding: 0; vertical-align: top; }
+
+            .table .odds-text { font-family: Verdana, Arial, Helvetica, AppleGothic, sans-serif; }
+            .table .odds-text-color { color: #FF8C00; }

@@ -1,0 +1,105 @@
+
+.trail_password,.trail_valida,.trail_btn
+{
+    height: 48px;
+    line-height: 48px;
+}
+.register_trail
+{
+    padding: 8px 0;
+}
+.trail_password > label
+{
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    width: 100px;
+    color: #000;
+    font-size: 14px;
+}
+.trail_password > div
+{
+    float: left;
+    width: 120px;
+}
+.trail_password > div.info_text
+ {
+    float: right;
+    padding-right: 50px;
+    color: #ac0b0b;
+    font-size: 12px;
+ }
+.trail_password > div > input
+{
+    width: 118px;
+    height: 26px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #cbbaba;
+    text-indent: 6px;
+}
+.trail_valida > label
+{
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    width: 100px;
+    color: #000;
+    font-size: 14px;
+}
+.trail_valida > div
+{
+    float: left;
+}
+
+.trail_valida> div > input
+{
+    width: 118px;
+    height: 26px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #cbbaba;
+    text-indent: 6px;
+}
+.trail_valida> div > input:focus,.trail_password> div > input:focus
+{
+    outline: 1px solid #f13131;
+}
+.trail_valida #trailvImg
+{
+    cursor: pointer;
+    width: 62px;
+    margin: 10px 0 0 28px;
+}
+.trail_btn
+{
+    text-indent: 96px;
+    margin-top: 8px;
+}
+.trail_btn .trail_submit
+{
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    margin: 0 6px;
+    background: green;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.trail_btn .trail_submit:hover
+{
+    background: #1cb41c;
+}
+.trail_btn .trail_cancel
+{
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.trail_btn .trail_cancel:hover
+{
+    background: #b2b0b0;
+}

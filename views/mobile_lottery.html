@@ -1,0 +1,17 @@
+<div class="mobile-content-wrap" style="background: url('/views/image/20200325/20200325200029777605-20181110120702640199-手机购彩图(1).png') no-repeat center;">
+    <div>
+
+    </div>
+</div>
+<script>
+var font_color_n=0;
+    setInterval(function(){
+        var color = new Array('#FFFF66','#FFFF00','#FF00CC','#66FFFF','#00CC00','#00FF66','#CCFF00','#FF0066','#FF0000','#F3CB66');
+        var obj = document.getElementById('color_switch');
+        var obj2 = document.getElementById('color_switch2');
+        obj.style.color = color[font_color_n];
+        obj2.style.color = color[font_color_n];
+        font_color_n ++;
+        if(font_color_n==5)font_color_n = 0;
+    },100);
+</script>

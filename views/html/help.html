@@ -1,0 +1,39 @@
+
+<!--
+    ***
+    **    帮助
+    *
+-->
+
+<!--链接-->
+<!--#include virtual="/views/html/head.html"-->
+
+<!-- 头部 -->
+<!--#include virtual="/views/html/header.html"-->
+
+<!-- 内容 -->
+<!--#include virtual="/views/html/help-content.html"-->
+
+<!-- 脚部-->
+<!--#include virtual="/views/html/footer.html"-->
+
+<script type="text/javascript">
+
+  //  获取 url 参数
+  function getQueryString(helpId) {
+    var reg = new RegExp("(^|&)" + helpId + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+  }
+
+  var helpId = getQueryString('helpId');
+
+  $(function () {
+    $('html, body').animate({
+      scrollTop: $("#help-" + helpId).offset().top
+    }, 300);
+  })
+
+</script>
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>

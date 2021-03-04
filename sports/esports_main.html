@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+    <title>电子竞技-王者荣耀</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="/sports/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/sports/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/sports/css/gaming.css"/>
+    <link rel="stylesheet" type="text/css" href="/sports/css/jquery.datetimepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="/sports/css/swiper.min.css"/>
+    <!--<script type="text/javascript" src="/js/lib/jquery/jquery.min.js"></script>-->
+    <script type="text/javascript" src="/js/lib/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="/sports/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/js/lib/jquery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/js/lib/util/error.js"></script>
+    <script type="text/javascript" src="/sports/js/pages.js"></script>
+    <script type="text/javascript" src="/sports/js/gaming.js"></script>
+    <script type="text/javascript" src="/sports/js/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript" src="/js/lib/layer/layer.js"></script>
+    <style>
+        html, body {
+            background: initial;
+        }
+    </style>
+</head>
+<body style="position: relative">
+
+<!-- 加载提示框-->
+<div class="loading" style="opacity: 0"><img src="/sports/images/loading_more.gif"/></div>
+
+<div style="width: 1360px;height: 660px;margin: 0 auto;position: relative;padding: 102px 80px 6px;background: url(/sports/esports/frame.png) no-repeat top left; background-size: 100% 100%;">
+    <!--投注模块-->
+    <div class="InjectionModule">
+        <div class="InjectionModuletop">
+            <span>投注单(<span id="betListCount">0</span>)</span>
+        </div>
+        <div class="InjectionModuleContent">
+            <div class="InjectionModuleDelite">
+            </div>
+            <div id="ModelFooter">
+                <div class="normal">
+                    <span>每单下注</span>
+                    <span>
+                        <div class="InjectionMoney alertModle">
+                            <ul>
+                                <li data="100" onclick="selectMoney(this)">RMB 100</li>
+                                <li data="200" onclick="selectMoney(this)">RMB 200</li>
+                                <li data="500" onclick="selectMoney(this)">RMB 500</li>
+                                <li data="1000" onclick="selectMoney(this)">RMB 1000</li>
+                                <li data="5000" onclick="selectMoney(this)">RMB 5000</li>
+                                <li data="10000" onclick="selectMoney(this)">RMB 10000</li>
+                            </ul>
+                        </div>
+                        <input type="number" min="0" max="1000000" onfocus="selectMoneywrap()"
+                               onkeyup="selectMoney(this)"
+                               placeholder="快捷下注" style="border: 1px solid #252d3d;" id="eachBetMoney"/>
+                    </span>
+                </div>
+                <div class="record">
+                    <ul>
+                        <li><span>总投注</span><span><span id="totalBetMoney">1000.0</span>元</span></li>
+                        <li><span>可得奖金</span><span><span id="maxWinning">1000.0</span>元</span></li>
+                        <li><span>自动接受最佳赔率<input type="checkbox" value="Y" id="autoAccept" checked="checked"/></span>
+                        </li>
+                    </ul>
+                </div>
+                <button id="authorization">投注</button>
+            </div>
+        </div>
+    </div>
+    <div id="gaming-wrap">
+        <div class="gaming-title">
+            <button data="competitionList" ext="1">赛事</button>
+            <button data="competitionResult" ext="2" onclick="getFinishedMatch()">赛果记录</button>
+            <a onclick="showRule()" style="float:right">游戏规则</a>
+        </div>
+        <div class="weekListWrap" style="position: relative">
+            <div class="swiper-container week-container">
+                <div class="swiper-wrapper" id="availableMatchDate">
+                    <div class="swiper-slide"><a>7月20号</a></div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="gaming-content">
+            <div class="ListCon competitionList" style="display: block;">
+                <table class="listDelite">
+                </table>
+            </div>
+            <!--订单-->
+            <div class="ListCon guessingCompetition" style="display: none">
+                <div class="guessingCompetition-menu">
+                    <div class="guessingMenu-nav" ext="0" guessingTitle="未结算订单">未结算订单</div>
+                    <div class="guessingMenu-nav" ext="1" guessingTitle="已结算订单">已结算订单</div>
+                </div>
+                <div class="guessingCompetition-con">
+                    <div id="guessRecord" class="guessingContent">
+                        <div class="guessingContentHead">
+                            <span class="myGuessingTitle">我的已结算订单</span>
+                            <div class="guessingTime">
+                                <span>从</span><input type="text" class="some_class" value="" id="startTime"/>
+                                <span>到</span><input type="text" class="some_class" value="" id="startEnd"/>
+                                <span onclick="getOrders(1)" class="btnSearch">搜索</span>
+                            </div>
+                            <div class="orderDeliteWrap">
+                            </div>
+                            <div class="orderPageWrap">
+                                <div class="orderPaging" id="orderPaging"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--赛果-->
+            <div class="ListCon competitionResult" style="display: none">
+                <div class="swiper-container" id="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="ResuotTime">
+                            <span class="GameDelite_Week">
+                            </span>
+                                <span>从</span><input type="text" class="some_class" value="" id="Resuot_startTime"/>
+                                <span>到</span><input type="text" class="some_class" value="" id="Resuot_startEnd"/>
+                                <button id="SearchBtn">查询</button>
+                            </div>
+                            <!--赛果-header-->
+                            <div class="Resuot-header">
+                                <div></div>
+                                <div>比赛时间</div>
+                                <!--<div>赛事</div>-->
+                                <div></div>
+                                <!--<div></div>-->
+                                <div class="Vsitem">
+                                    <div>主队</div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div>客队</div>
+                                </div>
+                                <div>赛果数据</div>
+                            </div>
+                            <!--赛果-内容-->
+                            <div id="finishedMatchContent">
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping">
+                            <div class="GameDelite_header">
+                            <span class="GameDelite_ReturnIco" onclick="tabGameDelite()"><i
+                                    class="fa fa-chevron-circle-left" aria-hidden="true"></i></span>
+                                <div class="matchTitle"><a>英雄联盟 2018 LPL春季赛</a><a>2018-01-28 14:00</a></div>
+                            </div>
+                            <div class="matchVsScore">
+                                <div class="matchDetail">
+                                    <div class="dispayTable">
+                                        <div class="dispayTableLogo_l"
+                                             style="background: url('http://game.fdfs.13322.com/group1/M00/00/CE/CoYWIFmyJoKAM_6HAAAhMRkUWDQ579.png') no-repeat center;"></div>
+                                        <div class="dispayTableText_l">TOP</div>
+                                    </div>
+                                    <div class="dispayTable">
+                                        <a id="fullRoundScoreH">0</a>
+                                        <a>:</a>
+                                        <a id="fullRoundScoreC">0</a>
+                                    </div>
+                                    <div class="dispayTable">
+                                        <div class="dispayTableText_r">IG</div>
+                                        <div class="dispayTableLogo_r"
+                                             style="background: url('http://game.fdfs.13322.com/group1/M00/00/CE/CoYWIFmyJoKAM_6HAAAhMRkUWDQ579.png') no-repeat center;"></div>
+                                    </div>
+                                </div>
+                                <div class="gameVsDelite_wrap">
+                                    <div class="gameVsDelite_wrap_header">
+                                        <!--<div></div>
+                                        <div>队伍</div>
+                                        <div>比分</div>
+                                        <div>人头数</div>
+                                        <div>助攻数</div>
+                                        <div>破塔数</div>
+                                        <div>一血</div>
+                                        <div>一塔</div>
+                                        <div>第一条小龙</div>
+                                        <div>第一条主宰</div>
+                                        <div>比赛时长</div>-->
+                                    </div>
+                                    <table style="width: 100%;" class="gameVsDelite_table">
+                                        <tr>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

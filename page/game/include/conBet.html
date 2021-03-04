@@ -1,0 +1,57 @@
+<div id="conBet" tabindex="-1" class="modal fade in" style="z-index: 1050; display: none;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true" onclick="conBetPage.cancel()">×</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">下注明细(请确认注单<span class="isShowNoteTitle" style="font-size: 14px;color: red;display: none">【投注成功后不可撤单】</span>)</h4>
+			</div>
+			<div class="modal-body" style="max-height: 420px; overflow-y: auto; padding-bottom: 0px;">
+				<table class="table table-bordered table-bet mb0">
+					<thead>
+						<tr>
+							<th>类型</th>
+							<th>内容</th>
+							<th>下注金额</th>
+							<th>可赢金额</th>
+							<th>删除</th>
+						</tr>
+					</thead>
+					<tbody id="betBody">
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="modal-footer text-center" style="padding-top: 5px; border-top: 0px;">
+				<div style="float:left;padding-top: 5px;padding-left: 5px">
+					<span>组数：<b class="text-danger" id="totalNums"></b></span>
+					<span>总金额：<b class="text-danger" id="totalMoney"></b></span>
+					<span>总可赢金额：<b class="text-danger" id="totalKyje"></b></span>
+				</div>
+				<button type="button" class="btn btn-danger" id="butConBet">确定</button>
+				<button type="button" class="btn btn-default" id="butCancel" style="margin-right: 16px;">取消</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+<script>
+	if ( system_config.hy_is_cancel === '0') {
+	    $('.isShowNoteTitle').show()
+	} else {
+        $('.isShowNoteTitle').hide()
+	}
+</script>
+<script id="conBetTemp" type="text/html">
+{{each content info i}}
+	<tr >
+     <td>{{info.cateName}}</td>
+	 <td>{{info.betInfo}}@<b class="text-danger">{{info.odds}}</b></td>
+	 <td><input type="text" class="form-control data-conBet" value="{{info.money}}" data-kyje="{{info.kyje}}" data-odds="{{info.odds}}" data-code="{{info.code}}" data-cateName="{{info.cateName}}" data-value="{{info.betInfo}}" onkeyup="clearNoNum(this)"></td>
+     <td class="data-kyje">{{info.kyje}}</td>
+	 <td><span aria-hidden="true" class="bet-remove">×</span></td>
+   </tr>
+{{/each}}
+</script> 

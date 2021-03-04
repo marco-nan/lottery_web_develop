@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>投注详情</title>
+  <style>
+    .border-right {
+      border-right: 1px solid #ccc;
+    }
+
+    .border-left {
+      border-left: 1px solid #fff;
+    }
+
+    #bet-content {
+      background-color: #DEDEDE;
+      border-radius: .375rem;
+    }
+
+    #bet-content label {
+      border-right: 1px solid #fff;
+    }
+
+    #bet-content label + div {
+      border-left: 1px solid #C7C7C7;
+      height: 118px;
+      overflow: auto;
+    }
+    .wordWrap{
+    	word-wrap:break-word;
+    	max-width:350px;
+    }
+    .wordWrap-betInfo{
+       	word-wrap:break-word;
+    }
+  </style>
+</head>
+<body>
+<div id="detailContainer" class="container-fluid">
+  <div class="row m-t-sm">
+    <div class="col-xs-4 p-r-md p-l-lg border-right">
+      <form class="form-xs">
+        <div class="form-group row">
+          <label class="control-label col-xs-4">用户名：</label>
+          <div class="col-xs-8">
+            <p id="account" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">注单编号：</label>
+          <div class="col-xs-8">
+            <p id="orderNo" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">倍数模式：</label>
+          <div class="col-xs-8">
+            <p id="multipleAndBetModel" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">奖期：</label>
+          <div class="col-xs-8">
+            <p id="turnNum" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">投注注数：</label>
+          <div class="col-xs-8">
+            <p id="totalNums" class="form-control-static text-right"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-4 p-x-md border-right border-left">
+      <form class="form-xs">
+        <div class="form-group row">
+          <label class="control-label col-xs-4">游戏：</label>
+          <div class="col-xs-8">
+            <p id="gameName" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">投单时间：</label>
+          <div class="col-xs-8">
+            <p id="addTime" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">注单奖金：</label>
+          <div class="col-xs-8">
+            <p id="reward" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">开奖内容：</label>
+          <div class="col-xs-8">
+            <p id="openNum" class="form-control-static text-right wordWrap"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-4 p-l-md p-r-lg border-left">
+      <form class="form-xs">
+        <div class="form-group row">
+          <label class="control-label col-xs-4">玩法：</label>
+          <div class="col-xs-8">
+            <p id="cateName" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">总金额：</label>
+          <div class="col-xs-8">
+            <p id="totalMoney" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">动态返点：</label>
+          <div class="col-xs-8">
+            <p id="rebateMoney" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">订单状态：</label>
+          <div class="col-xs-8">
+            <p id="statusDesc" class="form-control-static text-right"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row p-x-md">
+	  <form class="form-font-sm col-xs-12 m-t-md">
+	    <div id="bet-content" class="form-group row p-y-xs">
+	      <label class="control-label col-xs-2 p-y-lg text-center border-right">投注内容：</label>
+	      <div class="col-xs-10">
+	        <p id="betInfo" class="form-control-static wordWrap-betInfo"></p>
+	      </div>
+	    </div>
+	  </form>
+  </div>
+  <div class="table-responsive">
+    <h6 class="text-center">可能中奖情况</h6>
+    <table class="table table-condensed">
+      <thead class="thead-default">
+      <tr>
+        <th>奖级名称</th>
+        <th>号码</th>
+        <th>倍数</th>
+        <th>奖级</th>
+        <th>奖金</th>
+        <th>中奖金额</th>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div></div>
+  </div>
+  <div class="row text-center m-t-md">
+    <button id="goBackBtn" class="btn btn-primary">返回</button>
+  </div>
+</div>
+</body>
+</html>

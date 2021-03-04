@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>购彩查询</title>
+  <!--#include virtual="/page/include/user-center.html"-->
+  <!--#include virtual="/page/include/datepicker.html"-->
+  <!--#include virtual="/page/include/table.html"-->
+  <script src="/js/user-center/bet/bet.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="mainContainer" class="container-fluid">
+  <ul id="gameCodeNav" class="nav nav-tabs m-t-xs">
+    <li class="active"><a href="javascript:void(0)">今日</a></li>
+    <li class=""><a href="cp-history-report.html">历史</a></li>
+  </ul>
+  <form id="queryForm" class="form-inline m-t-md">
+    <input id="page" type="hidden" name="page" value="1">
+    <input id="rows" type="hidden" name="rows" value="10">
+    <div class="form-group m-r-md m-b-xs">
+      <label for="gameId">彩种：</label>
+      <select id="gameId" name="gameId" class="form-control input-sm">
+        <option value="">所有彩票</option>
+      </select>
+    </div>
+    <div class="form-group m-r-md m-b-xs">
+      <label for="status">状态：</label>
+      <select id="status" name="status" class="form-control input-sm field-sm">
+        <option value="">全部</option>
+        <option value="0">未开奖</option>
+        <option value="1">已开奖</option>
+        <option value="2">已撤销</option>
+      </select>
+    </div>
+    <button id="queryBtn" type="button" class="btn btn-primary btn-sm m-b-xs">查询</button>
+  </form>
+  <div class="table-responsive">
+    <table id="table" class="table table-condensed">
+      <thead class="thead-default">
+      <tr>
+        <th>注单编号</th>
+        <th>用户</th>
+        <th>投注时间</th>
+        <th>彩种</th>
+        <th>玩法</th>
+        <th>投注内容</th>
+        <th>投注期号</th>
+        <th>投注金额</th>
+        <th>有效投注</th>
+        <th>投注返点</th>
+        <th>奖金</th>
+        <th>开奖号码</th>
+        <th>状态</th>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="pagination"></div>
+    <div class="tips" style="font-size:14px">
+        <p>备注：点击“注单编号”可查看购彩详情</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

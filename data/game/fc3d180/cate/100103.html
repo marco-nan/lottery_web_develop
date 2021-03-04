@@ -1,0 +1,19 @@
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+<div class="table  table-bet  redTable data-betArea">
+<ul class="nav nav-tabs">
+	    		<li class="active"><a onclick="menu.tab('/data/game/fc3d180/cate/100103101.html','threeHtml')">三字组合</a></li>
+    		<li><a onclick="menu.tab('/data/game/fc3d180/cate/100103102.html','threeHtml')">组选三</a></li>
+    		<li><a onclick="menu.tab('/data/game/fc3d180/cate/100103103.html','threeHtml')">组选六</a></li>
+    		<li><a onclick="menu.tab('/data/game/fc3d180/cate/100103104.html','threeHtml')">百拾个定位</a></li>
+</ul>
+
+    <div id="threeHtml" class="betarea2_ball" style="display: block;">
+        <!--#include virtual="/data/game/fc3d180/cate/100103101.html"-->
+    </div>
+<!--#include virtual="/page/game/include/bar-bet.html"-->
+</div>
+<script type="text/javascript">
+$(function(){
+	menu.twoTab();
+});
+</script>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="zh-cn">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<title>忘记密码</title>
+		<link rel="stylesheet" href="/css/pwdforget.css">
+		<link rel='icon' href='images/index2/logoico.ico' type=‘image/x-ico’ />
+		<script type="text/javascript" src="/js/lib/jquery/jquery-1.9.1.min.js"></script>
+		<script src="/js/lib/jquery/jquery.form.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery/jquery.validate.js"></script>
+		<script type="text/javascript" src="/js/lib/layer/layer.js"></script>
+		<script type="text/javascript" src="/js/lib/util/error.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#findPwd_form')[0].reset();
+				getYzm();
+				validatorFindPwdForm();
+			});
+			
+			function getYzm(url) {
+			    $("#vImg").attr("src", "/v/vCode?m=reg&t="+Math.random()+(new Date).getTime());
+			}
+			
+			function validatorFindPwdForm() {
+				$("#findPwd_form").validate({
+					rules: {
+						userAccount: {
+							required: true
+						},
+						cashPassword: {
+							required: true,
+							digits: true,
+							rangelength:[4,4]
+						},
+						yzmNum: {
+							required: true
+						},
+					},
+					messages: {
+						userAccount: {
+							required: "<font color='red'>必填</font>"
+						},
+						cashPassword: {
+							required: "<font color='red'>必填</font>",
+							digits: "<font color='red'>请输入数字</font>",
+							rangelength: "<font color='red'>请输入4位的密码</font>",
+                            maxlength: "<font color='red'>请输入4位的密码</font>"
+						},
+						yzmNum: {
+							required: "<font color='red'>必填</font>"
+						}
+					},
+					success: function(label) {
+						label.html('<font color="green"><strong>√</strong></font>');
+					},
+					submitHandler: function(){
+						$.post('/api/userFindPwd/save',$('#findPwd_form').formSerialize(),function (data) {
+                                alert("提交申请成功,请及时与客服人员联系");
+                                window.close();
+						});
+					}
+				});
+			}
+		</script>
+	</head>
+	<body>
+		<div id="fgPg-wrap" class="fgpw-wrap">
+			<div class="lock-pic-wrap">
+				<div class="lock-line motion"></div>
+			</div>
+			<form id="findPwd_form" name="findPwd_form" method="post" action="">
+				<div class="txt-wrap">
+					<div class="pw-info-wrap">
+						<div class="pw-st-title">忘记密码</div>
+						<div id="JS-tips-wrap" class="pw-tips-wrap">
+							<span>请正确输入您的账号及取款密码，确保找回密码！</span>
+						</div>
+						<div class="pw-input-wrap clearfix">
+							<p class="pw-unit pw-unit-user">
+								<label name="user-acc" for="user-acc" class="pw-placeholder" style="opacity: 1;">会员帐号:</label>
+								<input id="userAccount" name="userAccount" autocomplete="off" class="user-acc unit-input" tabindex="1" size="12" maxlength="15" type="text">
+							</p>
+							<p class="pw-unit pw-unit-wdpw">
+								<label name="user-wdpw" for="user-wdpw" class="pw-placeholder" style="opacity: 1;">取款密码:</label>
+								<input id="cashPassword" name="cashPassword" autocomplete="off" class="user-wdpw unit-input" tabindex="2" size="6" maxlength="4" type="password">
+							</p>
+							<p class="pw-unit pw-unit-yzm">
+								<label name="user-acc" for="user-acc" class="pw-placeholder" style="opacity: 1;">验&nbsp;&nbsp;证&nbsp;&nbsp;码:</label>
+								<input id="yzmNum" name="yzmNum" autocomplete="off" class="user-acc unit-input" tabindex="3" size="4" maxlength="4" type="text">
+								<img src="/images/yzm.gif" onclick="getYzm();" alt="点击更换" id="vImg" class="vPic">
+							</p>
+						</div>
+					</div>
+
+					<div class="pw-submit-wap">
+						<input type="submit" value="确认送出" class="fgpw-submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

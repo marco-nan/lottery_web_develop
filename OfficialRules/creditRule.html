@@ -1,0 +1,125 @@
+<style type="text/css">
+    .rule-content {
+        padding: 10px 10px 50px 10px;
+    }
+    /*.rule-content .category .play-sample:before {
+      content: "例如：";
+      padding-right: 8px;
+    }*/
+    .rule-content .category .play-name {
+        /*padding-left: 10px;*/
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 500;
+        padding: 6px 0;
+    }
+    .rule-content .rule-desc,
+    .rule-content .category .play-sample,
+    .rule-content .category .play-desc {
+        font-size: 14px;
+        font-weight: 300;
+        padding: 5px 0;
+        text-indent: 28px;
+        color: #555;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+    .rule-content .category .category-name {
+        font-size: 22px;
+        font-weight: 800;
+        padding: 10px 0;
+        border-bottom: solid .5px #c6c6c6;
+    }
+    .rule-title {
+        font-size: 22px;
+        text-align: center;
+        line-height: 40px;
+    }
+</style>
+
+<div class="gz_con" style="padding: 0px">
+    <div class="gz_tab clear" style="padding: 0px;">
+        <ul rule="nav" id="rules">
+        </ul>
+    </div>
+
+    <div id="creditDiv">
+    </div>
+
+</div>
+
+<script type="text/html" id="templateGames">
+    {{each games game}}
+    <li><a id="{{game.code}}" href="javascript:;" onclick="changeGame('{{game.id}}','{{game.type}}','{{game.name}}')">{{game.name}}</a></li>
+    {{/each}}
+</script>
+
+<script>
+    $(function(){
+        $.ajax({
+            type : "get",
+            url : "/data/json/games.json",
+            success : function(data) {
+                var games = [];
+                for(var i=0;i<data.length;i++){
+                    if(data[i].isCredit === 1){
+                        games.push(data[i])
+                    }
+                }
+                var html = template("templateGames",{games: games});
+                $('#rules').html(html);
+                var gameCode = $('#rule_currPage').val();
+                $('#'+gameCode).click();
+            }
+        });
+    });
+</script>
+<script type="text/html" id="templateCreditRule">
+    <div class="gz_item" style="display: block;width: 840px;height: 480px;overflow-y: auto;padding: 25px"
+        >
+        <div  class="rule-content">
+            <div  class="rule-title">{{gameName}}[信用]游戏规则</div>
+            <div  class="rule-desc">{{#gameDesc}}</div>
+            {{each gameRules gameRule}}
+            <div  class="category">
+                <div  class="category-name">{{gameRule.name}}</div>
+                {{each gameRule.rules rule}}
+                <div  class="play-info">
+                    <div  class="play-name">{{#rule.name}}</div>
+                    <div  class="play-desc">{{#rule.desc}}</div>
+                    <div  class="play-sample">{{#rule.sample}}</div>
+                </div>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</script>
+<script type="text/javascript">
+    function changeGame(gameId,gameRuleName,gameName) {
+        $.ajax({
+            type: "get",
+            url: "/data/json/rules/"+gameRuleName+".json",
+            success: function (data) {
+                if(data != null ){
+                    var gameDesc;
+                    try {
+                        gameDesc = data.gameDesc[gameId];
+                    }catch (err){
+                        gameDesc = "";
+                    }
+                    var gameRules = data.categories;
+                  if(gameDesc === undefined || gameDesc === "undefined" ){
+                    gameDesc="";
+                  }
+                    var html = template("templateCreditRule",{gameRules: gameRules,gameName:gameName,gameDesc:gameDesc});
+                    $('#creditDiv').html(html);
+                }
+            }
+        });
+        $("#rules li").click(function () {
+            $(this).siblings('li').removeClass('curr'); // 删除其他兄弟元素的样式
+            $(this).addClass('curr'); // 添加当前元素的样式
+        });
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<!--#include virtual="/views/html/head.html"-->
+<script>
+    //通过window.screen.width获取屏幕的宽度
+    var offWidth = window.screen.width / 30; //这里用宽度/30表示1rem取得的px
+    document.getElementsByTagName("html")[0].style.fontSize = offWidth + 'px'; //把rem的值复制给顶级标签html的font-size
+</script>
+<script type="text/javascript" src="/views/js/index.js"></script>
+<body>
+<!-- 头部 -->
+<!--#include virtual="/views/html/header.html"-->
+
+<!-- 内容-->
+<!--#include virtual="/views/html/index-content.html"-->
+
+<!-- 脚部-->
+<!--#include virtual="/views/html/footer.html"-->
+
+<script>
+    // 首页 菜单 显示
+    $("#nav-more-menu").removeClass('nav-more-menu');
+    $('.more-lottery-wrap').show();
+</script>
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>
+
+</body>
+</html>

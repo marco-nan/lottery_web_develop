@@ -1,0 +1,11 @@
+{
+  "ssc": [
+    {"name": "总和单双", "baseCode": "110101"},
+    {"name": "总和大小", "baseCode": "110102"},
+    {"name": "龙虎", "baseCode": "110103"}
+  ],
+  "k3": [
+    {"name": "大小", "baseCode": "106"},
+    {"name": "单双", "baseCode": "108"}
+  ]
+}

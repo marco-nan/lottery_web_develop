@@ -1,0 +1,166 @@
+.x-toolbar {
+  margin-top: 10px;
+  text-align: center;/* right; */
+  margin-bottom: 10px;
+}
+
+.x-toolbar label {
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.x-toolbar label > input {
+
+}
+
+#trend-container {
+  margin: 0 auto;
+  padding-right: 8px;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.trend-table {
+  text-align: center;
+  vertical-align: middle;
+  width:95%;
+}
+
+.trend-table thead, .trend-table tfoot {
+  background-color: #f7f7f7;
+}
+
+.trend-table tbody {
+  background-color: #fff;
+}
+
+.trend-table th, .trend-table td {
+  border: #ddd solid;
+  border-width: 0 0 1px 1px;
+}
+
+.trend-table th.separate, .trend-table td.separate {
+  border-left-color: #ff0000;
+}
+
+.show-support.trend-table tr.separate th, .show-support .trend-table tr.separate td {
+  border-bottom-color: #ff0000;
+}
+
+.trend-table thead tr:first-child th {
+  border-top-width: 1px;
+}
+
+.trend-table th:last-child, .trend-table td:last-child {
+  border-right-width: 1px;
+}
+
+.trend-table th {
+  font-weight: normal;
+}
+
+.trend-table td {
+  color: #999;
+}
+
+.trend-table th, .trend-table td {
+  width: 20px;/* 16px; */
+  height: 20px;/* 16px; */
+  padding: 2px;
+}
+
+.trend-table th.num-type, .trend-table td.num-type {
+  width: 50px;
+}
+
+.trend-table th.issue, .trend-table td.issue {
+  width: 120px;
+  color: inherit;
+}
+
+.trend-table td.open-num span, .trend-table td.missing-count span, .trend-table td.open-num-distri span {
+  width: 20px;/* 16px; */
+  height: 20px;/* 16px; */
+  line-height: 20px;
+  display: inline-block;
+}
+
+.trend-table td.open-num span, .trend-table td.open-num-distri span {
+  color: white;
+  border-radius: 10px;/* 8px; */
+}
+
+.trend-table td.missing-count span {
+  visibility: hidden;
+}
+
+.trend-table td.small {
+  font-size: 8px;
+  padding: 0;
+}
+
+.show-missing .trend-table td.missing-count span {
+  visibility: visible;
+}
+
+.trend-table tbody tr:nth-child(odd) td.open-num span, .trend-table tbody tr:nth-child(odd) td.open-num.odd span, .trend-table tbody tr:nth-child(even) td.open-num.even span {
+  background-color: #00A0E9;
+}
+
+.trend-table tbody tr:nth-child(even) td.open-num span, .trend-table tbody tr:nth-child(even) td.open-num.odd span, .trend-table tbody tr:nth-child(odd) td.open-num.even span {
+  background-color: #FF6501;
+}
+
+.trend-table td.jsk3-type span {
+  width: 48px;
+  height: 16px;
+  line-height: 16px;
+}
+
+.trend-table td.open-num-distri span {
+  background-color: #666;
+}
+
+.trend-table td.open-num-distri.multiple span {
+  background-color: #9a019a;
+}
+
+.show-temp .trend-table td.open-num.hot span {
+  background-color: #e30d0d !important;
+}
+
+.trend-table tr.appear-count td {
+  color: #ff00ff;
+}
+
+.trend-table tr.missing-count-avg td {
+  color: #485a30;
+}
+
+.trend-table tr.missing-count-max td {
+  color: #803905;
+}
+
+.trend-table tr.appear-count-max td {
+  color: #18566b;
+}
+
+.trend-table tr.sum {
+  display: none;
+}
+
+.show-sum .trend-table tr.sum {
+  display: table-row;
+}
+
+.show-missing-level .trend-table td.current-missing {
+  background-color: #ccccee;
+}

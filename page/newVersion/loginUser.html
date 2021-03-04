@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--logo-->
+    <!--#include virtual="/views/page_title_logo.html"-->
+    <!--title-->
+    <!--#include virtual="/views/page_title_content.html"-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+  <link rel="stylesheet" type="text/css" href="/page/newVersion/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/page/newVersion/css/common.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/page/newVersion/css/layer.css"> -->
+
+  <script type="text/javascript" src="/js/lib/jquery/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="/js/lib/jquery/jquery.cookie.js"></script>
+  <script type="text/javascript" src="/js/lib/layer/layer.js"></script>
+  <script type="text/javascript" src="/js/lib/util/md5.js"></script>
+  <script type="text/javascript" src="/page/newVersion/js/rem.js"></script>
+  <script type="text/javascript" src="/page/newVersion/js/common.js"></script>
+
+
+</head>
+<body>
+  <header class="header">
+     <ul>
+        <li>网站已改版升级</li>
+        <li>原账号密码不变</li>
+        <li>请根据提示使用原帐号密码进行登录。</li>
+        <li>给您带来的不便，敬请谅解</li>
+        <li>新版本全网最高赔率：</li>
+         <li>9.85（1990）</li>
+     </ul>
+  </header>
+  <main class="main">
+     <form class="formLogin">
+        <ul>
+           <li>帐号：</li>
+           <li><input type="text" placeholder="请输入帐号" id="account" onblur="checkAccount()"></li>
+        </ul>
+        <ul>
+           <li>密码：</li>
+           <li><input type="password" id="password" placeholder="请输入密码"></li>
+        </ul>
+        <ul id="confirmPasswordWrap">
+           <li>确认密码：</li>
+           <li><input type="password" id="confirmPassword" placeholder="请确认密码"></li>
+        </ul>
+        <ul>
+           <li>验证码：</li>
+           <li><input type="text" id="vCodeReg"  placeholder="请输入验证码" maxlength="4"> <img src="img/vCode.png" id="Vcode" onclick="getVcode()"></li>
+        </ul>
+        <input type="button" value="原帐号登录" id="login" onclick="alertLogin()">
+        <input type="button" value="注册新帐号" id="reg" class="reg" onclick="alertReg()">
+     </form>
+  </main>
+</body>
+</html>

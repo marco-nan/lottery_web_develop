@@ -1,0 +1,77 @@
+
+<!Doctype>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>优惠详情</title>
+</head>
+<body style="background: rgb(243, 243, 243);">
+
+<style>
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, input { margin: 0; padding: 0; border: none; outline: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+    html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 { -webkit-text-size-adjust: none; }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+    ol, ul { list-style: none; }
+    blockquote, q { quotes: none; }
+    blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+    ins { text-decoration: none; }
+    del { text-decoration: line-through; }
+    table { border-collapse: collapse; border-spacing: 0; }
+    body { font-family: 'Helvetica Neue', Arial, "Hiragino Sans GB", 'Microsoft YaHei', sans-serif; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; -o-text-size-adjust: none; text-size-adjust: none }
+    a { color: #fff; text-decoration: none; }
+    a:hover { color: #fff; text-decoration: none;}
+
+    .activity { width: 94%; margin:5px auto 0; }
+    .app-list-box { background: #fff; border:1px solid #dddddd; width: 96%; margin:0 auto 10px; box-sizing: border-box; padding:10px 15px 0; border-radius:5px;  }
+    .list-tit p { font-size: 80%; color: #666; line-height: 26px; }
+    .list-pic { overflow: hidden; }
+    .list-pic a { display: block; margin:3px 0; }
+    .list-pic img { max-width: 100%; height: auto; }
+    .list-pic p { font-size: 80%; color: #666; line-height: 22px;}
+
+    .hd_cont_txtarea {border: 1px dashed #eee; box-sizing: border-box; font-size: 14px; line-height: 20px; border-radius: 5px; color: #eee; text-justify: distribute; text-align: justify; color: #666}
+    .tab_fxgz{width:100%;margin:10px auto;}
+    .tab_fxgz th{background:#faf6dd; text-align:center; border:1px solid #ddd; line-height:30px; color: #000}
+    .tab_fxgz td{background:#fff; text-align:center; border:1px solid #ddd; line-height:25px; color: #666}
+    body {
+        width: 100%;
+    }
+    .content-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+    }
+    .content-scroller {
+        padding-bottom: 60px;
+    }
+</style>
+<div class="content-wrapper">
+    <div class="content-scroller">
+
+        <!--#include virtual="/views/mobile_wap_youhui_content.html"-->
+    </div>
+</div>
+<script type="text/javascript">
+    window.onload = function () {
+        if (window.parent && window.parent.document.getElementsByTagName('iframe')[0]){
+            var height = window.parent.document.getElementsByTagName('iframe')[0].style['min-height'];
+            document.getElementsByClassName('content-wrapper')[0].style.height = height;
+            document.body.style.height = height;
+        }
+
+        var index= getQueryStringIndex('index');
+
+        document.getElementById("youhui"+index).style.display="block";
+    }
+    //  获取 url 参数
+    function getQueryStringIndex(index) {
+        var reg = new RegExp("(^|&)" + index + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+
+</script>
+</body>

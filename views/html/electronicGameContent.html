@@ -1,0 +1,67 @@
+
+<!--
+****  电子游艺
+-->
+<link type="text/css" rel="stylesheet" href="/views/css/eleGame.css" />
+
+<div class="eleContentWrap">
+  <div class="eleContent">
+  <div id="eleload"><img src="/views/img/load.gif"></div>
+    <div class="eleHeader">
+      <ul>
+        <li type="mg" class="eleTabStyle gameTab" id="gamemg">MG电子</li>
+        <li type="pt" class="gameTab" id="gamept">PT电子</li>
+        <li type="agby" class="gameTab" id="gameagby">AG捕鱼</li>
+        <li type="bbin" class="gameTab" id="gamebbin">BBIN电子</li>
+        <li type="ag" class="gameTab" id="gameag">AG电子</li>
+      </ul>
+      <div class="gameContent">
+        <div class="search-input-wrap">
+          <a class="allGames" type="">所有游戏</a>
+          <a class="slot gameDeilte" type="SLOT">拉霸</a>
+          <a class="table gameDeilte" type="TABLE">桌面游戏</a>
+          <a class="video gameDeilte" type="VEDIO">视频扑克</a>
+          <a class="other gameDeilte" type="OTHER">其它游戏</a>
+          <input class="searchValue" type="text" placeholder="请输入关键字" >
+          <a class="searchBtn">确认</a>
+        </div>
+        <div class="TabContent">
+          <div class="MGWrap">
+            <div class="MGContent">
+              <ul class="MGAllGameDelite">
+              </ul>
+              <div class="pageOnWrap">
+                <button class="indexPage">首页</button>
+                <button class="prev">上一页</button>
+                <button>当前页:<span class="nowPage">1</span></button>
+                <button>共<span class="tatlePage">19</span>页</button>
+                <button class="next">下一页</button>
+                <button class="footerPage">尾页</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ag捕鱼 内容-->
+        <div class="agbyWrap">
+          <div class="agbyPicWrap">
+            <button class="enterAgbyGame" onclick="bywEnterGame()"></button>
+          </div>
+          <div class="agbyHelpWrap">捕鱼王游戏帮助</div>
+          <div class="ag-f-tab">
+            <div id="ftb-con">
+              <ul id="tab">
+                <li class="" onclick="agbyGamehelp(this,1)"><a title="点击查看">界面说明</a></li>
+                <li class="" onclick="agbyGamehelp(this,2)"><a title="点击查看">操作说明</a></li>
+                <li class="" onclick="agbyGamehelp(this,3)"><a title="点击查看">鱼的说明</a></li>
+                <li class="" onclick="agbyGamehelp(this,4)"><a title="点击查看">炮的说明</a></li>
+                <li class="" onclick="agbyGamehelp(this,5)"><a title="点击查看">图表说明</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>
+<script type="text/javascript" src="/views/js/eleGame.js"></script>

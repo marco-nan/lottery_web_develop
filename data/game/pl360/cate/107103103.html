@@ -1,0 +1,32 @@
+<div class="betarea2">
+<div class="ball_row1">
+    <ul class="font beijing">
+        <li class="r1">组选六</li>
+    </ul>
+    <ul class="ball_list">
+        <li data-value="0"><span>0</span></li>
+        <li data-value="1"><span>1</span></li>
+        <li data-value="2"><span>2</span></li>
+        <li data-value="3"><span>3</span></li>
+        <li data-value="4"><span>4</span></li>
+        <li data-value="5"><span>5</span></li>
+        <li data-value="6"><span>6</span></li>
+        <li data-value="7"><span>7</span></li>
+        <li data-value="8"><span>8</span></li>
+        <li data-value="9"><span>9</span></li>
+    </ul>
+</div>
+<div style="width:850px">
+	  <p class="betarea2_pl" id="playCate" name="rtype" data-code="107103103" data-cateName="组选六" data-minNumber="5"  data-maxNumber="8" data-number="3"> 
+  	玩法：<label class="lm_name">组选六</label>
+  	<span>  赔率：<label class="lm_pl data-odds">0</label></span></p>
+</div>
+<input type="hidden" id="ck-bet-type" value="ZX1" />
+<div class="clear"></div>
+</div>
+<script type="text/javascript">
+$(function(){
+    ZX1.init();
+	lotteryManager.up({startCallback:gameManager.startCallback,stopCallback:gameManager.stopCallback});
+});
+</script>

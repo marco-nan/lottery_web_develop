@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>账户充值</title>
+  <!--#include virtual="/page/include/user-center.html"-->
+  <!--#include virtual="/page/include/form.html"-->
+  <!--#include virtual="/page/include/validation.html"-->
+  <!--#include virtual="/page/include/datepicker.html"-->
+  <link href="/css/user-center/payment/recharge.css" type="text/css" rel="stylesheet"/>
+  <script src="/js/user-center/payment/recharge.js" type="text/javascript"></script>
+</head>
+<body class="bg-white">
+<div style="position: absolute; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.56); z-index: 3;display: none" class="center-shadow"></div>
+<div id="container" class="container-fluid">
+  <!--<div class="m-t-md p-x-lg bg-gray">
+    <ul id="tabs" class="nav nav-pills">
+      <li><a href="javascript:void(0)">银行转账</a></li>
+      <li class="active"><a href="javascript:void(0)">微信</a></li>
+      <li><a href="javascript:void(0)">支付宝</a></li>
+      <li><a href="javascript:void(0)">QQ钱包</a></li>
+      <li><a href="javascript:void(0)">京东钱包</a></li>
+    </ul>
+  </div>
+  <div class="m-t-md p-x-lg">
+    <h4 class="text-success">订单创建成功！充值金额 <span class="text-danger">100</span> 元。</h4>
+    <hr>
+    <h4 class="text-danger">请向以下账户转账完成付款</h4>
+    <h4 class="m-t-md"><label>收款账号：</label><span class="text-danger">zhangwj@163.com</span></h4>
+    <h4 class="m-t-md"><label>收&nbsp;&nbsp;款&nbsp;&nbsp;人：</label><span class="text-danger">小小张先生</span></h4>
+    <hr>
+    <h4 class="text-danger">请向以下账户转账完成付款</h4>
+    <h4 class="m-t-md"><label>收款账号：</label><span class="text-danger">62287873688781273863248</span></h4>
+    <h4 class="m-t-md"><label>收&nbsp;&nbsp;款&nbsp;&nbsp;人：</label><span class="text-danger">张无忌</span></h4>
+    <h4 class="m-t-md"><label>收款银行：</label><span class="text-danger">招商银行</span></h4>
+    <h4 class="m-t-md"><label>开&nbsp;&nbsp;户&nbsp;&nbsp;行：</label><span class="text-danger">北京朝阳支行</span></h4>
+    <hr>
+    <div>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAScAAAEnCAIAAABkOBIWAAAIDklEQVR42u3aW3LkRgwEQN3/0uMD2OEQhw1Ukcr+5o76gcRHYX9+ouvzr/XdN207/G7Pc7dxaoff/fKpOzz1y/Ga/6GOOuqoo4466qijjjrqqKOOOuqoo+6eus/YOlUNT6zyzQrePMWm3mzfPFjz1FFHHXXUUUcdddRRRx111FFHHXXUHVfXdtq2CURW72dxbU4X+nvr13+LOuqoo4466qijjjrqqKOOOuqoo46616vblJmtvLm+sPnKbT2IOuqoo4466qijjjrqqKOOOuqoo4466vbz9OxUoG3Pb+0m2Y5MHXXUUUcdddRRRx111FFHHXXUUUdds7onnvaJ04XNc2VfMHuueM1TRx111FFHHXXUUUcdddRRRx111FF3U93mmpPgG9+c7ewHa5463/iGOt/4hjrqfEMddb7xDXXU+Ya6S+o+D1ynPGd/ZzMZz+5wc2ryjAKmjjrqqKOOOuqoo4466qijjjrqqKPunrq2WcJmvZ4SPleLmzObTQnZilquTOqoo4466qijjjrqqKOOOuqoo4466i6pa3uPuez+iXl62/yjf7ax+V5f/zJ11FFHHXXUUUcdddRRRx111FFHHXU31WXz2Ww1bN7+5ttnu0lbt42/MnXUUUcdddRRRx111FFHHXXUUUcddZfUbVbMZs6breBT/6otK39Hl4y/O3XUUUcdddRRRx111FFHHXXUUUcddTfVnbr9uUS7zfM77qd/3tDWBb7+Zeqoo4466qijjjrqqKOOOuqoo4466i6p29zB5pQim933//W51+mvn82q+/6BqKOOOuqoo4466qijjjrqqKOOOuqoOx3Gzr39psO5ut/sOG19ITv/KOxu1FFHHXXUUUcdddRRRx111FFHHXXUHVc3lxdv3sjmu85l3NmsPLuf7B0e7GXUUUcdddRRRx111FFHHXXUUUcdddRdUreZescT2/IqbzPWNpNomzxRRx111FFHHXXUUUcdddRRRx111FHXoy6+y7W3b+tBP4dW1upcCj+a78/VKnXUUUcdddRRRx111FFHHXXUUUcddTfVtd1aWxeYO1f2FNlu8hlbhVMc6qijjjrqqKOOOuqoo4466qijjjrqLqnbTLQ/9esvn/0dU5PsTOLgWIs66qijjjrqqKOOOuqoo4466qijjrr/2UB2cpDN09tmCXPV8MQb21Q3+jvUUUcdddRRRx111FFHHXXUUUcdddQdVzeXKbe9dLbjzN1G9uY36+dU9Y7uhzrqqKOOOuqoo4466qijjjrqqKOOuksb2EyZswl7W70+MXM/1tr/9qSHOuqoo4466qijjjrqqKOOOuqoo466S+qyddaW6m762TzF3O+0zQAecYfUUUcdddRRRx111FFHHXXUUUcdddRdUpfNgje/aUvYN++wvyfO9bvN+qGOOuqoo4466qijjjrqqKOOOuqoo25CXVt1ZmcAJgc9if9b+wt11FFHHXXUUUcdddRRRx111FFHHXVX1bXl8m025rT8RFdhLa71zc07/O28jjrqqKOOOuqoo4466qijjjrqqKOOuoS6d7zHO5L6zeo8ddInzmx+e/nUUUcdddRRRx111FFHHXXUUUcdddTdU9f20ptVnp1/9M825kRt3uFcPX8/OaCOOuqoo4466qijjjrqqKOOOuqoo+6KuuUUNWi1/5fb/Gz2u81fXp79UEcdddRRRx111FFHHXXUUUcdddRRd0ld256yKfxrsum1U/ydnniw31FHHXXUUUcdddRRRx111FFHHXXUUXdcXVuiPVcN2f20/a22f/XE3kodddRRRx111FFHHXXUUUcdddRRR11KXWEau7Y2T5GdSWTffdPYslXqqKOOOuqoo4466qijjjrqqKOOOupuqmvLuLMv1JZN/0TXO/rCZkc+2byoo4466qijjjrqqKOOOuqoo4466qhLiNrM05/4itn6aLOa7ZIH90wdddRRRx111FFHHXXUUUcdddRRR90lddmct+2l595j7hRztdj/Fk+cZFBHHXXUUUcdddRRRx111FFHHXXUUbejbrPONtP8eKYcTL3bbjXb7+b6AnXUUUcdddRRRx111FFHHXXUUUcddffVzWnJitpMz7M73Ezh2/L9RyzqqKOOOuqoo4466qijjjrqqKOOOuqOq8v66c/BR1PmvVIom770v+DXe6aOOuqoo4466qijjjrqqKOOOuqoo+64uuz5n/i3snV2qgu0zVH6u9Ivz04dddRRRx111FFHHXXUUUcdddRRR90ldW9NbDdnG23ZdNusZe5N+2/svycH1FFHHXXUUUcdddRRRx111FFHHXXUXVHXn8+2pdX9VZ79nYMJe1XfPFlC1FFHHXXUUUcdddRRRx111FFHHXXUBYp8MI19YuK/abV/QpOdBmVr7OS8jjrqqKOOOuqoo4466qijjjrqqKOOukTm/sRcvq3OspXXP8XJTk2oo4466qijjjrqqKOOOuqoo4466qjbUZdNvfuT8bYqz95P/+xn86S/3SR11FFHHXXUUUcdddRRRx111FFHHXVPVjd3/myVZ8/+xN7aNv+gjjrqqKOOOuqoo4466qijjjrqqKOOurM1lP1m7n/czhnb7G7Z+9ns2tRRRx111FFHHXXUUUcdddRRRx111E2o2zxbdiYxt8N+Y1lR2d6x7Jk66qijjjrqqKOOOuqoo4466qijjrqb6jZXVm+2FjdPkZ219O957k2po4466qijjjrqqKOOOuqoo4466qi7r+5jWdbu+gcobntbkd8EwwAAAABJRU5ErkJggg==">
+      <div class="p-l-lg" style="display: inline-block; vertical-align: top">
+        <h4 class="text-danger">请扫描二维码完成付款</h4>
+        <h4 class="m-t-md"><i class="x-step bg-primary text-white">1</i>打开微信扫一扫</h4>
+        <h4 class="m-t-md"><i class="x-step bg-primary text-white">2</i>扫描左边二维码</h4>
+        <h4 class="m-t-md"><i class="x-step bg-primary text-white">3</i>输入支付金额 100 元</h4>
+        <h4 class="m-t-md"><i class="x-step bg-primary text-white">4</i>添加备注 zhangsan</h4>
+        <h4 class="m-t-md"><i class="x-step bg-primary text-white">5</i>点击确认支付完成充值</h4>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAScAAAEnCAIAAABkOBIWAAAIDklEQVR42u3aW3LkRgwEQN3/0uMD2OEQhw1Ukcr+5o76gcRHYX9+ouvzr/XdN207/G7Pc7dxaoff/fKpOzz1y/Ga/6GOOuqoo4466qijjjrqqKOOOuqoo+6eus/YOlUNT6zyzQrePMWm3mzfPFjz1FFHHXXUUUcdddRRRx111FFHHXXUHVfXdtq2CURW72dxbU4X+nvr13+LOuqoo4466qijjjrqqKOOOuqoo46616vblJmtvLm+sPnKbT2IOuqoo4466qijjjrqqKOOOuqoo4466vbz9OxUoG3Pb+0m2Y5MHXXUUUcdddRRRx111FFHHXXUUUdds7onnvaJ04XNc2VfMHuueM1TRx111FFHHXXUUUcdddRRRx111FF3U93mmpPgG9+c7ewHa5463/iGOt/4hjrqfEMddb7xDXXU+Ya6S+o+D1ynPGd/ZzMZz+5wc2ryjAKmjjrqqKOOOuqoo4466qijjjrqqKPunrq2WcJmvZ4SPleLmzObTQnZilquTOqoo4466qijjjrqqKOOOuqoo4466i6pa3uPuez+iXl62/yjf7ax+V5f/zJ11FFHHXXUUUcdddRRRx111FFHHXU31WXz2Ww1bN7+5ttnu0lbt42/MnXUUUcdddRRRx111FFHHXXUUUcddZfUbVbMZs6breBT/6otK39Hl4y/O3XUUUcdddRRRx111FFHHXXUUUcddTfVnbr9uUS7zfM77qd/3tDWBb7+Zeqoo4466qijjjrqqKOOOuqoo4466i6p29zB5pQim933//W51+mvn82q+/6BqKOOOuqoo4466qijjjrqqKOOOuqoOx3Gzr39psO5ut/sOG19ITv/KOxu1FFHHXXUUUcdddRRRx111FFHHXXUHVc3lxdv3sjmu85l3NmsPLuf7B0e7GXUUUcdddRRRx111FFHHXXUUUcdddRdUreZescT2/IqbzPWNpNomzxRRx111FFHHXXUUUcdddRRRx111FHXoy6+y7W3b+tBP4dW1upcCj+a78/VKnXUUUcdddRRRx111FFHHXXUUUcddTfVtd1aWxeYO1f2FNlu8hlbhVMc6qijjjrqqKOOOuqoo4466qijjjrqLqnbTLQ/9esvn/0dU5PsTOLgWIs66qijjjrqqKOOOuqoo4466qijjrr/2UB2cpDN09tmCXPV8MQb21Q3+jvUUUcdddRRRx111FFHHXXUUUcdddQdVzeXKbe9dLbjzN1G9uY36+dU9Y7uhzrqqKOOOuqoo4466qijjjrqqKOOuksb2EyZswl7W70+MXM/1tr/9qSHOuqoo4466qijjjrqqKOOOuqoo466S+qyddaW6m762TzF3O+0zQAecYfUUUcdddRRRx111FFHHXXUUUcdddRdUpfNgje/aUvYN++wvyfO9bvN+qGOOuqoo4466qijjjrqqKOOOuqoo25CXVt1ZmcAJgc9if9b+wt11FFHHXXUUUcdddRRRx111FFHHXVX1bXl8m025rT8RFdhLa71zc07/O28jjrqqKOOOuqoo4466qijjjrqqKOOuoS6d7zHO5L6zeo8ddInzmx+e/nUUUcdddRRRx111FFHHXXUUUcdddTdU9f20ptVnp1/9M825kRt3uFcPX8/OaCOOuqoo4466qijjjrqqKOOOuqoo+6KuuUUNWi1/5fb/Gz2u81fXp79UEcdddRRRx111FFHHXXUUUcdddRRd0ld256yKfxrsum1U/ydnniw31FHHXXUUUcdddRRRx111FFHHXXUUXdcXVuiPVcN2f20/a22f/XE3kodddRRRx111FFHHXXUUUcdddRRR11KXWEau7Y2T5GdSWTffdPYslXqqKOOOuqoo4466qijjjrqqKOOOupuqmvLuLMv1JZN/0TXO/rCZkc+2byoo4466qijjjrqqKOOOuqoo4466qhLiNrM05/4itn6aLOa7ZIH90wdddRRRx111FFHHXXUUUcdddRRR90lddmct+2l595j7hRztdj/Fk+cZFBHHXXUUUcdddRRRx111FFHHXXUUbejbrPONtP8eKYcTL3bbjXb7+b6AnXUUUcdddRRRx111FFHHXXUUUcddffVzWnJitpMz7M73Ezh2/L9RyzqqKOOOuqoo4466qijjjrqqKOOOuqOq8v66c/BR1PmvVIom770v+DXe6aOOuqoo4466qijjjrqqKOOOuqoo+64uuz5n/i3snV2qgu0zVH6u9Ivz04dddRRRx111FFHHXXUUUcdddRRR90ldW9NbDdnG23ZdNusZe5N+2/svycH1FFHHXXUUUcdddRRRx111FFHHXXUXVHXn8+2pdX9VZ79nYMJe1XfPFlC1FFHHXXUUUcdddRRRx111FFHHXXUBYp8MI19YuK/abV/QpOdBmVr7OS8jjrqqKOOOuqoo4466qijjjrqqKOOukTm/sRcvq3OspXXP8XJTk2oo4466qijjjrqqKOOOuqoo4466qjbUZdNvfuT8bYqz95P/+xn86S/3SR11FFHHXXUUUcdddRRRx111FFHHXVPVjd3/myVZ8/+xN7aNv+gjjrqqKOOOuqoo4466qijjjrqqKOOurM1lP1m7n/czhnb7G7Z+9ns2tRRRx111FFHHXXUUUcdddRRRx111E2o2zxbdiYxt8N+Y1lR2d6x7Jk66qijjjrqqKOOOuqoo4466qijjrqb6jZXVm+2FjdPkZ219O957k2po4466qijjjrqqKOOOuqoo4466qi7r+5jWdbu+gcobntbkd8EwwAAAABJRU5ErkJggg==">
+      <div class="p-l-lg" style="display: inline-block; vertical-align: top">
+        <h4 class="text-danger">请于30分钟内扫描二维码完成付款</h4>
+        <h4 class="m-t-md"><i class="x-step bg-primary text-white">1</i>打开微信扫一扫</h4>
+        <h4 class="m-t-md"><i class="x-step bg-primary text-white">2</i>扫描左边二维码</h4>
+        <h4 class="m-t-md"><i class="x-step bg-primary text-white">3</i>点击确认支付完成充值</h4>
+      </div>
+    </div>
+    <hr>
+    <button class="btn btn-primary">完成充值，查看订单进度</button>
+    <button class="btn btn-default m-l-md">继续充值</button>
+  </div>-->
+</div>
+</body>
+</html>

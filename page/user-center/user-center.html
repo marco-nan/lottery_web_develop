@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!--#include virtual="/views/page_title_logo.html"-->
+    <title>用户中心</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link id="layuicss-skinlayercss" rel="stylesheet" href="/js/lib/layui/css/modules/layer/default/layer.css?v=3.0.11110" media="all">
+    <link rel="stylesheet" href="/js/lib/layui/layui.css" />
+    <link href="/css/user-center/index.css" type="text/css" rel="stylesheet"/>
+
+    <script src="/js/lib/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/lib/layer/layer.js"></script>
+    <script type="text/javascript" src="/js/lib/layui/layui.js"></script>
+    <script src="/js/lib/jquery/jquery.cookie.js" type="text/javascript"></script>
+    <script src="/js/user-center/index.js" type="text/javascript"></script>
+    <script src="/js/enterLiveGame.js"></script>
+</head>
+<body>
+<div style="position: absolute;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.56);z-index: 2;display: none" class="center-shadow"></div>
+<script>
+    if (!$.cookie("token", {path: "/"})) {
+        window.location.href = (window.location.protocol || document.location.protocol) + '//'
+            + window.location.host;
+    }
+</script>
+
+<!--#include virtual="/views/online_service.html"-->
+<!--#include virtual="/views/isReplacement.html"-->
+<!--是否显示额度转换-->
+<script type="text/javascript">
+    $(function () {
+        if (common_config.isDP) {
+            $("#isReplacement, #live-bet, #game-ag, #game-live, #game-ele, #game-sport, #sport-bet, #dianzi-bet, #qipai-bet").show();
+            $.getJSON('/api/sports/getSportOnOff', function (res) {
+                if (res.sportOnOff === "true") {
+                    $(".isHG").show()
+                } else {
+                    $(".isHG").hide()
+                }
+            });
+            $.getJSON("/api/live/allLiveGames", function (res) {
+                for (var i = 0; i < res.length; i++) {
+                    $(".dp_" + res[i].code).show();
+                    if (res[i].code === 'jb' || res[i].code === 'ky' || res[i].code === 'qly') {
+                        $(".chess_menu").show()
+                    }
+                 }
+            })
+        } else {
+            $("#isReplacement, #live-bet, #game-ag, #game-live, #game-ele, #game-sport, #sport-bet, #dianzi-bet, #qipai-bet, #game-chess").hide()
+        }
+        $.ajax({
+          type: 'get',
+          url: '/api/eSports/getOpenStatus ',
+          success: function (res) {
+            if (res.status === '0') {
+              $("#game-wzry").show()
+            } else {
+              $("#game-wzry").hide()
+            }
+          },
+          error: function (res) {
+            $("#game-wzry").hide()
+          }
+        })
+    })
+</script>
+
+<div id="navbar" class="navbar">
+    <div class="navbar-brand"></div>
+    <ul class="navbar-nav">
+        <a class="nav-item nav-item-game-ag" id="game-wzry" href="/views/html/kingGlory.html" style="display: none;">王者荣耀</a>
+        <a class="nav-item nav-item-game-ag" id="game-ag" onclick="EnterLiveGame('ag')" style="display: none;">AG视讯</a>
+        <a class="nav-item nav-item-game-live" id="game-live" href="/views/html/LiveVideo.html" style="display: none;">真人视讯</a>
+        <a class="nav-item nav-item-game-ele" id="game-ele" href="/views/html/electronicGame.html" style="display: none;">电子游艺</a>
+        <div class="nav-item nav-item-game-sport" id="game-sport" style="display: none;">体育游戏
+            <div>
+                <a onclick="EnterLiveGame('sb')">沙巴体育</a>
+                <a onclick="EnterLiveGame('nm8')">M8体育</a>
+                <a  onclick="EnterLiveGame('bb')">BB体育</a>
+                <a onclick="EnterLiveGame('bl')">皇冠体育</a>
+                <a  onclick="EnterLiveGame('agty')">AG体育</a>
+            </div>
+        </div>
+        <div class="nav-item nav-item-game-sport chess_menu" style="display: none" id="game-chess">棋牌游戏
+            <div>
+                <a class="dp_qly" style="display: none" onclick="EnterLiveGame('qly')">棋乐游</a>
+                <a class="dp_jb" style="display: none" onclick="EnterLiveGame('jb')">金宝棋牌</a>
+                <a class="dp_ky" style="display: none" onclick="EnterLiveGame('ky')">开元棋牌</a></div>
+        </div>
+        <a id="nav-game-center" href="/page/game-center.html"
+           class="nav-item nav-item-game-center">彩票大厅</a>
+        <a href="/views/main.html" class="nav-item nav-item-home">返回首页</a>
+        <a class="online-service nav-item nav-item-customer-service">在线客服</a>
+        <!--<a href="#" class="nav-item nav-item-game-rules">规则说明</a>-->
+        <!--<a href="/page/GameHelp/game-help.html" class="nav-item nav-item-help">游戏帮助</a>-->
+        <a id="nav-sign-out" href="javascript:void(0);" class="nav-item nav-item-sign-out">登出用户</a>
+    </ul>
+</div>
+<div id="layout-east">
+    <form id="form-account-info">
+        <div id="div-account">账号：<span id="account"></span></div>
+        <div id="div-balance">余额：<span id="balance"></span></div>
+        <ul id="div-cash-buttons">
+            <li id="bank-rech">充值</li>
+            <li id="bank-withdraw">提现</li>
+        </ul>
+    </form>
+    <div id="accordion">
+
+        <div class="accordion-item" id="isReplacement">
+            <div class="accordion-title">额度转换</div>
+            <ul class="accordion-content">
+                <li id="replacement" data-url="/page/user-center/quotaReplacement/line-convert.html">额度转换
+                </li>
+            </ul>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-title">投注记录</div>
+            <ul class="accordion-content">
+                <li id="bet-bet" data-url="/page/user-center/bet/bet.html">彩票查询</li>
+                <li id="bet-trace" data-url="/page/user-center/bet/trace.html">追号查询</li>
+                <li id="live-bet" data-url="/page/user-center/bet/live-bet.html?pageType=live">真人游戏</li>
+                <li id="sport-bet" data-url="/page/user-center/bet/sport-bet.html?pageType=sport&gameCode=hgSport" style="display: none;">体育游戏</li>
+                <li id="dianzi-bet" data-url="/page/user-center/bet/live-bet.html?pageType=electronic" style="display: none;">电子游戏</li>
+                <li id="qipai-bet" data-url="/page/user-center/bet/live-bet.html?pageType=chess" style="display: none;">棋牌游戏</li>
+            </ul>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-title">报表管理</div>
+            <ul class="accordion-content">
+                <li id="report-bill" data-url="/page/user-center/report/bill_report.html">账户明细</li>
+                <li id="report-personal-report" data-url="/page/user-center/report/personal-report.html">
+                    个人报表
+                </li>
+                <!--<li data-url="/test.html">优惠活动详情</li>-->
+            </ul>
+        </div>
+        <div class="accordion-item">
+            <div id="account-mgmt" class="accordion-title">账户管理</div>
+            <ul class="accordion-content">
+                <li id="account-overviews" data-url="/page/user-center/account/overviews.html">个人总览</li>
+                <li id="account-password" data-url="/page/user-center/account/password.html">个人资料</li>
+                <li id="account-bank" data-url="/page/user-center/account/bank.html">银行卡管理</li>
+                <li id="payment-recharge-order" data-url="/page/user-center/payment/recharge-order.html">充值订单</li>
+                <li id="payment-withdraw-order" data-url="/page/user-center/payment/withdraw-order.html">提款订单</li>
+                <li id="account-play-cate" data-url="/page/user-center/account/play-cate.html">彩种信息</li>
+                <li id="account-play-cate-limit" data-url="/page/user-center/account/play-cate-limit.html">
+                    彩种限额
+                </li>
+            </ul>
+        </div>
+        <div id="agent-center" class="accordion-item">
+            <div class="accordion-title">代理管理</div>
+            <ul class="accordion-content">
+                <li id="agent-declare" data-url="/page/user-center/agent/declare.html">代理说明</li>
+                <li id="agent-team-overviews" data-url="/page/user-center/agent/team-overviews.html">团队总览
+                </li>
+                <li id="agent-userlist" data-url="/page/user-center/agent/user_list.html">用户列表</li>
+                <li id="agent-regist" data-url="/page/user-center/agent/regist.html">注册管理</li>
+                <li id="agent-spread-info" data-url="/page/user-center/agent/spread-info.html">推广注册</li>
+            </ul>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">短信公告</div>
+            <ul class="accordion-content">
+                <li id="cms-message" data-url="/page/user-center/cms/message.html">站内短信</li>
+                <li data-url="/page/user-center/cms/notice.html">网站公告</li>
+            </ul>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">优惠活动</div>
+            <ul class="accordion-content">
+                <li id="activity-hall" data-url="/page/user-center/activity/activity-hall.html">活动大厅</li>
+                <li id="my-activity" data-url="/page/user-center/activity/my-activity.html">我的活动</li>
+                <li id="my-lottery" data-url="/page/user-center/activity/my-lottery.html">我的抽奖</li>
+                <li id="my-redenvelope" data-url="/page/user-center/activity/my-redenvelope.html">抽奖结果</li>
+                <!-- <li id="my-discount" data-url="/page/user-center/activity/my-discount.html">我的优惠</li> -->
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="layout-center">
+    <div id="page-info">
+        <span id="breadcrumb"></span>
+        <div id="notice-carousel">
+            <div id="rechNotice" class="h-100"></div>
+        </div>
+    </div>
+    <div id="page-container">
+        <iframe id="page-frame" name="pageFrame" width="100%" height="100%" scrolling="auto"
+                frameborder="no" style="position: relative;z-index: 2"></iframe>
+    </div>
+</div>
+
+<div id="game-center-games" class="flopy hidden">
+    <div class="games-catelog border-right">
+        <h3 class="official">官方玩法</h3>
+        <ul id="official-games"></ul>
+    </div>
+    <div class="games-catelog">
+        <h3 class="credit">信用玩法</h3>
+        <ul id="credit-games"></ul>
+    </div>
+</div>
+</body>
+</html>

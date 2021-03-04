@@ -1,0 +1,72 @@
+<!-- ****  电子游艺  -->
+
+<link type="text/css" rel="stylesheet" href="/page/eleGame/css/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="/error_page/css/font-awesome/css/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="/page/eleGame/css/eleGame.css" />
+
+<div class="eleContentWrap">
+  <div class="eleContent">
+    <div class="ele-loading"><span><i class="fa fa-spinner" aria-hidden="true"></i>加载中。。。</span></div>
+    <div class="ele-header">
+      <div class="swiper-container ele-swiper-container" style="height: 100%;">
+        <div class="swiper-wrapper ele-swiper-wrapper"></div>
+      </div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+    <div class="ele-nav-box isNotAgby">
+      <div class="ele-nav-row" onclick="searchCurGame()">全部游戏</div>
+      <div class="ele-nav-row"><input type="text" class="searchValue" placeholder="请输入关键字" /> <i class="fa fa-search" aria-hidden="true" onclick="searchGame()"></i> </div>
+      <div class="ele-nav-row">
+        <span>最新游戏</span>
+        <div class="ele-mg-next-nav">
+          <span>/</span><span onclick="eleGameClass('SLOT')">拉霸</span>
+          <span>/</span><span onclick="eleGameClass('TABLE')">桌面游戏</span>
+          <span>/</span><span onclick="eleGameClass('VEDIO')">视频扑克</span>
+          <span>/</span><span onclick="eleGameClass('OTHER')">其它游戏</span>
+        </div>
+        <div class="ele-jdb-next-nav">
+          <span>/</span><span onclick="eleGameClass('JDB_LHJ')">老虎机</span>
+          <span>/</span><span onclick="eleGameClass('JDB_BYJ')">捕鱼机</span>
+          <span>/</span><span onclick="eleGameClass('JDB_JJ')">街机</span>
+          <!-- <span>/</span><span onclick="eleGameClass('JDB_QT')">棋牌</span> -->
+          <span>/</span><span onclick="eleGameClass('JDB_CP')">电子彩票</span>
+        </div>
+      </div>
+    </div>
+    <div class="ele-gamelist-row isNotAgby"></div>
+    <div class="ele-footer-page isNotAgby">
+      <div class="box" id="page-box">
+        <span onclick="eleIndexPage()">首页</span>
+        <span onclick="elePrevPage()">上一页</span>
+        <span>当前页: <a id="curPageNum">1</a></span>
+        <span>共<a id="curTotalPageNum"></a>页</span>
+        <span onclick="eleNextPage()">下一页</span>
+        <span onclick="eleEndPage()">尾页</span>
+      </div>
+    </div>
+    <div class="agby-box isAgby">
+      <div style="width: 1000px;height: 600px;position: relative">
+        <video width="100%" height="100%" id="ele-byVideo" loop="loop">
+          <source src="/page/eleGame/img/byvideo.mp4" type="video/mp4" />
+          您的浏览器不支持此种视频格式
+        </video>
+        <span class="mutedBtn" onclick="mutedBank()">
+          <i class="fa fa-bell isNotMuted" aria-hidden="true"></i>
+          <i class="fa fa-bell-slash isMuted" aria-hidden="true"></i>
+        </span>
+        <span class="agby-btn" onclick="bywEnterGame()"></span>
+      </div>
+      <div class="by-rule-box">
+        <span onclick="agbyGamehelp(this,1)">界面说明</span>
+        <span onclick="agbyGamehelp(this,2)">操作说明</span>
+        <span onclick="agbyGamehelp(this,3)">鱼的说明</span>
+        <span onclick="agbyGamehelp(this,4)">炮的说明</span>
+        <span onclick="agbyGamehelp(this,5)">图表说明</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/page/eleGame/js/swiper.min.js"></script>
+<script type="text/javascript" src="/page/eleGame/js/eleGame.js"></script>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+                        http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-4.2.xsd
+                        http://www.springframework.org/schema/tx  
+                        http://www.springframework.org/schema/tx/spring-tx.xsd  
+                        http://www.springframework.org/schema/aop  
+                        http://www.springframework.org/schema/aop/spring-aop.xsd
+                        http://www.springframework.org/schema/cache 
+                        http://www.springframework.org/schema/cache/spring-cache.xsd">
+	<!-- <context:property-placeholder location="classpath:config.properties" /> -->
+	
+	<import resource="classpath:spring/datasource-master.xml" />
+	<import resource="classpath:spring/datasource-slave.xml" />
+    <!-- 动态数据源类 -->  
+	<bean id="dataSource" class="com.cz.framework.dao.DynamicDataSource">  
+        <property name="targetDataSources">  
+            <map key-type="java.lang.String">  
+                <entry value-ref="dataSourceMaster" key="dataSourceMaster"></entry>  
+                <entry value-ref="dataSourceSlave" key="dataSourceSlave"></entry>  
+            </map>  
+        </property>  
+        <property name="defaultTargetDataSource" ref="dataSourceMaster">  
+        </property>  
+    </bean>  
+	<!-- 配置数据源切换实现类 -->  
+    <bean id="dataSourceInterceptor"  
+        class="com.cz.framework.dao.DataSourceInterceptor" />  
+  
+    <!-- 切换数据源 -->  
+    <aop:config>  
+        <aop:aspect id="dataSourceHolderAdviceAspect" ref="dataSourceInterceptor" order="1">
+            <aop:pointcut id="changeDataSource" 
+				expression="execution(* com.cz..*.service..*.slave*(..)) or execution(* com.cz..*.manager..*.slave*(..))" /> 
+            <aop:before method="setSlaveDataSource" pointcut-ref="changeDataSource" />  
+            <aop:after method="removeDataSource" pointcut-ref="changeDataSource" />  
+            <aop:after-throwing pointcut-ref="changeDataSource" method="handleException" throwing="ex"/>
+        </aop:aspect>  
+    </aop:config>  
+	
+    <bean id="txManager"  
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
+        <property name="dataSource" ref="dataSource" />  
+    </bean> 
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<tx:advice id="txAdvice" transaction-manager="txManager" >    
+	    <tx:attributes>  
+			<tx:method name="sel*" propagation="REQUIRED" read-only="true" rollback-for="java.lang.Exception"/>
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" rollback-for="java.lang.Exception"/>
+			<tx:method name="query*" propagation="REQUIRED" read-only="true" rollback-for="java.lang.Exception"/>
+			<tx:method name="*" propagation="REQUIRED" rollback-for="java.lang.Exception"/>
+	    </tx:attributes>  
+	</tx:advice>
+	
+	<aop:config expose-proxy="true">  
+		<aop:pointcut id="serviceOperation" 
+				expression="execution(* com.cz..*.service..*.*(..))" /> 
+  		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation"/>
+	</aop:config> 
+	
+	<bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">                 
+        <!-- 线程池活跃的线程数 -->     
+	    <property name="corePoolSize" value="50" />
+	    <!-- 线程池最大活跃的线程数 -->    
+	    <property name="maxPoolSize" value="200" />
+	    <!-- 队列的最大容量 -->    
+	    <property name="queueCapacity" value="100000" />
+	    <!-- 线程池维护线程所允许的空闲时间，默认为60s -->
+        <property name="keepAliveSeconds" value="300" />  
+	</bean>
+	
+	
+	
+	<context:component-scan base-package="com.cz">   
+    	<!-- 正则表达式过滤掉不扫描指定的包 -->
+    	<context:exclude-filter type="regex" expression="com\.cz\..*\.ctrl\..*"/>
+	</context:component-scan>  
+	<cache:annotation-driven />
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+
+</beans>

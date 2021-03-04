@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>活动大厅</title>
+  <!--#include virtual="/page/include/user-center.html"-->
+  <!--#include virtual="/page/include/datepicker.html"-->
+  <!--#include virtual="/page/include/table.html"-->
+  <script src="/js/user-center/activity/activity-hall.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="mainContainer" class="container-fluid">
+  <form id="queryForm" class="form-inline m-t-md">
+    <input id="page" type="hidden" name="page" value="1">
+    <input id="rows" type="hidden" name="rows" value="10">
+    <div class="form-group m-r-md m-b-xs">
+      <label for="startDate">活动时间：</label>
+      <div id="startDatePicker" class="input-group">
+        <input id="startDate" name="startDate" class="form-control none-bg input-sm field-md" placeholder="请选择起始时间" readonly>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>
+      <div class="input-group">
+        <span for="endDate" class="input-group-addon none-style">至</span>
+      </div>
+      <div id="endDatePicker" class="input-group">
+        <input id="endDate" name="endDate" class="form-control none-bg input-sm field-md" placeholder="请选择截止时间" readonly>
+        <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+      </div>
+    </div>
+    <button id="queryBtn" type="button" class="btn btn-primary btn-sm m-b-xs">查询</button>
+  </form>
+  <div class="table-responsive">
+    <table id="table" class="table table-condensed">
+      <thead class="thead-default">
+      <tr>
+        <th>编号</th>
+        <th>活动名称</th>
+        <th>活动标题</th>
+        <th>活动开始时间</th>
+        <th>活动结束时间</th>
+        <th>操作</th>
+      </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="pagination"></div>
+    <div class="tips" style="font-size:14px">
+      <p>备注:点击"详情"可查看活动具体说明;点击"申请"可参加活动</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

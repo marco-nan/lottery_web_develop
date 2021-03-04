@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="zh-cn">
+<!--#include virtual="/views/html/head.html"-->
+
+<style>
+
+    .header-gou {
+      font-size: 12px;
+    }
+
+    .headTop_right a {
+      font-size: 12px;
+    }
+
+    .Sec_bg_right_content input {
+      font-size: 12px;
+    }
+    .mainContentWrap
+    {
+      overflow: hidden;
+    }
+</style>
+
+<body>
+
+<!-- 头部 -->
+<!--#include virtual="/views/html/header.html"-->
+
+
+<div class="mainContentWrap">
+  <div class="mainContent">
+    <div class="main help">
+
+
+      <div class="help_main" style="border-top: 1px solid #999;">
+    <!-- 左边 导航 -->
+
+        <!--#include virtual="/views/agent_left_menu.html"-->
+
+    <!--右边 内容-->
+
+        <!--#include virtual="/views/agent_right_content.html"-->
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--#include virtual="/views/html/footer.html"-->
+
+<script>
+
+  $(".PlanfinancingNav").find("li").bind('click',function () {
+    $(".PlanfinancingNav").find("li").removeClass('active');
+    $(this).addClass('active');
+      var data = $(this).attr('data');
+      var itemsLength = $(".financingContent").length;
+      $(".financingContent").removeClass("financingContent-show")
+      for(var i = 0;i<itemsLength;i++){
+          if(data == $(".financingContent").eq(i).attr('data')){
+            $(".financingContent").eq(i).addClass("financingContent-show");
+          }
+      }
+  })
+
+</script>
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>
+
+
+</body>
+</html>
+
+
+
+

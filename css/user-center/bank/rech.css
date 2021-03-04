@@ -1,0 +1,240 @@
+#rechAccounts {
+}
+
+#rechAccounts img {
+  margin: .375rem 0;
+}
+
+#rechAccounts tr {
+  cursor: pointer;
+}
+
+#rechAccounts .warning {
+  color: #d9534f;
+}
+
+#rechAccounts tr:first-child td {
+  border-top: none;
+}
+
+#rechTypes input[type="radio"] {
+  margin-left: -8px;
+  margin-top: 8px;
+}
+
+#rechTypes .bank-logo {
+  margin-left: 10px;
+}
+
+#rechTypes .active {
+  border: .125rem solid #d9534f;
+}
+
+.bank-logo {
+  background: url(../../../images/user-center/bank/bank-logos.png) center no-repeat;
+  width: 120px;
+  height: 30px;
+  display: inline-block;
+}
+
+.bank-logo-0 {
+  background-position: -605px -345px;
+}
+
+.bank-logo-1 {
+  background-position: 0px 0px;
+}
+
+.bank-logo-2 {
+  background-position: -150px 0px;
+}
+
+.bank-logo-3 {
+  background-position: -298px 0px;
+}
+
+.bank-logo-4 {
+  background-position: -455px 0px;
+}
+
+.bank-logo-5 {
+  background-position: -600px 0px;
+}
+
+.bank-logo-7 {
+  background-position: -750px 0px;
+}
+
+.bank-logo-8 {
+  background-position: -600px -300px;
+}
+
+.bank-logo-9 {
+  background-position: 0px -53px;
+}
+
+.bank-logo-10 {
+  background-position: -150px -53px;
+}
+
+.bank-logo-11 {
+  background-position: -298px -53px;
+}
+
+.bank-logo-12 {
+  background-position: -455px -53px;
+}
+
+.bank-logo-13 {
+  background-position: -600px -53px;
+}
+
+.bank-logo-14 {
+  background-position: -750px -53px;
+}
+
+.bank-logo-15 {
+  background-position: -750px -300px;
+}
+
+.bank-logo-16 {
+  background-position: 0px -100px;
+}
+
+.bank-logo-17 {
+  background-position: -150px -100px;
+}
+
+.bank-logo-18 {
+  background-position: -298px -100px;
+}
+
+.bank-logo-19 {
+  background-position: -455px -100px;
+}
+
+.bank-logo-20 {
+  background-position: -600px -100px;
+}
+
+.bank-logo-21 {
+  background-position: -750px -100px;
+}
+
+.bank-logo-22 {
+  background-position: 0px -350px;
+}
+
+.bank-logo-23 {
+  background-position: 0px -150px;
+}
+
+.bank-logo-24 {
+  background-position: -150px -150px;
+}
+
+.bank-logo-25 {
+  background-position: -298px -150px;
+}
+
+.bank-logo-26 {
+  background-position: -455px -150px;
+}
+
+.bank-logo-27 {
+  background-position: -600px -150px;
+}
+
+.bank-logo-28 {
+  background-position: -750px -150px;
+}
+
+.bank-logo-29 {
+  background-position: -150px -350px;
+}
+
+.bank-logo-30 {
+  background-position: 0px -200px;
+}
+
+.bank-logo-31 {
+  background-position: -150px -200px;
+}
+
+.bank-logo-32 {
+  background-position: -298px -200px;
+}
+
+.bank-logo-33 {
+  background-position: -455px -200px;
+}
+
+.bank-logo-34 {
+  background-position: -600px -200px;
+}
+
+.bank-logo-35 {
+  background-position: -750px -200px;
+}
+
+.bank-logo-36 {
+  background-position: -298px -350px;
+}
+
+.bank-logo-37 {
+  background-position: 0px -250px;
+}
+
+.bank-logo-38 {
+  background-position: -150px -250px;
+}
+
+.bank-logo-39 {
+  background-position: -298px -250px;
+}
+
+.bank-logo-40 {
+  background-position: -455px -250px;
+}
+
+.bank-logo-41 {
+  background-position: -600px -250px;
+}
+
+.bank-logo-42 {
+  background-position: -750px -250px;
+}
+
+.bank-logo-43 {
+  background-position: -455px -351px;
+}
+
+.bank-logo-50 {
+  background-position: 0px -300px;
+}
+
+.bank-logo-100 {
+  background-position: -168px -300px;
+}
+
+.bank-logo-101 {
+  background-position: -303px -300px;
+}
+
+.bank-logo-102 {
+  background-position: -455px -300px;
+}
+
+.bank-logo-more {
+  background: none;
+  font-size: 18px;
+  line-height: 26px;
+  margin-right: 8px;
+  margin-left: 15px;
+}
+
+.bank-logo-more b {
+  background: none;
+  font-size: 22px;
+  line-height: 26px;
+}

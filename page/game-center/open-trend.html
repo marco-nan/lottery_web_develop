@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>开奖走势</title>
+  <title>用户中心</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link href="/js/lib/My97DatePicker/skin/whyGreen/datepicker.css" type="text/css"
+        rel="stylesheet"/>
+  <link href="/css/game-center/style.open.css" type="text/css" rel="stylesheet"/>
+  <link href="/css/game-center/style.open.trend.css" type="text/css" rel="stylesheet"/>
+  <script src="/js/lib/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+  <script src="/js/game-center/open-trend.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="game-tab-container" class="game-tab-container x-center">
+  <ul class="tabs">
+    <li class="link" data-game-cate="-1">全部彩种</li>
+    <li class="link" data-game-cate="1">低频彩</li>
+    <li class="link" data-game-cate="2">时时彩</li>
+    <li class="link" data-game-cate="3">PK拾</li>
+    <li class="link" data-game-cate="4">11选5</li>
+    <li class="link" data-game-cate="5">快乐彩</li>
+    <li class="link" data-game-cate="6">快三</li>
+    <li class="link" data-game-cate="7">PC蛋蛋</li>
+  </ul>
+  <div class="tab-contents">
+    <ul class="tab-panel" data-game-cate="-1"></ul>
+    <ul class="tab-panel" data-game-cate="1"></ul>
+    <ul class="tab-panel" data-game-cate="2"></ul>
+    <ul class="tab-panel" data-game-cate="3"></ul>
+    <ul class="tab-panel" data-game-cate="4"></ul>
+    <ul class="tab-panel" data-game-cate="5"></ul>
+    <ul class="tab-panel" data-game-cate="6"></ul>
+    <ul class="tab-panel" data-game-cate="7"></ul>
+  </div>
+</div>
+<div id="toolbar" class="x-center x-toolbar">
+  <label>
+    <input type="checkbox" value="show-line" checked>
+    显示折线
+  </label>
+  <label>
+    <input type="checkbox" value="show-temp" checked>
+    显示号温
+  </label>
+  <label>
+    <input type="checkbox" value="show-missing-level" checked>
+    显示遗漏分层
+  </label>
+  <label>
+    <input type="checkbox" value="show-missing" checked>
+    显示遗漏
+  </label>
+  <label>
+    <input type="checkbox" value="show-sum" checked>
+    显示统计
+  </label>
+  <label>
+    <input type="checkbox" value="show-support" checked>
+    显示辅助线
+  </label>
+  <ul id="rows" class="small-button-groups">
+<!--     <li class="link active" data-date="0">今天</li>
+    <li class="link" data-date="1">昨天</li>
+    <li class="link" data-date="2">前天</li> -->
+    <li class="link active" data-rows="30">最近30期</li>
+    <li class="link" data-rows="50">最近50期</li>
+    <li class="link" data-rows="100">最近100期</li>
+  </ul>
+</div>
+<div>
+  <div id="trend-container"
+       class="show-temp show-missing-level show-missing show-sum show-support">
+  </div>
+</div>
+<div id="menus"></div>
+<canvas id="canvas"></canvas>
+</body>
+</html>

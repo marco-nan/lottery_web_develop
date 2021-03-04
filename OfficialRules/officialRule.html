@@ -1,0 +1,130 @@
+<style type="text/css">
+    .rule-desc {
+        font-size: 13px;
+        font-weight: 300;
+        padding: 5px 0;
+        text-indent: 28px;
+        color: #555;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
+
+</style>
+<div class="rule-State">
+    <ul class="clear gz_tab .ziti" rule="nav" id="rules">
+    </ul>
+    <div id="gameRuleDiv">
+    </div>
+</div>
+
+<script type="text/html" id="templateGames">
+    {{each games game}}
+    <li><a id="{{game.code}}" href="javascript:;" onclick="changeGame('{{game.id}}','{{game.type}}','{{game.name}}')">{{game.name}}</a></li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="templateRules">
+    <div class="gz_con" rule="content" style="padding: 10px;height: 485px;width: 840px;overflow-y: auto;display: block"
+         >
+        <div class="main-tit" style="text-align: center;font-size: 18px;padding: 10px">{{gameName}}[官方]玩法介绍</div>
+        <div  class="rule-desc">{{#gameDesc}}</div>
+        <div class="table-list">
+            <table>
+                <thead>
+                <tr>
+                    <th width="15%">玩法组</th>
+                    <th width="15%">玩法</th>
+                    <th width="40%">玩法说明</th>
+                    <th width="30%">中奖举例</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{each gameRules rule}}
+                <tr>
+                    <td rowspan= {{#rule.itemRule.length + 1}}>{{#rule.name}}</td>
+                    <td>{{#rule.headRule.name}}</td>
+                    <td style="padding: 10px">{{#rule.headRule.desc}}</td>
+                    <td style="padding: 10px">{{#rule.headRule.sample}}</td>
+                </tr>
+                {{each rule.itemRule item}}
+                <tr>
+                    <td>{{#item.name}}</td>
+                    <td style="padding: 10px">{{#item.desc}}</td>
+                    <td style="padding: 10px">{{#item.sample}}</td>
+                </tr>
+                {{/each}}
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</script>
+
+<script>
+    $(function(){
+        $.ajax({
+            type : "get",
+            url : "/data/json/games.json",
+            success : function(data) {
+                var games = [];
+                for(var i=0;i<data.length;i++){
+                    if(data[i].isOffcial === 1){
+                        games.push(data[i])
+                    }
+                }
+                var html = template("templateGames",{games: games});
+                $('#rules').html(html);
+                var gameCode = $('#rule_currPage').val();
+                $('#'+gameCode).click();
+            }
+        });
+    });
+</script>
+
+
+<script type="text/javascript">
+    function changeGame(gameId,gameRuleName,gameName) {
+        $.ajax({
+            type: "get",
+            url: "/data/json/rules/"+gameRuleName+"_official.json",
+            success: function (data) {
+                if(data != null ){
+                    var gameRule = data;
+                    var rules = [];
+                    var gameDesc;
+                    try {
+                        gameDesc = data.gameDesc[gameId]||"";
+                    }catch (err){
+                        gameDesc = "";
+                    }
+                    for(var i= 0;i< gameRule.categories.length; i++) {
+                        var gcr = gameRule.categories[i].rules;
+                        var rule = {};
+                        var itemRule = [];
+                        for (var k = 0;k<gcr.length;k++){
+                            if(k == 0){
+                                var headRule = gcr[0];
+                                rule.headRule = headRule;
+                                rule.name = gameRule.categories[i].name;
+                            }else{
+                                itemRule.push(gcr[k]);
+                            }
+                        }
+                        rule.itemRule = itemRule;
+                        rules.push(rule);
+                    }
+                    if(gameDesc === undefined || gameDesc === "undefined" ){
+                      gameDesc="";
+                    }
+                    var html = template("templateRules",{gameRules: rules,gameName:gameName,gameDesc:gameDesc});
+                    $('#gameRuleDiv').html(html);
+
+                }
+            }
+        });
+        $("#rules li").click(function () {
+            $(this).siblings('li').removeClass('curr'); // 删除其他兄弟元素的样式
+            $(this).addClass('curr'); // 添加当前元素的样式
+        });
+    }
+</script>

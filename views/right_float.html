@@ -1,0 +1,58 @@
+<div id="FloatRight_"  class="float-right-wrap" style="background: url(/views/image/20200804/20200804182911296581-20200521162304532375-2.png) no-repeat; height: 570px;    width: 120px;">
+    
+<a href="javascript:;" class="online-service" style="height: 131px;display: block;"></a>
+<a href="http://wpa.qq.com/msgrd?V=3&amp;uin=369044798" style="height: 80px;"> </a>
+ <a href="/data/game/jssc/index.html" target="_blank" style="height: 80px;"></a>
+<a href="#" style="height: 173px;">  <img src="/views/image/20200521/20200521152936023964-100_副本.png"  style="margin-top: 0px;margin-left: 15px;"></a>
+<a href="javascript:;" class="close" style="height: 50px;margin-top:0px;"> </a>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $("a.online-service").on("click",function () {
+            layer.open({
+            type: 2,
+            title: '在线客服',
+            anim: 2,
+            shade: 0, //不显示遮罩
+            shadeClose: true, //开启遮罩关闭
+            area: ['800px', '700px'],
+            content:'http://api.pop800.com/chat/123456',
+        });
+        })
+    })
+</script>
+
+<style>
+        .float-right-wrap,
+        .float-left-wrap{width:117px !important;}
+    </style>
+	
+	<script>
+$(".close").click(function(){
+  $(this).parent().fadeOut(100);
+});
+$(".Recharge").click(function(){
+  var token = $.cookie("token", {path: "/"});
+  if (token != null && token != "" )
+    window.location.href = "/page/user-center/user-center.html?startPage=bank-rech";
+  else
+    layer.alert('请先登入', {
+      icon: 2,
+      shade: 0
+    }, function () {
+      window.location.href = "/views/html/login.html";
+    });
+})
+</script>
+
+<style>
+.alert-notice-warp img{
+max-width:100%;
+}
+
+.alert-notice-warp{
+    border: 5px solid rgba(255,255,255,0.2);
+border-radius: 8px;
+}
+</style>

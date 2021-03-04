@@ -1,0 +1,17 @@
+{
+    "cus_model_nav":[
+    
+        {
+          "modelName": "模板一",
+          "modelId": "1"
+        }
+    ],
+    "cus_model_next":[
+        {
+            "modelName": "游艺一",
+            "appId": "1",
+            "appLink": "8zyyl.com",
+            "appImg": "/views/image/20181108/20181108163957561962-chat.png"
+        }
+    ]
+}

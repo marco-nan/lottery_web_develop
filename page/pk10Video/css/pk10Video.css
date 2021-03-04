@@ -1,0 +1,519 @@
+/*body { background: url(/page/pk10Video/images/skin1/bg1.jpg) no-repeat !important; background-position: center top; }*/
+*{margin:0;padding:0}
+a{text-decoration:none;outline:none;}
+#kaijiang ul{list-style: none;}
+.track{position:relative;width:720px;height:270px;overflow:hidden}
+.track-side{position:relative;width:720px;height:68px;overflow:hidden;background: url(/page/pk10Video/images/pk10video/track-side-bg.png)}
+.mover{-webkit-animation:run .5s linear 0s infinite normal;animation:run .5s linear 0s infinite normal;}
+.sidebg-mover{-webkit-animation:sidebg_mover 3s linear 0s infinite normal;animation:sidebg_mover 3s linear 0s infinite normal;}
+.relay{-webkit-animation:relay .5s linear 0s;-webkit-animation-fill-mode:forwards}
+.pksp-area dl{position:absolute;top:0;width:100%;height:100%}
+.bg{background:url(/page/pk10Video/images/pk10video/track_bg.png) repeat-x;width:200%;height:100%;position:absolute;top:0;left:-100%;z-index:1;}
+.side-bg{background:url(/page/pk10Video/images/pk10video/side-bg.png) repeat-x;width:200%;height:100%;position:absolute;top:0;left:-100%;z-index:1;}
+.begin{-webkit-animation:begin_mover .5s linear 0s forwards;animation:begin_mover .5s linear 0s forwards;}
+.end{-webkit-animation:end_mover .5s linear 0s forwards;animation:end_mover .5s linear 0s forwards;}
+
+.pksp-area dd{position:absolute;z-index:2;}
+.car-1,.car-2,.car-3,.car-4,.car-5,.car-6,.car-7,.car-8,.car-9,.car-10{display:block;animation:shake-vertical 100ms ease-in-out infinite;}
+.car-1{background: url(/page/pk10Video/images/pk10video/car-1.png) no-repeat;background-size:contain;width:74px;height:18px;}
+.car-2{background: url(/page/pk10Video/images/pk10video/car-2.png) no-repeat;background-size:contain;width:79px;height:20px;}
+.car-3{background: url(/page/pk10Video/images/pk10video/car-3.png) no-repeat;background-size:contain;width:84px;height:22px;}
+.car-4{background: url(/page/pk10Video/images/pk10video/car-4.png) no-repeat;background-size:contain;width:89px;height:24px;}
+.car-5{background: url(/page/pk10Video/images/pk10video/car-5.png) no-repeat;background-size:contain;width:94px;height:26px;}
+.car-6{background: url(/page/pk10Video/images/pk10video/car-6.png) no-repeat;background-size:contain;width:99px;height:28px;}
+.car-7{background: url(/page/pk10Video/images/pk10video/car-7.png) no-repeat;background-size:contain;width:106px;height:30px;}
+.car-8{background: url(/page/pk10Video/images/pk10video/car-8.png) no-repeat;background-size:contain;width:112px;height:32px;}
+.car-9{background: url(/page/pk10Video/images/pk10video/car-9.png) no-repeat;background-size:contain;width:120px;height:34px;}
+.car-10{background: url(/page/pk10Video/images/pk10video/car-10.png) no-repeat;background-size:contain;width:128px;height:36px;}
+
+.pksp-step1.on #car-1{top:10px;width:74px;height:18px;right:22px;}
+.pksp-step1.on #car-2{top:28px;width:79px;height:20px;right:23px;}
+.pksp-step1.on #car-3{top:48px;width:84px;height:22px;right:24px;}
+.pksp-step1.on #car-4{top:70px;width:89px;height:24px;right:25px;}
+.pksp-step1.on #car-5{top:92px;width:94px;height:26px;right:26px;}
+.pksp-step1.on #car-6{top:115px;width:101px;height:28px;right:27px;}
+.pksp-step1.on #car-7{top:140px;width:109px;height:30px;right:28px;}
+.pksp-step1.on #car-8{top:168px;width:114px;height:32px;right:29px;}
+.pksp-step1.on #car-9{top:196px;width:120px;height:34px;right:30px;}
+.pksp-step1.on #car-10{top:226px;width:128px;height:36px;right:31px;}
+
+.pksp-area{width:720px;background: #212121;border:1px solid #car-7car-7car-7;overflow: hidden;}
+.pksp-header{height:66px;width:100%;background-image: url(/page/pk10Video/images/pk10video/pksp-header.png);}
+.pksp-header .nextAction{float: right;color:#FFF;font-size: 12px;margin-top:16px;margin-right:10px;}
+.pksp-header .pksp-number{width:295px;height:66px;float: left;/*padding-left:40px;*/}
+
+.pksp-bottom{height:85px;width:100%;padding:0 10px;}
+/*pk10 top*/
+.pksp-top{height:32px;width:100%;background: #FFF;padding:0 10px;}
+.pksp-top .thisNum{float: left;width:155px;height:32px;line-height: 32px;}
+.pksp-top .nextNum{float: left;width:300px;height:32px;line-height: 32px;}
+.pksp-top .gotextMode,.pksp-top .historyList{float: right;width:72px;text-align: center;height:32px;line-height: 32px;}
+.pksp-top .historyList{margin-right: 10px;}
+.pksp-top .gotextMode a,.pksp-top .historyList a{display:block;height:25px;line-height:25px;width:68px;color: #FFF;margin:4px;font-size: 13px;}
+.pksp-top .historyList a{background: #08f;margin-right: 100px;}
+.pksp-top .gotextMode a{background: red;}
+.pksp-top .historyList .homekjhistory{display: none;position: absolute;}
+
+/*track-side*/
+
+.track-side .count{width:100px;height:32px;line-height: 32px;position: absolute;top:35px;right: 0;text-align:center;}
+.track-side .count a{color: #FFF;}
+
+/**pksp-periods*/
+.pksp-periods{line-height: 66px}
+.pksp-periods span{color:#FFF;font-size: 12px;}
+
+/**car wgeel*/
+.car-wheel1,.car-wheel2{display:block;background: url(/page/pk10Video/images/pk10video/car-wheel.png) no-repeat;background-size:contain;position: absolute;float: left;z-index:2;}
+#car-1 .car-wheel1,#car-1 .car-wheel2{width:12px;height:12px;}
+#car-1 .car-wheel1{left:12px;top:10px;}
+#car-1 .car-wheel2{left:56px;top:10px;}
+#car-2 .car-wheel1,#car-2 .car-wheel2{width:12px;height:12px;}
+#car-2 .car-wheel1{left:14px;top:11px;}
+#car-2 .car-wheel2{left:61px;top:11px;}
+#car-3 .car-wheel1,#car-3 .car-wheel2{width:14px;height:14px;}
+#car-3 .car-wheel1{left:14px;top:11px;}
+#car-3 .car-wheel2{left:64px;top:11px;}
+#car-4 .car-wheel1,#car-4 .car-wheel2{width:14px;height:14px;}
+#car-4 .car-wheel1{left:15px;top:12px;}
+#car-4 .car-wheel2{left:68px;top:12px;}
+#car-5 .car-wheel1,#car-5 .car-wheel2{width:15px;height:15px;}
+#car-5 .car-wheel1{left:16px;top:12px;}
+#car-5 .car-wheel2{left:72px;top:12px;}
+#car-6 .car-wheel1,#car-6 .car-wheel2{width:15px;height:15px;}
+#car-6 .car-wheel1{left:17px;top:13px;}
+#car-6 .car-wheel2{left:76px;top:13px;}
+#car-7 .car-wheel1,#car-7 .car-wheel2{width:17px;height:17px;}
+#car-7 .car-wheel1{left:17px;top:13px;}
+#car-7 .car-wheel2{left:80px;top:13px;}
+#car-8 .car-wheel1,#car-8 .car-wheel2{width:17px;height:17px;}
+#car-8 .car-wheel1{left:19px;top:14px;}
+#car-8 .car-wheel2{left:86px;top:14px;}
+#car-9 .car-wheel1,#car-9 .car-wheel2{width:18px;height:18px;}
+#car-9 .car-wheel1{left:20px;top:15px;}
+#car-9 .car-wheel2{left:92px;top:15px;}
+#car-10 .car-wheel1,#car-10 .car-wheel2{width:20px;height:20px;}
+#car-10 .car-wheel1{left:21px;top:16px;}
+#car-10 .car-wheel2{left:98px;top:16px;}
+/**car speed and fire*/
+.car-speed{display:block;background: url(/page/pk10Video/images/pk10video/car-speed.png) no-repeat;background-size:contain;position: absolute;display: none}
+#car-1 .car-speed{width:117px;height:40px;top:-9px;left:-6px;}
+#car-2 .car-speed{width:128px;height:45px;top:-10px;left:-10px;}
+#car-3 .car-speed{width:130px;height:45px;top:-11px;left:-6px;}
+#car-4 .car-speed{width:163px;height:48px;top:-14px;left:-10px;}
+#car-5 .car-speed{width:150px;height:50px;top:-14px;left:-10px;}
+#car-6 .car-speed{width:160px;height:52px;top:-14px;left:-10px;}
+#car-7 .car-speed{width:165px;height:56px;top:-14px;left:-10px;}
+#car-8 .car-speed{width:170px;height:56px;top:-14px;left:-10px;}
+#car-9 .car-speed{width:178px;height:59px;top:-14px;left:-10px;}
+#car-10 .car-speed{width:185px;height:63px;top:-14px;left:-10px;}
+/**car-shadow*/
+.car-shadow{display:block;background: url(/page/pk10Video/images/pk10video/car-shadow.png) no-repeat;background-size:contain;position: absolute;z-index:-1;}
+#car-1 .car-shadow{width:77px;height:12px;top:17px;left:0px;}
+#car-2 .car-shadow{width:80px;height:12px;top:18px;left:0px;}
+#car-3 .car-shadow{width:86px;height:12px;top:19px;left:0px;}
+#car-4 .car-shadow{width:90px;height:12px;top:20px;left:0px;}
+#car-5 .car-shadow{width:95px;height:12px;top:21px;left:0px;}
+#car-6 .car-shadow{width:102px;height:12px;top:21px;left:0px;}
+#car-7 .car-shadow{width:106px;height:12px;top:24px;left:0px;}
+#car-8 .car-shadow{width:112px;height:12px;top:25px;left:0px;}
+#car-9 .car-shadow{width:115px;height:12px;top:26px;left:0px;}
+#car-10 .car-shadow{width:120px;height:12px;top:27px;left:0px;}
+
+/**pksp-header*/
+.pksp-icon{width:95px;height:100%;float: left;}
+.pksp-periods{width:95px;height:100%;float: left;margin-left:96px;}
+
+.num-items{display:block;float:left;width:28px;height:28px;margin-top:20px !important;float: left;}
+li.carNum-1{background: url(/page/pk10Video/images/pk10video/carNum-1.png) no-repeat;background-size:contain;}
+li.carNum-2{background: url(/page/pk10Video/images/pk10video/carNum-2.png) no-repeat;background-size:contain;}
+li.carNum-3{background: url(/page/pk10Video/images/pk10video/carNum-3.png) no-repeat;background-size:contain;}
+li.carNum-4{background: url(/page/pk10Video/images/pk10video/carNum-4.png) no-repeat;background-size:contain;}
+li.carNum-5{background: url(/page/pk10Video/images/pk10video/carNum-5.png) no-repeat;background-size:contain;}
+li.carNum-6{background: url(/page/pk10Video/images/pk10video/carNum-6.png) no-repeat;background-size:contain;}
+li.carNum-7{background: url(/page/pk10Video/images/pk10video/carNum-7.png) no-repeat;background-size:contain;}
+li.carNum-8{background: url(/page/pk10Video/images/pk10video/carNum-8.png) no-repeat;background-size:contain;}
+li.carNum-9{background: url(/page/pk10Video/images/pk10video/carNum-9.png) no-repeat;background-size:contain;}
+li.carNum-10{background: url(/page/pk10Video/images/pk10video/carNum-10.png) no-repeat;background-size:contain;}
+
+.pksp-sound{display: block;width:32px;height:26px;float: right;margin-top:20px;margin-right:12px;cursor: pointer;}
+.pksp-sound.sound-on{background: url(/page/pk10Video/images/pk10video/sound-on.png) no-repeat;}
+.pksp-sound.sound-off{background: url(/page/pk10Video/images/pk10video/sound-off.png) no-repeat;}
+
+/**light*/
+.light{position: absolute;left:200px;top:25px;width:320px;z-index:2;}
+.light .clock{text-align: center;color:#FFF;font-size: 58px;width:100%;}
+.light .light-box{width:100%;height:66px;background:url(/page/pk10Video/images/pk10video/light-bg.png) no-repeat;background-size: contain;}
+.light ul{display:block;height:52px;width:100%;margin-left:7px !important;}
+.light .light-item{height:45px;float: left;width:45px;margin:8px 3px !important;position: relative;}
+.light .light-green{background: url(/page/pk10Video/images/pk10video/light-1.png) no-repeat;background-size: contain;}
+.light .light-orange{background: url(/page/pk10Video/images/pk10video/light-2.png) no-repeat;background-size: contain;}
+.light .light-red{background: url(/page/pk10Video/images/pk10video/light-3.png) no-repeat;background-size: contain;}
+.light .light-gaglow,.light .light-oaglow,.light .light-raglow{width:128px;height:128px;position: absolute;top:-40px;left:-40px;z-index: 10;}
+.light .light-gaglow{background: url(/page/pk10Video/images/pk10video/light-aglow1.png) no-repeat;background-size: contain;display: none}
+.light .light-oaglow{background: url(/page/pk10Video/images/pk10video/light-aglow2.png) no-repeat;background-size: contain;display: none}
+.light .light-raglow{background: url(/page/pk10Video/images/pk10video/light-aglow3.png) no-repeat;background-size: contain;}
+.light .ligth-mask{display:block;width:46px;height:46px;background: url(/page/pk10Video/images/pk10video/ligth-mask.png) no-repeat;background-size: contain;position: absolute;z-index:20;}
+
+/*stop-line*/
+.stop-line{width:135px;height:258px;background: url(/page/pk10Video/images/pk10video/stop-line.png) no-repeat;background-size: contain;position: absolute;z-index: 2;top:6px;}
+.stop-line.begin{right:62px;}
+.stop-line.end{left:-135px;}
+/*pksp-step2*/
+.pksp-step2,.pksp-step1{display: none;}
+.pksp-step2{height:313px;overflow: hidden;}
+
+.pksp-step2 {background: url(/page/pk10Video/images/pk10video/step2-bg.png) no-repeat;position: relative;}
+.pksp-step2 li{display: block;float: left;position: absolute;}
+.pksp-step2 .ranking-car,.pksp-step2 .ranking-label{width:100%;float: left;margin-top:38px;}
+.pksp-step2 .ranking-label li.nd{left:85px;}
+.pksp-step2 .ranking-label li.st{left:290px;}
+.pksp-step2 .ranking-label li.rd{left:520px;}
+.pksp-step2 .ranking-car li{opacity: 0}
+.pksp-step2 .ranking-car li.st{width:336px;height:195px;z-index: 2;}
+.pksp-step2 .ranking-car li.rd,.pksp-step2 .ranking-car li.nd{width:210px;height:122px;z-index: 1}
+.pksp-step2 .ranking-car li.st{top:75px;left:220px;}
+.pksp-step2 .ranking-car li.rd{top:100px;left:500px;}
+.pksp-step2 .ranking-car li.nd{top:100px;left:80px;}
+
+.pksp-step2 .ranking-label li.st{width:300px;height:95px;}
+.pksp-step2 .ranking-label li.rd,.pksp-step2 .ranking-label li.nd{width:210px;height:65px;}
+
+.pksp-step1.on,.pksp-step2.on{display: block;}
+.car-winer-1{background: url(/page/pk10Video/images/pk10video/car-winer-1.png) no-repeat;background-size: contain;}
+.car-winer-2{background: url(/page/pk10Video/images/pk10video/car-winer-2.png) no-repeat;background-size: contain;}
+.car-winer-3{background: url(/page/pk10Video/images/pk10video/car-winer-3.png) no-repeat;background-size: contain;}
+.car-winer-4{background: url(/page/pk10Video/images/pk10video/car-winer-4.png) no-repeat;background-size: contain;}
+.car-winer-5{background: url(/page/pk10Video/images/pk10video/car-winer-5.png) no-repeat;background-size: contain;}
+.car-winer-6{background: url(/page/pk10Video/images/pk10video/car-winer-6.png) no-repeat;background-size: contain;}
+.car-winer-7{background: url(/page/pk10Video/images/pk10video/car-winer-7.png) no-repeat;background-size: contain;}
+.car-winer-8{background: url(/page/pk10Video/images/pk10video/car-winer-8.png) no-repeat;background-size: contain;}
+.car-winer-9{background: url(/page/pk10Video/images/pk10video/car-winer-9.png) no-repeat;background-size: contain;}
+.car-winer-10{background: url(/page/pk10Video/images/pk10video/car-winer-10.png) no-repeat;background-size: contain;}
+
+/***/
+.pksp-bottom{position: relative;}
+.pksp-bottom table{float: left}
+.pksp-bottom table td{margin: 0 5px;}
+.pksp-bottom table th,.pksp-bottom table td{color:#FFF;font-size: 12px;}
+.pksp-bottom table th{width:26px;text-align: center;font-weight: normal !important;height:26px;line-height:26px;}
+.pksp-bottom table td{height:26px;line-height:26px;text-align: center;}
+.pksp-bottom table th.th-empty{width:80px;}
+.pksp-bottom table .tb-title{border-radius:3px;width:60px;margin:0 auto;}
+.pksp-bottom .tb1,.pksp-bottom .tb2{width:350px;height:85px;float: left;}
+.pksp-bottom table td .ball-item{
+    float: left;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #888;
+    color: #FFF;
+    border-radius: 11px;
+    font: 10px/20px Arial, Helvetica, sans-serif;
+    color: #888;
+    box-shadow: 0px 0px 1px #848484 inset, 0px 0px 1px #222;
+    background-size: 100%;
+    background-image: -moz-radial-gradient(top left, circle, #ffffff, #848484, #848484);
+    background-image: -webkit-radial-gradient(top left, circle, #ffffff, #848484, #848484);
+    background-image: radial-gradient(circle at top left, #ffffff, #848484, #848484);
+    background-image: url('/page/pk10Video/images/skin1/tableball-item.png');}
+
+.pksp-bottom table td .blue {
+    color:#FFF;
+    background: #005199;
+    background-size: 100%;
+    background-image: -moz-radial-gradient(top left, circle, #ffffff, #005199, #005199);
+    background-image: -webkit-radial-gradient(top left, circle, #ffffff, #005199, #005199);
+    background-image: radial-gradient(circle at top left, #ffffff, #005199, #005199);
+    box-shadow: 0px 0px 1px #005199 inset, 0px 0px 3px #2f2f2f;
+    background-image: url('/page/pk10Video/images/skin1/tableblue.png');
+}
+.pksp-bottom table td .black{
+    color:#FFF;
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #555555), color-stop(100%, #222222));
+    background-image: -moz-linear-gradient(#555555, #222222); background-image: -webkit-linear-gradient(#555555, #222222);
+    background-image: linear-gradient(#555555, #222222); box-shadow: 0px 0px 3px #000; color: #FFF;
+    background-image: url(height: 26px; line-height: 26px; text-align: center; background: #222; background-image: url('/page/pk10Video/images/skin1/tableblack.png');
+}
+.pksp-bottom table td .red {
+    color:#FFF;
+    background: #930000;
+    background-size: 100%;
+    background-image: -moz-radial-gradient(top left, circle, #ffffff, #930000, #930000);
+    background-image: -webkit-radial-gradient(top left, circle, #ffffff, #930000, #930000);
+    background-image: radial-gradient(circle at top left, #ffffff, #930000, #930000);
+    box-shadow: 0px 0px 1px #930000 inset, 0px 0px 3px #2f2f2f;
+    background-image: url('/page/pk10Video/images/skin1/tableRed.png');
+    float:left;
+}
+.pksp-bottom table td .green {
+    color:#FFF;
+    background: #1bb000;
+    background-size: 100%;
+    background-image: -moz-radial-gradient(top left, circle, #ffffff, #1bb000, #1bb000);
+    background-image: -webkit-radial-gradient(top left, circle, #ffffff, #1bb000, #1bb000);
+    background-image: radial-gradient(circle at top left, #ffffff, #1bb000, #1bb000);
+    box-shadow: 0px 0px 1px #930000 inset, 0px 0px 3px #2f2f2f;
+    background-image: url('/page/pk10Video/images/skin1/tablegreen.png');
+}
+
+/**closeOdd*/
+.closeOdd{display: block;position: absolute; top: 0; left: 0; width: 100%; height: 100%; line-height: 100%; background: #000 \9; filter: alpha(opacity=65) \9; background-color: rgba(0, 0, 0, 0.6); color: #FFF; text-align: center;}
+.closeOdd-info{width:260px;height:32px;line-height:32px;margin:0 auto;margin-top:28px;}
+.closeOdd-icon{
+    display:block;
+    width:32px;
+    height:32px;
+    background-size: contain;
+    float: left;
+    background-image: url("/page/pk10Video/images/skin1/closeOdd-icon.png");
+}
+.closeOdd-title{color:#fff;font-size: 18px;}
+#gotoland{
+    height:32px;
+    width:100px;
+    -webkit-transform: skew(20deg);
+    transform: skew(20deg);
+    position: absolute;
+    right:-5px;
+    background: #000 \9;
+    filter: alpha(opacity=55) \9;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#gotoland a{
+    display:block;
+    width:100%;
+    height:32px;
+    line-height: 32px;
+    text-align: center;
+    float: right;
+    color:#FFF;
+    -webkit-transform: skew(-20deg);
+    transform: skew(-20deg);
+}
+
+.pa{position: absolute;}
+.ps{position: static;}
+
+/**css3 animate*/
+@keyframes run{0%{left:-100%}100%{left:0}}
+@-webkit-keyframes run{0%{left:-100%}100%{left:0}}
+@keyframes relay{0%{left:0}100%{left:-100%}}
+@-webkit-keyframes relay{0%{left:0}100%{left:-100%}}
+@keyframes begin_mover{0%{right:62px}100%{right:-135px}}
+@-webkit-keyframes begin_mover{0%{right:62px}100%{right:-135px}}
+@keyframes end_mover{0%{left:-135px}100%{left:62px}}
+@-webkit-keyframes end_mover{0%{left:-135px}100%{left:62px}}
+@keyframes sidebg_mover{0%{left:-100%}100%{left:0}}
+@-webkit-keyframes sidebg_mover{0%{left:-100%}100%{left:0}}
+
+.light-box ul.show .light-green .light-gaglow{-webkit-animation:showop 0.2s linear 3s;animation:showop 0.2s linear 3s;}
+.light-box ul.show .light-green .light-gaglow{-webkit-animation:showop 0.2s linear 3s;animation:showop 0.2s linear 3s;}
+.light-box ul.show .light-orange .light-gaglow{-webkit-animation:showop 0.2s linear 2s;animation:showop 0.2s linear 2s;}
+.light-box ul.show .light-orange .light-gaglow{-webkit-animation:showop 0.2s linear 2s;animation:showop 0.2s linear 2s;}
+.light-box ul.show .light-red .light-gaglow{-webkit-animation:showop 0.2s linear 1s;animation:showop 0.2s linear 1s;}
+.light-box ul.show .light-red .light-gaglow{-webkit-animation:showop 0.2s linear 1s;animation:showop 0.2s linear 1s;}
+
+@keyframes showop{0%{opacity: :0}100%{opacity: :1}}
+@-webkit-keyframes showop{0%{opacity: :0}100%{opacity: :1}}
+
+.car-wheel1.slow,.car-wheel2.slow{-webkit-animation:rotate .5s linear 0s infinite normal;animation:rotate .5s linear 0s infinite normal;}
+.car-wheel1.fast,.car-wheel2.fast{-webkit-animation:rotate .2s linear 0s infinite normal;animation:rotate .2s linear 0s infinite normal;}
+
+@keyframes rotate{from{transform:rotate(360deg);-webkit-transform:rotate(360deg)}to{transform:rotate(0deg);-webkit-transform:rotate(0deg)}}
+@-webkit-keyframes rotate{from{transform:rotate(360deg);-webkit-transform:rotate(360deg)}to{transform:rotate(0deg);-webkit-transform:rotate(0deg)}}
+.running{animation-play-state:running;-webkit-animation-play-state:running;}
+.paused{animation-play-state:paused;-webkit-animation-play-state:paused;}
+
+.pksp-step2.on .ranking-car li.st{-webkit-animation:strun .5s linear 0s forwards;animation:strun .5s linear 0s forwards;}
+.pksp-step2.on .ranking-car li.nd{-webkit-animation:ndrun 1.5s linear 0s forwards;animation:ndrun 1.5s linear 0s forwards;}
+.pksp-step2.on .ranking-car li.rd{-webkit-animation:rdrun 2.5s linear 0s forwards;animation:rdrun 2.5s linear 0s forwards;}
+
+@keyframes strun{from {top:75px;left:220px;opacity: 0}to{top:115px;left:185px;opacity: 1}}
+@-webkit-keyframes strun{from {top:75px;left:220px;opacity: 0}to{top:115px;left:185px;opacity: 1}}
+@keyframes ndrun{from {top:100px;left:80px;opacity: 0}to{top:135px;left:45px;opacity: 1}}
+@-webkit-keyframes ndrun{from {top:100px;left:80px;opacity: 0}to{top:135px;left:45px;opacity: 1}}
+@keyframes rdrun{from {top:100px;left:500px;opacity: 0}	to {top:135px;left:466px;opacity: 1}}
+@-webkit-keyframes rdrun{from {top:100px;left:500px;opacity: 0}	to {top:135px;left:466px;opacity: 1}}
+
+/*banner*/
+.banner{
+    position: relative;
+    z-index:2;
+    width:92px;height:72px;top:200px;
+}
+.banner li{width:92px;height:72px;position: absolute;}
+.banner li.banner-1{background: url(/page/pk10Video/images/pk10video/banner-1.png) no-repeat;background-size: contain;left:0;top:0;display: none;}
+.banner li.banner-2{background: url(/page/pk10Video/images/pk10video/banner-2.png) no-repeat;background-size: contain;left:78px;top:-10;display: none;}
+.banner li.banner-3{background: url(/page/pk10Video/images/pk10video/banner-3.png) no-repeat;background-size: contain;left:84px;top:-7px;display: none;}
+.banner li.banner-4{background: url(/page/pk10Video/images/pk10video/banner-4.png) no-repeat;background-size: contain;left:12px;top:-10px;display: none;}
+.banner1Run{-webkit-animation:bannerrun-1 .5s linear 0s infinite normal;animation:bannerrun-1 .5s linear 0s infinite normal;}
+.banner2Run{-webkit-animation:bannerrun-2 .5s linear 0s infinite normal;animation:bannerrun-2 .5s linear 0s infinite normal;}
+.banner3Run{-webkit-animation:bannerrun-3 .5s linear 0s infinite normal;animation:bannerrun-3 .5s linear 0s infinite normal;}
+.banner4Run{-webkit-animation:bannerrun-4 .5s linear 0s infinite normal;animation:bannerrun-4 .5s linear 0s infinite normal;}
+
+@keyframes bannerrun-1{from {display:none}to{display: block}}
+@-webkit-keyframes bannerrun-1{from {display:none}to{display: block}}
+@keyframes bannerrun-2{from {display:none}to{display: block}}
+@-webkit-keyframes bannerrun-2{from {display:none}to{display: block}}
+@keyframes bannerrun-3{from {display:none}to{display: block}}
+@-webkit-keyframes bannerrun-3{from {display:none}to{display: block}}
+@keyframes bannerrun-4{from {display:none}to{display: block}}
+@-webkit-keyframes bannerrun-4{from {display:none}to{display: block}}
+
+/*飘落*/
+.Falling{
+    position: relative;
+    z-index:2;
+    width:100%;
+    height:100%;
+}
+.falling-items{
+    animation-name: fade, drop;
+    animation-duration: 5.44448s, 5.44448s;
+    animation-delay: 2.73479s, 2.73479s;
+    -webkit-animation-name: fade, drop;
+    -webkit-animation-duration: 5.44448s, 5.44448s;
+    -webkit-animation-delay: 2.73479s, 2.73479s;
+    width:12px;
+    height:12px;
+    background: #FFF;
+    position: absolute;
+    margin:5px 0;
+}
+
+@keyframes fade{0%   { opacity: 1; }95%  { opacity: 1; }100% { opacity: 0; }}
+@-webkit-keyframes fade{0%   { opacity: 1; }95%  { opacity: 1; }100% { opacity: 0; }}
+@-webkit-keyframes drop{0%   { -webkit-transform: translate(0px, -50px); }100% { -webkit-transform: translate(0px, 650px);}}
+@keyframes drop{0%   { -webkit-transform: translate(0px, -50px); }100% { -webkit-transform: translate(0px, 650px);}}
+@keyframes SpinAndFlip{0%   { -webkit-transform: scale(-1, 1) rotate(50deg);}100% { -webkit-transform: scale(-1, 1) rotate(-50deg);}}
+@-webkit-keyframes SpinAndFlip{0%   { -webkit-transform: scale(-1, 1) rotate(50deg);}100% { -webkit-transform: scale(-1, 1) rotate(-50deg);}}
+
+.homekjhistory{height:auto !important;}
+.gotextMode{margin-right:120px;}
+.nextNum{width:270px !important;}
+
+.pksp-area .historyList .for:hover .homekjhistory{display: block}
+
+@keyframes shake-vertical {
+    2% {transform: translate(0px, 0px) rotate(.5deg)}
+    4% {transform: translate(1px, 0px) rotate(.5deg)}
+    6% {transform: translate(0px, 0px) rotate(.5deg)}
+    8% {transform: translate(0px, 0px) rotate(.5deg)}
+    10% {transform: translate(1px, 1px) rotate(.5deg)}
+    12% {transform: translate(1px, 1px) rotate(.5deg)}
+    14% {transform: translate(1px, 0px) rotate(.5deg)}
+    16% {transform: translate(0px, 1px) rotate(.5deg)}
+    18% {transform: translate(1px, 0px) rotate(.5deg)}
+    20% {transform: translate(0px, 1px) rotate(.5deg)}
+    22% {transform: translate(0px, 1px) rotate(.5deg)}
+    24% {transform: translate(1px, 1px) rotate(.5deg)}
+    26% {transform: translate(1px, 0px) rotate(.5deg)}
+    28% {transform: translate(0px, 0px) rotate(.5deg)}
+    30% {transform: translate(1px, 0px) rotate(.5deg)}
+    32% {transform: translate(1px, 1px) rotate(.5deg)}
+    34% {transform: translate(1px, 0px) rotate(.5deg)}
+    36% {transform: translate(1px, 1px) rotate(.5deg)}
+    38% {transform: translate(0px, 0px) rotate(.5deg)}
+    40% {transform: translate(0px, 1px) rotate(.5deg)}
+    42% {transform: translate(1px, 1px) rotate(.5deg)}
+    44% {transform: translate(1px, 1px) rotate(.5deg)}
+    46% {transform: translate(1px, 1px) rotate(.5deg)}
+    48% {transform: translate(1px, 1px) rotate(.5deg)}
+    50% {transform: translate(0px, 1px) rotate(.5deg)}
+    52% {transform: translate(1px, 1px) rotate(.5deg)}
+    54% {transform: translate(1px, 0px) rotate(.5deg)}
+    56% {transform: translate(1px, 1px) rotate(.5deg)}
+    58% {transform: translate(1px, 1px) rotate(.5deg)}
+    60% {transform: translate(0px, 0px) rotate(.5deg)}
+    62% {transform: translate(1px, 0px) rotate(.5deg)}
+    64% {transform: translate(0px, 1px) rotate(.5deg)}
+    66% {transform: translate(1px, 0px) rotate(.5deg)}
+    68% {transform: translate(1px, 1px) rotate(.5deg)}
+    70% {transform: translate(0px, 1px) rotate(.5deg)}
+    72% {transform: translate(1px, 1px) rotate(.5deg)}
+    74% {transform: translate(0px, 1px) rotate(.5deg)}
+    76% {transform: translate(0px, 1px) rotate(.5deg)}
+    78% {transform: translate(1px, 0px) rotate(.5deg)}
+    80% {transform: translate(1px, 0px) rotate(.5deg)}
+    82% {transform: translate(1px, 1px) rotate(.5deg)}
+    84% {transform: translate(1px, 1px) rotate(.5deg)}
+    86% {transform: translate(0px, 1px) rotate(.5deg)}
+    88% {transform: translate(1px, 1px) rotate(.5deg)}
+    90% {transform: translate(1px, 1px) rotate(.5deg)}
+    92% {transform: translate(0px, 0px) rotate(.5deg)}
+    94% {transform: translate(0px, 0px) rotate(.5deg)}
+    96% {transform: translate(1px, 1px) rotate(.5deg)}
+    98% {transform: translate(1px, 0px) rotate(.5deg)}
+    0%,100% {transform: translate(0, 0) rotate(0)}
+}
+@-webkit-keyframes shake-vertical {
+    2% {transform: translate(0px, 0px) rotate(.5deg)}
+    4% {transform: translate(1px, 0px) rotate(.5deg)}
+    6% {transform: translate(0px, 0px) rotate(.5deg)}
+    8% {transform: translate(0px, 0px) rotate(.5deg)}
+    10% {transform: translate(1px, 1px) rotate(.5deg)}
+    12% {transform: translate(1px, 1px) rotate(.5deg)}
+    14% {transform: translate(1px, 0px) rotate(.5deg)}
+    16% {transform: translate(0px, 1px) rotate(.5deg)}
+    18% {transform: translate(1px, 0px) rotate(.5deg)}
+    20% {transform: translate(0px, 1px) rotate(.5deg)}
+    22% {transform: translate(0px, 1px) rotate(.5deg)}
+    24% {transform: translate(1px, 1px) rotate(.5deg)}
+    26% {transform: translate(1px, 0px) rotate(.5deg)}
+    28% {transform: translate(0px, 0px) rotate(.5deg)}
+    30% {transform: translate(1px, 0px) rotate(.5deg)}
+    32% {transform: translate(1px, 1px) rotate(.5deg)}
+    34% {transform: translate(1px, 0px) rotate(.5deg)}
+    36% {transform: translate(1px, 1px) rotate(.5deg)}
+    38% {transform: translate(0px, 0px) rotate(.5deg)}
+    40% {transform: translate(0px, 1px) rotate(.5deg)}
+    42% {transform: translate(1px, 1px) rotate(.5deg)}
+    44% {transform: translate(1px, 1px) rotate(.5deg)}
+    46% {transform: translate(1px, 1px) rotate(.5deg)}
+    48% {transform: translate(1px, 1px) rotate(.5deg)}
+    50% {transform: translate(0px, 1px) rotate(.5deg)}
+    52% {transform: translate(1px, 1px) rotate(.5deg)}
+    54% {transform: translate(1px, 0px) rotate(.5deg)}
+    56% {transform: translate(1px, 1px) rotate(.5deg)}
+    58% {transform: translate(1px, 1px) rotate(.5deg)}
+    60% {transform: translate(0px, 0px) rotate(.5deg)}
+    62% {transform: translate(1px, 0px) rotate(.5deg)}
+    64% {transform: translate(0px, 1px) rotate(.5deg)}
+    66% {transform: translate(1px, 0px) rotate(.5deg)}
+    68% {transform: translate(1px, 1px) rotate(.5deg)}
+    70% {transform: translate(0px, 1px) rotate(.5deg)}
+    72% {transform: translate(1px, 1px) rotate(.5deg)}
+    74% {transform: translate(0px, 1px) rotate(.5deg)}
+    76% {transform: translate(0px, 1px) rotate(.5deg)}
+    78% {transform: translate(1px, 0px) rotate(.5deg)}
+    80% {transform: translate(1px, 0px) rotate(.5deg)}
+    82% {transform: translate(1px, 1px) rotate(.5deg)}
+    84% {transform: translate(1px, 1px) rotate(.5deg)}
+    86% {transform: translate(0px, 1px) rotate(.5deg)}
+    88% {transform: translate(1px, 1px) rotate(.5deg)}
+    90% {transform: translate(1px, 1px) rotate(.5deg)}
+    92% {transform: translate(0px, 0px) rotate(.5deg)}
+    94% {transform: translate(0px, 0px) rotate(.5deg)}
+    96% {transform: translate(1px, 1px) rotate(.5deg)}
+    98% {transform: translate(1px, 0px) rotate(.5deg)}
+    0%,100% {transform: translate(0, 0) rotate(0)}
+}
+/*pk10开奖动画按钮css*/
+.pk10videoBtn{
+    color: #000 !important;
+    display: inline-block;
+    margin-left: 5px;
+    background: rgba(255,255,255,0.65);
+    border-radius: 5px;
+    height: 26px;
+    width: 70px;
+}
+.pk10VideoLottery {
+    z-index: 99;
+    position: relative;
+    left: 817px;
+    top: -52px;
+    text-align: center
+}

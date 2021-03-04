@@ -1,0 +1,666 @@
+* { padding: 0; margin: 0; }
+body { position: relative; font: 12px/1.8 simhei,'Microsoft YaHei',Arial,Verdana,Georgia,'Comic Sans MS','Trebuchet MS',Black,Impact; height: 100%; min-width: 1200px; min-height: 768px; font-size: 14px; }
+a { text-decoration: none; cursor: pointer; }
+ul { list-style: none; }
+input, button,
+select, textarea { outline: none; outline: 0; }
+*:focus { outline: none; outline: 0; }
+.aleft { text-align: left; }
+.acenter { text-align: center; }
+.aright { text-align: right; }
+.vm { vertical-align: middle; }
+.fleft, .fl { float: left; }
+.fright { float: right; }
+.clear:before, .clear:after { content: ""; display: table; }
+.clear:after { clear: both; }
+.clear { *zoom: 1; }
+.c9-hide { display: none; }
+
+.group-btn { padding: 5px 10px; border-radius: 4px; line-height: 1; display: inline-block; *display: inline; *zoom: 1; }
+.pdB-40 { padding-bottom: 40px; }
+.head .top_menu span { display: block; }
+.games,.getout, .new-msg, .rule_description, .btn-login-out, .btn-login-in, .play_help { font-size: 12px; color: #fff; width: 52px; text-align: center; padding-top: 48px; letter-spacing: 1px; }
+.bottom_info_hidden, .fotright_hidden { display: none; }
+.login-area li .btn-detection { display: none; }
+.login-area li .separate_hidden { display: none !important; }
+
+a { color: #555; text-decoration: none !important; outline: none !important; }
+
+.side_menu .sidem_b, .side_menu .sidem_b span, .side_menu .sidem_item li a:hover,
+.side_menu .sidem_item .active > a, .form-box span.checkbox, .helpMenu li.active a, .helpMenu a:hover,
+.helpMenu .rulelist li.active a, .helpMenu .rulelist a:hover { background: url(/page/GameHelp/image/base-ico.png) no-repeat; }
+.userbox .refresh { position: absolute; right: 3px; top: 0; display: block; padding: 0 5px; line-height: 25px; cursor: pointer; }
+
+.select-box span { display: block; }
+
+.side_menu .sidem_item li > span { position: relative; cursor: pointer; }
+.side_menu .sidem_item .active > ul { display: block; }
+.side_menu .sidem_item li a:hover, .side_menu .sidem_item li a.active { }
+.side_menu .sidem_item li i { position: absolute; right: 8px; top: 0px; height: 33px; width: 25px; }
+.side_menu .sidem_item_active ul { display: block; }
+.side_menu .sidem_item li li a { line-height: 30px; height: 30px; padding-left: 60px; }
+.side_menu .sidem_item_active ul ul { display: none; }
+.form-horizontal input[type="checkbox"] { border: 0; }
+.form-horizontal .control-group { *zoom: 1; }
+.form-horizontal .control-group:before, .form-horizontal .control-group:after { display: table; content: ""; line-height: 0; }
+.form-horizontal .control-group:after { clear: both; }
+.form-horizontal .control-label { width: 226px; }
+.form-horizontal .help-block { margin-bottom: 0; }
+.btn-box .btn { *zoom: 1; }
+.form-horizontal2 { padding: 0 0 20px 0; }
+.form-horizontal2 .control-group { margin-bottom: 0; padding: 10px 0; }
+.acenter .btn { margin: 0 10px; }
+.bonus-card { width: 119px; display: inline; float: left; margin: 15px; border-radius: 5px; text-align: center; }
+.bonus-card .btn, .bonus-card .group-btn { padding: 8px 18px; }
+.row-one, .row-two, .row-three { height: 120px; }
+.inner-content { width: 90%; text-align: center; margin: auto; height: 100%; }
+.bonus-num { font-size: 30px; padding-top: 25px; *padding-top: 0px; margin: auto; line-height: 50px; font-weight: normal; }
+.bonus-num span { font-size: 10px; }
+.row-three-content { padding: 20px 0; }
+.bonus_scale_adjust { padding: 30px; overflow: hidden; }
+.bonus_scale_adjust div { float: left; display: inline-block; }
+.measure { width: 900px; margin-left: 11px; }
+.ruler { height: 8px; width: 900px; margin: 11px 11px 0 11px; cursor: pointer; position: relative; }
+.ui-slider-range { height: 8px; }
+.ui-slider-handle { height: 20px; width: 10px; border-radius: 2px; display: inline-block; position: absolute; top: -6px; }
+.add_bonus, .minus_bonus { width: 22px; height: 22px; border-radius: 50%; text-align: center; line-height: 22px; margin-top: 4px; cursor: pointer; }
+.minus_bonus { position: relative; top: -19px; left: 11px; }
+.scale_typein { margin-left: 180px; position: relative; top: -20px; }
+.scale_typein span { text-align: center; display: inline-block; width: 200px; margin-top: 5px; }
+.scale_typein input { text-align: center; }
+.rules { height: 12px; width: 900px; margin-top: 10px; cursor: pointer; position: relative; }
+.rules div { display: inline-block; width: 30px; float: left; height: 12px; }
+.scale_num { margin-left: -20px; margin-right: -20px; width: 940px; }
+.scale_num .right_scale_num { float: right; }
+.save_bonus_setting { clear: both; text-align: center; width: 200px; height: 40px; border-radius: 5px; margin: 150px auto 0 auto; cursor: pointer; line-height: 40px; font-size: 18px; }
+.inputText, .input_02, .input_03, .peiText { width: 250px; height: 28px; line-height: 28px; text-indent: 12px; font-family: 'microsoft yahei'; }
+.memCon > p > a { font-weight: bold; padding: 10px 0; display: block; text-decoration: underline; }
+.memCon td .w200 { width: 200px; }
+.memCon td select.w200 { width: 204px; }
+.bank_content .btn { width: auto; padding: 5px 10px; margin: 3px 5px 0 0; border-radius: 0; }
+.bank_content p { line-height: 1.8em; }
+.bank_content .bank_btn2 { width: 102px; padding: 0; }
+.hankInfo li { width: 330px; float: left; padding-left: 10px; }
+.hankInfo input { width: auto; }
+.memCon table th { padding: 8px; }
+.memCon table input.btn { padding: 0 10px; }
+
+/*分页样式*/
+.page_num { padding: 0 7px; text-decoration: none; line-height: 20px; height: 20px; overflow: hidden; margin: 0 1px; cursor: pointer; }
+.page a { padding: 0 8px; margin: 0 2px; }
+
+/**/
+.ui-item { min-width: 280px; float: left; width: 27%; padding: 0 3%; }
+.form-horizontal .ui-item .control-label { width: 120px; text-align: left; }
+.form-horizontal .ui-item .controls { margin-left: 125px; text-align: right; word-break: break-all; word-wrap: break-word; }
+.bet-con { margin: 5px 20px; border-radius: 4px; height: 100px; padding: 3px; }
+.bet-con span { float: left; width: 180px; height: 100px; text-align: center; line-height: 100px; font-size: 14px; }
+.bet-num { height: 100px; overflow-y: scroll; margin-left: 180px; padding: 0 10px; word-break: break-all; word-wrap: break-word; }
+
+/*帮助*/
+.helpMenu li.active a, .helpMenu a:hover { background-position: 0 -535px; color: #000; }
+.helpMenu li.active a span, .helpMenu a:hover span { color: #000; }
+.helpMenu .active .rulelist a { background: none; }
+.helpMenu .rulelist a { display: block; text-align: left; padding-left: 10px; height: 33px; line-height: 33px; color: #fff; }
+.helpMenu .play-ico { float: left; width: 20px; height: 33px; padding-right: 10px; background: url(/page/GameHelp/image/play-ico.png?d09f786674) no-repeat 0 -34px; }
+.helpMenu .rulelist li.active a, .helpMenu .rulelist a:hover { background-position: 0 -618px; color: #000000; }
+.helpMenu a .official-ico { background-position: 0 0; }
+.helpMenu a:hover .play-ico, .helpMenu .active .play-ico { background-position: 0 -102px; }
+.helpMenu a:hover .official-ico, .helpMenu .active .official-ico { background-position: 0 -68px; }
+.help-con td { border-left: 1px solid #cdcdcd; }
+.help-head { border-top: 1px solid #ccc; background: #d3d3d3; }
+.money_bg { background-color: #343434; }
+.help-main { border-left: 1px solid #ccc; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.rulelist { display: none; }
+.help-main img { width: 1000px; margin: 10px 0; }
+
+/* 共用样式 begin */
+.pf { position: fixed !important; }
+.mt10px { margin-top: 10px !important; }
+.mt15px { margin-top: 15px !important; }
+/* 共用样式 end */
+
+/* 网站公告 begin */
+.bottom-page a { color: #000; text-decoration: none; line-height: 22px; height: 22px; overflow: hidden; margin: 0 1px; padding: 0 7px; display: inline-block; vertical-align: top; }
+/* 网站公告 end */
+
+/* 站内短信样式begin */
+.ui-item-1 > input[type="checkbox"] { width: auto; height: auto; margin: 4px 5px 3px 0; }
+.ui-msg-down-ul-box > .ui-wewe-box > ul > li { height: 30px; line-height: 30px; vertical-align: middle; overflow-x: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.ui-msg-down-ul-box > .ui-wewe-box > ul > li > input[type=checkbox] { margin: 9px 3px 8px 5px; float: left; }
+.ui-message-box { background-color: #FFF; border: 1px solid #999; }
+.ui-parant-close-box { color: #999; }
+.ui-msg-down-ul-box { border: 1px solid #cccccc; background-color: #f5f5f5; }
+.ui-msg-down-ul-box > .ui-wewe-box { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+.ui-msg-line-box { border-bottom: 1px solid #cccccc; border-left: 1px solid #cccccc; }
+.fs-999 { color: #999999; }
+/* 站内短信样式end */
+
+/* 资料修改 begin */
+.ui-form-wrap-box > div > p { padding-left: 73px; }
+.ui-form-wrap-box { border: 1px solid #999; background-color: #ffffff; }
+.ui-form-wrap-box > div > label:nth-of-type(2) > input[type='text'] { color: #000; }
+/* 资料修改 end */
+
+/* 推广链接 begin */
+.ui-input-border-box { border: 1px solid #999 !important; }
+/* 推广链接 end */
+
+/* 密保设定 begin */
+.mbactive { display: inline-block; color: #000; }
+/* 密保设定 end */
+
+/* common start */
+/*IE6 BUG*/
+body .d-header { background: #b62929; /*background-image: -webkit-gradient(linear, left top, left bottom, from(#127fb0), to( #0088ff)); background-image: -moz-linear-gradient(top, #127fb0, #0088ff); background-image: -o-linear-gradient(top, #127fb0,  #0088ff); background-image: -webkit-linear-gradient(top, #127fb0,  #0088ff); background-image: linear-gradient(to bottom, #127fb0,  #0088ff); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#127fb0', endColorstr='#0f597b')"; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#127fb0', endColorstr='#0f597b');*/ }
+body .d-button { color: #fff; background: url(/Content/mapping/caipiao99/images/base-bg.png?ab18549868) repeat 0 -469px; }
+body .d-title { padding: 10px 15px; border-bottom: none; height: 28px; line-height: 27px; font-weight: bold; font-family: Tahoma, Arial/9 !important; }
+body .d-state-noTitle .d-title { display: none; }
+body .d-close:hover { text-decoration: none; }
+body .d-content.d-state-full { display: block; width: 100%; margin: 0; padding: 0 !important; height: 100%; }
+body .d-loading { width: 96px; height: 32px; text-align: left; text-indent: -999em; overflow: hidden; }
+body .d-button::-moz-focus-inner, .d-button::-moz-focus-outer { border: 0 none; padding: 0; margin: 0; }
+body .d-button:focus { outline: none 0; /*border-color:#426DC9; box-shadow:0 0 8px rgba(66, 109, 201, .9);*/ }
+body .d-button[disabled] { cursor: default; box-shadow: none; }
+body .d-state-highlight:active { background-color: #498e17; box-shadow: none; /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bbee', endColorstr='#2288cc'); background: linear-gradient(top, #33bbee, #2288cc); background: -moz-linear-gradient(top, #33bbee, #2288cc); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#33bbee), to(#2288cc));*/ border: none; }
+body .d-button { border-radius: 4px; width: auto; padding: 6px 12px; height: auto; font-weight: 700; font-size: 14px; margin: 0 5px; line-height: 1.428571429; border: none; box-shadow: none; }
+body .d-state-noTitle .d-nw, .d-state-noTitle .d-ne, .d-state-noTitle .d-sw, .d-state-noTitle .d-se { width: 3px; height: 3px; }
+body .d-state-noTitle .d-titleBar { bottom: 0; _bottom: 0; _margin-top: 0; }
+body .d-state-noTitle .d-close { top: 0; right: 0; width: 18px; height: 18px; line-height: 18px; text-align: center; text-indent: 0; font-size: 18px; text-decoration: none; filter: !important; }
+body .d-state-noTitle .d-close:hover, .d-state-noTitle .d-close:active { text-decoration: none; }
+body .d-close { position: absolute; float: right; top: 13px; right: 13px; _height: 26px; padding: 0 4px; font-size: 21px; font-weight: bold; line-height: 1; cursor: pointer; -webkit-appearance: none; color: #fff; text-shadow: 0 1px 0 #FFF; /*opacity: .2; filter: alpha(opacity=20); background: transparent; */ _background: #FFF; border: 0; }
+body .d-inner { border-radius: 8px; border: none; }
+body .d-outer .d-title { margin: 0; line-height: 1.428571429; min-height: 16.428571429px; height: auto; padding: 15px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: bold; cursor: default; background: none; border-top: none; border-bottom: none; padding-left: 0; }
+body .d-buttons { text-align: center; border: none; background: #fff; padding: 8px; }
+
+body .ui-dialog-body { min-width: 180px; }
+body .d-footer { border: none; }
+body .d-state-highlight { box-shadow: none; }
+.d-button { border: none; }
+.d-button::-moz-focus-inner, .d-button::-moz-focus-outer { border: 0 none; }
+/* common end */
+
+.d-inner, .d-main { border: none; background: #000; }
+.d-state-drag .d-titleBar { box-shadow: none; }
+.d-state-noTitle { border: 0 none; box-shadow: none; }
+.d-state-noTitle .d-dialog { box-shadow: none; }
+
+@media screen and (min-width:0) { /* css3 */
+    .d-inner { border: 0 none; }
+    .d-state-drag, .d-state-focus:active { box-shadow: none; }
+    /*.d-outer { -webkit-transform: scale(0); transform: scale(0); -webkit-transition: -webkit-box-shadow .2s ease-in-out, -webkit-transform .2s ease-in-out; transition: box-shadow .2s ease-in-out, transform .2s ease-in-out; }
+	.d-state-visible { -webkit-transform: scale(1); transform: scale(1); }*/
+}
+
+.popup_wrap .d-title { border: none; }
+.d-state-lock .d-nw, .d-state-lock .d-n, .d-state-lock .d-ne, .d-state-lock .d-w, .d-state-lock .d-e, .d-state-lock .d-sw, .d-state-lock .d-s, .d-state-lock .d-se { background: rgba(0, 0, 0, .5); background: #000\9 !important; filter: alpha(opacity=50); }
+.d-outer.d-state-focus .d-title { padding-left: 24px; font-size: 14px; font-family: 'Microsoft YaHei'; border-top: none; color: #fff; text-shadow: 0 1px 0 #656464; background: #b62929; }
+.d-state-drag .d-title { box-shadow: none; background: linear-gradient(top, #bdc6cd, #edf5f8); background: -moz-linear-gradient(top, #bdc6cd, #edf5f8); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bdc6cd), to(#edf5f8)); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdc6cd', endColorstr='#edf5f8'); }
+.d-outer.d-state-focus .d-close { color: #fff; text-shadow: 0 1px 0 rgba(255, 255, 255, .9); }
+.d-close:hover { color: #fff; }
+.d-state-focus .d-content { color: #000; background: #fff; }
+.d-state-noTitle .d-inner { border: 1px solid #666; background: #FFF; }
+.d-state-noTitle .d-nw, .d-state-noTitle .d-n, .d-state-noTitle .d-ne, .d-state-noTitle .d-w, .d-state-noTitle .d-e, .d-state-noTitle .d-sw, .d-state-noTitle .d-s, .d-state-noTitle .d-se { background: rgba(0, 0, 0, .05); background: #000\9 !important; filter: alpha(opacity=5) !important; }
+.d-state-noTitle .d-close { color: #214FA3; background: none; }
+.d-state-noTitle .d-close:hover, .d-state-noTitle .d-close:active { color: #900; }
+
+body .d-close:hover { color: #fff; }
+.body .d-outer { border: 1px solid #fff; border-radius: 8px; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); border: 5px solid rgba(255,255,255,0.3); color: #333; background: none; padding: 0; overflow: hidden; }
+body .d-state-focus .d-content { color: #333; }
+
+.body .d-state-highlight:active { border-color: #b31515; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b31515', endColorstr='#8e3a8c'); background: linear-gradient(top, #b31515, #b62929); background: -moz-linear-gradient(top, #b31515, #b62929); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b31515), to(#b62929)); }
+body .d-main { background: #fff; min-width: 16em; text-align: center; }
+
+.popup_wrap .d-state-focus .d-title { color: #fff; text-shadow: 0 1px 0 #95B83E; }
+.popup_wrap .d-title { filter: progid:DXImageTransform.Microsoft.gradient(enabled=false,startColorstr='#acd050', endColorstr='#acd050'); }
+
+@media screen and (min-width: 0) {
+    .d-nw, .d-n, .d-ne, .d-w, .d-e, .d-sw, .d-s, .d-se { display: none; }
+}
+/* common start */
+.d-loading { background: url(loading.gif) no-repeat center center; }
+.d-button:active { border-color: #666; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DDDDDD', endColorstr='#FFFFFF'); background: linear-gradient(top, #DDD, #FFF); background: -moz-linear-gradient(top, #DDD, #FFF); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDD), to(#FFF)); box-shadow: inset 0 1px 1em rgba(0, 0, 0, .6), inset 0 1px 1em rgba(0, 0, 0, .3); }
+.d-button[disabled] { color: #666; background: #DDD; border: 1px solid #999; filter: alpha(opacity=50); opacity: .5; }
+.d-state-highlight { color: #FFF; background-color: #95B83E; }
+.d-state-highlight:hover { color: #FFF; }
+.d-state-highlight:active { border: none; background-color: #498e17; }
+.d-mask { background: #fff; filter: alpha(opacity=60); opacity: .5; }
+.d-border, .d-dialog { margin: 0; border-collapse: collapse; width: auto; border: none; }
+body .d-outer { border: 5px solid rgba(255,255,255,0.3); box-shadow: 0 0 8px rgba(136, 136, 136, 0); border-radius: 8px; color: #333; }
+/* common end */
+
+
+/*登录页面*/
+.login-area { height: 495px; width: 930px; margin: 0 auto; position: relative; z-index: 2; background: url(/Content/mapping/caipiao99/home/images/login-bg.png?66bd2fa86b) no-repeat; margin-top: 4%; }
+.site-logo { width: 50%; height: 460px; float: left; }
+.login-area li { padding: 1px 0; width: 360px; height: 45px; margin: 0 auto 8px; position: relative; }
+.login-area .loginbtn { margin: 6px auto 8px 4px; }
+.login-area .login_others { padding: 0; text-align: center; }
+.login-area .loginbtn .btn_login { width: 360px; height: 50px;background: url(/Content/mapping/caipiao99/home/images/btn_login.png?6d34a67428) no-repeat top center; }
+.login-area .loginbtn .btn_register { width: 360px; height: 30px; background: url(/Content/mapping/caipiao99/home/images/btn_register.png?2d524b3438) no-repeat top center; }
+.login-area .browser_hidden { margin: 25px 0 0 10px; }
+.login-area li span, .login-area li label { position: absolute; top: 16px; left: 46px; line-height: 15px; color: #fff; }
+.codeBox img { width: 70px; height: 28px; }
+.login-area input { width: 300px; height: 15px; margin: 0 auto; padding: 15px 10px 15px 46px; border-radius: 4px; background: none; border: none; color: #fff; float: left; }
+/*.login-area input:focus { box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 0, 0, 0.18); }*/
+.login-area li.codewrap input { width: 218px; background: none; }
+.login-area li span.codeBox { float: left; cursor: pointer; position: static; height: 47px; }
+.login-area li.codewrap img { vertical-align: middle; margin-top: 9px; }
+.login-area .btn { color: #FFF; background: none; width: 360px; height: 46px; cursor: pointer; display: inline-block; font-size: 14px; font-weight: 400; line-height: 1.33333; margin-bottom: 0; padding: 10px 0; text-align: center; vertical-align: middle; white-space: nowrap; min-width: 80px; font-family: Arial; }
+.logo-items {width: 100%;height: 64%;border-radius: 0;background: url(/Content/mapping/caipiao99/home/images/login_logo.png?94d3e4ab35) no-repeat center center;}
+.site-logo .form-tips{color:yellow; text-align:center;line-height:32px;}
+.loginform { position: absolute; top: 180px; left: 26px; }
+.loading { -webkit-animation: load3 1.4s infinite linear; animation: load3 1.4s infinite linear; background: rgba(0, 0, 0, 0) linear-gradient(to right, #ffffff -20%, rgba(255, 255, 255, 0) 40%) repeat scroll 0 0; background: -moz-linear-gradient(left, #ffffff -20%, rgba(255, 255, 255, 0) 40%); background: -webkit-linear-gradient(left, #ffffff -20%, rgba(255, 255, 255, 0) 40%); background: -o-linear-gradient(left, #ffffff -20%, rgba(255, 255, 255, 0) 40%); background: -ms-linear-gradient(left, #ffffff -20%, rgba(255, 255, 255, 0) 40%); background: linear-gradient(to right, #ffffff -20%, rgba(255, 255, 255, 0) 40%); border-radius: 50%; font-size: 10px; height: 120px; margin: 5em auto; position: relative; text-indent: -9999em; width: 120px; left: -5px; top: 10px; }
+.loading::before { border-radius: 100% 0 0; content: ""; height: 50%; left: 0; position: absolute; top: 0; width: 50%; }
+.login_tit { width: 50%; float: left; padding: 60px 0 12px 0; }
+.login_tit h1 { font-size: 20px; font-weight: normal; display: inline-block; padding-left: 45px; color: #fff; }
+.login_tit a { font-size: 14px; display: inline-block; float: right; margin-top: 6px; color: #fff; }
+.login-area .login-form { float: left; width: 360px; padding: 0 35px 0 35px; }
+.Verification_code { margin-left: 0; }
+.codeBox a { margin-left: 6px; color: #fff; }
+.login-area li span.separate { display: inline-block; position: static; margin: 0 10px; color: #eaeaec; }
+.login-area li p { float: left; color: #000; }
+.login-area .chrome_icon { width: 56px; height: 28px; padding-left: 38px; float: left; background: url(/Content/mapping/caipiao99/home/images/login_browser.png?77e3524647) no-repeat; }
+.login-area .firefox_icon { width: 28px; height: 28px; padding-left: 38px; float: left; background: url(/Content/mapping/caipiao99/home/images/login_browser.png?77e3524647) no-repeat 0 -28px; }
+.login-contianer { width: 100%; position: absolute; height: 100% !important; background: url(/Content/mapping/caipiao99/images/usercenter/register/register-bg.jpg?5102f7029c) no-repeat center top !important; float: left; }
+.login-area li span { color: #fff; }
+p { font-size: 14px; color: #666; }
+.login-area li a { color: #000; }
+.login-area li .authentication { color: #eaeaec; }
+.login_exhibition { width: 100%; background: #fff; margin-top: 6%; }
+.download_link { margin: 0 auto; width: 1018px; height: 200px; }
+.download_link .advantages { display: inline-block; width: 266px; float: left; }
+.advantages .payment_date { width: 266px; height: 80px; margin-top: 16px; }
+.payment_date .payment_date_l { float: left; }
+.payment_date .payment_date_l h3 { font-size: 12px; font-weight: normal; color: #4c4c4c; margin-left: 4px; }
+.payment_date .payment_date_l p { font-size: 12px; font-weight: normal; color: #c9c6c6; margin-left: 4px; }
+.payment_date .payment_date_r { float: right; /*margin-top:6px;*/ color: #4c4c4c; }
+.payment_date .payment_date_r .pay_time { font-size: 30px; *padding: 6px; color: #4c4c4c; }
+.payment_date .payment_date_r .pay_time strong { font-size: 12px; font-weight: normal; margin-left: 8px; color: #c9c6c6; }
+.payment_date .time_bar { width: 266px; height: 16px; float: left; position: relative; background: url("/Content/mapping/caipiao99/home/images/others_all.png?910a6c35cb") no-repeat 0 -228px; }
+.time_bar .bar_slide { width: 112px; height: 16px; border-radius: 10px; position: absolute; top: 0; left: 0; background: #ffdf01; }
+.time_bar .bar_slide_n { width: 172px; height: 16px; border-radius: 10px; position: absolute; top: 0; left: 0; background: #e35050; }
+.mobile_down { display: inline-block; vertical-align: top; height: 162px; float: left; margin: 0 42px 0 92px; padding-top: 34px; }
+.mobile_down p { font-size: 12px; text-align: left; margin-top: 10px; color: #808080; }
+.mobile_down .down { margin-top: 10px; }
+.mobile_down .down .apple, .mobile_down .down .android, .mobile_down .down .browser { width: 78px; height: 78px; margin-right: 22px; float: left; background: url("/Content/mapping/caipiao99/home/images/login_mobile_icon.png?737c74e68b") no-repeat; }
+.mobile_down .down .apple { background-position: 0 0; }
+.mobile_down .down .apple:hover, .mobile_down .down .android:hover, .mobile_down .down .browser:hover { background-position-x: -108px; }
+.mobile_down .down .android { background-position: 0 -98px; }
+.mobile_down .down .browser { background-position: 0 -195px; }
+.mobile_down .down span a { width: 78px; height: 78px; display: block; }
+.mobile_client { float: left; height: 170px; margin-top: 30px; }
+.client_downloads { float: left; width: 100px; margin-right: 24px; }
+.client_downloads h2 { font-size: 16px; color: #000; font-weight: normal; margin-bottom: 6px; }
+.client_downloads a { width: 100px; height: 25px; display: block; }
+.client_downloads .login_android, .client_downloads .login_ios { background: url("/Content/mapping/caipiao99/home/images/login_mobile_icon.png?737c74e68b") no-repeat; }
+.client_downloads .login_android { background-position: 0 -292px; margin: 14px 0; }
+.client_downloads .login_ios { background-position: 0 -330px; }
+.client_erweima { float: left; width: 104px; height: 104px; padding: 12px; margin-top: 6px; }
+.login_footer { height: 100%; background: #0c0c0c; }
+.login_footer_c { width: 1120px; height: 126px; margin: 0 auto; background: url("/Content/mapping/caipiao99/home/images/login_footer.png?7addebcf7e") no-repeat; }
+
+/*优惠活动详情*/
+.bg-black { background: #363636; color: #fff; }
+.u-activity-item { width: 1000px; margin: 10px; border: 1px solid #cccccc; border-right: none; background: #fff; }
+.u-activity-item ul { width: 100%; height: 80px; border-bottom: 1px solid #e9e9e9; }
+.u-activity-item li { width: 250px; float: left; list-style: none; }
+.u-activity-item li span { display: block; height: 40px; line-height: 40px; text-align: center; border-right: 1px solid #ccc; }
+.activity-box { padding: 5px; border-right: 1px solid #ccc; }
+.activity-box span { padding-left: 70px; line-height: 40px; font-size: 14px; display: block; background: url(/Content/mapping/caipiao99/home/images/circle.png?4fc972d607) no-repeat 50px center; }
+.activity-box img { width: 900px; display: inline-block; }
+.activity-head, .activity-body { text-align: center; }
+/*优惠活动详情*/
+
+/* 规则样式 begin */
+.help-con .table-list li { list-style: none; padding-left: 20px; line-height: 28px; }
+.help-con a { padding: 0 5px; display: block; }
+
+/**样式*/
+.btn { border: none; color: #fff; background: #b62929; }
+.group-btn { border: none; background: #323232; color: #fff; }
+.acc li p:nth-child(4) { border: none; }
+
+/*帮助*/
+.help-con table { border-left: none; }
+
+/***用户中心左边***/
+.side_menu .sidem_item .active { border-bottom: none; }
+
+/* 投注页面新增右侧切换模块 begin */
+.db { display: inline-block !important; }
+.ui-md-box { width: 42px; position: fixed; right: 32px; top: 50%; margin-top: -100px; z-index: 9999; }
+.ui-ww-box a { position: relative; display: inline-block; width: 48px; height: 44px; background: url(/Content/mapping/caipiao99/images/rightPendant.png) no-repeat; }
+.ui-ww-box a.ui-t1-box { background-position: 0 -67px; }
+.ui-ww-box a.ui-t2-box { margin-top: 8px; background-position: -12px -149px; }
+.ui-ww-box a.ui-t3-box { margin-top: 8px; background-position: -12px -220px; }
+.ui-ww-box a.ui-t4-box { background-position: -12px -14px; }
+.ui-skin-box { position: absolute; top: 0px; right: 67px; width: 156px; padding: 0 10px 0 0; z-index: 9999; }
+.ui-skin-in { width: 144px; background-clip: border-box; margin-right: 10px; padding: 4px; background: rgba(255,255,255,0.4); border: 2px rgba(0,0,0,0.2) solid; border-radius: 5px; }
+.ui-sub-box { width: 67px; cursor: pointer; float: left; margin: 0 2px; }
+.ui-skin-box label { text-align: center; font-size: 12px; width: 100%; padding-top: 50px; color: #ffffff; }
+.ui-md-box .ui-code-right-box { width: 104px; height: 104px; top: 14px; padding: 0; right: 72px; background: url(/Content/mapping/caipiao99/images/QRcode.jpg?889929d068) no-repeat; border: 8px solid rgba(255,255,255,0.3); border-radius: 5px; box-shadow: 0 0 5px #242020; }
+/* 投注页面新增右侧切换模块 end */
+
+.status-win { color: #e71010 !important; }
+.status-lose { color: #908e8e !important; }
+.status-unlottery { color: #07d00b !important; }
+.status-undo { color: #2c77ba !important; }
+.status-hasundo { color: #906944 !important; }
+.status-delete { color: #b9cca6 !important; }
+.status-lottery { color: #e2bc03 !important; }
+
+body.body { overflow: visible; min-width: 1248px; background: #0c0c0c; position: relative; }
+
+
+/* 规则样式 begin */
+.col_red { color: #ff0000; }
+.col_blue { color: #0000ff; }
+.col_green { color: #008000; }
+
+.fc_red { color: #f00; }
+.fc_blue { color: #001791; }
+.fc_green { color: #008000; }
+
+.head, .container { background: #363636; }
+.head .top_menu a { width: 52px; margin: 0 14px; background: url(/page/GameHelp/image/top_menu_icos.png) no-repeat; }
+.head .top_menu .games { background-position: 4px -500px; }
+.head .top_menu .getout { background-position: 4px 0; }
+.head .top_menu .service { background-position: 4px -100px; }
+.head .top_menu .rule { background-position: 4px -200px; }
+.head .top_menu .btn-login-out { background-position: 4px -300px; }
+.head .top_menu .help { background-position: 4px -400px; }
+.head .top_menu .btn-login-in { background-position: 4px -600px; }
+.head .top_menu a:hover { color: #ededed; }
+.head .top_menu .games:hover { background-position: -49px -500px; }
+.head .top_menu .getout:hover{ background-position: -49px 0; }
+.games:hover,.getout:hover, .new-msg:hover, .rule_description:hover, .btn-login-out:hover, .btn-login-in:hover, .play_help:hover { color: #ededed; }
+.head .top_menu .service:hover { background-position: -49px -100px; }
+.head .top_menu .rule:hover { background-position: -49px -200px; }
+.head .top_menu .btn-login-out:hover { background-position: -49px -300px; }
+.head .top_menu .btn-login:hover { background-position: -49px -225px; }
+.head .top_menu .help:hover { background-position: -49px -400px; }
+.head .top_menu .btn-login-in:hover { background-position: -49px -600px; }
+
+.userbox li.balance { background-position: -100px -80px; height: 36px; padding-top: 10px; }
+.userbox li .stc_t { *zoom: 1; color: #fff; float: left; }
+.userbox li .stc_c { text-align: left; width: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; float: left; }
+
+.acc-links a { width: 80px; margin: 0 14px 1px 4px; color: #EFECEC; }
+.acc-links a:hover { color: #fff; }
+
+.select-box span { background: url(/Content/mapping/caipiao99/images/select-ico.png) no-repeat 90% center; }
+/******？******/
+
+.side_menu .sidem_item li a, .side_menu .sidem_item li > span { color: #fff; }
+
+.ui-main { background: #ededed; }
+.main-head { background: #fff; border-bottom: 1px solid #d0d0d0; }
+.con_box { background: #ededed; }
+table { border-left: 1px solid #cdcdcd; border-top: 1px solid #cdcdcd; border-right: 1px solid #cdcdcd; }
+th { background: #c7c7c7; }
+td { border-bottom: 1px solid #cdcdcd; background: #fff; }
+.tab { background: #e6e4e4; border-top: 1px solid #e6e4e4; }
+.tabs-con { border: 3px #b62929 solid; border-radius: 5px; }
+.tab a { *zoom: 1; padding: 0 8px; color: #000; }
+.tab a.active { background: #b62929; color: #fff; }
+.content { background: #fff; }
+.content th { border-bottom: 1px solid #cdcdcd; }
+.content td { border-left: 1px solid #cdcdcd; border-bottom: 1px solid #cdcdcd; }
+
+.form-horizontal input { color: #000; border: 1px #ccc solid; }
+.form-horizontal input:focus { border-color: rgba(198, 33, 51, 0.8); -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(198, 33, 51, 0.8); -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(198, 33, 51, 0.8); -ms-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(198, 33, 51, 0.8); box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(198, 33, 51, 0.8); }
+.form-horizontal input.error { border-color: #f7371d; }
+.form-horizontal input[type="checkbox"] { border: 0; }
+.form-horizontal .controls select { border: 1px #ccc solid; }
+.btn-box .active { background: none; color: #000; }
+
+.form-horizontal2 { border-top: 1px solid #cdcdcd; }
+.form-horizontal2 .control-group { background: #fff; border-bottom: 1px solid #cdcdcd; }
+
+.acc { background: #fff; border-left: 1px solid #cdcdcd; border-top: 1px solid #cdcdcd; }
+.acc li { border-bottom: 1px solid #cdcdcd; border-right: 1px solid #c3c3c3; }
+.acc li span { background: #e2e2e2; color: #222; }
+.acc li p { border-right: 1px solid #cdcdcd; }
+
+.bonus-card { border: 1px solid grey; background: #fff; }
+.inner-content { border-bottom: 1px solid grey; }
+.rojo-num-active { color: #EAD630; }
+.white-num { color: #fff; }
+
+.ruler { background: grey; }
+.ui-slider-range { background: #a10000; }
+.ui-slider-handle { background: #EAD630; }
+
+.add_bonus, .minus_bonus { background: grey; color: #fff; }
+.scale_typein span { color: #4A4A4A; }
+.rules div { border-left: 1px solid #4A4A4A; }
+.rules .last_scale { border-right: 1px solid #4A4A4A; }
+.save_bonus_setting { background: #a10000; color: #fff; }
+.scale_typein span { color: #4A4A4A; }
+.inputText, .input_02, .input_03, .peiText { border: solid 1px #e1e1e1; background-color: #FFF; }
+
+/**/
+.memCon .copy_btn a { color: #fff; }
+.memCon > p > a { color: #004892; }
+.step_box i { background: url(/Content/mapping/caipiao99/images/usercenter/step.png?c9312fa688) no-repeat; }
+.step_box span { color: #000; }
+.step_box span.num { background: url(/Content/mapping/caipiao99/images/usercenter/step_ico.png?6651ed3592) no-repeat center top; color: #FFF; }
+.step_box .active span.num { background: url(/Content/mapping/caipiao99/images/usercenter/step_ico.png?6651ed3592) no-repeat center bottom; }
+.Payment_tip { background: url(/Content/mapping/caipiao99/images/usercenter/warn.png) no-repeat 0 25px; }
+
+.memRight .bank_content { background: #fff; color: #000; }
+.bank_content .btn { border: 1px solid #BBBBBB; }
+.bank_content .bank_btn { background: #C5D9F1; color: #000; }
+.bank_content .bank_btn1 { background: #F2DCDB; color: #000; }
+.bank_content table td { color: #000; }
+.bank_content .TdB { background: #C5D9F1; }
+.bank_content .TdR { background: #F2DCDB; }
+.bank_content .TdG { background: #D8E4BC; }
+.bank_content p { color: #000; }
+.bank_content .bank_btn2 { background: url(/Content/default/images/usercenter/order_btn.gif) no-repeat 0 -40px; color: #fff; }
+.bank_content .bank_btn2:hover { background: url(/Content/default/images/usercenter/order_btn.gif) no-repeat 0 -40px; }
+.helpWord h4 { color: #F00; }
+.hankInfo table { border-top: 1px solid #cdcdcd; }
+.memCon table { border-top: 1px solid #cdcdcd; border-right: none; }
+.memCon table td,
+.memCon table th { color: #000; border-right: 1px solid #cdcdcd; border-bottom: 1px solid #cdcdcd; }
+.memCon table th { background: #E6E6E6; }
+.memCon table td { color: #000; }
+.memCon table td a { color: #0523FC; }
+
+/*弹窗*/
+.mask { background: url(/Content/mapping/caipiao99/officialGames/images/bg_04.png?4a6ed16682) repeat; }
+.popup { background: #fff; box-shadow: 0 1px 2px #4A4949; }
+.popup-head { color: #fff; background: #626262; border-bottom: 1px solid #393939; }
+.popup-body { border-top: 1px solid #585858; }
+
+/**/
+.ui-item1 { border-right: 1px solid #ccc; }
+.ui-item2 { border-left: 1px solid #fff; border-right: 1px solid #ccc; }
+.ui-item3 { border-left: 1px solid #fff; }
+.bet-con { background: #DEDEDE; }
+.bet-con span { border-right: 1px solid #fff; }
+.bet-num { border-left: 1px solid #C7C7C7; }
+
+/*对话框*/
+.UC-con .ui-dialog-footer button.ui-dialog-autofocus { box-shadow: none; outline: 0; background-color: #b62929; border-color: #b62929; }
+.UC-con .ui-dialog-footer button.ui-dialog-autofocus:hover,
+.UC-con .ui-dialog-footer button.ui-dialog-autofocus:focus,
+.UC-con .ui-dialog-footer button.ui-dialog-autofocus:active { box-shadow: none; color: #ffffff; background-color: #b62929; border-color: #b62929; }
+.UC-con .dialog-custom .ui-dialog-title { padding: 10px 15px; color: #fff; }
+.UC-con .dialog-custom .ui-dialog-close { width: 25px; height: 25px; top: 5px; opacity: 1; color: #fff; }
+.UC-con .dialog-custom .ui-dialog-content { color: #484544; }
+.UC-con .dialog-custom .ui-dialog-content span.succeed { font-size: 22px; font-weight: 700; color: #64931b; }
+.UC-con .dialog-custom .ui-dialog-footer { padding: 0 20px 10px 20px; }
+.UC-con .dialog-custom .ui-dialog-footer button { border: none; background: url(/Content/mapping/caipiao99/images/pop-btn-disabled.png?31ed8dac86) repeat; color: #fff; }
+.UC-con .dialog-custom .ui-dialog-footer button:hover, .dialog-custom .ui-dialog-footer button:focus, .dialog-custom .ui-dialog-footer button:active { background: url(/Content/mapping/caipiao99/images/pop-btn-disabled.png?31ed8dac86) repeat; border: none; }
+.UC-con .dialog-custom .ui-dialog-footer .ui-dialog-autofocus { border: none; background: url(/Content/mapping/caipiao99/images/pop-btn-bg.png?e05e3d2822) repeat; color: #fff; }
+.UC-con .dialog-custom .ui-dialog-footer .ui-dialog-autofocus:hover, .dialog-custom .ui-dialog-footer .ui-dialog-autofocus:focus, .dialog-custom .ui-dialog-footer .ui-dialog-autofocus:active { background: url(/Content/mapping/caipiao99/images/pop-btn-bg.png?e05e3d2822) repeat; }
+.UC-con .dialog-custom .ui-dialog-footer button.ui-dialog-autofocus { color: #fff; }
+.UC-con .dialog-custom .ui-dialog-header { background: #b62929; background-image: -webkit-gradient(linear, left top, left bottom, from(#b31515 ), to(#b62929)); background-image: -moz-linear-gradient(top, #b31515, #b62929); background-image: -o-linear-gradient(top, #b31515, #b62929); background-image: -webkit-linear-gradient(top, #b31515, #b62929); background-image: linear-gradient(to bottom, #b31515, #b62929); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#b31515', endColorstr='#b62929')"; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b31515', endColorstr='#b62929'); }
+.UC-con .dialog-custom { border: 1px solid #fff; border: 5px solid rgba(255,255,255,0.3); box-shadow: 0 0 8px rgba(136, 136, 136, 0); overflow: hidden; }
+
+/* 推广注册 start  */
+.register-form { border: 1px solid #b62929; }
+.regsiter-btn { background: url(/Content/mapping/caipiao99/images/usercenter/register/register_btn.png?edf1cc88e5) no-repeat center; }
+.register_form_body { background: url(/Content/mapping/caipiao99/images/usercenter/register/register-bg.jpg?5102f7029c) no-repeat center top; background-size: cover; }
+.register_form_logo { background: url(/Content/mapping/caipiao99/images/usercenter/register/register_logo.png?de7dcde2d1) no-repeat center center;}
+.regsiter-btn { display: block; width: 306px; height: 47px; margin-bottom: 12px; }
+.form-list input { background: none; border: none; color: #fff; }
+.code-box { padding: 0 0 0 15px; width: 280px; margin-bottom: 18px; }
+.code { margin: 11px 0 11px 6px; height: 19px; line-height: 19px; float: left; width: 90px; }
+/***推广注册****/
+
+/**样式*/
+.group-btn:hover { background: #b62929; border-color: #b62929; }
+.userbox li { padding-top: 7px; height: 34px; margin-bottom: 12px; color: #fff; background: url(/Content/mapping/caipiao99/images/base-ico2.png?329fc73cc5) no-repeat; background-position: -100px -37px; }
+.head .logo-wrap { width: 174px; background: url(/page/GameHelp/image/logo1.png) no-repeat center center; }
+.rojo-num { color: #b62929; }
+
+/***用户中心左边***/
+.side_menu .sidem_item .active i { background-position: left bottom; }
+.side_menu .sidem_b { color: #fff; background-position: 0 -576px; }
+.side_menu .sidem_b span { background-position: 130px -10px; color: #fff; }
+.side_menu a.active span { background-position: 130px -50px; }
+.side_menu .sidem_item li a:hover, .side_menu .sidem_item .active > a { background-position: 0 -618px; color: #000; }
+.form-box span.checkbox { background-position: 4px -159px; }
+.form-box span.select { background-position: 4px -184px; }
+.acc-links a span { background: url(/Content/mapping/caipiao99/images/user-btn.png?0d1a1d7e61) no-repeat; }
+.acc-links .btn-navacc-deposit span { background-position: -2px 4px; }
+.acc-links .btn-navacc-withdraw span { background-position: -82px 6px; }
+
+/***用户中心右边***/
+.main-head span { border-bottom: 2px solid #b62929; }
+
+/***登录框弹窗****/
+.d-outer.d-state-focus .d-state-highlight { margin-left: 0; color: #FFF; border: 1px solid #b62929; background: #b62929; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b31515', endColorstr='#b62929'); background: linear-gradient(top,#b31515, #b62929); background: -moz-linear-gradient(top,#b31515, #b62929); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b31515), to(#b62929)); text-shadow: -1px -1px 1px #b31515; }
+body .token_process input:-webkit-autofill { border: none; -webkit-box-shadow: 0 0 0px 1000px #a1a1a1 inset; -webkit-text-fill-color: #fff; }
+.token_process .input_text, .input_text1, .input_text2 { width: 170px; }
+.register_box { width: 100%; height: 100%; background: url(/Content/mapping/caipiao99/images/usercenter/register/register-bg.jpg?5102f7029c) no-repeat center top !important; float: left; }
+.warp_box { float: left; }
+
+/***底部***/
+.new-box { padding-top: 2px; text-align: left; height: 128px; border-right: 1px solid hsla(0,0%,100%,.5); }
+.new-box .new-con { padding: 5px 0; }
+.browser-list.notitle { float: none; }
+.browser-list li { margin-bottom: 5px; }
+.browser-list.notitle li { float: left; font-size: 0; width: 30%; text-align: center; margin-right: 6px; }
+.icon { display: inline-block; vertical-align: middle; }
+.Rechargetable .receipts-item .bg1 { height: 140px; }
+.footer { height: 267px; padding-top: 110px; margin: 0 auto; width: 100%; background: url(/Content/mapping/caipiao99/home/images/footer_bg.jpg?4c1fc4c3a0) no-repeat center -2px; border-top: 4px solid #e35050; }
+.footer_main { width: 1010px; margin: 0 auto; }
+.bottom-info-main .bottom-info { float: left; width: 32%; padding-left: 10px; }
+.bottom-info-main .bottom-info .new-box { margin-left: 48px; }
+.bottom-info-main .bottom-info:last-child .new-box { border-right: none; }
+.bottom-info-main span { font-size: 12px; }
+.new-box h1, .new-box h2, .new-box h3 { font-weight: normal; }
+.new-box h1 > em, .new-box h2 > em, .new-box h3 > em { font-style: normal; display: inline-block; vertical-align: bottom; *margin-bottom: 10px; }
+.new-box h1 > span, .new-box h2 > span, .new-box h3 > span { display: inline-block; vertical-align: bottom; }
+.new-box h1 { margin: 0; height: 30px; line-height: 30px; }
+.new-box h1 > span { font-size: 12px; margin: 0 5px; *margin-bottom: 8px; }
+.new-box h1 > em { font-size: 16px; }
+.new-box h3 { line-height: 20px; }
+.new-box.bottom-box { background: none; border: none; }
+.icon-partner { width: 210px; height: 61px; background-position: 0 -1423px; }
+.icon-arrRight { width: 16px; height: 16px; padding-left: 7px; vertical-align: top; background-position: 0 -155px; }
+.guideTable { width: 100%; border: none; color: #8C8C8C; margin-left: 10px; }
+.guideTable a { color: #EBEBEB; text-align: left; display: block; font: 12px/16px 'Microsoft YaHei', "Microsoft JhengHei UI", "Microsoft JhengHei", Pmingliu, "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol", "Helvetica Neue", tahoma, arial, 'Hiragino Sans GB', "\5b8b\4f53", sans-serif; }
+.guideTable a:hover { color: #FFF; }
+.guideTable td { padding: 0 0 10px 0; text-align: center; border: none; background: none; }
+.icon-browser { width: 46px; height: 49px; }
+.tool-list li { float: left; margin-right: 15px; }
+.icon-tool { width: 50px; height: 50px; }
+.browser-list .icon { margin-right: 7px; }
+.browser-list.notitle li span { display: inline-block; margin-top: 8px; }
+.browser-tip { width: 100%; padding-top: 6px; text-align: center; }
+.browser-tip span { display: inline-block; }
+.copyright { text-align: center; padding-top: 36px; color: #555 !important; }
+.main .btn-gotop { background: none; }
+.landing-paly, .icon-partner, .icon-arrRight, .icon-browser, .icon-gotop { background: url(/Content/mapping/caipiao99/home/images/home-ico.png?b48fde6a2b) no-repeat; }
+.new-box h1 { color: #fff; }
+.browser-list.notitle li span { color: #fff; }
+.icon-browserIE { background-position: 0 -948px; }
+.icon-browserFF { background-position: -46px -948px; }
+.icon-browserGL { background-position: -92px -948px; }
+.icon-browser:hover { background-position-y: -899px; }
+.icon-tool-clean { background-image: url(/Content/mapping/caipiao99/home/images/icon-tool-clean.png); }
+.icon-tool-check { background-image: url(/Content/mapping/caipiao99/home/images/icon-tool-check.png); }
+.bottom-info-main .bottom-info .new_titile { margin-left: 20px; }
+.company_name span { color: #c1c1c1; font-size: 12px; }
+.footbox { background: url(/Content/mapping/caipiao99/home/images/footer_bg_login.jpg?91fccc683a) no-repeat center top; width: 100%; height: 288px; }
+.footcon { width: 980px; margin: 0px auto; padding-top: 16px; }
+.payments { width: 332px; height: 38px; background: url(/Content/mapping/caipiao99/home/images/payment.png?effff2c6dd) no-repeat; }
+.footcon .fotleft { float: left; width: 348px; margin-top: 35px; }
+.fottxt1 { color: #5e5e5e; font-size: 12px; }
+.footcon .fotright { float: right; width: 260px; margin-top: 62px; }
+.fottxt2 { color: #fff; font-size: 12px; text-align: right; }
+.clear_both { clear: both; font-size: 1px; height: 0px; line-height: 0px; }
+.footbox .new-box { height: 142px; border-right: 1px solid hsla(0,0%,100%,.3); }
+.footbox .bottom-info { width: 334px; float: left; margin-top: 35px; }
+.footbox .bottom-info li { width: 110px; float: left; text-align: center; margin: 0; }
+.footbox .bottom-info .new-con li span { display: block; color: #fff; font-size: 12px; }
+.footbox .bottom-info .new-con li span:hover { color: #5e5e5e; }
+.bottom-info .new-box h1 > em { margin-left: 24px; }
+.footer_logo { width: 112px; height: 100px; background: url(/Content/default/images/footer_logo.png?d32b04f152) no-repeat; float: left; }
+.footer_logo a { width: 112px; height: 100px; display: block; }
+.footer_title { width: 183px; height: 27px; background-image: url(/Content/default/home/images/footer_title.png?0a6677c681); margin-top: 26px; margin-left: 120px; }
+/*.footer_title { width: 178px; float: left; margin-left: 12px; padding-right: 10px; }*/
+.footer_title p { font-size: 12px; line-height: 16px; color: #fff; padding: 2px 0; text-indent: 2em; text-align: left; }
+.footer_title .company_name { margin-left: 36px; }
+.footer_title .company_name .footer_line { width: 55px; height: 1px; background: #9f9f9f; float: left; margin-top: 14px; margin-right: 6px; }
+.footer_company { width: 53px; height: 28px; background: url(/Content/mapping/caipiao99/images/footer_company.png?_=20161025) no-repeat; float: left; margin-left: 20px; }
+/******底部end*******/
+
+.help-main .img1-1 { height: 419px; background: url(/page/GameHelp/image/1.png) no-repeat; }
+.help-main .img2-1 { height: 532px; background: url(/page/GameHelp/image/2-1.jpg?be2ff8bc6e) no-repeat; }
+.help-main .img3-1 { height: 146px; background: url(/page/GameHelp/image/3-1.jpg?710b01f0ef) no-repeat; }
+.help-main .img3-2 { height: 376px; background: url(/page/GameHelp/image/3-2.jpg?07bbefc6ec) no-repeat; }
+.help-main .img4-1 { height: 470px; background: url(/page/GameHelp/image/4-1.jpg?fabbea0f0f) no-repeat; }
+.help-main .img4-2 { height: 618px; background: url(/page/GameHelp/image/4-2.jpg?53e38b8082) no-repeat; }
+.help-main .img5-1 { height: 642px; background: url(/page/GameHelp/image/5-1.jpg?ee2c4ab929) no-repeat; }
+.help-main .img5-2 { height: 443px; background: url(/page/GameHelp/image/5-2.jpg?60d9de6bd1) no-repeat; }
+.help-main .img5-3 { height: 346px; background: url(/page/GameHelp/image/5-3.jpg?854f140bf8) no-repeat; }
+
+/****首次登陆*****/
+.first_login { background: url(/Content/mapping/caipiao99/images/usercenter/register/register-bg.jpg?5102f7029c) no-repeat center top !important; }
+/****首次登陆*****/
+
+/*第三方支付*/
+.Recharge-table .btn { margin: 10px 10px 10px 0; }
+.Recharge-table a.btn { padding: 20px 30px; font-size: 16px; color: #fff; background: #cdcdcd; color: #757575; }
+.Recharge-table input.btn { padding: 0 20px; height: 30px; }
+.memCon .Recharge-table td.aleft { padding-left: 70px; }
+.loginbtn .loginarea_btn_hidden, .logintxt1, .indfotbox, .yuming, .contact_problem { display: none; }
+.Recharge-table a.btn.active { background: #e23939; color: #fff; }
+.Recharge-table .fc-red { color: #f00; }
+
+/*隐藏绑定银行卡管理多余项*/
+.group_hide { display: none; }
+
+
+/**线路检测*/
+.line-body { background: url(/content/mapping/caipiao99/images/bg1.jpg?ceb4dad705) no-repeat center top; }
+.line-wrap .logo { background: url(/content/mapping/caipiao99/home/images/logo.png?cc403e1395) no-repeat center center; }
+.main .line-list li .rounds { background: url(/Content/mapping/caipiao99/images/rounds.png?28e7286ba2) center center no-repeat; }
+.main .line-list li .enter { background: url(/Content/mapping/caipiao99/images/l-btn.png?f634269651) center center no-repeat; }
+
+/****忘记密码*****/
+.dialog-forgot .d-header .d-title { padding-left: 24px; font-size: 14px; font-family: 'Microsoft YaHei'; border-top: none; color: #fff; text-shadow: 0 1px 0 #656464; background: #b62929; }
+.dialog-forgot .d-close { top: 20px; right: 16px; }
+.dialog-forgot .d-content { padding: 20px !important; border: 0 none; text-align: center; background: transparent; }
+.dialog-forgot .d-content > div { width: 400px; display: inline-block; position: relative; vertical-align: middle; text-align: left; }
+.dialog-forgot table { width: 350px; margin: 0 auto; border: none; }
+.dialog-forgot table td { border: none; }
+.dialog-forgot input { width: 180px; height: 20px; padding: 5px; line-height: 20px; margin: 5px 0; border: 1px solid #ccc; border-radius: 3px; }
+.dialog-forgot .mt10px { font-size: 12px; }
+.dialog-forgot .d-footer { border-top: 1px solid #ded5d5; padding: 20px; border: 0 none; text-align: left; }
+.dialog-forgot .d-footer .d-buttons { text-align: center; white-space: nowrap; padding: 0; }
+.dialog-forgot .d-footer .d-buttons input { width: auto; height: 34px; overflow: visible; display: inline-block; padding: 6px 12px; _margin-left: 5px; margin-bottom: 0; font-size: 14px; font-weight: normal; line-height: 1.428571429; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; background-image: none; border: 1px solid transparent; border-radius: 4px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; }
+.dialog-forgot .d-footer .d-buttons input { color: #333333; background-color: #ffffff; border-color: #cccccc; }
+.dialog-forgot .d-footer input.d-state-highlight { min-width: 54px; color: #ffffff; background-color: #b62929; border-color: #e53838; text-shadow: none; }
+.dialog-forgot input + input { margin-bottom: 0; margin-left: 5px; }
+.ui-code-box { vertical-align: middle; }
+.dialog-forgot .d-footer .d-buttons input.d-button:active { color: #333333; border-color: #adadad; background-color: #ebebeb; box-shadow: none; }
+.dialog-forgot .d-footer .d-buttons input:hover { background-color: #ebebeb; border-color: #adadad; }
+.dialog-forgot .d-footer input.d-state-highlight:hover { background-color: #d41c1c; border-color: #c31818; }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>${game.name}</title>
+    <!--#include virtual="/page/game/official/include_css.html"-->
+</head>
+<body class="index-bg">
+<div class="header_nav_bg">
+    <input type="hidden" id="gameId" value="${game.id}"  data-gameCode="${game.code}" data-gameName="${game.name}"/>
+    <div class="header_nav">
+        <!--#include virtual="/page/include/lottery.html"-->
+    </div>
+</div>
+<div class="frame">
+    <div class="sidebar index-sidebar">
+        <!--#include virtual="/page/game/include/left.html"-->
+    </div>
+    <div id="_main_view" class="main">
+        <!--#include virtual="/page/game/official/main.html"-->
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<!--#include virtual="/page/game/include/bottom_notice.html"-->
+<!--#include virtual="/page/game/official/game_template.html"-->
+<!--#include virtual="/page/game/official/include_js.html"-->
+</body>
+</html>

@@ -1,0 +1,414 @@
+<style>
+	.h2{
+		width: 230px;
+		height: 42px;
+		color: #fff;
+		font: 16px/42px 'Microsoft Yahei';
+		text-align: left;
+		float: left;
+		position: relative;}
+	.mainGame-ico-con {
+		width: 100%;
+
+	}
+	span.second-hot-menu-btn {
+		background: #e94335;
+		padding: 4px 8px;
+		font-size: 12px;
+		color: #fff;
+	}
+	.mainGame-ico-con a:nth-child(2) {
+		width: 100px !important;
+	}
+	.daohangmeihua{
+		display: block;
+		width: 108px;
+		height: 33px;
+		line-height: 33px;
+		margin: 6px;
+		float: left;
+		padding: 0 8px;
+		border: 1px solid #5f4c73;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		position: relative;
+	}
+
+	.daohangmeihua1{
+		display: block;
+		width: 108px;
+		height: 33px;
+		line-height: 33px;
+		margin: 6px;
+		float: left;
+		padding: 0 8px;
+		border: 1px solid #5f4c73;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		position: relative;
+	}
+
+	.menuDeliteNext_a li:hover{
+	cursor: pointer;
+		background: #3e2755;
+		transition: .3s;
+		color:#fff !important;
+	}
+
+	.menuDeliteNext_a li a:hover{
+		color: #fff !important;
+	}
+
+	.daohangmeihua a{
+	color: #545454;
+	}
+
+
+	.h2 {
+		width: 230px;
+		height: 42px;
+		color: #fff;
+		font: 16px/42px 'Microsoft Yahei';
+		text-align: left;
+		float: left;
+		position: relative;
+	}
+
+	.menuMain
+	{
+	  height: 84px !important;
+	  width: 180px !important;
+	  margin: 0 10px;
+	  border-bottom: 1px solid #e4e3e3;
+	  position: relative;
+	  cursor: pointer;
+	}
+	.menuMain:hover
+	{
+	  background: #f8f8f8;
+	}
+	.menuMain:hover .menuDeliteNext
+	{
+	  display: block;
+	}
+
+	.menucontent a
+	{
+	  display: block !important;
+	  height: 28px !important;
+	  width: 60px !important;
+	  text-align: center !important;
+	  line-height: 28px !important;
+	  font-size: 12px !important;
+	  margin: 0 !important;
+	  cursor: pointer;
+	  float: left;
+	  border: none !important;
+	}
+	.menucontent a:hover
+	{
+	  color: REd;
+	}
+	.menuname span
+	{
+	  background: rgba(191, 194, 195, 0.3);
+	  font-size: 12px;
+	  padding: 24px 2px;
+	  border-radius: 4px;
+	  color: #bfb5b5;
+	}
+
+	.globeLotteryHead
+	{
+	  height: 50px;
+	  line-height: 50px;
+	  font-size: 14px;
+	  text-align: left;
+	  text-indent: 12px;
+	  width: 786px;
+	  font-weight: 500;
+	  color: #333;
+	  text-shadow: 2px 2px 2px #b5b5e6;
+	  margin: 0 10px;
+	  display: block;
+	  background-color: #fff;
+	}
+	.globeLotteryHead i
+	{
+	  color: #4677c4;
+	  margin-right: 8px;
+	  font-size: 20px;
+	}
+	.globeLotteryDelite
+	{
+	  height: 222px;
+	  width: 788px;
+	  margin: 10px;
+	  text-align: left;
+	}
+	.globeLotteryDelite a
+	{
+	  font-size: 14px;
+	  line-height: 48px;
+	  height: 48px;
+	  float: left;
+	  width: 92px;
+	}
+
+
+	.menuMain div
+	{
+	  float: left;
+	  height: 84px;
+	}
+
+	.menuMain:hover .menuDeliteNext
+	{
+	  display: block;
+	}
+	.menuMain .menuDeliteNext
+	{
+	  position: absolute;
+	  top: -1px;
+	  left: 180px;
+	  width: 780px;
+	  height: 300px;
+	  border: 1px solid #e3e9ea;
+	  background: #f8f8f8;
+	  z-index: 3;
+	  border-left: none;
+	  border-radius: 0 4px 4px 0;
+	  display: none;
+	}
+	.menuMain .menuDeliteNext_x
+	{
+	  top: -86px;
+	}
+	.menuMain .menuDeliteNext_all
+	{
+	  top: -172px;
+	}
+	.menuMain .menuDeliteNext h4
+	{
+	  height: 50px;
+	  line-height: 50px;
+	  font-size: 22px;
+	  font-weight: 200;
+	  text-indent: 24px;
+	  color: #000
+	}
+	.menuDeliteNext_a
+	{
+	  width: 770px !important;
+	  height: 186px !important;
+	  padding: 12px;
+	}
+	.menuDeliteNext_a > a
+	{
+	  float: left !important;
+	  width: 102px;
+	  text-align: center;
+	  line-height: 30px;
+	  font-size: 12px;
+	  font-weight: 400;
+	}
+
+	.menuDeliteNext_a > a:hover
+	{
+	  color: red;
+	}
+
+	.menuMain:last-child
+	{
+	  border: none;
+	}
+	.menuMain div
+	{
+	  float: left;
+	  height: 84px;
+	}
+
+	.menuMain div:nth-child(1)
+	{
+	  width: 60px;
+	  height: 84px;
+	  text-indent: 10px;
+	  line-height: 84px;
+	}
+	.menuMain div:nth-child(2)
+	{
+	  width: 120px;
+	  height: 84px;
+	}
+
+	.menuname span
+	{
+	  background: rgba(191, 194, 195, 0.3);
+	  font-size: 12px;
+	  padding: 24px 2px;
+	  border-radius: 4px;
+	  color: #bfb5b5;
+	}
+	.lottery-list-wrap{
+		overflow: unset;
+	}
+</style>
+<div class="h2"><span class="allLottery">热门彩种</span>
+<div class="more-lottery-wrap">
+<ul class="lottery-list-box">
+	<li class="index_nav_li"><!--  热门菜  --></li>
+	<li class="mainGame">
+	<div class="mainGame-ico-con"><a style="background:url(/views/image/20191203/cqssc.png) no-repeat center center/78%;float:left;height:100%;width:50px;">&nbsp;</a><a href="/data/game/txffc/index.html" style="font-size: 16px;color:#000;float: left;">幸运时时彩</a><span class="second-hot-menu-btn">最创新</span></div>
+	</li>
+	<li class="mainGame">
+	<div class="mainGame-ico-con"><a style="background:url(/page/game/img/lhc300.png) no-repeat center center/78%;float:left;height:100%;width:50px;">&nbsp;</a> <a href="/data/game/lhc300/index.html" style="font-size: 16px;color:#000;float: left;">极速六合彩</a> <span class="second-hot-menu-btn">最经典</span></div>
+	</li>
+	<li class="mainGame">
+	<div class="mainGame-ico-con"><a style="background:url(/views/image/20190728/20190728233726405786-xyks.png) no-repeat center center/78%;float:left;height:100%;width:50px;">&nbsp;</a> <a href="/data/game/k360/index.html" style="font-size: 16px;color:#000;float: left;">幸运快三</a> <span class="second-hot-menu-btn">最激情</span></div>
+	</li>
+	<li class="mainGame">
+	<div class="mainGame-ico-con"><a style="background:url(/views/image/20191203/jssc60.png) no-repeat center center/78%;float:left;height:100%;width:50px;">&nbsp;</a> <a href="/data/game/jssc60/index.html" style="font-size: 16px;color:#000;float: left;">幸运PK10</a> <span class="second-hot-menu-btn">最快速</span></div>
+	</li>
+	<li class="mainGame">
+	<div class="mainGame-ico-con"><a style="background:url(/page/game/img/pcdd60.png) no-repeat center center/78%;float:left;height:100%;width:50px;">&nbsp;</a> <a href="/data/game/pcdd60/index.html" style="font-size: 16px;color:#000;float: left;">幸运PC蛋蛋</a> <span class="second-hot-menu-btn">最经典</span></div>
+	</li>
+	<li class="mainGame">
+	<div class="mainGame-ico-con"><a style="background:url(/views/image/20190807/20190807013518546363-tjks.png) no-repeat center center/78%;float:left;height:100%;width:50px;">&nbsp;</a> <a href="/data/game/tjks/index.html" style="font-size: 16px;color:#000;float: left;">天津快三</a> <span class="second-hot-menu-btn">最经典</span></div>
+	</li>
+</ul>
+</div>
+
+<div class="lottery-tab"><a class="active" href="javascript:;">高频</a> <a href="javascript:;">信用</a> <a href="javascript:;">官方</a></div>
+
+<div class="lottery-list-wrap"><!--开始-->
+<div class="menuMain">
+<div class="menuname" style="width: 27px; height: 57px; text-align: center; border-radius: 7px; margin-top: 9px; text-indent: 0px; line-height: 24px; margin-right: 15px; margin-left: 5px; border: 1px solid #f1adad; padding-top: 7px; background: #f5c8c8; color: #f31819 !important;">官方</div>
+
+<div class="menucontent"><a href="/data/game/cqssc/index.html">重庆时时彩</a> <a href="/data/game/bjkc/index.html">北京PK10</a> <a href="/data/game/jssc60/index.html">一分PK拾</a> <a href="/data/game/jssc/index.html ">三分PK拾</a></div>
+
+<div class="menuDeliteNext">
+<h4>官方玩法</h4>
+
+<div class="menuDeliteNext_a">
+<ul>
+	<li class="daohangmeihua"><a href="/data/game/cqssc/index.html">重庆时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/bjkc/index.html">北京PK10</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jssc60/index.html">一分PK拾</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jssc/index.html ">三分PK拾</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jscq60/index.html ">一分时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jscq/index.html ">三分时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/xyft/index.html">幸运飞船</a></li>
+	<li class="daohangmeihua"><a href="/data/game/txffc/index.html">幸运分分彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/bjkl8/index.html ">北京快乐8</a></li>
+	<li class="daohangmeihua"><a href="/data/game/tjssc/index.html ">天津时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/xjssc/index.html ">新疆时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gd11x5/index.html ">广东11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/js11x5/index.html">江苏11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jx11x5/index.html">江西11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/hlj11x5/index.html">黑龙江11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/xj11x5/index.html">新疆11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/sh11x5/index.html">上海11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jsk3/index.html">江苏骰宝(快3)</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gxk3/index.html">广西快三</a></li>
+	<li class="daohangmeihua"><a href="/data/game/hbk3/index.html">河北快三</a></li>
+	<li class="daohangmeihua"><a href="/data/game/fc3d/index.html">福彩3D</a></li>
+	<li class="daohangmeihua"><a href="/data/game/pl3/index.html">排列3</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jxssc/index.html">江西时时彩</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="menuMain">
+<div class="menuname" style="width: 27px; height: 57px; text-align: center; border-radius: 7px; margin-top: 9px; text-indent: 0px; line-height: 24px; margin-right: 15px; margin-left: 5px; border: 1px solid #77bdf3; padding-top: 7px; background: #b2d3ec; color: #0a70bf !important;">信用</div>
+
+<div class="menucontent"><a href="/data/game/cqssc/index.html">重庆时时彩</a> <a href="/data/game/lhc/index.html">六合彩</a> <a href="/data/game/bjkc/index.html">北京PK10</a> <a href="/data/game/jssc60/index.html">一分PK拾</a> <a href="/data/game/jssc/index.html">三分PK拾</a></div>
+
+<div class="menuDeliteNext menuDeliteNext_x">
+<h4>信用玩法</h4>
+
+<div class="menuDeliteNext_a">
+<ul>
+	<li class="daohangmeihua"><a href="/data/game/cqssc/index.html">重庆时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/lhc/index.html">六合彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/bjkc/index.html">北京PK10</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jssc60/index.html">一分PK拾</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jssc/index.html">三分PK拾</a></li>
+	<li class="daohangmeihua"><a href="/data/game/pcdd/index.html">PC蛋蛋</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jscq60/index.html">一分时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jscq/index.html">三分时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/xyft/index.html">幸运飞船</a></li>
+	<li class="daohangmeihua"><a href="/data/game/txffc/index.html">幸运分分彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/bjkl8/index.html">北京快乐8</a></li>
+	<li class="daohangmeihua"><a href="/data/game/tjssc/index.html">天津时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/xjssc/index.html">新疆时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gd11x5/index.html">广东11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/js11x5/index.html">江苏11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jx11x5/index.html">江西11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/hlj11x5/index.html">黑龙江11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/xj11x5/index.html">新疆11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/sh11x5/index.html">上海11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jsk3/index.html">江苏骰宝(快3)</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gxk3/index.html">广西快三</a></li>
+	<li class="daohangmeihua"><a href="/data/game/hbk3/index.html">河北快三</a></li>
+	<li class="daohangmeihua"><a href="/data/game/fc3d/index.html">福彩3D</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gdklsf/index.html">广东快乐十分</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gxklsf/index.html">广西快乐十分</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jxssc/index.html">江西时时彩</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="menuMain">
+<div class="menuname" style="width: 27px; height: 57px; text-align: center; border-radius: 7px; margin-top: 9px; text-indent: 0px; line-height: 24px; margin-right: 15px; margin-left: 5px; border: 1px solid #96e8c5; padding-top: 7px; background: #b2f5d3; color: #1c8859 !important;">全部</div>
+
+<div class="menucontent"><a href="/data/game/tjssc/index.html ">天津时时彩</a> <a href="/data/game/xj11x5/index.html">新疆11选5</a> <a href="/data/game/sh11x5/index.html">上海11选5</a> <a href="/data/game/jscq60/index.html ">一分时时彩</a> <a href="/data/game/jscq/index.html ">三分时时彩</a></div>
+
+<div class="menuDeliteNext menuDeliteNext_all">
+<h4>全部游戏</h4>
+
+<div class="menuDeliteNext_a">
+<ul>
+	<li class="daohangmeihua"><a href="/data/game/cqssc/index.html">重庆时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/bjkc/index.html">北京PK10</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jssc60/index.html">一分PK拾</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jssc/index.html ">三分PK拾</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jscq60/index.html ">一分时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jscq/index.html ">三分时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/bjkl8/index.html ">北京快乐8</a></li>
+	<li class="daohangmeihua"><a href="/data/game/tjssc/index.html ">天津时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/xjssc/index.html ">新疆时时彩</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gd11x5/index.html ">广东11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/js11x5/index.html">江苏11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jx11x5/index.html">江西11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gd11x5/index.html">广东11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/js11x5/index.html">江苏11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jx11x5/index.html">江西11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/hlj11x5/index.html">黑龙江11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/xj11x5/index.html">新疆11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/sh11x5/index.html">上海11选5</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jsk3/index.html">江苏骰宝(快3)</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gxk3/index.html">广西快三</a></li>
+	<li class="daohangmeihua"><a href="/data/game/hbk3/index.html">河北快三</a></li>
+	<li class="daohangmeihua"><a href="/data/game/fc3d/index.html">福彩3D</a></li>
+	<li class="daohangmeihua"><a href="/data/game/pl3/index.html">排列3</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gdklsf/index.html">广东快乐十分</a></li>
+	<li class="daohangmeihua"><a href="/data/game/cqxync/index.html">重庆幸运农场</a></li>
+	<li class="daohangmeihua"><a href="/data/game/gxklsf/index.html">广西快乐十分</a></li>
+	<li class="daohangmeihua"><a href="/data/game/jxssc/index.html">江西时时彩</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  $(".lottery-tab a").mouseenter(function () {
+    var $index = $(this).index();
+    $(this).addClass('active').siblings().removeClass('active');
+    $(".lottery-list-wrap ul").eq($index).css("display", "block").siblings().css("display", "none");
+  })
+</script>

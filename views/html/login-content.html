@@ -1,0 +1,42 @@
+
+<!--
+  ***
+  **  登入 页面
+-->
+
+<div class="login-wraped" onkeydown="KeyDown();">
+  <div class="login-content">
+    <div class="login-tit">
+      <h3>用户登录</h3>
+      <div class="login-fr"><a>没有账号？</a><a class="orange" href="/views/html/register.html">立即注册</a></div>
+    </div>
+    <div class="reg-info" id="_form_login">
+      <ul>
+        <li>
+          <div class="info-left"><span class="red">* </span>用户名：</div>
+          <div class="info-right"><input class="reg-int" type="text" id="username" placeholder="请输入用户名"></div>
+          <div class="info-txt">请输入用户名（4-11位英文、数字，以字母开头）</div>
+        </li>
+        <li>
+          <div class="info-left"><span class="red">* </span>密码：</div>
+          <div class="info-right"><input class="reg-int" id="password" type="password" placeholder="请输入密码"></div>
+          <div class="info-txt"></div>
+        </li>
+        <li id="vcode_moudle">
+          <div class="info-left"><span class="red">* </span>验证码：</div>
+          <div class="info-right info-codes">
+            <input type="hidden" id="needVocde" value="">
+            <input class="codes-int" name="authnum" type="text" id="rmNum" onfocus="getYzm()" maxlength="4" placeholder="请输入验证码">
+            <img class="makecodePic" id="vImg" onclick="getYzm()" src="/views/img/code.png" >
+            <span class="freshen" onclick="getYzm()"><i class="fa fa-repeat" aria-hidden="true"></i></span>
+
+          </div>
+        </li>
+        <li>
+          <div class="info-left">&nbsp;</div>
+          <div class="info-right"><input id="btn-sub" type="button" onclick="aLeftForm1Sub()" class="submit" value="登录"></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

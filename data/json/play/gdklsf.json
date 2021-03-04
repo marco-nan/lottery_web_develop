@@ -1,0 +1,12 @@
+{
+    "credit": [
+        {"name": "两面", "code": "lianmian"},
+        {"name": "选一", "code": "101"},
+        {"name": "选二", "code": "102"},
+        {"name": "选三", "code": "103"},
+        {"name": "选四", "code": "104"},
+        {"name": "选五", "code": "105"}
+    ],
+    "official": [
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "credit": [
+        {"name": "特码", "code": "tm"},
+        {"name": "正码", "code": "zm"},
+        {"name": "正码特", "code": "ztm"},
+        {"name": "特码生肖", "code": "201"},
+        {"name": "一肖正特尾数", "code": "202"},
+        {"name": "正肖", "code": "203"},
+        {"name": "连肖", "code": "204"},
+        {"name": "连尾", "code": "205"},
+        {"name": "合肖", "code": "206"},
+        {"name": "连码", "code": "207"},
+        {"name": "自选不中", "code": "zxbz"},
+        {"name": "自选中一", "code": "zxzy"}
+    ],
+    "official": [
+    ]
+}

@@ -1,0 +1,136 @@
+/*
+   帮助 样式
+*/
+
+.mainContentWrap{
+  background: #fff !important;
+}
+.main {
+  width: 1000px !important;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.help .help_main {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  width: inherit;
+}
+.help .help_main .help_sub_left {
+  width: 131px;
+  overflow: initial;
+  border: 1px solid #FFE3C7;
+  background: #FEF7F4;
+}
+.help .help_main .help_sub_left .sub_item {
+  width: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.help .help_main .help_sub_left .sub_item .nav_title {
+  width: inherit;
+  line-height: 37px;
+  text-align: center;
+  position: relative;
+  font-weight: 900;
+}
+.help .help_main .help_sub_left .sub_item .nav_title a{
+  color: #3532ef;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.help .help_main .help_right {
+  width: 853px;
+  border: 1px solid rgba(255,127,0,0.5);
+  background: #FFFDFA;
+}
+.help .help_main .help_right .zh .item .item_title {
+  width: inherit;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 30px;
+  border-bottom: 1px dashed #E94335;
+}
+.help .help_main .help_sub_left .sub_item.hover .nav_title, .help .help_main .help_sub_left .sub_item:hover .nav_title {
+   background: #E94335;
+   text-align: center;
+   color: #fff;
+   width: 132px;
+   position: relative;
+   height: 37px;
+   line-height: 37px;
+ }
+.help .help_main .help_sub_left .sub_item.hover .nav_title, .help .help_main .help_sub_left .sub_item:hover .nav_title a{
+
+  color: #fff;
+
+}
+.help .help_main .help_sub_left .sub_item.hover .nav_title em.sj, .help .help_main .help_sub_left .sub_item:hover .nav_title em.sj {
+  display: block;
+  position: absolute;
+  background: url(../images/help_sj.png);
+  top: 0px;
+  right: -11px;
+  width: 11px;
+  height: 37px;
+  background-size: 12px 38px;
+  background-repeat: no-repeat;
+}
+.help .help_main .help_sub_left .sub_item .nav_title i {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  width: 16px;
+  height: 16px;
+  z-index: 9;
+  font-size: 17px;
+  line-height: 17px;
+  color: #3532ef;
+}
+.help .help_main .help_right .zh .item {
+  width: inherit;
+  font-family: "微软雅黑";
+  cursor: pointer;
+}
+.help .help_main .help_right .zh .item .item_content {
+  font-size: 12px;
+  padding-left: 30px;
+  line-height: 33px;
+  border-bottom: 1px dashed #E94335;
+  background: #fff;
+  color:red;
+}
+.right {
+  overflow: hidden;
+  float: right;
+}
+.left {
+  overflow: hidden;
+  float: left;
+}
+.sub_nav {
+  background: #F6F6F6;
+  height: 42px;
+  line-height: 42px;
+  padding-left: 20px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.sub_nav a {
+  display: inline-block;
+  color: #333;
+}
+.sub_nav em {
+  width: inherit;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+
+

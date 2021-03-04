@@ -1,0 +1,73 @@
+<div style="overflow: hidden;">
+    <!--#include virtual="/page/game/include/left_user_info.html"-->
+    <div class="side-in">
+        <div class="side_tab">
+            <!--#include virtual="/page/game/include/left_lottery_result.html"-->
+        </div>
+        <!--#include virtual="/page/game/include/game_list.html"-->
+    </div>
+</div>
+
+<script id="srResultTemp" type="text/html">
+    {{each list as value i}}
+    <li>
+        <span class="sr-index" data-bind="text:$index()+1">{{i+1}}</span>
+        <span class="sr-period" data-bind="text:period">{{value.turnNum}}</span>
+        <div class="sr-nums" style="color: #000">
+            <span>{{value.openNum}}</span>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<script id="latelyBetInfoTemp" type="text/html">
+    <div class="stc_2" style="display: block;">
+        <table class="top10-order">
+            <thead class="top10-order-header">
+            <tr class="top10-tr">
+                <th class="top10-td-1">时间</th>
+                <th class="top10-td-2">赔率</th>
+                <th class="top10-td-3 noborder">金额</th>
+            </tr>
+            </thead>
+            <tbody class="top10-order-content" id="latelyBetInfoArea">
+            <tbody class="top10-order-content">
+            </tbody>
+            <tr>
+
+                {{each content info i}}
+            <tr class="top10-tr" data-position="mouse"
+                data-tip="注单编号:{{info.orderNo}}<br></tr>期数： <span class='status-win'>{{info.turnNum}}</span><br/>投注内容： {{info.cateName}}<br/>投注： {{info.betInfo}}<br/>扣款： <span class='status-unlottery'>-{{info.totalMoney}}</span>    ({{info.moneyStr}} * {{info.multiple}}倍 * 1注)<br/>返点：扣款 * {{info.rebate}}%<br/>可赢奖金： <span class='status-lottery'>{{(info.totalMoney*info.odds-info.totalMoney).oddFixed(2)}}元</span>">
+                <td class="top10-td-1 bdtop" align="center">{{info.addTime}}</td>
+                <td class="top10-td-2 bdtop" align="center">{{info.odds}}</td>
+                <td class="top10-td-3 bdtop" align="center">{{info.totalMoney}}</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="top10-td-4 bdbottom">{{info.cateName}}:{{info.betInfo}}</td>
+            </tr>
+            {{/each}}
+            </tr>
+            </tbody>
+            <tfoot class="top10-order-content">
+
+            </tfoot>
+
+        </table>
+        <ul class="top10T" data-bind="style:{display:resultHistoryList().length>=5?'':'none'}"><a href="javaScript:void(0)" onclick="openModalX('bet')">更多下注记录</a></ul>
+    </div>
+    <!--<tr>-->
+    <!--<td class="border_001">号码</td>-->
+    <!--<td class="border_002">赔率</td>-->
+    <!--<td class="border_003">金额</td><i></i>-->
+    <!--</tr>-->
+    <!--{{each content as info i}}-->
+    <!--<tr class="top10-tr">-->
+    <!--<td class="top10-td-1 bdtop" align="center">{{info.addTime}}</td>-->
+    <!--<td class="top10-td-2 bdtop" align="center">{{info.odds}}</td>-->
+    <!--<td class="top10-td-3 bdtop" align="center">{{info.money}}</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+    <!--<td colspan="3" class="top10-td-4 bdbottom">{{info.cateName}}:{{info.betInfo}}</td>-->
+    <!--</tr>-->
+    <!--{{/each}}-->
+</script>

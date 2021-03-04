@@ -1,0 +1,84 @@
+
+/*登录页面*/
+.login-area { height: 495px; width: 930px; margin: 0 auto; position: relative; z-index: 2; background: url(/images/login-bg.png?66bd2fa86b0) no-repeat; margin-top: 4%; }
+.site-logo { width: 50%; height: 460px; float: left; }
+.login-area li { padding: 1px 0; width: 360px; height: 45px; margin: 0 auto 8px; position: relative; }
+.login-area .loginbtn { margin: 16px auto 8px 4px; }
+.login-area .login_others { padding: 0; text-align: center; }
+.login-area .loginbtn .btn_login { width: 360px; height: 50px;background: url(/images/btn_login.png?6d34a67428c) no-repeat top center; }
+.login-area .loginbtn .btn_register { width: 360px; height: 30px; background: url(/images/btn_register.png?2d524b34388) no-repeat top center; }
+.login-area .browser_hidden { margin: 15px 0 0 10px; }
+.login-area li span, .login-area li label { position: absolute; top: 16px; left: 46px; line-height: 15px; color: #fff; }
+.codeBox img { width: 70px; height: 28px; }
+.login-area input { width: 300px; height: 15px; margin: 0 auto; padding: 20px 10px 15px 46px; border-radius: 4px; background: none; border: none; color: #fff; float: left; }
+/*.login-area input:focus { box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 0, 0, 0.18); }*/
+.login-area li.codewrap input { width: 218px; background: none; }
+.login-area li span.codeBox { float: left; cursor: pointer; position: static; height: 47px; }
+.login-area li.codewrap img { vertical-align: middle; margin-top: 15px; }
+.login-area .btn { color: #FFF; background: none; width: 360px; height: 46px; cursor: pointer; display: inline-block; font-size: 14px; font-weight: 400; line-height: 1.33333; margin-bottom: 0; padding: 10px 0; text-align: center; vertical-align: middle; white-space: nowrap; min-width: 80px; font-family: Arial; }
+.logo-items {
+    width: 100%;height: 63%;
+    border-radius: 0;
+}
+.logo-items>a.index-logo{
+    display: inline-block;
+    width: 100%;
+    height:100%;
+    cursor: pointer;
+}
+.loginform { position: absolute; top: 180px; left: 26px; }
+.loading { -webkit-animation: load3 1.4s infinite linear; animation: load3 1.4s infinite linear; background: rgba(0, 0, 0, 0) linear-gradient(to right, #ffffff -20%, rgba(255, 255, 255, 0) 40%) repeat scroll 0 0; background: -moz-linear-gradient(left, #ffffff -20%, rgba(255, 255, 255, 0) 40%); background: -webkit-linear-gradient(left, #ffffff -20%, rgba(255, 255, 255, 0) 40%); background: -o-linear-gradient(left, #ffffff -20%, rgba(255, 255, 255, 0) 40%); background: -ms-linear-gradient(left, #ffffff -20%, rgba(255, 255, 255, 0) 40%); background: linear-gradient(to right, #ffffff -20%, rgba(255, 255, 255, 0) 40%); border-radius: 50%; font-size: 10px; height: 120px; margin: 5em auto; position: relative; text-indent: -9999em; width: 120px; left: -5px; top: 10px; }
+.loading::before { border-radius: 100% 0 0; content: ""; height: 50%; left: 0; position: absolute; top: 0; width: 50%; }
+.login_tit { width: 50%; float: left; padding: 60px 0 12px 0; }
+.login_tit h1 { font-size: 20px; font-weight: normal; display: inline-block; padding-left: 45px; color: #fff; }
+.login_tit a { font-size: 14px; display: inline-block; float: right; margin-top: 6px; color: #fff; }
+.login-area .login-form { float: left; width: 360px; padding: 0 35px 0 35px; }
+.Verification_code { margin-left: 0; }
+.codeBox a { margin-left: 6px; color: #fff; }
+.login-area li span.separate { display: inline-block; position: static; margin: 0 10px; color: #eaeaec; }
+.login-area li p { float: left; color: #000; }
+.login-area .chrome_icon { width: 56px; height: 28px; padding-left: 38px; float: left; background: url(/images/login_browser.png?77e35246478) no-repeat; }
+.login-area .firefox_icon { width: 28px; height: 28px; padding-left: 38px; float: left; background: url(/images/login_browser.png?77e35246478) no-repeat 0 -28px; }
+.login-contianer { width: 100%; position: absolute; height: 100% !important; background: url(/images/bootomBG.jpg) !important; float: left; }
+.login-area li span { color: #fff; }
+p { font-size: 14px; color: #666; }
+.login-area li a { color: #000; }
+.login-area li .authentication { color: #eaeaec; }
+.login_exhibition { width: 100%; background: #fff; margin-top: 40px; }
+.download_link { margin: 0 auto; width: 1018px; height: 200px; }
+.download_link .advantages { display: inline-block; width: 266px; float: left; }
+.advantages .payment_date { width: 266px; height: 80px; margin-top: 16px; }
+.time_bar .bar_slide { width: 112px; height: 16px; border-radius: 10px; position: absolute; top: 0; left: 0; background: #ffdf01; }
+.time_bar .bar_slide_n { width: 172px; height: 16px; border-radius: 10px; position: absolute; top: 0; left: 0; background: #e35050; }
+.mobile_down { display: inline-block; vertical-align: top; height: 162px; float: left; margin: 0 42px 0 92px; padding-top: 34px; }
+.mobile_down p { font-size: 12px; text-align: left; margin-top: 10px; color: #808080; }
+.mobile_down .down { margin-top: 10px; }
+.mobile_down .down .apple, .mobile_down .down .android, .mobile_down .down .browser { width: 78px; height: 78px; margin-right: 22px; float: left; background: url("/images/login_mobile_icon.png?737c74e68b6") no-repeat; }
+.mobile_down .down .apple { background-position: 0 0; }
+.mobile_down .down .apple:hover, .mobile_down .down .android:hover, .mobile_down .down .browser:hover { background-position-x: -108px; }
+.mobile_down .down .android { background-position: 0 -98px; }
+.mobile_down .down .browser { background-position: 0 -195px; }
+.mobile_down .down span a { width: 78px; height: 78px; display: block; }
+.mobile_client { float: left; height: 170px; margin-top: 30px; }
+.client_downloads { float: left; width: 100px; margin-right: 24px; }
+.client_downloads h2 { font-size: 16px; color: #000; font-weight: normal; margin-bottom: 6px; }
+.client_downloads a { width: 100px; height: 25px; display: block; }
+.client_downloads .login_android, .client_downloads .login_ios { background: url("/images/login_mobile_icon.png") no-repeat; }
+.client_downloads .login_android { background-position: 0 -292px; margin: 14px 0; }
+.client_downloads .login_ios { background-position: 0 -330px; }
+.client_erweima { float: left; width: 104px; height: 104px; padding: 12px; margin-top: 6px; }
+input::-webkit-input-placeholder {
+    color: #fff !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: #fff !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: #fff !important;
+}
+
+input:-ms-input-placeholder {
+    color: #fff !important;
+}

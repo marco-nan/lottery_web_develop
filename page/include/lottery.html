@@ -1,0 +1,160 @@
+<!--#include virtual="/views/online_service.html"-->
+<div class="Ccenter">
+    <div class="top">
+        <div class="top_in clear">
+            <div class="top_menu">
+                <div class="clear">
+                    <a href="/views/main.html" class="getout" title="返回首页"><span class="return_index">返回首页</span></a>
+                    <a href="/page/game-center.html" class="Lottery_hall" title="购彩大厅"><span class="return_Lottery_hall">购彩大厅</span></a>
+                    <a href="/views/html/youhui.html" class="favourable" title="优惠活动"><span class="return_index">优惠活动</span></a>
+                    <a  target="_blank" class="online-service service" title="在线客服">
+                        <span class="new-msg" id="NewMsg">在线客服</span>
+                    </a>
+                    <a href="javascript:void(0)" onclick="openRule()" class="rule iframe" title="规则说明"
+                       style="text-decoration: none;-webkit-tap-highlight-color: transparent;outline: none;"><i></i><span
+                            class="rule_description">规则说明</span></a>
+                    <a title="登出账号" class="btn-login-out" href="javascript:void(0)" onclick="logout()" id="logout"><span>登出账号</span></a>
+                	<a title="登录账号" class="btn-login-out" href="/views/html/login.html" id="login"><span>登录账号</span></a>
+                </div>
+            </div>
+            <div class="game_info game_1" id="_r_id_game_info">
+                <div class="game_ico game_ico_1">
+                    <img id="lottery_logo" src="" width="100px" height="100px">
+                </div>
+                <div class="game_mane">
+                    <span class="" id="game_name"></span>
+                </div>
+                <div class="openinfo">
+                    <div class="drawNumber" id="PeriodInfo">
+                            <span class="c-period">
+                                    <input type="hidden" id="turnNum"/>
+                                <div>第 <b id="turnNumText"></b> 期</div><div
+                            >剩余投注时间</div>
+                            </span>
+                        <span class="c-resttime flip-clock-wrapper" id="RestTime"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="openResult">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="sscTemplate">
+    <div class="lottery_result lottery_result_SSC">
+        {{include 'openNumTemplate'}}
+        {{include 'defTemplate'}}
+    </div>
+</script>
+
+<script type="text/html" id="PK10_Template">
+    <div class="lottery_result game_PK10">
+        {{include 'openNumTemplate'}}
+        {{include 'defTemplate'}}
+    </div>
+</script>
+<script type="text/html" id="lhc_Template">
+    <div class="lottery_result game_LHC">
+        <div class="lr_ball_box flip" id="LotteryResultBox">
+            {{each openNums data index}}
+            <span class="lottery-result-ball ball_{{data}}" style="position:relative;">
+			<label>{{data}}</label><span
+                    style="position:absolute;right:-1em;bottom:5px;color:#fff;font-weight:normal;font-size:12px;line-height:1">{{sxs[index]}}</span>
+		</span>
+            {{/each}}
+        </div>
+        {{include 'defTemplate'}}
+    </div>
+</script>
+
+<script type="text/html" id="defTemplate">
+    <div>
+        <span class="lr_txt">第<span class="color-NoL fsL" id="preTurnNum">{{preTurnNum}}</span>期</span>
+        <a class="lr_txt" id="showLotteryStatus" target="_blank" href="/" ></a>
+        <!--<a href="javascript:;" class="volume volume-on" onclick="testAudio()">-->
+        <a href="javascript:;" class="volume volume-on" onclick="oggManager.mute()">
+            <audio id="lottery_audio" src="/page/game/oggs/1.ogg"></audio>
+        </a>
+
+        <div class="Ringtone select-box">
+            <div class="select-current"><span id="select-trackName">默认音效</span><i></i></div>
+            <select class="select-list" id="audio-select">
+                <option value="1">默认音效</option>
+                <option value="2">铃声一</option>
+                <option value="3">铃声二</option>
+                <option value="4">铃声三</option>
+                <option value="5">铃声四</option>
+            </select>
+        </div>
+    </div>
+</script>
+
+
+
+<link rel="stylesheet" href="/OfficialRules/liuhecai.css"/>
+
+<script type="text/javascript" src="/js/ruleDialog.js"></script>
+
+<!--开奖号码-->
+<script type="text/html" id="openNumTemplate">
+    <div id="LotteryResultBox" class="lr_ball_box flip">
+        {{each openNums data}}
+        <span class="lottery-result-ball ball_{{data}}">{{data}}</span>
+        {{/each}}
+    </div>
+</script>
+
+<script>
+
+	var log= $.cookie("token",{ path: "/"});;
+	if(log){
+		$("#login").hide();
+		$("#logout").show();
+	}else{
+		$("#login").show();
+		$("#logout").hide();
+	}
+
+
+    function openRule() {
+        var gameId = $('#gameId').attr("data-gameCode");
+        var official = 0;
+        if(gameManager.getPlayType()==Constants.CREDIT_HTML){
+            page = "/OfficialRules/creditRule.html?gameCode="+gameId;
+            official = 0;
+        }else{
+            page = "/OfficialRules/officialRule.html?gameCode="+gameId;
+            official = 1;
+        }
+
+        $.ajax({
+            async:false,
+            url : page,
+            success : function(result){
+                result += "<input type=\"hidden\" id=\"rule_currPage\" value= '"+gameId+"'/>";
+                ruleDialog.show({content:result});
+            }
+        });
+    }
+
+
+   /* function testAudio() {
+            $.ajax({
+                async:false,
+                url : "/OfficialRules/creditRule.html",
+                success : function(result){
+                    ruleDialog.show({content:result})
+
+                }
+            });
+//        oggManager.play();
+    }*/
+</script>
+
+
+<!--pk10开奖动画-->
+<div class="pk10VideoLottery"  style="display: none" >
+    <a href="javascript:;" class="pk10videoBtn" onclick="diplayLotteryVideo();"  >开奖动画</a>
+    <!--#include virtual="/page/pk10Video/html/pk10Video.html"-->
+</div>

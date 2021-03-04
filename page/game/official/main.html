@@ -1,0 +1,138 @@
+<!-- 玩法菜单 -->
+<div class="mainNav">
+    <div class="mainNav-list"></div>
+    <div class="gamePlay">
+        <div class="TabBtn-wrap">
+            <span  class="left_game_play" onclick="javascript:window.location.href='index_official.html'" >官方玩法</span>
+            <span class="right_game_play addStyle" onclick="javascript:window.location.href='index.html'">信用玩法</span>
+        </div>
+    </div>
+</div>
+<div class="mainNav-children">
+    <div></div>
+    <div></div>
+</div>
+<!--下注选择内容-->
+<div class="sumBtn_box"></div>
+<div class="help-box clear">
+    <div class="current-game fleft">
+        <span><b>五星</b>：<label>五星复式</label></span>
+    </div>
+    <div class="fleft">
+        <div class="checkbox-box" style="display: none;">
+            <label class="checkbox" for="APPEAR"><input type="checkbox" class="checkbox-hide" id="APPEAR">冷热</label>
+            <label class="checkbox" for="OMIT"><input type="checkbox" class="checkbox-hide" id="OMIT">遗漏</label>
+        </div>
+        <div class="help-tips">
+            <span class="help-exp" data-align="top"></span>
+            <span class="help-help" data-align="top"></span>
+        </div>
+        <span id="configDescription" class="fleft">从万位、千位、百位、十位、个位中选择一个5位数号码组成一注。</span>
+    </div>
+</div>
+<div class="betNum-btn row_btm clear-ab">
+    <div id="MoneyUnitWrap">
+        <ul>
+            <li><a href="javascript:;" data-value="0">元</a></li>
+            <li><a href="javascript:;" data-value="1">角</a></li>
+            <li><a href="javascript:;" data-value="2">分</a></li>
+        </ul>
+    </div>
+    <div class="betNum-in">
+        <div class="amount-box">
+            <div class="amount" >
+                <div class="amountZi">
+                    <span >1</span>
+                    <span>5</span>
+                    <span >10</span>
+                    <span >15</span>
+                    <span >20</span>
+                    <span >50</span>
+                    <span >100</span>
+                    <span >200</span>
+                    <span >500</span>
+                    <span >1000</span>
+                    <span>2000</span>
+                </div>
+                <i class="minus">-</i>
+                <input type="text" id="allPrice" maxlength="6" value="1">
+                <i class="plus">+</i>
+            </div>
+            <span>倍</span>
+            <span>模式</span>
+            <div class="unit-box select-box" style="position: relative">
+                <div class="unit"><span data-slide="bar">元</span><i style="cursor: pointer"></i></div>
+            </div>
+        </div>
+        <div style="float:left">
+            <span class="dolor">$</span>
+            <span id="amount" >0%</span>
+            <span class="minues">-</span>
+            <div class="span6"><div id="v-slider" style="height:4px;"></div></div>
+            <span class="Plus">+</span>
+            <span class="amountBindVal">1990 </span>
+        </div>
+        <span class="total">共选<label class="extraFontC count">0</label>注，共投<label class="extraFontC betMoney">0</label>元，盈利<label class="extraFontC canWinMoney">0</label> 元</span>
+    </div>
+    <a href="javascript:void(0);" class="btn add-btn" title="确认选号"></a>
+    <a href="javascript:void(0);" class="btn confirm-btn" title="立即下注"></a>
+</div>
+<div class="line1"></div>
+<div class="betNum-list clear">
+    <div class="bet-box betB-w40">
+        <div class="row_btm clear">
+            <span class="fleft">随机<input type="text" name="randomNum" maxlength="2" value="1">注<a href="javascript:void(0);" class="btn Random-btn">随机</a></span>
+            <span class="tit">投注列表</span>
+            <a href="javascript:void(0);" class="btn delete-btn">清空</a>
+        </div>
+        <div class="table-list betb-main bet-content-list"><table></table></div>
+    </div>
+    <div class="bet-box betB-w25">
+        <div class="row_btm">
+            <span class="tit">操作状态</span>
+        </div>
+        <div class="betb-main">
+            <div class="clear"><span class="fleft">选择</span><span class="fright"><label class="extraFontC totalOrderCount">0</label>单</span><span class="fright"><label class="extraFontC totalBetCount">0</label>注</span></div>
+            <div class="clear"><span class="fleft">投注</span><span class="fright"><label class="extraFontC totalMoney">0</label>元</span></div>
+            <div class="clear"><span class="fleft">追号</span><span class="fright">无追号</span></div>
+        </div>
+    </div>
+    <div class="bet-box betB-w35">
+        <div class="row_btm"></div>
+        <div class="betb-main">
+            <div class="NumberCheck clear">
+                <a href="javascript:void(0);" class="btn Continue-btn" title="我要追号"></a>
+                <div class="fleft" id="CK-Out-stopAfterWin" >
+                    <!--<label class="checkbox select" id="CK_Out_label"><input class="checkbox-hide"  type="checkbox">中奖后停止追号</label>-->
+                </div>
+            </div>
+            <a id="confirmBetBtn" href="javascript:void(0);" class="btn deter-btn" title="确认下注"><label style="display: none;">追0</label></a>
+        </div>
+    </div>
+</div>
+<div class="bet-history clear">
+    <div class="row_btm">
+        <a href="javascript:void(0);" id="batchCancelOrderBtn" class="btn" style="left: 10px; right: auto;display: none;">批量撤单<b>(0)</b></a>
+        <span class="tit">游戏记录</span>
+        <a href="javascript:void(0)" onclick="openModalX('bet')" class="btn">更多记录</a>
+    </div>
+    <div class="table-list">
+        <table>
+            <thead>
+            <tr>
+                <th><input type="checkbox" style="display: none;"></th>
+                <th>注单编号</th>
+                <th>玩法</th>
+                <th>期号</th>
+                <th>投注时间</th>
+                <th style="width: 150px;text-align: center">投注内容</th>
+                <th>倍模</th>
+                <th>总金额</th>
+                <th>奖金</th>
+                <th>状态</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>

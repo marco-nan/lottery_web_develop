@@ -1,0 +1,90 @@
+.trend-box .trend-title h2 {
+    padding-left: 42px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.trend-box .trend-title {
+    height: 35px;
+    line-height: 35px;
+    padding-left: 15px;
+    border-bottom: 1px solid #f5f5f5;
+}
+.trend-box {
+    margin: 10px auto 0;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+._iframe_divs_ {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+._iframe_divs_>#_games_2 {
+    margin: 0px auto 0 auto;
+}
+.trend-box .trend-main .lottery-logo a img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+}
+h3 {
+    font-weight: normal;
+}
+.trend-box .trend-main .right-content .row-content .trend-content span a {
+    background: #e4393c;
+    color: #fff;
+    padding: 5px 10px;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+}
+.trend-box .trend-main .lottery-logo a {
+    width: 77px;
+    height: 77px;
+    display: block;
+    margin-top: 6px;
+    margin-left: 22px;
+    overflow: hidden;
+}
+.trend-box .trend-main .lottery-logo {
+    float: left;
+    width: 123px;
+    height: 114px;
+}
+.trend-box .trend-main .trend-lot-ul li {
+    float: left;
+    width: 155px;
+}
+.trend-lot-ul {
+    overflow: hidden;
+    padding: 20px;
+}
+.trend-box .trend-main .lottery-logo .lottery-title {
+    height: 17px;
+    line-height: 17px;
+    padding-top: 8px;
+    width: 114px;
+    text-align: center;
+    font-weight: normal;
+}
+.trend-box .trend-main .right-content .row-content .trend-content span {
+    display: block;
+    float: left;
+    line-height: 18px;
+}
+.trend-box .trend-main .right-content .row-content .trend-content {
+    float: left;
+    padding-left: 10px;
+}
+.trend-box .trend-main .right-content .row-content {
+    padding-left: 15px;
+}
+.trend-box .trend-main .right-content {
+    float: left;
+    padding: 10px 0 0;
+}
+.trend-box .trend-main .right-content .row-content .trend-content span a:hover {
+    color: #ff0;
+    cursor: pointer;
+}
+

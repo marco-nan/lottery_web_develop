@@ -1,0 +1,287 @@
+[
+  {
+    "name": "充值",
+    "type": "recharge",
+    "open": "1"
+  },
+  {
+    "name": "提现",
+    "type": "withdraw",
+    "open": "1"
+  },
+  {
+    "name": "彩票游戏",
+    "type": "gcdt",
+    "open": "1"
+  },
+  {
+    "name": "电子游戏",
+    "type": "ele",
+    "open": "0"
+  },
+  {
+    "name": "棋牌游戏",
+    "type": "qp",
+    "open": "0"
+  },
+  {
+    "name": "体育赛事",
+    "type": "sport",
+    "open": "0"
+  },
+  {
+    "name": "真人视讯",
+    "type": "live",
+    "open": "0"
+  },
+  {
+    "name": "王者荣耀",
+    "type": "wzry",
+    "open": "0"
+  },
+  {
+    "name": "AG视讯",
+    "type": "ag",
+    "open": "0"
+  },
+  {
+    "name": "LMG视讯",
+    "type": "lmg",
+    "open": "0"
+  },
+  {
+    "name": "DS视讯",
+    "type": "ds",
+    "open": "0"
+  },
+  {
+    "name": "BBIN视讯",
+    "type": "bbin",
+    "open": "0"
+  },
+  {
+    "name": "MG视讯",
+    "type": "mg",
+    "open": "0"
+  },
+  {
+    "name": "OG视讯",
+    "type": "og",
+    "open": "0"
+  },
+  {
+    "name": "DG视讯",
+    "type": "dg",
+    "open": "0"
+  },
+  {
+    "name": "长龙排行榜",
+    "type": "tulongbang",
+    "open": "0"
+  },
+  {
+    "name": "优惠活动",
+    "type": "yhhd",
+    "open": "0"
+  },
+  {
+    "name": "在线客服",
+    "type": "online-customer",
+    "open": "1"
+  },
+  {
+    "name": "我的",
+    "type": "mine",
+    "open": "1"
+  },
+  {
+    "name": "极速六合彩",
+    "type": "game/71",
+    "open": "0"
+  },
+  {
+    "name": "香港六合彩",
+    "type": "game/70",
+    "open": "0"
+  },
+  {
+    "name": "甘肃快三",
+    "type": "game/58",
+    "open": "0"
+  },
+  {
+    "name": "上海快三",
+    "type": "game/57",
+    "open": "0"
+  },
+  {
+    "name": "贵州快三",
+    "type": "game/55",
+    "open": "0"
+  },
+  {
+    "name": "安徽快三",
+    "type": "game/54",
+    "open": "0"
+  },
+  {
+    "name": "湖北快三",
+    "type": "game/53",
+    "open": "0"
+  },
+  {
+    "name": "吉林快三",
+    "type": "game/52",
+    "open": "0"
+  },
+  {
+    "name": "三分PC蛋蛋",
+    "type": "game/51",
+    "open": "0"
+  },
+  {
+    "name": "一分PC蛋蛋",
+    "type": "game/50",
+    "open": "0"
+  },
+  {
+    "name": "三分快三",
+    "type": "game/49",
+    "open": "0"
+  },
+  {
+    "name": "一分快三",
+    "type": "game/48",
+    "open": "0"
+  },
+  {
+    "name": "三分PK10",
+    "type": "game/46",
+    "open": "0"
+  },
+  {
+    "name": "一分PK10",
+    "type": "game/45",
+    "open": "0"
+  },
+  {
+    "name": "三分时时彩",
+    "type": "game/44",
+    "open": "0"
+  },
+  {
+    "name": "一分时时彩",
+    "type": "game/43",
+    "open": "0"
+  },
+  {
+    "name": "河北快三",
+    "type": "game/41",
+    "open": "0"
+  },
+  {
+    "name": "广西快三",
+    "type": "game/40",
+    "open": "0"
+  },
+  {
+    "name": "上海11选5",
+    "type": "game/39",
+    "open": "0"
+  },
+  {
+    "name": "新疆11选5",
+    "type": "game/38",
+    "open": "0"
+  },
+  {
+    "name": "黑龙江11选5",
+    "type": "game/37",
+    "open": "0"
+  },
+  {
+    "name": "江苏11选5",
+    "type": "game/36",
+    "open": "0"
+  },
+  {
+    "name": "江西11选5",
+    "type": "game/35",
+    "open": "0"
+  },
+  {
+    "name": "幸运飞艇",
+    "type": "game/34",
+    "open": "0"
+  },
+  {
+    "name": "广东11选5",
+    "type": "game/33",
+    "open": "0"
+  },
+  {
+    "name": "江苏骰宝(快3)",
+    "type": "game/32",
+    "open": "0"
+  },
+  {
+    "name": "PC蛋蛋",
+    "type": "game/31",
+    "open": "0"
+  },
+  {
+    "name": "广西快乐十分",
+    "type": "game/29",
+    "open": "0"
+  },
+  {
+    "name": "重庆幸运农场",
+    "type": "game/28",
+    "open": "0"
+  },
+  {
+    "name": "江西时时彩",
+    "type": "game/27",
+    "open": "0"
+  },
+  {
+    "name": "重庆时时彩",
+    "type": "game/26",
+    "open": "0"
+  },
+  {
+    "name": "天津时时彩",
+    "type": "game/25",
+    "open": "0"
+  },
+  {
+    "name": "广东快乐十分",
+    "type": "game/24",
+    "open": "0"
+  },
+  {
+    "name": "北京快乐8",
+    "type": "game/23",
+    "open": "0"
+  },
+  {
+    "name": "北京PK10",
+    "type": "game/22",
+    "open": "0"
+  },
+  {
+    "name": "新疆时时彩",
+    "type": "game/21",
+    "open": "0"
+  },
+  {
+    "name": "排列3",
+    "type": "game/11",
+    "open": "0"
+  },
+  {
+    "name": "福彩3D",
+    "type": "game/10",
+    "open": "0"
+  }
+]

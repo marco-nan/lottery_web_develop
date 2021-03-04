@@ -1,0 +1,31 @@
+<!-- 游戏种类 -->
+<div class="side_menu" id="sideMenu">
+    <div class="sidem_item sidem_item_1">
+        <a href="javascript:;" class="sidem_b clear"><i></i><span>低频彩</span></a>
+        <ul style="display:none">
+            <li><a data-key="1" data-val="⑥合彩" href="/data/game/lhc/index.html" class=""
+                   id="a_lhc"><span><i></i>⑥合彩</span></a></li>
+            <li><a href="/data/game/fc3d/index.html" class="" id="a_fc3d"><span><i></i>福彩3D</span></a></li>
+        </ul>
+    </div>
+</div>
+
+
+<script type="text/html" id="gameListTempLate">
+    {{if cates[0].name !== '六合彩'}}
+    <div class="sidem_item sidem_item_1" id="lhc_sidem_item">
+        <a href="/data/game/lhc/index.html;" class=" sidem_b clear"><i></i><span>六合彩</span></a>
+    </div>
+    {{/if}}
+
+    {{each cates  cate i}}
+    <div class="sidem_item sidem_item_{{i+1}}">
+        <a href="javascript:;" class="sidem_b clear"><i></i><span>{{cate.name}}</span></a>
+        <ul style="display:none">
+            {{each cates[i].list game index}}
+            <li><a href="{{game.href}}" class="" id="a_{{game.code}}"><span><i></i>{{game.name}}</span></a></li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/each}}
+</script>

@@ -1,0 +1,33 @@
+<!--
+    ***
+    **    资讯  详情
+    *
+-->
+
+<!--链接-->
+<!--#include virtual="/views/html/head.html"-->
+
+<!-- 头部 -->
+<!--#include virtual="/views/html/header.html"-->
+
+<!-- 内容 -->
+
+<div class="consult-detail-wrap">
+    <!--#include virtual="/views/news_detail.html"-->
+</div>
+
+<!-- 脚部-->
+<!--#include virtual="/views/html/footer.html"-->
+
+<script type="text/javascript">
+    $(function () {
+        var id=getUrlParam("id");
+        $("#"+id).show();
+    })
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+</script>
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>追号详情</title>
+  <style>
+    .border-right {
+      border-right: 1px solid #ccc;
+    }
+
+    .border-left {
+      border-left: 1px solid #fff;
+    }
+
+    #bet-content {
+      background-color: #DEDEDE;
+      border-radius: .375rem;
+    }
+
+    #bet-content label {
+      border-right: 1px solid #fff;
+    }
+
+    #bet-content label + div {
+      border-left: 1px solid #C7C7C7;
+      height: 118px;
+      overflow: auto;
+    }
+    .wordWrap-betInfo{
+       	word-wrap:break-word;
+    }
+  </style>
+</head>
+<body>
+	<div id="detailContainer" class="container-fluid">
+		<div class="row m-t-sm">	
+		    <div class="col-xs-4 p-r-md p-l-lg border-right">
+		      <form class="form-xs form-horizontal">
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">追号编号：</label>
+		          <div class="col-xs-8">
+		            <p id="orderNo" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">游戏：</label>
+		          <div class="col-xs-8">
+		            <p id="gameName" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">开始期号：</label>
+		          <div class="col-xs-8">
+		            <p id="turnNum" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">取消期数：</label>
+		          <div class="col-xs-8">
+		            <p id="cancelCount" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">中奖期数：</label>
+		          <div class="col-xs-8">
+		            <p id="winCount" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">中奖后停止追号：</label>
+		          <div class="col-xs-8">
+		            <p id="stopAfterWinDesc" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		      </form>
+		    </div>
+			<div class="col-xs-4 p-x-md border-right border-left">
+		      <form class="form-xs form-horizontal">
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">游戏用户：</label>
+		          <div class="col-xs-8">
+		            <p id="account" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">玩法：</label>
+		          <div class="col-xs-8">
+		            <p id="cateName" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">追号期数：</label>
+		          <div class="col-xs-8">
+		            <p id="traceCount" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">追号总金额：</label>
+		          <div class="col-xs-8">
+		            <p id="traceTotalMoney" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">派奖总金额：</label>
+		          <div class="col-xs-8">
+		            <p id="winTraceMoney" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		      </form>
+		    </div>
+			<div class="col-xs-4 p-x-md border-left">
+		      <form class="form-xs form-horizontal">
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">追号时间：</label>
+		          <div class="col-xs-8">
+		            <p id="addTime" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">模式：</label>
+		          <div class="col-xs-8">
+		            <p id="betModelDesc" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">完成期数：</label>
+		          <div class="col-xs-8">
+		            <p id="finishCount" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">完成金额：</label>
+		          <div class="col-xs-8">
+		            <p id="finishMoney" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">取消金额：</label>
+		          <div class="col-xs-8">
+		            <p id="cancelMoney" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		        <div class="form-group row">
+		          <label class="control-label col-xs-4">追号状态：</label>
+		          <div class="col-xs-8">
+		            <p id="statusDesc" class="form-control-static text-right"></p>
+		          </div>
+		        </div>
+		      </form>
+		    </div>	
+		    </div>
+		    <div class="row p-x-md">
+		    <form class="form-font-sm col-xs-12 m-t-md">
+		      <div id="bet-content" class="form-group row p-y-xs">
+		        <label class="control-label col-xs-2 p-y-lg text-center border-right">投注内容：</label>
+		        <div class="col-xs-10">
+		          <p id="betInfo" class="form-control-static wordWrap-betInfo"></p>
+		        </div>
+		      </div>
+		    </form>
+		  </div>
+		  <div class="table-responsive">
+		    <h6 class="text-center">可能中奖情况</h6>
+		    <table class="table table-condensed">
+		      <thead class="thead-default">
+		      <tr>
+		        <th>奖期</th>
+		        <th>追号倍数</th>
+		        <th>追号状态</th>
+		      </tr>
+		      </thead>
+		      <tbody></tbody>
+		    </table>
+		  </div>
+		  <div class="row text-center m-t-md m-b-md">
+		    <button id="goBackBtn" class="btn btn-primary">返回</button>
+		  </div>	
+	</div>
+
+</body>
+</html>

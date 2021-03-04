@@ -1,0 +1,461 @@
+<meta charset="utf-8">
+<style type="text/css">
+    body, html {
+        padding: 0px;
+        margin: 0px;
+        overflow: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .popup_tab {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #484544;
+        width: 100%;
+        height: 38px;
+        margin-top: -1px;
+    }
+
+    .popup_tab a.active {
+        background: #b62929;
+    }
+
+    .popup_tab a {
+        color: #fff;
+        text-shadow: 0 1px 1px #000;
+        color: #fff;
+        display: inline-block;
+        font-size: 15px;
+        padding: 8px 25px;
+        background-color: #393736;
+        cursor: pointer;
+    }
+
+    .popup_tab a:nth-child(1) {
+        border-radius: 6px 0 0 6px;
+    }
+
+    .popup_tab a:nth-child(2) {
+        border-radius: 0px 6px 6px 0;
+    }
+
+    .datail_form {
+        height: 140px;
+        width: 100%;
+        background: #484544;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .datail_form_zi {
+        float: left;
+        height: 140px;
+        width: 33.3%;
+    }
+
+    .datail_form_zi ul {
+        padding: 10px;
+    }
+
+    .datail_form_zi ul li {
+        height: 24px;
+        border-right: 1px solid #999;
+        width: 100%;
+
+    }
+
+    .datail_right ul li {
+        border: none;
+    }
+
+    .datail_right ul li:last-child span:last-child {
+        color: #908e8e;
+    }
+
+    .datail_form_zi ul li span:nth-child(1) {
+        float: left;
+    }
+
+    .datail_form_zi ul li span:nth-child(2) {
+        float: right;
+        margin-right: 10px;
+    }
+
+    .BettingContent {
+        width: 100%;
+        height: 90px;
+        background-color: #484544;
+    }
+
+    .BettingContent_top {
+        height: 60px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 6px;
+    }
+
+    .BettingContent_under {
+        height: 30px;
+        line-height: 30px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .BettingContent_left {
+        float: left;
+        width: 14%;
+        height: 50px;
+        margin-top: 5px;
+        line-height: 50px;
+        text-align: center;
+        color: #000;
+        border-right: 1px solid #999;
+    }
+
+    .BettingContent_right {
+        float: left;
+        width: 85%;
+        height: 60px;
+        font-size: 12px;
+        line-height: 24px;
+        font-size: 12px;
+        text-indent: 12px;
+    }
+
+    .popupTitle {
+        width: 100%;
+        height: 28px;
+        background-color: #d5dfe2;
+        table-layout: fixed;
+    }
+
+    .popupTitle tr {
+        width: 100%;
+    }
+
+    .popupTitle tr td {
+        width: 25%;
+        text-align: center;
+        font-size: 12px;
+        color: #000 !important;
+        font-weight: 700;
+    }
+
+    .scllorWrap {
+        height: 182px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .scllorWrap ul {
+        height: 182px;
+        width: 100%;
+    }
+
+    .scllorWrap ul li {
+        height: 30px;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .scllorWrap ul li span {
+        width: 25%;
+        float: left;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        color: #333;
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .scllorWrap ul li span:nth-child(1) {
+        position: relative;
+        text-indent: 24px;
+    }
+
+    .checkboxTrue {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ddd;
+        position: absolute;
+        top: 4px;
+        left: 50px;
+        background-color: #fff;
+        border-radius: 4px;
+        /*background-image: url(img/check_true.png);*/
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .checkboxTrueInput {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ddd;
+        position: absolute;
+        top: 4px;
+        left: 50px;
+        z-index: 1;
+    }
+
+    .scllorWrap ul li span input[type="text"] {
+
+        width: 69px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        outline: none;
+        text-indent: 10px;
+    }
+
+    .scllorWrap ul li span input[type="checkbox"] {
+        opacity: 0;
+    }
+
+    .peishu {
+        margin: 0 4px;
+    }
+
+    .GenerateAppend {
+        margin-left: 264px;
+        display: inline-block;
+        width: 156px;
+        height: 34px;
+        background: url(images/GenerateAppend-bg1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .GenerateAppend:hover {
+        background: url(images/GenerateAppend-bg2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .status-win {
+        color: #e71010 !important;
+    }
+
+    .status-lose {
+        color: #908e8e !important;
+    }
+
+    .status-unlottery {
+        color: #07d00b !important;
+    }
+
+    .status-undo {
+        color: #2c77ba !important;
+    }
+
+    .status-hasundo {
+        color: #906944 !important;
+    }
+
+    .status-delete {
+        color: #b9cca6 !important;
+    }
+
+    .status-lottery {
+        color: #e2bc03 !important;
+    }
+
+    span.record-status {
+        font-weight: 700;
+    }
+    .checkbox_one {
+        position: absolute;
+        top: 2px;
+        left: 50px;
+        width: 20px;
+        height: 20px;
+        background-image: url(/page/game/official/images/check_true.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #fff;
+        border: 1px solid #999;
+        border-radius: 5px;
+    }
+
+    .checkbox_one_tow {
+        background-image: none;
+    }
+</style>
+
+<div id="content"></div>
+<script type="text/html" id="zhDetailDialogTpl">
+    <div class="datail_form clear" style="height: 160px;">
+        <div class="datail_left datail_form_zi">
+            <ul>
+                <li><span>追号编码</span><span>{{orderNo}}</span></li>
+                <li><span>游戏</span><span>{{gameName}}</span></li>
+                <li><span>开始期数</span><span>{{turnNum}}</span></li>
+                <li><span>取消期数</span><span>{{cancelCount}}</span></li>
+                <li><span>中奖期数</span><span>{{winCount}}</span></li>
+                <li><span>中奖后停止追号</span><span>{{stopAfterWin == 0 ?'否' : '是'}}</span></li>
+            </ul>
+        </div>
+        <div class="datail_middle datail_form_zi">
+            <ul>
+                <li><span>游戏用户</span><span>{{account}}</span></li>
+                <li><span>玩法</span><span>{{cateName}}</span></li>
+                <li><span>追号期数</span><span>{{traceCount}}</span></li>
+                <li><span>追号总金额</span><span>{{traceTotalMoney}}</span></li>
+                <li><span>派奖总金额</span><span>{{winTraceMoney}}</span></li>
+
+            </ul>
+        </div>
+        <div class="datail_right datail_form_zi">
+            <ul>
+                <li><span>追号时间</span><span>{{addTime}}</span></li>
+                <li><span>模式</span><span>
+                    {{if betModel === 0}} <span>元</span>
+                    {{else if betModel === 1}}<span>角</span>
+                    {{else if betModel === 2}}<span>分</span>
+                    {{/if}}
+                </span></li>
+                <li><span>完成期数</span><span>{{finishCount}}</span></li>
+                <li><span>完成金额</span><span>{{finishMoney}}</span></li>
+                <li><span>取消金额</span><span>{{cancelMoney}}</span></li>
+                <li><span>订单状态</span><span>
+                   	{{if status == 0 }}<span class="record-status status-undo">进行中</span>
+					{{else if status === 1}}<span class="record-status status-lottery">已完成</span>
+					{{else if status == 2}}<span class="record-status status-hasundo">撤销</span>
+					{{/if}}
+                </span></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="BettingContent">
+        <div class="BettingContent_top">
+            <div class="BettingContent_left">
+                投注内容
+            </div>
+            <div class="BettingContent_right">
+                {{betInfo}}
+            </div>
+        </div>
+        <div class="BettingContent_under">
+            追号情况
+        </div>
+    </div>
+
+    <table class="popupTitle">
+        <tr>
+            <td>奖期</td>
+            <td>追号倍数</td>
+            <td>封盘时间</td>
+            <td>追号状态</td>
+        </tr>
+    </table>
+
+    <div class="scllorWrap">
+        <ul style="height: 150px;width: 100%;overflow-x: hidden;" id="otherZhContent">
+            {{each zhList item}}
+            <li>
+                <span><div class="checkboxTrue checkbox_one"><input type="checkbox" class="checkboxTrueInput"><span>{{item.turnNum}}</span></div> </span>
+                <span>{{item.multiple}}</span>
+                <span>{{item.endTime}}</span>
+                <span>
+                    {{if item.status === 0}} 进行中
+                    {{else if item.status === 1}}已完成
+                    {{else if item.status === 2 }}撤销
+                    {{/if}}
+                </span>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</script>
+<script id="otherZhTemplate" type="text/html">
+    {{each zhList item}}
+    <li class="data-chose-item">
+    <span>{{item.turnNum}}</span>
+    <span>{{item.multiple}}</span>
+    <span style="text-indent: 24px;">{{item.endTime}}</span>
+    <span style="text-indent: 24px;">
+    {{if item.status === 0}} <a class="status-undo" style="font-weight: bold;">进行中</a>
+    {{else if item.status === 1}}<a class="status-lottery"  style="font-weight: bold;">已完成</a>
+    {{else if item.status === 2 }}<a class="status-hasundo" style="font-weight: bold;">已撤销</a>
+    {{/if}}
+    </span>
+    </li>
+    {{/each}}
+</script>
+<script type="text/javascript" src="/js/lib/jquery/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/lib/template-web.js"></script>
+<script type="text/javascript">
+
+
+    var list;
+    function setZhContent(betOrder) {
+        $('#content').html(template("zhDetailDialogTpl", betOrder));
+        getZhLish(betOrder.orderNo);
+        //bind
+    }
+
+    
+    
+
+    function getZhLish(trackOrderNo) {
+        $.ajax({
+            url: '/api/trace/turn?traceOrderNo=' + trackOrderNo,
+            type: 'GET',
+            cache: false,
+            contentType: "application/json",
+            success: function (response) {
+                list = response;
+                var content = {'zhList':response};
+                $('#otherZhContent').html(template('otherZhTemplate',content))
+
+
+                $('.data-chose-item').bind('click',function (_,e) {
+                    if($(this).find('div').hasClass('checkbox_one')){
+                        $(this).find('div').removeClass('checkbox_one')
+                    }else{
+                        $(this).find('div').addClass('checkbox_one');
+                    }
+                })
+                
+                
+                
+
+            },
+            complete: function () {
+            }
+        })
+    }
+    
+    
+    function getCdList() {
+        var cdList = [];
+        $.each($('.data-chose-item'),function (i,e) {
+            if($(e).find('div').hasClass('checkbox_one')){
+                cdList.push(list[i]);
+            }
+        })
+        return cdList;
+    }
+    
+    function cancelOrder(orderNo) {
+    }
+</script>

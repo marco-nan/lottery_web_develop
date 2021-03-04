@@ -1,0 +1,279 @@
+
+/* 电子游艺 */
+.eleContentWrap
+{
+  width: 100%;
+  min-height: 100px;
+  overflow: hidden;
+  background: url(/views/img/liveBJ.jpg);
+}
+.eleContent
+{
+  width: 1000px;
+  height: 846px;
+  margin: 32px auto;
+  border: 3px #AA0000 solid;
+  background: #1f1f1f;
+  position:relative;
+}
+.eleHeader
+{
+  width: 100%;
+  height: 54px;
+  background: #121212;
+}
+#eleload
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.34);
+}
+#eleload > img
+{
+  width: 180px;
+  margin-left: 430px;
+  margin-top: 288px
+
+}
+
+.search-input-wrap
+{
+  height: 64px;
+}
+.search-input-wrap,.TabContent,.agbyWrap
+{
+  display: none;
+}
+.search-input-wrap a
+{
+  background: #5e0e0e none repeat scroll 0 0;
+  border: 1px solid #730204;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  float: left;
+  margin-top: 16px;
+  margin-left: 10px;
+  height: 32px;
+  line-height: 32px;
+  width: 80px;
+  text-align: center;
+}
+.search-input-wrap a:hover
+{
+  background: #000000;
+}
+.search-input-wrap input
+{
+  float: left;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  width: 130px;
+  height: 32px;
+  line-height: 32px;
+  margin-left: 10px;
+  margin-top: 16px;
+  text-indent: 12px;
+  color: #000;
+}
+
+.eleHeader > ul
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.eleHeader ul li
+{
+  flex: 1;
+  height: 54px;
+  text-align: center;
+  line-height: 54px;
+  color: #808080;
+  cursor: pointer;
+}
+.eleHeader ul li.eleTabStyle
+{
+  background: #8d030a;
+  color: #ffffff;
+}
+.gameContent
+{
+  background:#1f1f1f;
+  height: auto;
+  width: 100%;
+}
+.MGWrap,.MGContent,.MGContent ul
+{
+  width: 100%;
+  min-height: 400px;
+}
+.MGContent ul
+{
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+.MGContent ul li
+{
+  float: left;
+  width: 184px;
+  height: 206px;
+  list-style-type: none;
+  background: url(/views/img/gamgBJ.png) no-repeat;
+  margin-left: 10px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.MGContent ul li .gamename
+{
+  height: 56px;
+  width: 100%;
+  line-height: 56px;
+  text-align: center;
+  color: #fff;
+}
+.MGContent ul li .gamepic
+{
+  height: 140px;
+  width: 158px;
+  margin-left: 14px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.MGContent ul li .gamepic > img
+{
+  margin-left: 6px;
+}
+.pageOnWrap
+{
+  width: 100%;
+  height: 84px;
+  text-align: center;
+  line-height: 72px;
+}
+
+.pageOnWrap > button
+{
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 4px;
+  background-color: rgb(94, 14, 14);
+  border: 1px solid #5e0e0e;
+  cursor: pointer;
+  outline: none;
+}
+
+/* ag捕鱼*/
+.agbyWrap
+{
+  width: 1000px;
+  height:792px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.agbyPicWrap
+{
+  width: 928px;
+  height: 510px;
+  border: 1px solid #000000;
+  margin: 20px auto 0;
+  background: url("/views/img/ag-fish.jpg") no-repeat;
+  position: relative;
+}
+.enterAgbyGame
+{
+  width: 220px;
+  height: 62px;
+  position: absolute;
+  left: 50%;
+  top: 346px;
+  margin-left: -110px;
+  background: url(/views/img/by-btn.png) no-repeat;
+  cursor: pointer;
+  outline: none;
+}
+.enterAgbyGame:hover
+{
+  opacity: .9;
+}
+.agbyHelpWrap
+{
+  width: 928px;
+  margin: 0 auto;
+  height: 70px;
+  background: #3474c1 none repeat scroll 0 0;
+  color: #fff100;
+  font-size: 26px;
+  line-height: 70px;
+  text-align: center;
+}
+.ag-f-tab {
+  background: #144989 none repeat scroll 0 0;
+  text-align: center;
+  width: 928px;
+  height: 104px;
+  margin: 0 auto;
+}
+.ag-f-tab #ftb-con {
+  overflow: hidden;
+  padding-left: 116px;
+  padding-top: 24px;
+}
+.ag-f-tab ul {
+  padding: 0px;
+  width: 678px;
+  height: 40px;
+}
+.ag-f-tab li {
+  list-style: none;
+  float: left;
+  height: 38px;
+  line-height: 38px;
+  margin-right: 14px;
+  text-align: center;
+  width: 120px;
+  background:url(/views/img/f-tab-btn.png) no-repeat scroll 0 0;
+}
+.ag-f-tab li.active
+{
+  background: rgba(0, 0, 0, 0) url(/views/img/f-tab-btnh.png) no-repeat scroll 0 0;
+}
+.ag-f-tab li:hover {
+  background: rgba(0, 0, 0, 0) url(/views/img/f-tab-btnh.png) no-repeat scroll 0 0;
+}
+.ag-f-tab ul li a {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 38px;
+  outline: 0 none;
+  text-decoration: none;
+  width: 120px;
+  cursor: pointer;
+  line-height: 38px;
+}
+.demo-class1
+{
+  padding: 10px;
+  background: rgb(253, 237, 189);
+  border-radius: 6px;
+}
+.demo-class1 .layui-layer-title
+{
+  background: rgb(129, 120, 101);
+  color: #fff;
+}
+.demo-class1 .layui-layer-setwin
+{
+  top: 24px !important;
+}
+.PicWrap img
+{
+  width: 678px;
+}

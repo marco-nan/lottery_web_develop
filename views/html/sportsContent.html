@@ -1,0 +1,63 @@
+<!-- 体育链接 -->
+<style>
+  .liveGame-wrap {
+      width: 100%;
+      height: auto;
+      padding: 20px 0;
+      background: url(/views/img/liveBJ.jpg);
+  }
+  .liveGameDelite {
+       width: 1002px;
+       height: 626px;
+       margin: 0 auto;
+   }
+  .liveGameDelite ul {
+      width: 100%;
+      height: 310px;
+      border: 1px solid #cccccc;
+      background: url(/views/img/livegamedeliteBJ.png);
+      margin-bottom: 10px;
+  }
+  .liveGameDelite ul li {
+      width: 237px;
+      height: 286px;
+      border: 1px solid #cccccc;
+      float: left;
+      margin: 12px 0 0 6px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+  }
+  .liveGameDelite ul li:nth-child(1) {
+      margin-left: 14px;
+  }
+  .enterLiveBtn {
+      position: absolute;
+      bottom: -26px;
+      left: 20px;
+      padding: 13px 58px;
+      cursor: pointer;
+      background: url(/views/img/livebtn-enter.png) no-repeat;
+      transition: bottom 1s, transform 1s;
+      -moz-transition: bottom .5s,-moz-transform .5s;
+      -webkit-transition: bottom .5s,-webkit-transform .5s;
+      -o-transition: bottom .5s, -o-transform .5s;
+  }
+  .liveGameDelite ul li:hover .enterLiveBtn {
+      bottom: 24px;
+  }
+</style>
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>
+<div class="liveGame-wrap">
+  <div class="liveGameDelite">
+      <ul>
+           <!-- ag体育 -->
+          <li><img src="/views/img/live-ag.jpg" /><span class="enterLiveBtn" onclick="EnterLiveGame('ag')"></span></li>
+          <!-- IBC沙巴体育 -->
+          <li><img src="/views/img/live-bbin.jpg" /><span class="enterLiveBtn"  onclick="EnterLiveGame('bb')"></span></li>
+          <!-- GJ皇冠体育 -->
+          <li><img src="/views/img/live-ibc.jpg" /><span class="enterLiveBtn"  onclick="EnterLiveGame('sb')"></span></li>
+		  <li class="livewait"><img src="/views/img/live-wait.jpg" /><span class="enterLiveBtn" onclick="layer.msg('敬请期待 更多视讯!',{btn: '知道了'})"></span></li>
+      </ul>
+  </div>
+</div>

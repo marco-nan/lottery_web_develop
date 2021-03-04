@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta contect="none" name="Robots">
+    <title>Rules</title>
+   <link type="text/css" href="mem_qa.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="css_rule.css">
+
+    <script src="QA_sport.js" type="text/javascript" language="javascript"></script>
+</head>
+<body oncontextmenu="self.event.returnValue=false;window.event.returnValue=false;" onselectstart="self.event.returnValue=false" id="SPORT">
+    <div class="qa_head">
+        <em>帮助</em><span onclick="window.close();" class="close_box">关闭</span></div>
+    <div id="wrapper">
+        <div id="qa_nav">
+            <ul>
+                <li class="sport"><a href="QA_sport.html">体育规则</a></li>
+                <li class="rule"><a href="QA_roul.html">规则与条款</a></li>
+                <li class="odd"><a href="QA_way.html">赔率计算列表</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <a name="top"></a>
+            <h1>
+                选择体育项目 :
+                <label>
+                    <select onchange="chg_roul(this.options[this.selectedIndex].value);" id="jumpMenu" name="jumpMenu">
+                        <option value="QA_sport.html">一般体育说明</option>
+                        <option selected="selected" value="rule_zq.html">足球</option>
+                        <option value="rule_lq.html">篮球</option>
+                        <option value="rule_binqiu.html">冰球</option>
+                        <option value="rule_bq.html">棒球</option>
+                        <option value="rule_paiqiu.html">排球</option>
+                        <option value="rule_wq.html">网球</option>
+                    </select>
+                </label>
+            </h1>
+            <div id="info">
+                <!--资料区-->
+                <p>足球投注种类：<a href="#bookmark1">足球投注名词</a>│<a href="#bookmark2"> 足球赛果认定</a>│<a href="#bookmark3">独赢</a>│<a href="#bookmark4">让球</a>│<a href="#bookmark5">大小球</a>│<a href="#bookmark6">上半场</a>│<a href="#bookmark7">滚球</a>│ <a href="#bookmark8">波胆│</a><a href="#bookmark9">入球数</a>│<a href="#bookmark10">半全场</a>│ <a href="#bookmark11">综合过关</a></p>
+                <!--#include virtual="/sports/Rule/data/zq.html"-->
+                <div class="to_top"><a href="#top"><span>回最上层</span></a></div>
+            </div>
+            <!--资料区 End-->
+        </div>
+    </div>
+    <div class="qa_foot">
+    </div>
+
+</body></html>

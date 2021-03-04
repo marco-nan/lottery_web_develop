@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>活动详情</title>
+  <style>
+    .border-right {
+      border-right: 1px solid #ccc;
+    }
+
+    .border-left {
+      border-left: 1px solid #fff;
+    }
+
+    #bet-content {
+      background-color: #DEDEDE;
+      border-radius: .375rem;
+    }
+
+    #bet-content label {
+      border-right: 1px solid #fff;
+    }
+
+    #bet-content label + div {
+      border-left: 1px solid #C7C7C7;
+      max-height: 360px;
+      overflow: auto;
+    }
+    .wordWrap{
+      word-wrap:break-word;
+      max-width:350px;
+    }
+    .wordWrap-betInfo{
+      word-wrap:break-word;
+    }
+  </style>
+</head>
+<body>
+<div id="detailContainer" class="container-fluid">
+  <div class="row m-t-sm">
+    <div class="col-xs-4 p-r-md p-l-lg border-right">
+      <form class="form-xs">
+        <div class="form-group row">
+          <label class="control-label col-xs-4">活动名称：</label>
+          <div class="col-xs-8">
+            <p id="activityRecordName" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">活动标题：</label>
+          <div class="col-xs-8">
+            <p id="activityRecordTitle" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">活动开始时间：</label>
+          <div class="col-xs-8">
+            <p id="beginDatetime" class="form-control-static text-right"></p>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="control-label col-xs-4">活动结束时间：</label>
+          <div class="col-xs-8">
+            <p id="endDatetime" class="form-control-static text-right"></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row p-x-md">
+    <form class="form-font-sm col-xs-12 m-t-md">
+      <div id="bet-content" class="form-group row p-y-xs">
+        <label class="control-label col-xs-2 p-y-lg text-center border-right">活动规则：</label>
+        <div class="col-xs-10">
+          <p id="activityRecordDesc" class="form-control-static wordWrap-betInfo"></p>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="row text-center m-t-md">
+    <button id="goBackBtn" class="btn btn-primary">返回</button>
+  </div>
+</div>
+</body>
+</html>

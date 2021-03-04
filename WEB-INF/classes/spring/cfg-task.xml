@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:task="http://www.springframework.org/schema/task"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                        http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    					http://www.springframework.org/schema/task 
+    					http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+
+  <context:component-scan base-package="com.cz.gameplat.task.job">
+  </context:component-scan>
+
+  <task:scheduler id="myScheduler" pool-size="30"/>
+  <task:scheduled-tasks scheduler="myScheduler">
+
+    <!-- 优惠活动模块,定点时间,获取参加当天红包雨资格的任务-->
+    <task:scheduled ref="activityScheduledJob" method="getRedEnvelopeQualification" cron="0 3 13 ? * *"/>
+    <!-- 每5分钟验证报表-->
+    <task:scheduled ref="userBusDayReportTaskJob" method="saveLastDayReport" cron="0 2,7,12,17,22,27,32,37,42,47,52,57 * * * ?"/>
+    <!-- 每天执行代理返点数据转移到历史数据中-->
+    <task:scheduled ref="dlRebateReportTaskJob" method="saveHis" cron="0 0 6 * * ?"/>
+    <!-- 每月19号执行清理代理返点历史数据 -->
+    <task:scheduled ref="dlRebateReportTaskJob" method="delHis" cron="0 30 5 19 * ?"/>
+    <!-- 上报支付统计数据 每天6点执行 -->
+    <task:scheduled ref="tpStatTaskJob" method="uploadTpStatData" cron="0 0 6 * * ?"/>
+    <!-- 清理密码重置数据 每天6点执行-->
+    <task:scheduled ref="userFindPwdJob" method="clearFindPwdData" cron="0 0 6 * * ?"/>
+    <!-- 上报在线人数数据-->
+    <task:scheduled ref="userJob" method="statisticsUserOnline2center" cron="0 */15 * * * ?"/>
+    <!-- 上报运营数据-->
+    <task:scheduled ref="userJob" method="statisticsData2center" cron="0 0 * * * ?"/>
+
+  </task:scheduled-tasks>
+</beans>

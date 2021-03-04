@@ -1,0 +1,105 @@
+.x-step {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin-right: 10px;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+.x-card {
+  display: inline-block;
+  cursor: pointer;
+  width: 280px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px 20px;
+  vertical-align: top;
+}
+
+.x-card.active {
+  border-color: #b62929;
+  background-image: url("/images/user-center/x-card-active.png");
+  background-repeat: no-repeat !important;
+  background-size: 16px;
+  background-position: 255px 5px;
+}
+
+.x-card > .x-card-heading {
+  font-size: 18px;
+  height: 36px;
+  line-height: 36px;
+  background-image: url("/data/image/pay-type-icon/wechat.png");
+  background-size: 36px;
+  background-repeat: no-repeat !important;
+  background-position: center left;
+  padding-left: 48px;
+}
+
+.x-card > .x-card-heading.lg {
+  height: 92px;
+  line-height: 92px;
+}
+
+.x-card > .x-card-body {
+  padding: 5px 0;
+  margin-top: 5px;
+  border-top: 1px solid #ddd;
+}
+
+.x-card > .x-card-body > .x-card-text {
+  height: 40px;
+  overflow-y: auto;
+  padding: 0 5px;
+  font-size: 14px;
+  color: #777;
+}
+.x-card-b-box {
+  display: inline-block;
+  width: 302px;
+  vertical-align: top;
+}
+.x-card-b-box >p{
+  padding: 10px;
+}
+.x-card-b {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.x-card-b.active {
+  border: 1px solid #b62929;
+}
+
+.x-card-b > .x-card-body {
+  width: 280px;
+  min-height: 127px;
+  padding: 7px  5px 0 10px;
+  background-image: url("/data/image/pay-type-icon/bank.png");
+  background-repeat: no-repeat !important;
+  background-size: 100% 100%;
+  color: #fff;
+}
+
+.x-card-b.active > .x-card-body {
+  background-image: url("/data/image/pay-type-icon/bank-active.png");
+}
+.x-card-body .bankAddress{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.x-card-body p span:nth-child(1){
+  width: 70px;
+  vertical-align: top;
+  display: inline-block;
+}
+.x-card-body p span:nth-child(2){
+  display: inline-block;
+  width: calc(100% - 75px);
+}

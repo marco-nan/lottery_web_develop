@@ -1,0 +1,1976 @@
+body {
+	position: relative;
+	font: 13px/1.8 'Microsoft YaHei', Arial, Verdana, Georgia,
+		'Comic Sans MS', 'Trebuchet MS', Black, Impact;
+	height: 100%;
+	min-width: 1342px;
+	min-height: 790px;
+	_width: expression(( document.documentElement.clientWidth ||
+		document.body.clientWidth)>1342?"auto":"1342");
+	_height: expression(( document.documentElement.clientHeight ||
+		document.body.clientHeight)>790?"auto":"790");
+	background-repeat: no-repeat;
+	background-attachment: fixed
+}
+
+html, body, p, ul, li, dl, dd, dt, input, h1, h2, h3, h4, select {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+a:active {
+	blr: expression(this.onFocus = this.blur ());
+}
+/*input,textarea{outline:none;}*/
+input, textarea {
+	font: 13px 'Microsoft YaHei', Arial, Verdana, Georgia, 'Comic Sans MS',
+		'Trebuchet MS', Black, Impact
+}
+
+button {
+	outline: none;
+}
+
+img {
+	border: 0;
+}
+
+.clear:after, .clear:before {
+	content: " ";
+	display: table;
+}
+
+.clear:after {
+	clear: both;
+}
+
+.clear {
+	zoom: 1;
+}
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+.select-box {
+	position: relative;
+	display: inline-block;
+	z-index: 99;
+}
+
+.select-box div i {
+	position: absolute;
+	right: 0;
+	top: 1px;
+	width: 29px;
+	height: 23px;
+}
+
+.select-box span {
+	display: block;
+	padding: 3px 38px 3px 8px;
+	line-height: 18px;
+	border-radius: 3px;
+}
+
+.period-list, .select-list {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	line-height: 26px;
+	height: 26px;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+}
+
+.Ccenter {
+	width: 1342px;
+	margin: 0 auto;
+}
+
+.display-block {
+	display: block;
+}
+
+.top {
+	height: 115px;
+	margin-bottom: 0;
+	width: 1342px;
+	padding: 5px 0 0 0;
+}
+
+.top_in {
+	width: 1342px;
+	height: 115px;
+	position: relative;
+	z-index: 99;
+}
+
+.top_in .logo {
+	width: 210px;
+	height: 108px;
+	float: left;
+}
+
+.top_in .top_menu {
+	width: auto;
+	position: absolute;
+	right: 5px;
+	width: auto;
+	height: 40px;
+	top: 10px;
+}
+
+.top_in .top_menu a {
+	width: 111px;
+	height: 40px;
+	float: left;
+	position: relative;
+	z-index: 98
+}
+
+.top_in .lottery_result {
+	float: left;
+	margin-top: 0px;
+	height: 50px;
+	padding: 2px 0 3px 0;
+	display: inline;
+	text-align: center;
+	width: 540px;
+}
+
+.lottery_result .lr_txt {
+	color: #fff;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 5px;
+	font-size: 14px;
+}
+
+.lottery_result .lr_txt a {
+	color: #fff;
+}
+
+.lottery_result .flip .lottery-result-ball {
+	-webkit-transform: rotateX(360deg);
+	-moz-transform: rotateX(360deg);
+	transform: rotateX(360deg);
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-transition-delay: 0s;
+	-moz-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.redtext {
+	color: red;
+}
+
+.bluetext {
+	color: #09A3C8;
+}
+
+.greentext {
+	color: #00C400;
+}
+
+.game_mane {
+	width: 285px;
+	height: 50px;
+	margin-left: 115px;
+	*float: left;
+	*margin-left: 12px;
+	*width: 256px;
+}
+
+.game_mane span {
+	display: inline-block;
+	float: left;
+	height: 50px;
+	padding: 0 9px 0 5px;
+	font-weight: bold;
+	font-size: 27px;
+	font-style: italic;
+	color: #fff;
+	letter-spacing: 2px;
+}
+
+.game_mane .cn-btn {
+	display: block;
+	width: 76px;
+	height: 23px;
+	float: left;
+	margin-top: 10px;
+	background: url(/Content/default/images/cn-btn.png?113c7fa0cc7)
+		no-repeat;
+}
+
+.openinfo {
+	width: 250px;
+	height: 29px;
+	padding: 3px 5px;
+	font-size: 12px;
+	margin-left: 115px;
+	*float: left;
+	*margin-left: 12px;
+}
+
+.drawNumber {
+	line-height: 15px;
+	width: 300px; /
+	float: left;
+	text-align: center;
+}
+
+.drawNumber label {
+	color: #f0a109;
+	font-weight: bold;
+}
+
+.drawNumber input {
+	background: none;
+	border: none;
+}
+
+.drawNumber .c-period {
+	float: left;
+	padding: 0;
+	width: 128px;
+	text-align: center
+}
+
+.drawNumber .c-period div {
+	line-height: 15px;
+}
+
+.drawNumber .c-resttime { /*margin-left:122px;*/
+	font-size: 24px;
+	line-height: 29px;
+	text-align: center;
+	font-weight: 700;
+	float: left;
+	width: 145px;
+	padding: 0;
+	height: 29px;
+	overflow: hidden;
+}
+
+.drawNumber .c-resttime i {
+	color: #fff !important;
+	font-size: 25px;
+	line-height: 34px;
+	font-weight: bold;
+}
+
+.game_info {
+	float: left;
+	width: 385px;
+	height: 95px;
+	padding: 9px 0 9px 5px;
+}
+
+.game_ico {
+	width: 97px;
+	height: 97px;
+	float: left;
+	padding: 0 8px 0 10px;
+	*padding: 0;
+}
+
+.game_ico image {
+	width: 100%;
+	height: 100%;
+}
+
+/*音效*/
+.volume {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 19px;
+	height: 26px;
+	vertical-align: middle;
+	margin: 0 5px;
+	background: url(/Content/default/images/volume-ico.png?50c86b0d5e4)
+		no-repeat;
+}
+
+.volume-on {
+	background-position: 0 0;
+}
+
+.volume-off {
+	background-position: 0 -25px;
+}
+
+.Ringtone {
+	background: #404549;
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 5px;
+	height: 26px;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+}
+
+.Ringtone .select-current span {
+	border: none;
+	color: #fff;
+	background: none;
+}
+
+.Ringtone .select-current i {
+	border: none;
+	background: none;
+}
+
+.Ringtone .select-current i:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	margin-top: -3px;
+	margin-right: -3px;
+}
+/*音效-----*/
+.video-btn {
+	display: inline-block;
+	padding: 0 20px;
+	line-height: 26px;
+	vertical-align: middle;
+	border-radius: 5px;
+}
+
+.container {
+	position: relative;
+	width: 1342px;
+	margin-bottom: 40px;
+}
+
+.container .side { /*position:absolute;left:0 ;top:0;bottom:30px;*/
+	width: 199px;
+	float: left;
+}
+
+.container .ui-main {
+	width: 1140px;
+	margin: 0 0 0 202px;
+	position: relative;
+}
+
+.container .rightbar {
+	width: 234px;
+	height: 705px;
+	float: right;
+	margin-top: -45px;
+}
+
+.side-acc-btn {
+	height: 19px;
+	padding: 7px;
+	margin-bottom: 5px;
+}
+
+.side-acc-btn a {
+	width: 84px;
+	height: 19px;
+	line-height: 19px;
+	text-align: center;
+	float: left;
+	font-size: 14px;
+}
+
+.side-acc-btn a#HistoryOrders {
+	border: none;
+}
+
+.userbox {
+	margin-bottom: 1px;
+	width: 100%;
+	height: auto;
+}
+
+.userbox li {
+	height: 31px;
+	padding-top: 12px;
+	line-height: 31px;
+	position: relative;
+}
+
+.userbox li .stc_t {
+	padding-left: 45px;
+	line-height: 31px;
+	display: inline-block;
+	*zoom: 1;
+}
+
+.userbox li .stc_c {
+	width: 100px;
+	text-align: left;
+	display: inline-block;
+	font-family: 'squarefontregular', 'Helvetica', 'Verdana', 'Tahoma',
+		sans-serif
+}
+
+.userbox .refresh {
+	position: absolute;
+	right: 3px;
+	top: 15px;
+	display: block;
+	padding: 0 5px;
+	line-height: 25px;
+	cursor: pointer;
+}
+
+.acc-links {
+	padding: 10px 0 3px 0;
+}
+
+.acc-links a {
+	width: 65px;
+	float: left;
+	height: 60px;
+	line-height: 20px;
+	margin: 0 0 1px 1px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.acc-links a span {
+	display: block;
+	padding-top: 40px;
+}
+
+.side_tab {
+	width: 100%;
+	height: auto;
+	padding: 0 0 4px 0;
+}
+
+.side_tab .st_header {
+	width: 199px;
+	height: 38px;
+	font-size: 0;
+}
+
+.st_header a {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	width: 96px;
+	text-align: center;
+	line-height: 33px;
+	padding-top: 5px;
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.st_header a.active {
+	width: 103px;
+	font-size: 15px;
+	height: 38px;
+	padding: 0;
+	line-height: 38px;
+	font-weight: bolder;
+}
+
+.st_content {
+	width: 197px;
+	height: 194px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	overflow-y: auto;
+}
+
+.st_content .stc_1 {
+	border-radius: 5px;
+}
+
+.st_content li {
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	*line-height: 20px;
+	*height: 20px;
+}
+/*.st_content span{float:left;}*/
+.st_content .stc_t {
+	text-align: right;
+	width: 45%;
+	overflow: hidden;
+}
+
+.st_content .stc_c {
+	text-align: center;
+	width: 55%;
+	overflow: hidden;
+}
+
+.st_content .stc_2 {
+	width: 100%;
+	height: 100%;
+}
+
+.st_content .top10-order-header {
+	width: 100%;
+	height: 22px;
+}
+
+.top10-order-header .top10-tr {
+	
+}
+
+.st_content .top10-tr {
+	overflow: hidden;
+}
+
+.st_content .top10-tr li {
+	float: left;
+	text-align: center;
+	line-height: 22px;
+	height: 22px;
+	overflow: hidden;
+}
+
+.st_content .top10-tr li.top10-td-1 {
+	width: 43%
+}
+
+.st_content .top10-tr li.top10-td-2 {
+	width: 23%
+}
+
+.st_content .top10-tr li.top10-td-3 {
+	width: 33%
+}
+
+.st_content .top10-order-content {
+	width: 100%;
+}
+
+.stc_2 .top10-order-content {
+	width: 100%;
+}
+
+.stc_2 .top10-item {
+	
+}
+
+.side-result {
+	overflow: hidden;
+	font-size: 12px;
+}
+
+.side-result li {
+	overflow: hidden;
+	padding: 3px 0 3px 4px;
+	width: auto;
+}
+
+.side-result .sr-period {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 60px;
+	float: left;
+	text-align: center;
+}
+
+.side-result .sr-index {
+	float: left;
+	width: 19px;
+	height: 19px;
+	margin: 2px;
+	line-height: 19px;
+	text-align: center;
+}
+
+.side-result li i {
+	font-style: normal;
+	display: inline-block;
+}
+
+.side-result li>i {
+	padding: 0 10px 0 5px;
+}
+
+.side-result .sr-nums {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 90px;
+	float: left;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*
+#lotteryResultCenter .left_resultNum:hover span {
+	-webkit-transition: margin 3s linear;
+	-moz-transition: margin 3s linear;
+	-o-transition: margin 3s linear;
+	-ms-transition: margin 3s linear;
+	transition: margin 3s linear;
+}
+*/
+
+.spanLongHover{
+	-webkit-transition: margin 5s linear;
+	-moz-transition: margin 5s linear;
+	-o-transition: margin 5s linear;
+	-ms-transition: margin 5s linear;
+	transition: margin 5s linear;
+	margin-left: -350px;
+	current: default;
+}
+.spanMiddleHover{
+	-webkit-transition: margin 3s linear;
+	-moz-transition: margin 3s linear;
+	-o-transition: margin 3s linear;
+	-ms-transition: margin 3s linear;
+	transition: margin 3s linear;
+	margin-left: -175px;
+	current: default;
+}
+
+.spanShortHover{
+	-webkit-transition: margin 3s linear;
+	-moz-transition: margin 3s linear;
+	-o-transition: margin 3s linear;
+	-ms-transition: margin 3s linear;
+	transition: margin 3s linear;
+	margin-left: -70px;
+	current: default;
+}
+/*#lotteryResultCenter .left_resultNum:hover span {
+	margin-left: -300px;
+	current: default;
+}*/
+
+.side-result .sr-nums i {
+	padding: 0 1px;
+}
+
+.side-in {
+	margin-top: 1px;
+}
+
+.side_menu a.sidem_b {
+	display: block;
+	font-weight: 700;
+	height: 42px;
+	line-height: 42px;
+	padding-right: 30px;
+	text-align: right;
+	font-size: 14px;
+}
+
+.side_menu a.sidem_b i {
+	float: left;
+	width: 26px;
+	height: 28px;
+	margin: 7px 15px 0 8px;
+}
+
+.side_menu .sidem_item ul {
+	display: none;
+	margin-bottom: 1px;
+}
+
+.side_menu .sidem_item li {
+	height: 26px;
+}
+
+.side_menu .sidem_item li a {
+	display: block;
+	text-align: left;
+	height: 26px;
+	line-height: 26px;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.side_menu .sidem_item li a:hover, .side_menu .sidem_item li a.active {
+	
+}
+
+.side_menu .sidem_item_active ul {
+	display: block;
+}
+
+.side_menu {
+	margin: 0;
+	width: 198px;
+}
+
+.side_menu .sidem_item li a span {
+	display: block;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.side_menu .sidem_item li a:hover span, .side_menu .sidem_item li a.active span
+	{
+	/*box-shadow: 42px 0px 0 0 #227aa4 inset;*/
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	border-radius: 5px;
+}
+
+.side_menu .sidem_item li a i {
+	width: 42px;
+	height: 25px;
+	float: left;
+}
+
+/*.side_shadow{width:100%;height:5px;position:absolute;bottom:0;left:0;display:block;background:url(/Content/default/images/side_shadow.jpg?e39b28590fd) repeat-x;}*/
+.con_box {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+/* 右侧 */
+.rightbar .otergamebar {
+	/*width:100%;height:34px;_width:auto;padding-bottom:5px;*/
+	
+}
+
+.rightbar .otergamebar a {
+	display: block;
+	padding-left: 16px;
+	height: 100%;
+	line-height: 34px;
+}
+
+.rightbar .otergamebar a span {
+	float: left;
+}
+
+.rightbar .otergamebar a i {
+	width: 9px;
+	height: 8px;
+	float: right;
+	margin: 12px 14px 0 0;
+}
+
+/* 跑马灯 */
+.side_news {
+	width: 100%;
+	min-width: 1210px;
+	height: 28px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	_position: absolute;
+	_left: expression(eval(document.documentElement.scrollLeft +0));
+	_top: expression(eval(document.documentElement.scrollTop +
+		document.documentElement.clientHeight-this.offsetHeight- ( parseInt(this.currentStyle.marginTop
+		, 10)||0)-(parseInt(this.currentStyle.marginBottom, 10)||0)));
+	z-index: 99;
+}
+
+.side_news .sn_in {
+	width: 1342px;
+	margin: 0 auto;
+}
+
+.side_news .sn_h {
+	float: left;
+	width: 170px;
+	text-align: right;
+	font-weight: bold;
+	line-height: 28px;
+	padding-right: 30px;
+	display: inline;
+}
+
+.side_news .sn_c {
+	float: left;
+	width: 1008px;
+	height: 21px;
+	margin: 3px 0;
+	display: inline;
+}
+
+/* 快选金额 */
+.select-amount {
+	width: 73px;
+	text-align: center !important;
+	padding: 2px 0;
+}
+
+.select-amount a {
+	display: block;
+	padding: 4px 0;
+}
+
+/* 表格样式 */
+table.table_chc {
+	border-collapse: separate;
+	border-spacing: 1px;
+	border-width: 0;
+	width: 100%;
+	font-family: verdana, arial;
+	font-size: 10pt;
+	line-height: 1.5;
+}
+
+table.table_chc th {
+	padding: 3px;
+}
+
+table.table_chc td {
+	padding: 3px 5px;
+	vertical-align: top;
+}
+
+/* 最新10笔交易 */
+/*.top10-order{height:194px;overflow:auto;color:#fff;}
+.top10-tr{overflow:hidden;}
+.top10-tr li{float:left;text-align:center;}
+.top10-order .top10-td-1{width:80px;}
+.top10-order .top10-td-2{width:60px;}
+.top10-order .top10-td-3{width:60px;}
+.top10-td-4{padding:0 7px;word-break:break-all}
+.top10-order-content{width:200px;}
+.top10-item,.top10-order-header ul{border-bottom:1px solid #113c4d;}
+.top10-order-content li{font-family:Arial,Verdana;}
+.top10T{text-align:center;line-height:30px;}*/
+table.top10-order {
+	width: 228px;
+	color: #fff;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 12px;
+}
+/*table.top10-order td,table.top10-order th{border-right:1px solid  #113c4d;border-bottom:1px solid  #113c4d}*/
+table.top10-order .bdtop {
+	border-top: 1px solid #113c4d;
+}
+
+table.top10-order .bdbottom {
+	border-bottom: 1px solid #113c4d;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+table.top10-order th {
+	text-align: center;
+	border-bottom: 1px solid #113c4d
+}
+
+.top10T {
+	text-align: center;
+	line-height: 30px;
+}
+
+.top10T a {
+	color: inherit;
+}
+
+/* 注单 */
+.cart-box {
+	display: none;
+}
+
+.cart-box .order-header {
+	text-align: center;
+	line-height: 27px;
+	font-weight: 700;
+}
+
+.cart-box .order-list-wrap {
+	max-height: 198px;
+	overflow: auto;
+	_height: expression(this.scrollHeight > 198 ? "198px" : "auto");
+	_height: 260px;
+	width: 198px;
+}
+
+.cart-box .order-list {
+	width: 100%;
+	text-align: center;
+	font-family: Arial;
+}
+
+.cart-box .order-list thead {
+	
+}
+
+.cart-box .order-list tbody td {
+	
+}
+
+.cart-box .order-list .ol-title {
+	word-break: break-all;
+}
+
+.cart-box .order-list b {
+	margin: 0 3px;
+}
+
+.cart-box .order-footer {
+	padding: 10px 0;
+	text-align: center;
+}
+
+.cart-box .order-footer .btn { /*width:50px;*/
+	height: 24px;
+}
+
+.cart-box .order-footer .btn-blue {
+	text-shadow: none;
+}
+
+.cart-box .order-list td {
+	padding: 0 2px;
+}
+
+.cart-box .order_state p {
+	border-width: 1px 0;
+	border-style: solid;
+	padding: 3px 0;
+	text-align: center;
+}
+
+.cart-box .order_tips {
+	height: 25px;
+	line-height: 25px;
+	display: none;
+}
+
+/* buttons */
+.topnav-wrap a.btn, .btn {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	padding: 0 12px;
+	margin: 0 3px;
+	font-size: 12px;
+	line-height: 24px\9;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled= false);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.topnav-wrap a.btn-mini, .btn-mini {
+	height: 20px;
+	line-height: 20px;
+	padding: 0 6px;
+}
+
+.topnav-wrap a.btn-mini {
+	width: auto;
+}
+
+.topnav-wrap .diy-slct-sum .btn {
+	width: 50px;
+	padding: 3px 0;
+	height: 17px;
+}
+
+/* 路单样式，BY CHC ----------start------*/
+.waybill-tab {
+	margin-bottom: 5px;
+}
+
+.waybill-tab dt, .waybill-tab dd {
+	float: left;
+}
+
+.waybill-tab a {
+	float: left;
+	width: 60px;
+	height: 25px;
+	line-height: 25px;
+	margin: 2px;
+	text-align: center;
+}
+
+.waybill {
+	margin: 0 2px;
+	width: 900px;
+}
+
+.waybill-tab dt {
+	width: 100px;
+	overflow: hidden;
+	margin: 2px 10px 2px 2px;
+}
+
+.waybill-tab select {
+	width: 120px;
+	border: none;
+	padding-right: 26px;
+	height: 25px;
+	line-height: 25px;
+}
+
+/* 路单样式，BY CHC ----------end------*/
+
+/*新路单样式*/
+.waybill-box-1, .waybill-wrap {
+	width: 890px;
+	padding: 10px 5px;
+}
+
+.w-side {
+	width: 68px;
+	float: left;
+}
+
+div.w-side span {
+	width: 100%;
+	height: 98px;
+	display: table;
+}
+
+.w-side span a {
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	width: 32px;
+	padding: 0 10px 10px 10px;
+	height: 92px;
+	vertical-align: middle;
+	display: table-cell;
+	*display: block;
+	line-height: 25px;
+}
+
+.w-side i {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 12px 0 0 0;
+}
+
+.w-item-main {
+	float: left;
+	width: 818px;
+	margin-left: 4px;
+}
+
+.w-item-main dl {
+	height: 96px;
+}
+
+.w-item-main dt {
+	float: left;
+	width: 32px;
+	height: 95px;
+}
+
+.w-item-main dt span {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.w-item-main dd {
+	position: relative;
+	float: left;
+	overflow: hidden;
+}
+
+.w-item-main table {
+	border: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	cursor: all-scroll;
+}
+
+.w-item-main td {
+	padding: 0;
+}
+
+.w-item-main td i {
+	display: block;
+	width: 15px;
+	height: 15px;
+	font-style: normal;
+	text-align: center;
+	line-height: 15px;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+.big-road-wrap {
+	margin-bottom: 4px;
+}
+
+.big-road-wrap dd {
+	width: 783px;
+	height: 96px;
+}
+
+.next-road-wrap dl {
+	width: 203px;
+	float: left;
+}
+
+.next-road-wrap dd {
+	width: 170px;
+	height: 96px;
+}
+
+/*开奖结果*/
+.lottery-result-ball {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	width: 44px;
+	height: 42px;
+	line-height: 44px;
+	padding-bottom: 5px;
+	margin: 0 7px;
+	font-family: 'Microsoft YaHei', Arial, ’Times New Roman’;
+	font-size: 16px;
+}
+
+.game_PK10 .lottery-result-ball {
+	width: 31px;
+	height: 31px;
+	padding: 0;
+	margin: 10px 6px 0 6px;
+	font-size: 14px;
+	line-height: 31px;
+}
+
+.lr_ball_box {
+	width: 500px;
+	height: 58px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.result-bjpk10 .lottery-result-ball {
+	width: 50px;
+	height: 32px;
+	line-height: 999;
+	overflow: hidden;
+	font-size: 0;
+	margin: 10px 1px 0 3px;
+	padding-bottom: 0;
+}
+
+.result-gxk3 .ball_01, .result-gxk3 .ball_1, .result-gxk3 .ball_02,
+	.result-gxk3 .ball_2, .result-gxk3 .ball_03, .result-gxk3 .ball_3,
+	.result-gxk3 .ball_04, .result-gxk3 .ball_4, .result-gxk3 .ball_05,
+	.result-gxk3 .ball_5, .result-gxk3 .ball_06, .result-gxk3 .ball_6 {
+	font-size: 0;
+	line-height: -9999;
+}
+
+.diy-slct-sum {
+	width: 240px;
+	padding: 3px 0;
+}
+
+.diy-slct-sum .diy_tit {
+	height: 27px;
+	line-height: 27px;
+	padding: 0 15px;
+	font-weight: bold;
+}
+
+.diy-slct-sum .diy_tit span {
+	float: left;
+}
+
+.diy-slct-sum .diy_tit a {
+	float: right;
+}
+
+.diy-slct-sum .dss-content {
+	padding: 5px;
+}
+
+.diy-slct-sum .dss-content input {
+	padding: 2px;
+	width: 90px;
+	height: 23px;
+	margin: 5px 0;
+}
+
+.diy-slct-sum .dss-content i {
+	font-style: normal;
+	cursor: pointer;
+	float: right;
+	margin: 5px 2px 0;
+	height: 27px;
+	padding: 2px 0;
+	line-height: 26px;
+	width: 55px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+.diy-slct-sum li {
+	padding: 3px 5px;
+	line-height: 100%;
+	overflow: hidden;
+}
+
+.diy-slct-sum .dss-btn {
+	text-align: center;
+	padding: 5px;
+}
+
+.diy-slct-sum .dss-tip {
+	text-align: center;
+	padding: 3px 0;
+}
+
+.diy-slct-sum .dss-warn {
+	padding: 3px 8px;
+	line-height: 1.2;
+}
+
+.tab-wrap {
+	padding: 0 10px;
+	margin-top: 10px
+}
+
+.tab-btn {
+	
+}
+
+.tab-btn a {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px 1px;
+}
+
+.tab-btn a:hover {
+	
+}
+
+.tab-btn a.active {
+	border-width: 1px 1px 0 1px;
+	padding: 0 10px 1px;
+	font-weight: bold;
+}
+
+.tab-tip {
+	float: right;
+	margin-top: 4px;
+}
+
+.tab-box {
+	
+}
+
+.tab-box .tb-item {
+	margin: 5px 1px;
+	padding: 7px;
+}
+
+.tab-box .tb-head {
+	font-family: Consolas, Verdana, Arial;
+}
+
+.tab-box .tb-head span {
+	margin-left: 15px;
+}
+
+.tab-box .tb-self p {
+	margin: 5px;
+}
+
+.tab-box .tb-reply {
+	padding: 3px;
+}
+
+.tab-box .tb-reply b {
+	color: red;
+	font-style: normal;
+}
+
+.tab-form {
+	display: none;
+	padding-top: 20px;
+}
+
+.tab-form textarea {
+	height: 100px;
+	width: 270px;
+	padding: 3px;
+}
+
+.table-list {
+	margin-top: 5px;
+}
+
+.table-list th {
+	height: 25px;
+	line-height: 25px\9;
+	font-weight: 500;
+}
+
+.topnav-wrap {
+	padding: 5px;
+}
+
+.topnav-wrap input {
+	text-align: left;
+	vertical-align: initial;
+	cursor: initial;
+	height: 18px;
+	margin: 1px 0;
+}
+
+.topnav-wrap input.btn {
+	height: 20px;
+}
+
+.topnav-wrap input.btn-green {
+	width: 50px;
+	padding: 3px 0;
+	height: 23px;
+	display: inline-block;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	text-shadow: initial;
+	line-height: 1;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled= false);
+}
+
+.topnav-wrap tfoot td {
+	
+}
+
+.icon-red-1, .icon-blue-1, .icon-red-2, .icon-blue-2, .icon-red-3,
+	.icon-blue-3, .icon-red-4, .icon-blue-4, .icon-red-5, .icon-blue-5,
+	.icon-big, .icon-small, .icon-odd, .icon-even, .icon-dragon,
+	.icon-tiger, .icon-draw, .icon-green-1 {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/*帐户资料*/
+.user_info_tab {
+	padding-top: 7px;
+}
+
+.user_info_tab a {
+	height: 25px;
+	line-height: 25px;
+}
+
+/* 本期投注 */
+.page {
+	font: 13px/1.5 verdana, arial;
+	height: 22px;
+	margin-top: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.page a, .page .page-inner span {
+	text-decoration: none;
+	line-height: 22px;
+	height: 22px;
+	overflow: hidden;
+	margin: 0 1px;
+	padding: 0 7px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.page_num {
+	padding: 0 7px;
+	text-decoration: none;
+	line-height: 20px;
+	height: 20px;
+	overflow: hidden;
+	margin: 0 1px;
+	cursor: pointer;
+}
+
+.page a {
+	padding: 0 8px;
+	margin: 0 2px;
+}
+
+.page .current {
+	padding: 0 8px;
+}
+
+/* topnav 打开后页面的标题 */
+h4.mainpage-title {
+	font-family: Microsoft Yahei;
+	font-size: 14px;
+	padding: 0 3px;
+	margin-bottom: 5px;
+}
+
+/* 弹窗 */
+.body .d-state-highlight {
+	width: 40px;
+	height: 23px;
+	padding: 0 0 3px 0;
+	text-align: center;
+	text-shadow: none;
+	box-shadow: none;
+	border-radius: 4px;
+	min-height: initial;
+}
+
+.body .d-state-highlight:hover, .body .d-state-highlight:active {
+	border: none;
+	box-shadow: none;
+}
+
+.body .d-close {
+	position: absolute;
+	top: 13px;
+	right: 13px;
+	display: block;
+	width: 18px;
+	height: 18px;
+	opacity: 1;
+	filter: alpha(opacity = 100);
+	line-height: 999;
+	overflow: hidden;
+}
+
+.body .d-button {
+	border: none;
+	text-shadow: none;
+	width: auto;
+	padding: 6px 12px;
+	height: auto;
+	color: #fff;
+	font-weight: 700;
+	font-size: 14px;
+	margin-left: 0;
+	line-height: 1.428571429;
+}
+
+.body .d-button:active {
+	
+}
+
+.body .d-button:focus {
+	border: none;
+}
+
+.body .d-state-highlight:active {
+	border: none
+}
+
+.body .d-outer {
+	padding: 0;
+	border-radius: 8px;
+}
+
+.body .d-inner {
+	border-radius: 2px;
+}
+
+.body .d-outer .d-dialog {
+	box-shadow: none;
+	border-radius: 7px;
+}
+
+.body .d-outer .d-title {
+	background: none;
+	margin: 0;
+	line-height: 1.428571429;
+	min-height: 16.428571429px;
+	height: auto;
+	padding: 15px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-weight: bold;
+	cursor: default;
+	border-top: none;
+}
+
+.body .d-buttons {
+	border: none;
+	text-align: center;
+	background: none;
+}
+
+.body .d-nw, .body  .d-n, .body  .d-ne, .body  .d-w, .body  .d-e, .body  .d-sw,
+	.body  .d-s, .body  .d-se {
+	display: none;
+}
+
+.body .d-mask {
+	display: none;
+}
+
+.w-1000 .side_news {
+	width: 1210px;
+}
+
+/* 自定义dialog样式 */
+.dialog-custom {
+	border-radius: 8px;
+	display: inline-block;
+	font: 12px/1.8 'Microsoft YaHei', Arial, Verdana, Georgia,
+		'Comic Sans MS', 'Trebuchet MS', Black, Impact;
+}
+
+.dialog-custom .ui-dialog-content {
+	min-width: 170px;
+	text-align: center
+}
+
+.dialog-custom .ui-dialog-close {
+	display: block;
+	width: 18px;
+	height: 18px;
+	opacity: 1;
+	filter: alpha(opacity = 100);
+	overflow: hidden;
+}
+
+.dialog-custom .table-box th {
+	text-align: center;
+}
+
+.dialog-custom .ui-dialog-footer {
+	padding: 10px 20px 10px 20px;
+	text-align: center;
+}
+
+.dialog-custom .ui-dialog-footer button.ui-dialog-autofocus:hover,
+	.dialog-custom .ui-dialog-footer button.ui-dialog-autofocus:focus,
+	.dialog-custom .ui-dialog-footer button.ui-dialog-autofocus:active {
+	outline: none;
+}
+
+/* 投注列表 */
+.betorder-box {
+	width: 400px;
+}
+
+.betorder-box .bb-list {
+	max-height: 300px;
+	overflow: auto;
+	padding: 10px;
+}
+
+.betorder-box .bb-list table {
+	width: 100%;
+}
+
+.betorder-box .foot-total {
+	padding: 10px;
+}
+
+/*登录*/
+.login-wrap {
+	width: 588px;
+	height: 222px;
+	position: fixed;
+	left: 50%;
+	margin-left: -288px;
+	top: 50%;
+	margin-top: -108px;
+}
+/*.login-close{position:absolute;top:8px;right:8px;display:block;width:18px;height:17px;background:url(/content/default/images/close.png) no-repeat;}*/
+.login-show-label label.label_tip {
+	display: inline;
+}
+
+.login-area {
+	padding: 20px;
+	height: 120px;
+}
+
+.login-area>div {
+	height: 32px;
+	padding: 4px 0;
+	line-height: 32px;
+	width: 100%;
+}
+
+.login-area .label-parent {
+	position: relative;
+}
+
+.login-area span {
+	float: left;
+	width: 60px;
+}
+
+.login-area .input_tip {
+	float: left;
+	width: 203px;
+	padding: 6px 10px;
+	height: 20px;
+	text-align: left;
+	line-height: 20px\9;
+}
+
+.login-area .label_tip {
+	position: absolute;
+	left: 10px;
+	top: 3px;
+	cursor: text;
+	display: none;
+}
+
+.login-area .input_tip_45 {
+	width: 138px;
+	background-position: 0 -32px;
+}
+
+.login-area img {
+	float: left;
+	margin: 6px 0 0 5px;
+}
+
+.login-foot {
+	margin-top: 10px
+}
+
+.btn-login {
+	width: 83px;
+	height: 31px;
+	float: right;
+	line-height: 31px;
+}
+
+.ui-dialog-content td, .ui-dialog-content th {
+	text-align: center;
+}
+
+.ui-dialog-button {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	float: none;
+}
+
+.w900 {
+	width: 900px;
+	float: left;
+}
+
+/* 投注页面新增右侧切换模块 begin */
+.dn {
+	display: none !important;
+}
+
+.db {
+	display: inline-block !important;
+	*zoom: 1;
+	*display: inline;
+}
+
+.ui-md-box {
+	/*width:80px;*/
+	position: absolute;
+	right: 8px;
+	top: 76px;
+	z-index: 998;
+}
+
+.ui-ww-box a {
+	position: relative;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	width: 34px;
+	height: 34px;
+	margin: 0 3px 0 2px;
+	background: url(/content/default/images/nav-icon.png?fa60a1287e2)
+		no-repeat;
+}
+/*.ui-ww-box a.ui-t0-box {
+    background-position:0 0;
+}*/
+.ui-ww-box a.ui-t1-box {
+	background-position: 0 0;
+}
+
+.ui-ww-box a.ui-t2-box {
+	background-position: 0 -34px;
+}
+
+.ui-ww-box a.ui-t3-box {
+	border-bottom: 0;
+	background-position: 0 -68px;
+}
+
+.ui-ww-box a.ui-t4-box {
+	border-bottom: 0;
+	background-position: right -102px;
+	width: 164px;
+}
+
+.ui-ww-box a.ui-t4-box span {
+	width: 130px;
+	overflow: hidden;
+	color: #ff0;
+	line-height: 34px;
+	text-align: center;
+	display: block;
+}
+
+.ui-ww-box a.ui-t4-box span.red {
+	color: #f00;
+	animation: twinkling 0.5s infinite ease-in-out;
+	-moz-animation: twinkling 0.5s infinite ease-in-out;
+	-webkit-animation: twinkling 0.5s infinite ease-in-out;
+	-o-animation: twinkling 0.5s infinite ease-in-out;
+}
+
+.ui-skin-box {
+	position: absolute;
+	top: 43px;
+	right: 0;
+	width: 156px;
+	margin-right: -58px;
+}
+
+.ui-skin-box:before {
+	content: "";
+	display: block;
+	border-bottom: 8px solid rgba(255, 255, 255, 0.8);
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	position: absolute;
+	top: -8px;
+	left: 33px;
+}
+
+.ui-skin-in {
+	width: 144px;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	background-clip: border-box;
+	margin-right: 10px;
+	padding: 4px;
+	border: 2px rgba(0, 0, 0, 0.2) solid;
+	border-radius: 5px;
+	position: relative;
+}
+
+.ui-sub-box {
+	width: 67px;
+	cursor: pointer;
+	float: left;
+	margin: 0 2px;
+}
+
+.ui-skin-box label {
+	text-align: center;
+	font-size: 12px;
+	color: #000;
+	width: 100%;
+	margin-top: 5px;
+	padding-top: 45px;
+	background: url(/content/default/images/skin2.png?dd37942da00) no-repeat;
+}
+
+.ui-sub-two-box label {
+	background: url(/content/default/images/skin1.png?041a33e7eeb) no-repeat;
+}
+
+.ui-md-box .ui-code-right-box {
+	width: 107px;
+	height: 107px;
+	top: 43px;
+	background: url() no-repeat;
+	border: 3px solid rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	padding: 0;
+	right: 50%;
+	margin-left: -72px;
+}
+
+.ui-md-box .ui-code-right-box:before {
+	left: 45px;
+	top: -11px;
+}
+
+.ui-md-box .code2 {
+	background: url() no-repeat;
+}
+
+.ui-md-box .code2:before {
+	left: 83px;
+	top: -11px;
+}
+
+/* 投注页面新增右侧切换模块 end */
+
+/****彩种停售 start*****/
+.stop_selling {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(/content/default/images/stop_selling_bg.png?97de07cd64c)
+		repeat;
+	z-index: 98;
+}
+
+.stop_selling_title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 642px;
+	height: 616px;
+	margin-top: -358px;
+	margin-left: -304px;
+	background:
+		url(/content/default/images/stop_selling_title.png?2f9261f623a)
+		no-repeat;
+	z-index: 97;
+}
+/****彩种停售 end*****/
+@
+keyframes twinkling { 0% {
+	color: red;
+}
+
+50%
+{
+color
+:
+ 
+yellow
+;
+}
+100%{
+color
+:red
+}
+}
+.sumBtn_wrap .sumBtn_info {
+	float: left;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.sumBtn_wrap .sumBtn_info span {
+	float: left;
+	height: 27px;
+	line-height: 27px;
+	margin: 9px 3px;
+}
+
+.content .bet-wrap .txt_section4 li {
+	width: 25%;
+}
+
+.txt_section4 .border_001, .txt_section4 .ball {
+	width: 28%
+}
+
+.content .txt_section4 ul .amount {
+	width: 83px
+}
+
+.gameSelect {
+	position: relative;
+	z-index: 1;
+	padding: 0 3px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	width: 60px;
+	padding-right: 20px;
+	background: url(/Content/default/images/select-box.png?6acddb20c8d)
+		no-repeat;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	float: left;
+}
+
+.gameSelect span {
+	position: relative;
+	vertical-align: middle;
+	color: #fff;
+}
+
+.gameSelect select {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+.txt_section5 {
+	padding: 5px 0;
+}
+
+.txt_section5 .dist-table {
+	width: 50%;
+	float: left;
+}
+
+.txt_section5 .dist-table span {
+	width: 80px;
+}
+
+.txt_section5 .dist-select .ball {
+	background-position: center top;
+	width: 60px;
+}
+
+.txt_section5 .dist-table .amount_pane {
+	padding-top: 2px;
+	width: 120px;
+}
+
+.txt_section5 .dist-select .int-text {
+	width: 80px;
+	height: 17px;
+	line-height: 17px\9;
+	padding: 6px 0;
+	border: 1px solid #ababab;
+	border-radius: 3px;
+}
+
+.txt_section5 .btn_ok {
+	width: 50%;
+}
+
+.txt_section5 .btn_ok span {
+	float: right;
+	padding-right: 10px;
+}

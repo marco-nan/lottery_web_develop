@@ -1,0 +1,138 @@
+<div id="quickBetDiv" style="display: none"><button class="QuickBetBtn">快速投注</button>
+<div style="clear: both;"></div>
+<div class="Nav_content_Fr_right_wrap">
+    <table class="Nav_content_Fr_table">
+        <tbody>
+        <tr>
+            <td onclick="lhcManager.quickBet('DA_N',-1,this)">大</td>
+            <td onclick="lhcManager.quickBet('XIAO_N',-1,this)">小</td>
+            <td onclick="lhcManager.quickBet('DAN_N',-1,this)">单</td>
+            <td onclick="lhcManager.quickBet('SHUANG_N',-1,this)">双</td>
+        </tr>
+
+        <!--<tr>
+            <td>大单</td>
+            <td>小单</td>
+            <td>大双</td>
+            <td>小双</td>
+        </tr>
+
+        <tr>
+            <td>合单</td>
+            <td>合双</td>
+            <td>家禽</td>
+            <td>野兽</td>
+        </tr>-->
+        </tbody>
+    </table>
+
+    <table class="Nav_content_Fr_table">
+        <tbody>
+        <tr>
+            <td onclick="lhcManager.quickBet('SXS_N',0,this)">鼠</td>
+            <td onclick="lhcManager.quickBet('SXS_N',1,this)">牛</td>
+            <td onclick="lhcManager.quickBet('SXS_N',2,this)">虎</td>
+            <td onclick="lhcManager.quickBet('SXS_N',3,this)">兔</td>
+            <td onclick="lhcManager.quickBet('SXS_N',4,this)">龙</td>
+            <td onclick="lhcManager.quickBet('SXS_N',5,this)">蛇</td>
+        </tr>
+
+        <tr>
+            <td onclick="lhcManager.quickBet('SXS_N',6,this)">马</td>
+            <td onclick="lhcManager.quickBet('SXS_N',7,this)">羊</td>
+            <td onclick="lhcManager.quickBet('SXS_N',8,this)">猴</td>
+            <td onclick="lhcManager.quickBet('SXS_N',9,this)">鸡</td>
+            <td onclick="lhcManager.quickBet('SXS_N',10,this)">狗</td>
+            <td onclick="lhcManager.quickBet('SXS_N',11,this)">猪</td>
+        </tr>
+
+
+        </tbody>
+    </table>
+
+    <table class="Nav_content_Fr_table">
+        <tbody>
+        <!--<tr style="color: red">
+            <td>红大</td>
+            <td>红小</td>
+            <td>红单</td>
+            <td>红双</td>
+        </tr>
+
+        <tr style="color:  rgb(12, 128, 156) ">
+            <td>蓝大</td>
+            <td>蓝小</td>
+            <td>蓝单</td>
+            <td>蓝双</td>
+        </tr>
+
+        <tr style="color: rgb(10, 170, 10) ;">
+            <td>绿大</td>
+            <td>绿小</td>
+            <td>绿单</td>
+            <td>绿双</td>
+        </tr>-->
+        <tr>
+            <td style="color: red" onclick="lhcManager.quickBet('LHC_HONG',this)">红波</td>
+            <td style="color:  rgb(12, 128, 156) " onclick="lhcManager.quickBet('LHC_LANG',this)">蓝波</td>
+            <td style="color: rgb(10, 170, 10) " onclick="lhcManager.quickBet('LHC_LU',this)">绿波</td>
+
+        </tr>
+        </tbody>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td style="width:49%;text-align: center;">
+                <button class="resentChoose" onclick="reset()">重置</button>
+            </td>
+            <td style="width:49%;text-align: center;"> <button class="allChoose" onclick="allChosen()">全选</button></td>
+            <!--<td style="width:33%;text-align: center;"><button class="oppositeChoose">反选</button></td>-->
+        </tr>
+    </table>
+    <div>
+
+
+
+    </div>
+
+</div>
+</div>
+<script>
+    function reset() {
+        $.each($('.Nav_content_Fr_table').find('td'),function (_,item) {
+            $(item).attr('data-chose',0);
+            $(item).css('background-color','')
+            $(item).removeClass('text-danger')
+        })
+        gameManager.cancel()
+    }
+
+    function allChosen() {
+        gameManager.cancel();
+        $.each($('.Nav_content_Fr_table').find('td'),function (_,item) {
+            $(item).attr('data-chose',0);
+            $(item).css('background-color','')
+            $(item).removeClass('text-danger')
+        })
+        lhcManager.allChosen()
+    }
+//    $(function () {
+//        $('.Nav_content_Fr_table').find('td').on('click',function () {
+//            var status = $(this).attr('data-chose')
+//            if(status == null || status == undefined){
+//                $(this).attr('data-chose',1);
+//                $(this).css('background-color','#FFC214')
+//                $(this).addClass('text-danger')
+//            }else if (status == 1){
+//                $(this).attr('data-chose',0);
+//                $(this).css('background-color','')
+//                $(this).removeClass('text-danger')
+//            }else if(status == 0){
+//                $(this).attr('data-chose',1);
+//                $(this).css('background-color','#FFC214')
+//                $(this).addClass('text-danger')
+//            }
+//
+//        })
+//    })
+</script>

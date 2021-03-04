@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>longsnake88 Flash</title>
+    <script type="text/javascript" src="https://login.longsnake88.com/jswrapper/integration.js.php?casino=longsnake88"></script>
+    <script type="text/javascript">
+        function parseUrl(){
+            var result ={};
+            var query = location.search.split("?")[1];
+            var queryArr = query.split("&");
+            queryArr.forEach(function(item){
+                var value = decodeURI(item.split("=")[1]);
+                var key = item.split("=")[0];
+                result[key] = value;
+            });
+            return result;
+        }
+        var result = parseUrl();
+        var userName = result["userName"]
+        var passWord = result["passWord"]
+        var language = result["language"]
+        var game = result["game"]
+       iapiSetCallout('Login', calloutLogin);
+       iapiSetCallout('Logout', calloutLogout);
+               function login(realMode) {
+                       iapiLogin(userName.toUpperCase(),passWord, realMode,language)
+        }
+                function logout(allSessions, realMode) {
+                    iapiLogout(allSessions, realMode);
+                }
+                function calloutLogin(response) {
+                if (response.errorCode) {
+                    alert("Login failed," + response.errorText);
+                }
+                else {
+                    window.location = "http://cache.download.banner.longsnake88.com/casinoclient.html?language="+language+"&game="+game;
+                }
+        }
+                function calloutLogout(response) {
+                if (response.errorCode) {
+                    alert("Logout failed," + response.errorCode);
+                }
+                else {
+                    alert("Logout OK")
+                }
+        }
+        </script>
+    
+    </head>
+<body>
+<style>
+    img
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 160px;
+        margin-top: -80px;
+        margin-left: -80px;
+    }
+</style>
+<img src="/images/load.gif" />
+<script>login(1)</script>
+</body>
+</html>

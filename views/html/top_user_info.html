@@ -1,0 +1,46 @@
+<script language=javascript type=text/javascript>
+  $(document).ready(function () {
+    getUserInfoTop();
+  });
+
+  function getUserInfoTop() {
+    $.ajax({
+      type: "GET",
+      url: HttpUtil.baseUrl + "/api/user/info",
+      dataType: "json",
+      success: function (data) {
+        console.log(data)
+        if (data != null) {
+          if (data.userInfo != null && data.userInfo != "") {
+
+            $("#top_u_account").html(data.userInfo.account);
+          }
+          if (data.extInfo != null && data.extInfo != "") {
+            $("#top_u_money").html(data.extInfo.money);
+          }
+          $("#top_newCount").html(data.unReadCount);
+        }
+	},
+     error: function (data) {
+          if (data.code == 'UC/TOKEN_INVALID') {
+            mem_logout();
+          }
+        }
+      });
+  }
+</script>
+
+<div class="logined-box">
+  <span>帐号：<font id="top_u_account"></font>&nbsp;&nbsp;余额：￥<font id="top_u_money"></font></span>
+  <a href="/page/user-center/user-center.html">会员中心</a><a href="/page/user-center/user-center.html?startPage=bank-rech">线上存款</a><a href="/page/user-center/user-center.html?startPage=bank-withdraw">线上取款</a><a href="/page/user-center/user-center.html?startPage=cms-message">未读讯息(<font class="col_money" id="top_newCount"></font>) </a><a href="javascript:void(0)" onclick="mem_logout()" class="exit">退出登录</a>
+  <!--#include virtual="/views/html/languages.html"-->
+</div>
+
+
+<style>
+  .key-wrap {
+    margin-top: 0 !important;
+  }
+</style>
+
+<script type="text/javascript" src="/views/js/Jurisdiction.js"></script>

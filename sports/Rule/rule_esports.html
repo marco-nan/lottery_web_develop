@@ -1,0 +1,158 @@
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .pageBox, .pageBox * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .pageBox {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        padding: 10px 35px;
+        font-size: 14px;
+        line-height: 1.8;
+        color: white;
+        font-family: "Microsoft YaHei", Arial, Verdana, Georgia, "Comic Sans MS", "Trebuchet MS", Black, Impact;
+        background: url(/sports/images/gameListBJ.jpg) no-repeat top center;
+        background-size: 100% 100%;
+    }
+
+    /* .pageBox .rule-title{
+          font-size: 22px;
+          text-align: center;
+          line-height: 40px;
+         color: #484544;
+      }*/
+    .pageBox .category-name {
+        font-size: 22px;
+        font-weight: 800;
+        padding: 10px 0;
+        border-bottom: 2px solid #42414180;
+    }
+
+    .pageBox .play-name {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 500;
+        padding: 6px 0;
+        color: #B5B3B4;
+    }
+
+    .pageBox .play-desc {
+        font-size: 14px;
+        font-weight: 300;
+        padding: 5px 0px 5px 28px;
+        color: #7E8690;
+        word-break: break-all;
+        word-wrap: break-word;
+        margin-bottom: 10px;
+    }
+    .pageBox p{
+        margin: 0px;
+    }
+</style>
+<div class="pageBox">
+    <div class="category-name">王者荣耀规则简介</div>
+    <div class="play-info">
+        <div class="play-name">胜</div>
+        <div class="play-desc">比赛获胜。单局比赛获胜或全场比赛获胜场次数多者获胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">一血</div>
+        <div class="play-desc">第一个击杀对方选手的队员和所在队伍获一血胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">一塔</div>
+        <div class="play-desc">第一个摧毁对方防御塔的队员和所在队伍获一塔胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">第一只主宰</div>
+        <div class="play-desc">第一个击杀主宰的队员和所在队伍获第一只主宰胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">第一只暴君</div>
+        <div class="play-desc">第一个击杀暴君的队员和所在队伍获第一只暴君胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">击杀胜</div>
+        <div class="play-desc">击杀数量多的队员和所在队伍获击杀胜，数量一样则打平。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">人头数</div>
+        <div class="play-desc">某队员或队伍的击杀数达到指定数量，比如预测某队员（或某队伍）人头数10，当局比赛该队员（或队伍）击杀数达到预测值则胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">助攻胜</div>
+        <div class="play-desc">助攻数量多的队员和所在队伍获助攻胜，数量一样则打平。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">助攻数</div>
+        <div class="play-desc">某队员或队伍的助攻数达到指定数量，比如预测某队员（或某队伍）助攻数10，当局比赛该队员（或队伍）助攻数达到预测值则胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">破塔胜</div>
+        <div class="play-desc">摧毁对方防御塔数量多的队员和所在队伍获破塔胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">经济胜</div>
+        <div class="play-desc">当局比赛结束，所得金钱数量多的队员或队伍获经济胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">助攻胜</div>
+        <div class="play-desc">第一个摧毁对方防御塔的队员和所在队伍获一塔胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">比赛时长</div>
+        <div class="play-desc">当局比赛所需时长预测，比如预测某局比赛需耗时20分钟，当局比赛结束，比赛耗时达到预测值则对应比赛时长预测胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">比分</div>
+        <div class="play-desc">全场比赛比分预测，比如预测某场比赛双方比分1:3，全场比赛结束，比赛最终比分为1:3与预测值一致则胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">局数</div>
+        <div class="play-desc">全场比赛结束总局数预测，比如预测某场比赛总局数5，全场比赛结束，比赛最终进行了5局与预测值一致则胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">单双</div>
+        <div class="play-desc">全场比赛比分两队比分之和单双预测，比如预测某场比赛两队比分之和单，全场比赛结束，比赛最终进行了5局，为单，与预测值一致胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">让分</div>
+        <div class="play-desc">全场比赛比分队伍受让指定分后胜负，比如预测某场比赛主队让1分胜，全场比赛结束主客队比分3:1，
+            主队比分3减受让分1后为2， 大于客队分1，则主队让分胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">比分大小</div>
+        <div class="play-desc">全场比赛两队比分之和值预测，比如预测某场比赛两队比分大3.5，全场比赛结束主客队比分3:1，主客队比分和4大于3.5，与预测值一致胜。</div>
+    </div>
+    <div class="play-info">
+        <div class="play-name">率先获得*个击杀</div>
+        <div class="play-desc">某局比赛率先获得指定击杀数的队伍或队员，比如某场比赛参赛队伍A和B，预测队伍A（或队员A）率先获得10个击杀，全场比赛结束，若队伍A获得10个击杀且先于队伍B获得，
+            预测队伍A率先获得10个击杀则胜,若两队都未获得10个击杀或队伍B先于队伍A获得10个击杀则负。</div>
+    </div>
+    <!--<div class="play-info">
+        <div class="play-name">小标题3</div>
+        <div class="play-desc"><p>简要说明。</p>
+            <p>示例</p>
+            <span style="color: #00f">04 14</span>
+            <span style="color: #f00">24 34</span>
+            <span style="color: #080">44<br>05</span>
+            <span style="color: #00f">15 25</span>
+            <span style="color: #f00">35 45</span><br>
+            <span style="color: #080">06 16</span>
+            <span style="color: #00f">26 36</span>
+            <span style="color: #f00">46<br>07</span>
+            <span style="color: #080">17 27 </span>
+            <span style="color: #00f">37 47</span><br>
+            <span style="color: #00f">10 20</span>
+            <span style="color: #f00">30 40</span>
+        </div>
+    </div>-->
+</div>

@@ -1,0 +1,21 @@
+.table {
+}
+
+th {
+  font-weight: normal;
+}
+
+.bg-withdraw-bet {
+  background-color: #C5D9F1;
+}
+
+.bg-audit {
+  background-color: #F2DCDB;
+}
+
+.bg-preferential-audit {
+  background-color: #D8E4BC;
+}
+#btn-primary{
+  display: none;
+}

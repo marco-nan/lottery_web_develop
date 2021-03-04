@@ -1,0 +1,669 @@
+/*===================================================================*/
+.popup-foot .btn, .betNum-btn .add-btn, .betNum-btn .activate, .Continue-btn,
+.deter-btn, .selector-con .btn, .selector-con .btn, .popup-form .generate, .betNum-btn .confirm-btn, .betNum-btn .activate1 { background: url(../images/btn1.png) no-repeat; }
+
+.twoNav .official-play-btn,
+.twoNav .credit-play-btn{
+    display: block;
+    float: right;
+    width: 106px;
+    height: 32px;
+    margin-top: 7px;
+    margin-right: 10px;
+    background: url("../images/base-ico.png") no-repeat;
+    background-position: 0 -731px;
+}
+
+.twoNav .credit-play-btn {
+    background: url("../images/base-ico.png") no-repeat;
+    background-position: 0 -445px;
+}
+.mainNav{/*width:100%;*/padding:2px 0 0 2px;height:43px;position:relative;}
+.mainNav-list{padding-right:115px;font-size:0;}
+.mainNav-list a{display:inline-block;*display:inline;*zoom:1;font-size:14px;padding:0;/*width:70px;*/padding:0 12px 0 10px;height:43px;line-height:43px;text-align:center;}
+.mainNav-children{margin:0;padding:7px 10px;min-height:64px;width:1116px;}
+.mainNav-children>div>span{display:inline-block;*zoom:1;width:90px;padding:5px 5px 6px 5px;color:#fff;}
+.mainNav-children a{display:inline-block;*display:inline;*zoom:1;padding:5px;/* width:60px; */line-height:17px;text-align:center;margin:2px;/*background:url(/Content/Default/officialGames/images/mainNav-li.png?90b2598e7cf) no-repeat center bottom;*/}
+.mainNav-children a.select{/*background-position:center top;*/padding:5px 5px 3px 5px;}
+
+.mainNav { padding: 0; height: 45px;background: #e2e0dd; }
+.mainNav-list a { height: 45px; line-height: 45px;color: #4d4d4d !important; background: none; }
+.mainNav-list a.active { background: #e95959; color: #fff !important; }
+.mainNav-children { width: 1123px;background: #fff; box-shadow: 0 0 0 rgba(0,0,0,0); border: none; }
+.mainNav-children > div > span { color: #212121; }
+.mainNav-children a { color: #303030 !important; }
+.mainNav-children a.select { color: #e95959 !important; border-bottom: 3px solid #e95959; text-shadow: 0 0px 0px #B8B6B6; }
+
+.gamePlay{position:absolute;right:0;top:0;}
+.gamePlay a{display:block;width:101px;height:32px;margin-top:7px; background-position: 0 -445px !important; background: url("../images/base-ico.png") no-repeat;}
+
+.sumBtn_list{position:relative;}
+.sumBtn_left>div,.sumBtn_list_kl8{padding-left:110px}
+.sumBtn_list .fleft{margin-left:25px;}
+.sumBtn_list_kl8 .fleft{width:785px}
+.num-box{width:50px;height:41px;padding-left:5px;float:left;position:relative;}
+.num-box.num-bigger-box {margin-left: 20px;}
+.num-box a{width:33px;height:33px;border-radius:50%;margin-top:6px;float:left;text-align:center;line-height:33px;}
+.num-box i{position:absolute;left:33px;top:0;font-family:Arial;}
+.num-box-1{text-align:center;width:75px;}
+.num-box-1 a{display:inline-block;float:none;}
+.sumBtn_list .name{position:absolute;left:0;top:0;width:87px;height:28px;margin:4px 15px 0;padding:3px 1px 1px 17px;line-height:28px;letter-spacing:2px;font-style:italic;text-align:center;font-weight:bold;font-size:14px;}
+.sumBtn_list .Bbtn{width:95px;height:41px;padding-left:5px;float:left;position:relative;}
+.sumBtn_list .Bbtn a{width:75px;height:33px;margin:6px 6px 0 0;border-radius:5px;float:left;text-align:center;line-height:33px;}
+.sumBtn_list .Bbtn i{position:absolute;left:80px;top:2px;font-style:initial;}
+.sumBtn_list .Bbtn2{width:110px;height:64px;padding-left:5px;float:left;position:relative;}
+.sumBtn_list .Bbtn2 a{width:90px;height:auto;margin:6px 6px 0 0;border-radius:5px;float:left;text-align:center;line-height:29px;vertical-align:middle;}
+.sumBtn_list .Bbtn2 i{position:absolute;left:80px;top:2px;font-style:initial;}
+.sumBtn_list .Bbtn2-odds{width:113px;padding:0 20px 0 5px;float:left;text-align:center;}
+.sumBtn_list .num-box-2{text-align:center;width:95px;}
+.sumBtn_list .num-box-2 a{display:inline-block;float:none;margin-right:0}
+.sumBtn_righr{float:left;width:390px;text-align:center;}
+.sumBtn_righr a{display:inline-block;*zoom:1;*display:inline;width:31px;height:31px;text-align:center;line-height:31px;margin:5px 8px 0;}
+.sumBtn_list_jsk3{margin:52px 0;}
+.sumBtn_list_jsk3 .num-box{padding:0 10px 0 15px}
+
+.sumBtn_box { margin: 0; padding-top: 5px;border-top: 1px solid #D7D1D1; background: #fff; }
+.num-box { color:#444;width:46px;height:46px; }
+.num-box a { width: 46px; height: 44px; padding-bottom: 2px; line-height: 44px; font-size: 16px; color: #000;margin-top:0; padding-left: 0px;}
+.num-box a.ball { background: url(../images/num.png) no-repeat; }
+.sumBtn_righr .allBtn .num-box a:hover { background-position-x: -70px; color: #1a1a1a; }
+.num-box i { font-style: initial; left: 46px;color: #9b9b9c; }
+.num-box i b { color: #f00; }
+.sumBtn_list .name { background-position: 0 -478px !important;padding: 0 1px 1px 0;color:#fff;margin-top:6px; }
+.sumBtn_list .Bbtn a { line-height: 31px;background: url(../images/sumBtn.png) no-repeat -67px -5px;color: #444; }
+.sumBtn_list .Bbtn a:hover { background-position: -67px -47px; color: #1a1a1a; }
+.sumBtn_list .Bbtn a.active { background-position: -67px -88px; color: #fff; }
+.sumBtn_list .Bbtn i { color: #fff; }
+.sumBtn_list .Bbtn2 a { color: #444; background: url(../images/sumBtn.png) no-repeat -148px -5px; }
+.sumBtn_list .Bbtn2 a:hover { background-position: -148px -64px; color: #1a1a1a; }
+.sumBtn_list .Bbtn2 a.active { background-position: -148px -123px; color: #fff; }
+.sumBtn_list .Bbtn2 i { color: #fff; }
+.sumBtn_list .Bbtn2-odds { color: #f00; }
+.sumBtn_righr a { width: 44px; height: 44px; line-height: 44px; margin: 0 2px; font-size:16px; background: url(../images/num.png) no-repeat; color: #000; }
+.sumBtn_righr a:hover, .sumBtn_righr a.active { background-position: 0 -49px; color: #fff;}
+
+.sumBtn_box {margin:0;margin:2px 0 0 0;min-height:235px;width:100%;}
+.sumBtn_left{float:left;width:740px;position:relative;}
+
+.num { background: url(../images/num.png) no-repeat; }
+
+.num-0:hover { background-position: -70px 0; }
+.num-1:hover { background-position: -70px -37px; }
+.num-2:hover { background-position: -70px -74px; }
+.num-3:hover { background-position: -70px -111px; }
+.num-4:hover { background-position: -70px -148px; }
+.num-5:hover { background-position: -70px -185px; }
+.num-6:hover { background-position: -70px -222px; }
+.num-7:hover { background-position: -70px -259px; }
+.num-8:hover { background-position: -70px -296px; }
+.num-9:hover { background-position: -70px -333px; }
+.num-10:hover { background-position: -70px -370px; }
+.num-11:hover { background-position: -70px -407px; }
+.num-12:hover { background-position: -70px -444px; }
+.num-13:hover { background-position: -70px -481px; }
+.num-14:hover { background-position: -70px -518px; }
+.num-15:hover { background-position: -70px -555px; }
+.num-16:hover { background-position: -70px -592px; }
+.num-17:hover { background-position: -70px -629px; }
+.num-18:hover { background-position: -70px -666px; }
+.num-19:hover { background-position: -70px -703px; }
+.num-20:hover { background-position: -70px -740px; }
+.num-21:hover { background-position: -70px -777px; }
+.num-22:hover { background-position: -70px -814px; }
+.num-23:hover { background-position: -70px -851px; }
+.num-24:hover { background-position: -70px -888px; }
+.num-25:hover { background-position: -70px -925px; }
+.num-26:hover { background-position: -70px -962px; }
+.num-27:hover { background-position: -70px -999px; }
+.num-28:hover { background-position: -70px -1036px; }
+.num-29:hover { background-position: -70px -1073px; }
+.num-30:hover { background-position: -70px -1110px; }
+.num-31:hover { background-position: -70px -1147px; }
+.num-32:hover { background-position: -70px -1184px; }
+.num-33:hover { background-position: -70px -1221px; }
+.num-34:hover { background-position: -70px -1258px; }
+.num-35:hover { background-position: -70px -1295px; }
+.num-36:hover { background-position: -70px -1332px; }
+.num-37:hover { background-position: -70px -1369px; }
+.num-38:hover { background-position: -70px -1406px; }
+.num-39:hover { background-position: -70px -1443px; }
+.num-40:hover { background-position: -70px -1480px; }
+.num-41:hover { background-position: -70px -1517px; }
+.num-42:hover { background-position: -70px -1554px; }
+.num-43:hover { background-position: -70px -1591px; }
+.num-44:hover { background-position: -70px -1628px; }
+.num-45:hover { background-position: -70px -1665px; }
+.num-46:hover { background-position: -70px -1702px; }
+.num-47:hover { background-position: -70px -1739px; }
+.num-48:hover { background-position: -70px -1776px; }
+.num-49:hover { background-position: -70px -1813px; }
+.num-50:hover { background-position: -70px -1850px; }
+.num-51:hover { background-position: -70px -1887px; }
+.num-52:hover { background-position: -70px -1924px; }
+.num-53:hover { background-position: -70px -1961px; }
+.num-54:hover { background-position: -70px -1998px; }
+.num-55:hover { background-position: -70px -2035px; }
+.num-56:hover { background-position: -70px -2072px; }
+.num-57:hover { background-position: -70px -2109px; }
+.num-58:hover { background-position: -70px -2146px; }
+.num-59:hover { background-position: -70px -2183px; }
+.num-60:hover { background-position: -70px -2220px; }
+.num-61:hover { background-position: -70px -2257px; }
+.num-62:hover { background-position: -70px -2294px; }
+.num-63:hover { background-position: -70px -2331px; }
+.num-64:hover { background-position: -70px -2368px; }
+.num-65:hover { background-position: -70px -2405px; }
+.num-66:hover { background-position: -70px -2442px; }
+.num-67:hover { background-position: -70px -2479px; }
+.num-68:hover { background-position: -70px -2516px; }
+.num-69:hover { background-position: -70px -2553px; }
+.num-70:hover { background-position: -70px -2590px; }
+.num-71:hover { background-position: -70px -2627px; }
+.num-72:hover { background-position: -70px -2664px; }
+.num-73:hover { background-position: -70px -2701px; }
+.num-74:hover { background-position: -70px -2738px; }
+.num-75:hover { background-position: -70px -2775px; }
+.num-76:hover { background-position: -70px -2812px; }
+.num-77:hover { background-position: -70px -2849px; }
+.num-78:hover { background-position: -70px -2886px; }
+.num-79:hover { background-position: -70px -2923px; }
+.num-80:hover { background-position: -70px -2960px; }
+.num-01:hover { background-position: -70px -2997px; }
+.num-02:hover { background-position: -70px -3034px; }
+.num-03:hover { background-position: -70px -3071px; }
+.num-04:hover { background-position: -70px -3108px; }
+.num-05:hover { background-position: -70px -3145px; }
+.num-06:hover { background-position: -70px -3182px; }
+.num-07:hover { background-position: -70px -3219px; }
+.num-08:hover { background-position: -70px -3256px; }
+.num-09:hover { background-position: -70px -3293px; }
+.active.num-0 { background-position: -35px 0; }
+.active.num-1 { background-position: -35px -37px; }
+.active.num-2 { background-position: -35px -74px; }
+.active.num-3 { background-position: -35px -111px; }
+.active.num-4 { background-position: -35px -148px; }
+.active.num-5 { background-position: -35px -185px; }
+.active.num-6 { background-position: -35px -222px; }
+.active.num-7 { background-position: -35px -259px; }
+.active.num-8 { background-position: -35px -296px; }
+.active.num-9 { background-position: -35px -333px; }
+.active.num-10 { background-position: -35px -370px; }
+.active.num-11 { background-position: -35px -407px; }
+.active.num-12 { background-position: -35px -444px; }
+.active.num-13 { background-position: -35px -481px; }
+.active.num-14 { background-position: -35px -518px; }
+.active.num-15 { background-position: -35px -555px; }
+.active.num-16 { background-position: -35px -592px; }
+.active.num-17 { background-position: -35px -629px; }
+.active.num-18 { background-position: -35px -666px; }
+.active.num-19 { background-position: -35px -703px; }
+.active.num-20 { background-position: -35px -740px; }
+.active.num-21 { background-position: -35px -777px; }
+.active.num-22 { background-position: -35px -814px; }
+.active.num-23 { background-position: -35px -851px; }
+.active.num-24 { background-position: -35px -888px; }
+.active.num-25 { background-position: -35px -925px; }
+.active.num-26 { background-position: -35px -962px; }
+.active.num-27 { background-position: -35px -999px; }
+.active.num-28 { background-position: -35px -1036px; }
+.active.num-29 { background-position: -35px -1073px; }
+.active.num-30 { background-position: -35px -1110px; }
+.active.num-31 { background-position: -35px -1147px; }
+.active.num-32 { background-position: -35px -1184px; }
+.active.num-33 { background-position: -35px -1221px; }
+.active.num-34 { background-position: -35px -1258px; }
+.active.num-35 { background-position: -35px -1295px; }
+.active.num-36 { background-position: -35px -1332px; }
+.active.num-37 { background-position: -35px -1369px; }
+.active.num-38 { background-position: -35px -1406px; }
+.active.num-39 { background-position: -35px -1443px; }
+.active.num-40 { background-position: -35px -1480px; }
+.active.num-41 { background-position: -35px -1517px; }
+.active.num-42 { background-position: -35px -1554px; }
+.active.num-43 { background-position: -35px -1591px; }
+.active.num-44 { background-position: -35px -1628px; }
+.active.num-45 { background-position: -35px -1665px; }
+.active.num-46 { background-position: -35px -1702px; }
+.active.num-47 { background-position: -35px -1739px; }
+.active.num-48 { background-position: -35px -1776px; }
+.active.num-49 { background-position: -35px -1813px; }
+.active.num-50 { background-position: -35px -1850px; }
+.active.num-51 { background-position: -35px -1887px; }
+.active.num-52 { background-position: -35px -1924px; }
+.active.num-53 { background-position: -35px -1961px; }
+.active.num-54 { background-position: -35px -1998px; }
+.active.num-55 { background-position: -35px -2035px; }
+.active.num-56 { background-position: -35px -2072px; }
+.active.num-57 { background-position: -35px -2109px; }
+.active.num-58 { background-position: -35px -2146px; }
+.active.num-59 { background-position: -35px -2183px; }
+.active.num-60 { background-position: -35px -2220px; }
+.active.num-61 { background-position: -35px -2257px; }
+.active.num-62 { background-position: -35px -2294px; }
+.active.num-63 { background-position: -35px -2331px; }
+.active.num-64 { background-position: -35px -2368px; }
+.active.num-65 { background-position: -35px -2405px; }
+.active.num-66 { background-position: -35px -2442px; }
+.active.num-67 { background-position: -35px -2479px; }
+.active.num-68 { background-position: -35px -2516px; }
+.active.num-69 { background-position: -35px -2553px; }
+.active.num-70 { background-position: -35px -2590px; }
+.active.num-71 { background-position: -35px -2627px; }
+.active.num-72 { background-position: -35px -2664px; }
+.active.num-73 { background-position: -35px -2701px; }
+.active.num-74 { background-position: -35px -2738px; }
+.active.num-75 { background-position: -35px -2775px; }
+.active.num-76 { background-position: -35px -2812px; }
+.active.num-77 { background-position: -35px -2849px; }
+.active.num-78 { background-position: -35px -2886px; }
+.active.num-79 { background-position: -35px -2923px; }
+.active.num-80 { background-position: -35px -2960px; }
+.active.num-01 { background-position: -35px -2997px; }
+.active.num-02 { background-position: -35px -3034px; }
+.active.num-03 { background-position: -35px -3071px; }
+.active.num-04 { background-position: -35px -3108px; }
+.active.num-05 { background-position: -35px -3145px; }
+.active.num-06 { background-position: -35px -3182px; }
+.active.num-07 { background-position: -35px -3219px; }
+.active.num-08 { background-position: -35px -3256px; }
+.active.num-09 { background-position: -35px -3293px; }
+.num-box a:hover { background-position: 0 -51px; color: #fff; }
+.num-box a.active { background-position: 0 -51px; color: #fff; }
+
+.help-box { background: #fff; border-bottom: 1px solid #d6d6d6; }
+.current-game label { color: #000; }
+.help-box  .checkbox { background-position: 0 -159px !important; color: #000000; }
+.NumberCheck .checkbox { background-position: 0 -834px; }
+.help-box .checkbox-box .select, .checkbox-checked { background-position: 0 -184px;}
+.no-checkbox .checkbox { background: none; }
+.help-box span { color: #000; text-shadow: 0 0 2px rgba(0,0,0,0); }
+.help-tips .help-exp { background-position: 0 -370px;}
+.help-tips .help-help { background-position: -43px -370px;}
+div.hover-tips { border: 2px solid #F6A513; background: #000; color: #fff; word-break: break-all; word-wrap: break-word;}
+
+.NumberCheck .select { background-position: 0 -863px; }
+
+.help-box{overflow:hidden;height:34px;padding-top:1px;}
+.current-game{width:190px;padding-left:10px;}
+.current-game label{font-size:13px;}
+
+.help-box .fright{padding-right:50px;}
+.help-box .checkbox-box{padding:0 5px;float:left;margin-top:5px;}
+.help-box .checkbox{display:inline-block;width:auto;height:25px;line-height:25px;padding:0 5px 0 25px;margin-left:2px; margin-top: 0px; margin-bottom: 0px;}
+.help-box span{line-height:34px}
+.help-tips{float:left;*zoom:1;position:relative;}
+.help-tips span{display:inline-block;*zoom:1;width:40px;height:24px;text-align:center;line-height:24px;margin:6px 0 0 0;cursor:pointer;}
+.help-tips .help-help{width:23px;}
+div.hover-tips{border-radius:5px;width:280px;padding:5px;line-height:1.5em;font-size:12px;}
+div.hover-tips .ui-dialog-arrow-a,div.hover-tips .ui-dialog-arrow-b{display:none;}
+
+.checkbox-hide{opacity:0;filter:alpha(opacity=0);margin-left:-13px;} /* 必须要这样处理，不然IE8不会响应ko的checked事件 */
+
+/*-------------*/
+.row_btm { background: url(../images/row_btm.png) repeat-x left bottom; color: #000; }
+.betNum-btn{width:100%;margin:0;padding:14px 0 0 0; overflow: hidden}
+.betNum-btn .add-btn,.betNum-btn .confirm-btn{float:left;padding:0;width:52px;height:26px;line-height:26px;text-align:center;width:122px;height:40px;margin:0 5px 0 0;}
+.betNum-btn .line1{height:1px;}
+.betNum-in {float:left;min-width:841px;}
+.betNum-in>span{line-height:38px;float:left;padding:0;}
+.amount-box{float:left;font-size:0;padding:10px 5px;}
+.amount{width:90px;height:22px;float:left;margin:0 5px;font-size:14px;}
+.amount i{float:left;width:22px;height:22px;text-align:center;line-height:22px;font-style:initial;font-size:22px;cursor:pointer;font-family:Tahoma, "\5FAE\8F6F\96C5\9ED1";}
+.amount input{width:43px;height:22px;float:left;border:none;background:none;text-align:center;}
+.amount-box span{font-size:14px;padding:0 2px;float:left;line-height:26px;}
+.amount-box a{width:26px;height:26px;text-align:center;line-height:26px;display:inline-block;*zoom:1;*display:inline;margin:0 3px;font-size:14px;}
+
+.ranger .ui-widget { background-position: 15px -510px; }
+.ranger .ui-handle { background-position: 0 -262px; }
+.betNum-btn { padding-top: 6px;background-position: left top; }
+.betNum-btn .add-btn { margin-top: 0;background-position: 0 0; color: #fff; }
+.betNum-btn .activate { background-position: 0 -52px; }
+.betNum-btn .confirm-btn { background-position: -482px 0; }
+.betNum-btn .activate1 { background-position: -482px -50px; }
+.extraFontC { color: #f00; }
+.amount {  width:100px;border-radius: 2px;border: 1px solid #929292; }
+.amount .minus { border-right: 1px solid #929292; color: #929292; }
+.amount .plus { border-left: 1px solid #929292; color: #929292; }
+.amount input { width: 53px; color: #272727; }
+.amount-box a { color: #fff; }
+.amount-box a.active { background: #37dcfc; }
+
+.BonusPercen,.Bonus,.buyBonus {float:left;}
+.buyBonus{padding:0 10px 0 35px;/*margin:0 5px;*/}
+.buyBonus a{float:left;width:15px;height:15px;margin:11px 3px;}
+.BonusPercen{line-height:38px;width:40px;text-align:right;}
+.Bonus{height:32px;padding:3px 0;}
+.Bonus span{height:16px;display:block;line-height:16px;text-align:center;}
+
+.buyBonus { background-position: 5px -226px; }
+.buyBonus a { width: 22px; height: 22px; margin: 8px 5px;color: #b62929; }
+.buyBonus .minus { background-position: 0 -90px; }
+.buyBonus .plus { background-position: 0 -112px; }
+
+.ranger{float:left;width:167px;height:26px;margin: 6px 0 0 0;display:inline;}
+.ranger .ui-widget{/*width:100%;*/padding:0 16px;height:100%;position:relative;}
+.ranger .ui-handle{display:inline-block;*zoom:1;width:32px;height:100%;position:absolute;top:1px;}
+
+.select-box{position:relative;display:inline-block;z-index:99;}
+.select-box div i{position:absolute;right:0;top:1px;width:29px;height:23px; display:block;float:left;border: none;}
+.select-box span{display:block;padding:3px 38px 3px 8px;line-height:18px;border-radius:3px;}
+.select-box ul{display:none;width:100%;position:absolute;left:0;top:26px;z-index:1;}
+.select-box ul li{line-height:25px;}
+.period-list,.select-list{position:absolute;left:0;top:0;width:100%;line-height:26px;height:26px;opacity:0;filter:alpha(opacity=0);}
+
+.unit { border-radius: 2px;border: 1px solid #929292;margin-left:0px;height:22px;float:left;width:54px; }
+.unit span {border-width: 0 1px 0 0;border-style: solid;border-color: transparent #929292 transparent transparent; padding:0 8px;line-height:22px;}
+/*.unit-box .unit i { border: none; }*/
+.unit-box li { border-left: 1px solid #fff; border-right: 1px solid #fff; }
+.unit-box a { background: none; }
+.unit-box a:hover { background: #626157; }
+
+/*.unit i{display:block;float:left;width:22px;height:22px;}*/
+.unit-box a{display:block;width:100%;height:100%;margin:0;}
+
+.select-box div i { background-position: 3px -209px !important; }
+.select-box ul li { border-bottom: 1px solid #BBB; background: url(../images/bg_08.png?7d9057073c9) repeat; }
+
+.clear-ab:after, clear-ab:before {
+    content: "";
+    display: table;
+}
+
+/*-------------------------------------------*/
+.line1 { border-top: 1px solid #fff; border-bottom: 1px solid #b0b0b0; }
+.betNum-list { height: 149px; }
+.betNum-list .row_btm{padding:9px 10px;line-height:26px;text-align:center;position:relative; height: 44px; font-size: 13px;}
+.betNum-list .row_btm .btn {padding: 0 35px; color: inherit;}
+.betNum-list .row_btm input{width:30px;line-height:22px;margin:0 5px;text-align:center;height:22px;}
+.bet-box {float:left;*display:inline;}
+.betB-w40{width:569px;}
+.betB-w25{width:228px;}
+.betB-w35{width:335px}
+.bet-box.betB-w35 {width: 345px;}
+.bet-box .row_btm span{display:inline-block;}
+.delete-btn{position:absolute;top:9px;right:10px;}
+.betb-main { background: url(../images/num-bg.png) repeat; border: none; padding-top: 0; border-top: 1px solid #cccccc; color: #000; padding:1px 0 0 0;height:104px; margin: 0;}
+.betB-w25 .betb-main{ border-left: 1px solid #eaeaea; border-right: 1px solid #eaeaea; margin:0 1px;}
+.betB-w25 .betb-main label {margin: 0px;}
+.table-list {overflow-y:auto;}
+.table-list  table{width:100%;border-collapse: separate;border-spacing:0;}
+.table-list  td{line-height:26px;text-align:center;font-size:12px;}
+.table-list  td .btn{border-radius:50%;padding:0;width:20px;height:20px;display:inline-block;text-align:center;line-height:20px}
+.betB-w25 .betb-main div{line-height:35px;padding:0 5px;}
+.betB-w25 div span{margin:0 5px;}
+.NumberCheck{width:262px;margin:0 auto;padding:5px 0;}
+.NumberCheck .fleft{width: 130px; margin-left: 12px;}
+.NumberCheck .fleft span{display:block;margin-left:5px;padding-left:25px;height:25px;line-height:25px;}
+.NumberCheck .checkbox { display:inline-block;width:auto;height:25px;line-height:25px;padding:0 5px 0 25px;margin: 0 0 0 2px; font-size: 13px; font-weight: normal;}
+.Continue-btn {float:left;width: 119px; height: 38px; margin-top: 6px;line-height:38px;text-align:center;padding:0;border-radius:5px; background-position: -205px 0px;}
+.Continue-btn { width: 120px; height: 40px; margin: 6px 0 0 0;}
+.Continue-btn.active1 {background-position: -325px 0;}
+/*.deter-btn{display:block;width:200px;height:33px;line-height:33px;margin:0 auto;text-align:center;font-size:16px;padding-left:40px;position:relative;}*/
+.deter-btn label{position:absolute;top:-5px;right:5px;font:12px/1 consolas,arial;padding:3px;}
+.Random-btn,.delete-btn{display:inline-block;*zoom:1;*display:inline;padding:0 0 0 25px;width:50px;height:24px;line-height:24px;margin-left:5px; border-radius: 3px}
+.betB-w35 .select-box span{padding:3px 61px 3px 13px}
+.Random-btn { background-position: 0 -394px; }
+.delete-btn { background-position: 0 -419px; }
+.deter-btn { background-position: 0 -164px; height: 40px; width: 258px; display: block; margin-left: 43px;}
+.table-list td .btn { border: 1px solid #aeacac; background: #fff; color: #b62929; }
+/*游戏记录*/
+.bet-history{}
+.bet-history .row_btm{text-align:center;line-height:30px;position:relative;height:30px}
+.bet-history .row_btm a{margin:3px 10px 0 0;position:absolute;right:0;top:0;}
+.bet-history th{line-height:31px;font-weight:500;}
+.bet-history  .table-list{height:167px;}
+.bet-history .ellipsis{display:inline-block;*display:inline;*zoom:1;}
+
+.bet-history .row_btm { background: url(../images/row_btm.png) repeat-x left center; border-top: 1px solid #e7e7e7; }
+.bet-history .row_btm a { color: #FAFAFA;background:#f2ae1b; padding: 5px 10px; line-height: 1; border-radius: 3px;}
+.bet-history th { background: #fff; color: #000; border-bottom: 1px solid #e7e7e7; text-align: center;}
+.bet-history .table-list { height: 164px;border: 1px solid #e7e7e7; background: #fff; margin-top: 0;}
+.bet-history table { border-left: 0; }
+.bet-history table tbody td {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.itemlist-5{padding-top:5px;}
+.itemlist-1 .sumBtn_list{padding:95px 0;*display:inline;*float:left;}
+.itemlist-2 .sumBtn_list{padding:36px 0;*display:inline;*float:left;}
+.itemlist-3 .sumBtn_list{padding:17px 0;*display:inline;*float:left;}
+.itemlist-4 .sumBtn_list{padding:7px 0;*display:inline;*float:left;}
+.itemlist-5 .sumBtn_list{padding:1px 0;*display:inline;*float:left;}
+.itemlist1-1 .sumBtn_list{padding:57px 0;*display:inline;*float:left;}
+.itemlist2-1 .sumBtn_list{padding:95px 0;*display:inline;*float:left;}
+.itemlist3-1 .sumBtn_list{padding:72px 0;*display:inline;*float:left;}
+/*----------------*/
+
+/*单选*/
+.selector-box{margin:23px 0;/*background:url(/Content/Default/officialGames/images/bg_02.png) repeat;*/}
+.selector-box2{margin:5px 0;}
+.selector-box3{margin:70px 0 0 0;}
+.selector-box4{margin:40px 0 0 0;}
+.selector-con{padding:0px 30px 0px 30px;}
+.selector-con textarea{width:841px;height:165px;float:left;padding:15px;border-radius:8px;resize: none;}
+.selector-con  .fleft{margin-left:20px;width:185px;}
+.selector-con .btn{width:165px;height:30px;display:block;margin:9px 0 0 0 ;text-align:center;font-size:16px;}
+.selector-box .tips{padding-left:31px;}
+
+/*单选*/
+.selector-con .btn { width: 197px; height: 44px; }
+.selector-con textarea { color: #333; border: 1px solid #D7D1D1; background: #fff; }
+.selector-con .DeleteDuplicate { background-position: -204px -50px; }
+.selector-con .Import { background-position: 0 -104px; }
+.selector-con .Empty { background-position: -205px -105px; }
+.selector-box .tips { color: #333; }
+
+.ellipsis {width:160px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+.con-toolbar { color: #333; }
+.con-toolbar .checkbox {color: #333;}
+.toolbar-tips label { color: #E94153; }
+.checkbox { background-position: 0 -159px; color: #000000; display:inline-block;width:auto;height:25px;line-height:25px;padding:0 5px 0 25px;margin-left:2px;}
+.checkbox-box .select, .checkbox-checked { background-position: 0 -184px; }
+
+.amountZi{
+    position: absolute;
+    height:262px;
+    background:#fff;
+    z-index: 9999 !important;
+    clear:both;
+    left: 32px;
+    width: 40px;
+    top: 20.3%;
+    /*border:1px solid #ddd;*/
+    box-shadow:1px 1px 1px #ddd;
+    display: none;
+}
+.amountZi span{
+    width: 100%;
+    height: 24px;
+    border-bottom:1px solid #dddddd;
+    display: inline-block;
+    line-height:24px;
+    cursor: pointer;
+}
+
+.amountZi span:hover{
+    color:#fff;
+    background: #999;
+}
+#MoneyUnitWrap
+{
+    display: none;
+    width: 53px;
+    height: 57px;
+    background: rgba(45, 45, 45, 0.81);
+    position: absolute;
+    top: 56%;
+    left: 165px;
+    z-index: 999;
+}
+#MoneyUnitWrap ul li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+
+}
+#MoneyUnitWrap ul li a{
+    color :#fff !important;
+}
+.select-box{
+    cursor: pointer;
+}
+.ui-corner-all{
+    margin-top: -2px !important;
+    outline: none;
+}
+#amount{
+    float: left;
+    height: 46px;
+    line-height: 46px;
+    width: 48px;
+    text-align: right;
+    margin-right: 5px;
+}
+.dolor,.Plus,.minues{
+    float: left;
+}
+.dolor{
+    border: 1px solid #ddd;
+    width: 22px;
+    height: 22px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #b62929;
+    font-size: 14px;
+    margin: 10px 0 0 4px;
+    font-weight: 600
+}
+.minues,.Plus
+{
+    border: 1px solid #ddd;
+    width: 20px;
+    height: 20px;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #b62929;
+    font-size: 20px;
+    margin: 11px 0 0 -2px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.Plus{
+    margin-left:8px;
+    margin-right:8px;
+}
+
+.span6{
+    border: 1px solid #fff;
+    width: 100px;
+    margin-left: 8px;
+    margin-top: 21px;
+    float: left;
+}
+.amountBindVal{
+    float: left;
+    height: 46px;
+    line-height: 38px;
+    /*width: 44px;*/
+    margin-right: 5px;
+}
+
+.dialog-custom {border: 1px solid #fff;border: 5px solid rgba(255,255,255,0.3);  box-shadow: 0 0 8px rgba(136, 136, 136, 0);}
+.official-dialog .dialog-custom { box-shadow: 0 0 8px rgba(136, 136, 136, 0); }
+.dialog-custom .ui-dialog-header { border-bottom: none; background: #b62929; background-image: -webkit-gradient(linear, left top, left bottom, from(#b31515), to(#b62929)); background-image: -moz-linear-gradient(top, #b31515, #b62929); background-image: -o-linear-gradient(top, #b31515, #b62929); background-image: -webkit-linear-gradient(top,#b31515, #b62929); background-image: linear-gradient(to bottom, #b31515, #b62929); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#b31515', endColorstr='#b62929')"; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b31515', endColorstr='#b62929'); zoom: 1; }
+.dialog-custom .ui-dialog-title { color: #fff; font-size: 14px;}
+.dialog-custom .ui-dialog-close { float: right; right: 13px; top:10px;border: none;font-size: 0px; position: relative;background: url("../images/base-ico.png") no-repeat; background-position: 0 -134px;}
+.dialog-custom .ui-dialog-grid {background-color: #fff;}
+.dialog-custom .ui-dialog-content { color: #484544; font-size: 14px;}
+.dialog-custom .ui-dialog-content span.succeed { color: #64931b; font-size: 22px;font-weight:700;}
+.dialog-custom .ui-dialog-footer button {
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    /*border: 1px solid transparent ;*/
+    border-radius: 4px;
+    margin: 0 10px;
+}
+.dialog-custom .ui-dialog-footer button { background: url(../images/pop-btn-disabled.png) repeat; color: #fff; }
+.dialog-custom .ui-dialog-footer button:hover,
+.dialog-custom .ui-dialog-footer button:focus,
+.dialog-custom .ui-dialog-footer button:active {
+    background: url(../images/pop-btn-disabled.png) repeat;
+}
+.dialog-custom .ui-dialog-footer .ui-dialog-autofocus {
+    background: url(../images/pop-btn-bg.png) repeat; color: #fff;
+}
+.dialog-custom .ui-dialog-footer .ui-dialog-autofocus:hover,
+.dialog-custom .ui-dialog-footer .ui-dialog-autofocus:focus,
+.dialog-custom .ui-dialog-footer .ui-dialog-autofocus:active {
+    background: url(../images/pop-btn-bg.png) repeat;
+}
+.dialog-custom .ui-dialog-footer button.ui-dialog-autofocus { color: #fff; }
+
+.status-win { color: #e71010 !important; }
+.status-lose { color: #908e8e !important; }
+.status-unlottery { color: #07d00b !important; }
+.status-undo { color: #2c77ba !important; }
+.status-hasundo { color: #906944 !important; }
+.status-delete { color: #b9cca6 !important; }
+.status-lottery { color: #e2bc03 !important; }
+span.record-status {
+    font-weight: 700;
+}
+/*下注详情对话框*/
+.layui-layer-title{
+    background-color: #b62929 !important;
+    color: #fff !important;
+    border:none !important;
+    text-align: left !important;
+    border-radius: 0;
+}
+.dialog-custom
+{
+    border: 5px solid rgba(255,255,255,0.3) !important;
+}
+
+.layui-layer-btn{
+    padding:10px 0px !important;
+    border-top: 1px solid #ddd !important;
+}
+.layui-layer-btn a {
+    width: 27% !important;
+    margin: 0 24px;
+    height: 45px !important;
+    line-height: 45px !important;
+    padding: 0 15px;
+    background-color: #b62929!important;
+    border-radius: 2px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    color: #fff !important;
+    font-size: 18px;
+    border-radius: 10px !important;
+}
+.layui-layer-btn .layui-layer-btn0{
+    border-color:#fff !important;
+}
+.layui-layer-btn{
+    text-align: left !important;
+}
+div.layui-layer-rim{
+    z-index: 19891015;
+    width: 200px;
+    height: 60px;
+    top: 64px;
+    left: 577px;
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid #fff;
+    border: 5px solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 8px rgba(136, 136, 136, 0);
+}

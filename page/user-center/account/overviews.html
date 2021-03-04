@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>个人总览</title>
+  <!--#include virtual="/page/include/user-center.html"-->
+  <!--#include virtual="/page/include/datepicker.html"-->
+  <script src="/js/user-center/account/overviews.js" type="text/javascript"></script>
+  <style type="text/css">
+
+  .allCss{
+    text-align: center;
+    line-height: 50px;
+
+  }
+  .preferential li span{
+    width: 49% !important;
+  }
+  .allCss div span{
+    width: 33%;
+    float: left;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .profits, .dL {
+    width: 30%;
+    float: left;
+    background-color: white;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+  .recharge{
+      width: 30%;
+      float: left;
+      background-color: white;
+      height: 200px;
+      margin-left: 5%;
+      border-radius: 5px;
+     margin-bottom: 30px;
+    }
+  .preferential{
+    width: 30%;
+    float: left;
+    background-color: white;
+    height: 200px;
+    margin-left: 5%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+  .lottery{
+    width: 30%;
+    float: left;
+    background-color: white;
+    height: 200px;
+    margin-right: 5%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+  .liveGame{
+    width: 30%;
+    float: left;
+    background-color: white;
+    height: 200px;
+    margin-left: 5%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+  .sports{
+    width: 30%;
+    float: left;
+    background-color: white;
+    height: 200px;
+    border-radius: 5px;
+  }
+  .teamNum{
+    width: 30%;
+    float: left;
+    background-color: white;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+  .teamNum span{
+    width: 50% !important;
+    display: block;
+    float: left;
+    text-align: center;
+  }
+
+  .moneyText{
+     color: red;
+   }
+
+  .titleText{
+    border-bottom: 1px solid #ccc;
+  }
+
+  .promotionRebate span{
+      width: 50% !important;
+      display: block;
+      float: left;
+      text-align: center;
+  }
+
+  </style>
+</head>
+<body>
+<div class="container-fluid p-x-md">
+  <form class="form-inline m-t-md">
+    <div class="form-group">
+      <label for="dateFrom" class="p-l-sm">时间：</label>
+      <div class="input-group" id="dateFromPicker">
+        <input type="text" class="form-control none-bg input-sm field-md" id="dateFrom"
+               placeholder="请选择起始时间" readonly>
+        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+      </div>
+      <div class="input-group">
+        <div class="input-group-addon none-style">至</div>
+      </div>
+      <div class="input-group" id="dateToPicker">
+        <input type="text" class="form-control none-bg input-sm field-md" id="dateTo" placeholder="请选择截止时间"
+               readonly>
+        <div class="input-group-addon"><span class="fa fa-calendar"></span></div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-sm btn-primary m-l-md" id="searchBtn">查询</button>
+  </form>
+  <div class="table-responsive m-t-md">
+    <div class="allCss">
+      <div class="profits">
+        <ul>
+          <li class="titleText">净盈利</li>
+          <li class="moneyText"  id="netProfit">元</li>
+          <li class="agentRebate"></li>
+        </ul>
+      </div>
+      <div class="recharge">
+        <ul>
+          <li class="titleText">充值提现</li>
+          <li class="moneyText" ><span id="balance">0元</span><span id="rechMoney">0元</span><span id="withdrawMoney">0元</span></li>
+          <li><span>余额</span><span>充值</span><span>提现</span></li>
+        </ul>
+      </div>
+      <div class="preferential" id="promotionRebate" >
+        <ul>
+          <li class="titleText">优惠</li>
+          <li class="moneyText" ><span id="rechDiscount">0元</span><span id="otherDiscount">0元</span><!--<span id="dlRebate">0元</span>--></li>
+          <li><span>充值优惠</span><span>其它优惠</span><!--<span class="agentRebateS">代理返点</span>--></li>
+        </ul>
+      </div>
+      <div class="lottery">
+        <ul>
+          <li class="titleText">彩票</li>
+          <li class="moneyText" ><span id="cpBettingMoney">0元</span><span id="cpRebateMoney">0元</span><span id="cpWinOrcloseMoney">0元</span></li>
+          <li><span>投注金额</span><span>返点金额</span><span>输赢金额</span></li>
+        </ul>
+      </div>
+      <div class="sports isDP">
+        <ul>
+          <li class="titleText">体育</li>
+          <li class="moneyText" ><span id="ftBettingMoney">0元</span ><span id="ftRebateMoney">0元</span><span id="ftWinOrcloseMoney">0元</span></li>
+          <li><span>投注金额</span><span>返点金额</span><span>输赢金额</span></li>
+        </ul>
+      </div>
+      <div class="liveGame isDP">
+        <ul>
+          <li class="titleText">真人</li>
+          <li class="moneyText" ><span id="liveBettingMoney">0元</span><span id="liveRebateMoney" >0元</span><span id="liveWinOrcloseMoney">0元</span></li>
+          <li><span>投注金额</span><span>返点金额</span><span>输赢金额</span></li>
+        </ul>
+      </div>
+      <div class="dL">
+        <ul>
+          <li class="titleText">代理总计</li>
+          <li class="moneyText" ><span id="dlRebate">0元</span><span id="dlBonuus">0元</span><span id="dlDayWage">0元</span></li>
+          <li><span>代理返点</span><span>代理分红</span><span>代理日工资</span></li>
+        </ul>
+      </div>
+      <!--<div class="teamNum">-->
+        <!--<ul>-->
+          <!--<li class="titleText">团队人数</li>-->
+          <!--<li class="moneyText" ><span>0人</span><span>0人</span></li>-->
+          <!--<li><span>团队总人数</span><span>时间范围内注册人数</span></li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    </div>
+
+  </div>
+</div>
+<!--#include virtual="/views/isReplacement.html"-->
+<script src="/js/lib/util/httpUtil.js" type="text/javascript" ></script>
+<script>
+  $(function () {
+      //判断是否为彩票，如果彩票就隐藏真人和体育
+    if (common_config.isDP)
+    {
+      $(".isDP").show();
+    }
+    else
+    {
+      $(".isDP").hide();
+    }
+
+    AgentRebate();
+
+  })
+
+  // 判断代理用户
+ function AgentRebate() {
+     var agentTextT="盈利=游戏输赢+优惠+代理总计";
+     var agentTextF="盈利=游戏输赢+优惠";
+     $.ajax({
+         type: "GET",
+         url: HttpUtil.baseUrl + "/api/user/info",
+         dataType: "json",
+         success: function (data) {
+             if (data != null) {
+                 if (data.userInfo.isDl) {
+                     $(".agentRebate").html(agentTextT);
+                     $(".dL").show();
+                 }else{
+                     $(".agentRebate").html(agentTextF);
+                     $(".dL").hide();
+                     PromotionRebate();
+                 }
+             }
+         },
+         error: function (data) {
+         }
+     });
+ }
+
+ // 非代理用户样式
+ function PromotionRebate() {
+     $(".agentRebateS").hide();
+     //$("#dlRebate").hide();
+     $("#promotionRebate").addClass("promotionRebate span");
+ }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="600 seconds">
+
+	<property name="APP_NAME" value="gameplat_web" />   
+	<property name="log.path" value="/opt/logs/program"/>
+    <contextName>${APP_NAME}</contextName>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<Encoding>UTF-8</Encoding>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>
+				%d{HH:mm:ss.SSS} [%thread] %-5level %logger{10} - %msg%n
+			</pattern>
+		</layout>
+	</appender>
+
+	<!-- 操作索引按照每天生成日志文件# 作者QQ1244666697 -->
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<Encoding>UTF-8</Encoding>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>
+				${log.path}/${APP_NAME}.%d{yyyy-MM-dd-HH}.log
+			</FileNamePattern>
+			<!-- 保留最近天数 -->
+			<MaxHistory>240</MaxHistory>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>
+				%d{HH:mm:ss.SSS} [%thread] %-5level %logger{10} - %msg%n
+			</pattern>
+		</layout>
+	</appender>
+	
+	<root level="INFO">
+    	<appender-ref ref="STDOUT" />  
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
